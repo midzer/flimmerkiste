@@ -1,0 +1,62 @@
+@import '../../helper.scss';
+@import '../../variables.scss';
+
+.screen {
+    @extend .fadeIn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75.1%;
+    height: 71.7%;
+    color: $lightGrey;
+    background-color: black;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.header {
+    margin-top: 1rem;
+}
+
+.menu {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.menu > li {
+    float: left;
+}
+
+.menu > li > a {
+    padding: 1rem;
+}
+
+.content {
+    text-align: initial;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    outline: 0;
+    color: $blue;
+}
+
+a {
+    line-height: 1.1;
+    display: inline-block;
+}
+
+a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: $blue;
+  transition: width 0.5s ease;
+}
+
+a:hover:after, a:focus:after {
+    width: 100%;
+}
+

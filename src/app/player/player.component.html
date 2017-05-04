@@ -1,0 +1,9 @@
+<div class="player">
+  {{subTune + 1}} / {{subTunes}} - {{playTime}}
+  <div class="marquee">
+    <span>{{author}} - {{title}}</span>
+  </div>
+  <button (click)="play()">{{playButton}}</button>
+  <button (click)="next()">+</button>
+  <button (click)="prev()">-</button>
+</div><!-- player -->

@@ -1,0 +1,13 @@
+<ul class="posts">
+  <li *ngFor="let post of posts">
+    <div class="post">
+      <span class="date">{{post.date}}</span>
+      <a [routerLink]="[post.name | lowercase | blank2dash]">{{post.name}}</a>
+      <span class="badge">{{post.category}}</span>
+      <audio *ngIf="post.category === 'DJ Sets'" controls preload="none">
+        <source src="{{post.name | lowercase | blank2dash | mp3file}}" type="audio/mpeg">
+        Dein Browser unterstützt kein Audio-Element
+      </audio>
+    </div>
+  </li>
+</ul>

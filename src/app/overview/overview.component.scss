@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+
+.posts {
+  list-style-type: none;
+}
+
+.post {
+  margin: 2rem 0;
+}
+
+.post .date {
+  display: block;
+  font-size: small;
+}
+
+.post .badge {
+  display: inline-block;
+  font-size: small;
+  color: $lightBlue;
+  padding: 0.1rem 0.5rem;
+  background-color: $darkBlue;
+  border-radius: 4px;
+}
+
+li a {
+	color: $blue;
+  text-decoration: none;
+	transition: color .3s;
+}
+
+li a:hover {
+	color: $lightBlue;
+}
+
+a:before {
+  content: '\203A';
+	font-weight: bold;
+	position: relative;
+	opacity: 0;
+	left: 0;
+	transition: left .3s, opacity .3s;
+}
+
+a:hover:before {
+	opacity: 1;
+	left: -5px;
+}
+
+audio {
+  display: block;
+  margin-top: 1rem;
+}

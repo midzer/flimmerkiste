@@ -1,0 +1,20 @@
+<div id="screen" class="screen" [style.cursor]="cursor" [style.animation-play-state]="state" (click)="show()">
+  <header class="header">
+    <h1>midzers Flimmerkiste</h1>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a [routerLink]="['']" routerLinkActive="active">home</a>
+        </li>
+        <li *ngFor="let menuitem of menu">
+          <a [routerLink]="[menuitem.name]" routerLinkActive="active">{{menuitem.name}}</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div><!-- screen -->

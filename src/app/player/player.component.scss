@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.player {
+    position: absolute;
+    top: 7.78%;
+    left: 77.69%;
+    width: 20.31%;
+    height: 20%;
+    color: $lightGrey;
+}
+
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;  /* show the marquee just outside the paragraph */
+    animation: marquee 10s linear infinite;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}

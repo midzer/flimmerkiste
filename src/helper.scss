@@ -1,0 +1,16 @@
+.fadeIn {
+    animation: opacityZeroToOne 1s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+@keyframes opacityZeroToOne {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+.centerAll {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
