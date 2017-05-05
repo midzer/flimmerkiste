@@ -11,6 +11,6 @@ export var MENU: Menuitem[] = [
       name: 'links'
   },
   {
-      name: 'kontakt'
+      name: 'contact'
   }
 ];
