@@ -1,2 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 //@import '/vendor/milligram/milligram.scss'
+@import 'variables.scss';
+
+.menu > li > a, .menu > li > a:hover, .menu > li > a:focus,
+markdown a, markdown a:hover, markdown a:focus {
+    text-decoration: none;
+    outline: none;
+    outline: 0;
+    color: $blue;
+}
+
+.menu > li > a,
+markdown a {
+    line-height: 1.1;
+    display: inline-block;
+}
+
+.menu > li > a:after,
+markdown a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: $blue;
+  transition: width 0.5s ease;
+}
+
+.menu > li > a:hover:after, .menu > li > a:focus:after,
+markdown a:hover:after, markdown a:focus:after {
+    width: 100%;
+}

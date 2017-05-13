@@ -34,29 +34,3 @@
 .content {
     text-align: initial;
 }
-
-a, a:hover, a:focus {
-    text-decoration: none;
-    outline: none;
-    outline: 0;
-    color: $blue;
-}
-
-a {
-    line-height: 1.1;
-    display: inline-block;
-}
-
-a:after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 0%;
-  background-color: $blue;
-  transition: width 0.5s ease;
-}
-
-a:hover:after, a:focus:after {
-    width: 100%;
-}
-
