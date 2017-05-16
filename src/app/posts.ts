@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export var POSTS: Post[] = [
   {
+      name: 'Lockpickingsimulator 2017',
+      date: '2012/04/23',
+      category: 'Philosophisches'
+  },
+  {
       name: 'Pausenfiller',
       date: '2012/04/23',
       category: 'DJ Sets'
