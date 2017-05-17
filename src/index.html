@@ -28,6 +28,9 @@
 	  line-height: 1.6;
     background-color: black;
   }
+  @media screen and (max-width:1024px) {
+    body { font-size: 1em; } /* 14px font */
+  }
   .outer-container {
     position: fixed;
     top: 0;
@@ -42,7 +45,7 @@
   }
   video#bgvid {
     height: 100vh;
-    display: none;
+    object-fit: contain;
   }
   </style>
   <div class="outer-container">
@@ -51,19 +54,18 @@
         <source src="assets/videos/intro.webm" type="video/webm">
         <source src="assets/videos/intro.mp4" type="video/mp4">
       </video>
+      <script src="assets/js/objectFitPolyfill.min.js" async></script>
       <app-root>Loading...</app-root>
     </div>
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      var video = document.getElementById("bgvid");
-      video.style.display = "inherit";
-      video.play();
+      document.getElementById("bgvid").play();
     });
     document.getElementById("bgvid").onended = function() {
-        var screen = document.getElementById("screen");
-        screen.style.cursor = "auto";
-        screen.style.webkitAnimationPlayState = "running";
+      var screen = document.getElementById("screen");
+      screen.style.cursor = "auto";
+      screen.style.webkitAnimationPlayState = "running";
     };
   </script>
 </body>

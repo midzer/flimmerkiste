@@ -14,10 +14,6 @@
     cursor: pointer;
 }
 
-.header {
-    margin-top: 1rem;
-}
-
 .menu {
     display: inline-block;
     list-style-type: none;
@@ -25,10 +21,7 @@
 
 .menu > li {
     float: left;
-}
-
-.menu > li > a {
-    padding: 1rem;
+    padding: 0 1em;
 }
 
 .content {

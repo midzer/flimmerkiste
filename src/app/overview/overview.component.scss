@@ -5,17 +5,17 @@
 }
 
 .post {
-  margin: 2rem 0;
+  margin: 2em 0;
 }
 
 .post .date {
   display: block;
-  font-size: small;
+  font-size: 0.8em;
 }
 
 .post .badge {
   display: inline-block;
-  font-size: small;
+  font-size: 0.8em;
   color: $lightBlue;
   padding: 0.1rem 0.5rem;
   background-color: $darkBlue;
@@ -48,5 +48,6 @@ a:hover:before {
 
 audio {
   display: block;
-  margin-top: 1rem;
+  margin-top: 0.5em;
+  width: 50%;
 }
