@@ -19,7 +19,7 @@ export class EyeComponent implements OnInit {
 
   constructor(@Inject(APP_CONFIG) config: AppConfig) {
     this.imgPath = config.imgPath;
-    this.source = config.imgPath + this.transparent;
+    this.clear();
    }
 
   ngOnInit() {
