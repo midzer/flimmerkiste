@@ -4,10 +4,6 @@
       <span class="date">{{post.date}}</span>
       <a [routerLink]="[post.name | lowercase | blank2dash]">{{post.name}}</a>
       <span class="badge">{{post.category}}</span>
-      <audio *ngIf="post.category === 'DJ Sets'" controls preload="metadata">
-        <source src="{{post.name | lowercase | blank2dash | mp3file}}" type="audio/mpeg">
-        Dein Browser unterstützt kein Audio-Element
-      </audio>
     </div>
   </li>
 </ul>

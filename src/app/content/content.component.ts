@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { POSTS } from '../posts'
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -9,6 +11,9 @@ import { Location } from '@angular/common';
 })
 export class ContentComponent implements OnInit {
   path: string;
+  name: string;
+  posts = POSTS;
+  hasAudio: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,8 +22,16 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.path = 'assets/markdown/' + params['name'] + '.md';
-   });
+      this.name = params['name'];
+      this.path = 'assets/markdown/' + this.name + '.md';
+      var name = this.name.split('-').join(' ');
+      for (var i = 0; i < this.posts.length; i++) {
+        if (this.posts[i].category == 'DJ Sets' && this.posts[i].name.toLowerCase() == name) {
+          this.hasAudio = true;
+          break;
+        }
+      }
+    });
   }
 
   goBack(): void {

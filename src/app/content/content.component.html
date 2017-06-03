@@ -1,2 +1,6 @@
 <button (click)="goBack()">&#9664;</button>
 <markdown path={{path}}></markdown>
+<audio *ngIf="hasAudio == true" controls preload="metadata">
+    <source src="{{name | mp3file}}" type="audio/mpeg">
+    Dein Browser unterstützt kein Audio-Element
+</audio>
