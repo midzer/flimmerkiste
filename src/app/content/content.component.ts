@@ -26,7 +26,8 @@ export class ContentComponent implements OnInit {
       this.path = 'assets/markdown/' + this.name + '.md';
       var name = this.name.split('-').join(' ');
       for (var i = 0; i < this.posts.length; i++) {
-        if (this.posts[i].category == 'DJ Sets' && this.posts[i].name.toLowerCase() == name) {
+        if ((this.posts[i].category == 'DJ Sets' || this.posts[i].category == 'Audio')
+            && this.posts[i].name.toLowerCase() == name) {
           this.hasAudio = true;
           break;
         }
