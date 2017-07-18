@@ -14,8 +14,6 @@
 
 [KabeSalod](http://kabesalod.de)
 
-[Kreative Klänge Kollektiv](http://www.kreativeklaenge.de)
-
 [sonus.fm](http://www.sonus.fm)
 
 [TermiTinitus](http://termitinitus.org)
