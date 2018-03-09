@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Retro Blog von midzer mit DJ Sets verschiedener Genre, einfachen Rezepten, Philosophisches aus dem Alltag und gewürzten Zitaten">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script type="text/javascript" src="assets/js/jsSID.min.js"></script>
-  <script src="assets/js/objectFitPolyfill.min.js" async></script>
+  <script src="/assets/js/jsSID.min.js"></script>
+  <script src="/assets/js/objectFitPolyfill.min.js"></script>
 </head>
 <body>
   <style>
@@ -59,15 +59,6 @@
       <app-root>Loading...</app-root>
     </div>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("bgvid").play();
-    });
-    document.getElementById("bgvid").onended = function() {
-      var screen = document.getElementById("screen");
-      screen.style.cursor = "auto";
-      screen.style.webkitAnimationPlayState = "running";
-    };
-  </script>
+  <script defer src="/assets/js/main.js"></script>
 </body>
 </html>
