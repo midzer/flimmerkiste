@@ -1,4 +1,4 @@
-## Kontakt
+# Kontakt
 
 * eMail: mail {ät} midzer {dot} de
 * IRC: midzer on [freenode](https://freenode.net)

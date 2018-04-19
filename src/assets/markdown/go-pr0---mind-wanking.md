@@ -1,4 +1,4 @@
-## Go pr0 - Mind wanking
+# Go pr0 - Mind wanking
 
 Masturbation. Alle machens, niemand spricht davon. Nur im engsten Freundeskreis entstehen meist amüsante Intermezzi über die Thematik: "Na, heute schon geschleudert?" "Ne, ich hatte alle Hände voll zu tun. Die breite Öffentlichkeit [schämt](https://youtu.be/-xPYomxBS48) sich dafür im stillen Kämmerlein.
 
@@ -13,4 +13,3 @@ The world is oversexed and underfucked...
 Vereinfachung der Kommunikation (z.B. mit Instant Messenger always on) führt zu Verkomplizierung menschlicher Interaktion.
 
 Also: Lieber anrufen, zusammen kommen, diskutieren und Spaß haben. [Alle für jeden](https://youtu.be/u553JK-0S44) =)
-

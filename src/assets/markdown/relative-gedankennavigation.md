@@ -1,4 +1,4 @@
-## Relative Gedankennavigation
+# Relative Gedankennavigation
 
 * Datum: 2017.07.18
 * DJ: tinkelow
@@ -23,4 +23,3 @@
 16. 1:22:26 Produkkt - Ciampino Airforce (Cyberpunkers Remix)
 17. 1:25:00 Codec & Flexor - Time Has Changed
 18. 1:31:18 ZokZok - Untitled
-

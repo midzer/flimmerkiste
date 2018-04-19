@@ -1,4 +1,4 @@
-## Quinoa Pfanne
+# Quinoa Pfanne
 
 Eines meiner Lieblingsgerichte, welches ich mir alle paar Wochen gerne mache ist eine Hühnchen-Gemüsepfanne mit Quinoa. Wer vegetarisch bevorzugt, lässt das Hühnchen weg und nimmt mehr Gemüse. Ein sehr leichtes, gesundes Essen. Man hat kein Völlegefühl nach dem Verzehr. Die Zubereitungszeit beträgt ungefähr 45 Minuten.
 
@@ -32,4 +32,3 @@ Sobald kein Wasser mehr im Quinoatopf ist, ist das Quinoa fertig und wird auf di
 Einen gestrichenen Teelöffel Zucker in die Pfanne (wegen der Tomaten). Etwas Salz, nach Belieben gerne etwas mehr Pfeffer.
 
 Reicht für mindestens 4 Portionen. Guten Appetit. =)
-

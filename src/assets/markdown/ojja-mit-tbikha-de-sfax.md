@@ -1,4 +1,4 @@
-## Ojja mit Tbikha de Sfax
+# Ojja mit Tbikha de Sfax
 
 Eine traditionelle, einfache Speise in Tunesien ist [Ojja](http://fr.wikipedia.org/wiki/Ojja) [3ojja]. Als Vorspeise empfehle ich eine Linsensuppe [Tbikha de Sfax](http://www.coujina-tounsia.com/2012/05/tbikha-de-sfax-soupe-aux-lentilles/) [tbi5a]. Die Speise ist in ca. 45 Minuten zubereitet.
 
@@ -35,4 +35,3 @@ Ein Ei komplett, von den restlichen Eiern nur das Eiweiß in die Pfanne geben, H
 Die Linsensuppe optional mit zerschnittener Melisse garnieren und servieren. Ojja servieren (jeweils Bereiche mit einem Ei) und zusammen mit Brot genießen.
 
 Dieses Gericht ist für 4 Personen auslegt. Bon appétit! =)
-

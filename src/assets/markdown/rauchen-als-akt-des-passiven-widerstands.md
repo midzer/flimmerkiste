@@ -1,4 +1,4 @@
-## Rauchen als Akt des passiven Widerstands
+# Rauchen als Akt des passiven Widerstands
 
 Eine moderne Gesellschaft in der kapitalistischen (Welt-)Ordnung ist auf hohe Effizienz, also Arbeit pro Zeit ausgerichtet. Jedes Individium sollte die Möglichkeit haben sich diesem medial oktroyierten Herdentrieb zu widersetzen und das System freiwillig [entschleunigen](http://de.wikipedia.org/wiki/Entschleunigung). Nur welche?
 
@@ -17,4 +17,3 @@ Wer eh schon systemgeschädigt ist, lässt sich das Essen frei Haus liefern. Ess
 Neben dem erläuterten Individualwiderstand entwickelten sich im Laufe der Zeit gruppendynamische [Alternativen](http://de.wikipedia.org/wiki/Sit-in). Auf der Suche nach weiteren Optionen findet der revolutionäre Geist keine Ruhe. Die Frage der Sinnhaftigkeit einzelner Aktionen muss jeder für sich beantworten.
 
 Vernetzt euch (korrekt), kommuniziert & don't forget to [F*ck the System](http://imgur.com/4uqXMPd).
-

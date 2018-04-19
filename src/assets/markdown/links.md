@@ -1,12 +1,12 @@
-## Links
+# Links
 
-### Blogs
+## Blogs
 
 [Audit0re - Alles und Mehr.](https://audit0re.wordpress.com)
 
 [La claque du mat - le blog qui fait du bien!](https://lepico.blogspot.fr)
 
-### Communities
+## Communities
 
 [Freiraum Dachau](https://freiraum-dachau.de)
 
@@ -16,13 +16,13 @@
 
 [TermiTinitus](https://termitinitus.org)
 
-### Hackerspaces
+## Hackerspaces
 
 [OpenLab Augsburg](https://openlab-augsburg.de)
 
 [muCCC](https://muc.ccc.de)
 
-### Me @
+## Me @
 
 [Blogspot: Elektronische Schmankerl](https://eschmankerl.blogspot.de)
 

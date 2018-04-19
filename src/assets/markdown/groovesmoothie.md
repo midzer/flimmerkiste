@@ -1,4 +1,4 @@
-## Groovesmoothie
+# Groovesmoothie
 
 * Datum: 2015.01.06
 * DJ: tinkelow
@@ -27,4 +27,3 @@
 19. 1:08:46 Dr. Alban - No Coke
 20. 1:13:36 Shitmat - Ace Of Base Babylon
 21. 1:15:34 Shinehead - Billy Jean
-

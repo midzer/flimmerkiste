@@ -1,3 +1,5 @@
+# About
+
 *WhoAmI?* Ich heiße Dennis und bin ein ostdeutsches Arbeiterkind. Computer. Für viele der älteren Generation ein Mysterium, heutzutage aus dem Alltag nicht mehr wegzudenken. Mit den Möglichkeiten der Informationstechnologie sehe ich Chancen sich selbst zu verwirklichen. Die Ideen von Lifelong learning, Nachhaltigkeit und Sharing entwickelten sich im Laufe des Lebens zu persönliche Säulen in einer modernen und zum Teil hektischen, undurchsichtigen Welt. Gute Musik ist dabei mein ständiger Begleiter.
 
 Viel Spaß beim Lesen :-)

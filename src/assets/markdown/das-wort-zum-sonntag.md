@@ -1,4 +1,4 @@
-## Das Wort zum Sonntag
+# Das Wort zum Sonntag
 
 * Datum: 2018.01.28
 * DJ: tinkelow

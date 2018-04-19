@@ -1,4 +1,4 @@
-## Darknet von Daniel Suarez
+# Darknet von Daniel Suarez
 
 “Macht vierzehn neununddreißig.”
 
@@ -55,4 +55,3 @@ Ein kräftig gebauter Assistant Manager mit Halbglatze kam aus dem Durchgang zur
 Der Manager blickte auf das Display. “Okay, macht vierzehn neununddreißig.”
 
 Es war Howards Glück, dass Sebeck keinen Taser mehr bei sich trug.
-
