@@ -62,6 +62,11 @@ export var POSTS: Post[] = [
         category: 'DJ Sets'
     },
     {
+        name: 'Retrogeschunkel',
+        date: '2016/08/15',
+        category: 'Schmankerl'
+    },
+    {
         name: 'Marionettenzauber',
         date: '2016/08/06',
         category: 'DJ Sets'
@@ -140,5 +145,45 @@ export var POSTS: Post[] = [
         name: 'Bergfestzelebration',
         date: '2015/08/21',
         category: 'DJ Sets'
+    },
+    {
+        name: 'Wer rastet der rostet',
+        date: '2015/07/23',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Style ohne Hipstergewand',
+        date: '2015/06/02',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Ueber die Alpen und zurueck',
+        date: '2015/05/24',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Trommelfundgrube',
+        date: '2015/05/23',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Gimme a break',
+        date: '2015/05/22',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Mit Pauken und Tubas',
+        date: '2015/05/21',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Trend zur Langsamkeit',
+        date: '2015/05/19',
+        category: 'Schmankerl'
+    },
+    {
+        name: 'Intro',
+        date: '2015/05/18',
+        category: 'Schmankerl'
     }
 ];
