@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets/audio/
+Disallow: /assets/images/
+Disallow: /assets/sids/
+Disallow: /assets/videos/
