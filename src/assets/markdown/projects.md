@@ -2,11 +2,11 @@
 
 ## Webdesign
 
-Ich bastle sehr gerne an Webseiten. Dabei entstehen sowohl kommerzielle, als auch nicht-kommerzielle Projekte. Static Site Generator wie [Jekyll](https://jekyllrb.com/) oder [Hugo](https://gohugo.io/) kommen zum Einsatz, um schlanke, performate und übersichtliche Seiten zu erstellen. Eine Auswahl ist [hier](https://rohner.io/leistungen/) zu finden.
+Ich bastle sehr gerne an Webseiten. Dabei entstehen sowohl kommerzielle, als auch nicht-kommerzielle Projekte. Static Site Generator wie [Jekyll](https://jekyllrb.com/) oder [Hugo](https://gohugo.io/) kommen zum Einsatz, um schlanke, performante und übersichtliche Seiten zu erstellen. Eine Auswahl ist [hier](https://rohner.io/leistungen/) zu finden.
 
 ## Graphics
 
-Immer mal wieder erstelle ich Flyer für unkommerzielle Veranstaltungen und kleinere Grafiken. Dabei arbeite ich mit [Paint.NET](http://www.getpaint.net), [GIMP](http://www.gimp.org) und seit neuestem mit [Krita](https://krita.org). Hier eine kleines Auswahl:
+Immer mal wieder erstelle ich Flyer für unkommerzielle Veranstaltungen und kleinere Grafiken. Dabei arbeite ich mit [GIMP](https://www.gimp.org/) und seit neuestem mit [Krita](https://krita.org).
 
 ### Flyer
 

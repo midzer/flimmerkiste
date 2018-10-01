@@ -1,11 +1,5 @@
 # Links
 
-## Blogs
-
-[Audit0re - Alles und Mehr.](https://audit0re.wordpress.com)
-
-[La claque du mat - le blog qui fait du bien!](https://lepico.blogspot.fr)
-
 ## Communities
 
 [Freiraum Dachau](https://freiraum-dachau.de)
@@ -23,10 +17,6 @@
 [muCCC](https://muc.ccc.de)
 
 ## Me @
-
-[Blogspot: Elektronische Schmankerl](https://eschmankerl.blogspot.de)
-
-[Couchsurfing](https://www.couchsurfing.com/people/midzer)
 
 [GitHub](https://github.com/midzer)
 

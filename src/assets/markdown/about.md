@@ -14,7 +14,7 @@ Die große LAN-Party Ära begann. Wie wir das ohne Mate ausgehalten haben, weiß
 
 ## Das Studium
 
-Man wurde älter und der Zockdrang ließ nach. Civilization 4, ein rundenbasiertes Strategiespiel ist das letzte große Game mit dem ich immer noch viel Zeit verbringe. Für das Game existieren interessante [Mods](http://forums.civfanatics.com/forumdisplay.php?f=171). Im Laufe der Zeit entwickelte ich ein Faible für [Poker](http://www.pokerth.net/).
+Man wurde älter und der Zockdrang ließ nach. Civilization 4, ein rundenbasiertes Strategiespiel ist das letzte große Game mit dem ich immer noch viel Zeit verbringe. Für das Game existieren interessante [Mods](https://forums.civfanatics.com/forums/civ4-modpacks.171/). Im Laufe der Zeit entwickelte ich ein Faible für [Poker](https://www.pokerth.net/).
 
 ## Heute
 
