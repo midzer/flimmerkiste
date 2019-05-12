@@ -53,7 +53,7 @@ function jsSID (bufferlen, background_noise)
  } 
 
  this.start = function(subt) { init(subt); if (startcallback!==null) startcallback(); this.playcont(); }
- this.playcont = function() { jsSID_scriptNode.connect(jsSID_audioCtx.destination); }
+ this.playcont = function() { jsSID_audioCtx.resume(); jsSID_scriptNode.connect(jsSID_audioCtx.destination); }
  this.pause = function() { if (loaded && initialized) jsSID_scriptNode.disconnect(jsSID_audioCtx.destination); } 
  //(Checking state before disconnecting is a workaround for Opera: gave error when code tried disconnecting what is not connected. 
  //Checking inner state variables here, but maybe audioContext status info could be more reliable. I just didn't want to rely too many Audio API function.)
