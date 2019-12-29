@@ -13,12 +13,12 @@
 svg {
   width: 3em;
   height: auto;
-  margin: 0 15px;
+  margin: 0 0.5em;
   fill: $grey;
   transition: 250ms;
   transition-timing-function: ease-in-out;
 }
 
 svg:hover {
-    fill: $darkGrey;
+  fill: $darkGrey;
 }
