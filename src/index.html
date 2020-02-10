@@ -24,27 +24,29 @@
   body {
     font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	  font-size: 1.6em;
-	  
 	  line-height: 1.6;
     background-color: black;
     margin: 0;
     display: flex;
     align-content: center;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  @media screen and (max-width:1024px) {
-    body { font-size: 1em; } /* 14px font */
   }
   .container {
     position: relative;
   }
   video#bgvid {
     height: 100vh;
+    width: auto;
+  }
+  @media screen and (max-width: 1071px) { 
+    video#bgvid {
+      height: auto;
+      width: 100vw;
+    } 
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
   </style>
   <div class="container">

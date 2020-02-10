@@ -9,6 +9,12 @@
     color: $lightGrey;
     text-align: center;
 }
+@media screen and (max-width: 576px) {
+    .player {
+        position: fixed;
+        top: 55%;  
+    } 
+}
 
 .marquee {
     margin: 0 auto;

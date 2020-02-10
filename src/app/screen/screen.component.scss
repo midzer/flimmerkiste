@@ -12,6 +12,12 @@
     background-color: black;
     overflow-y: auto;
     cursor: pointer;
+    padding: 1em;
+}
+@media screen and (max-width: 1071px) {
+    .screen {
+        height: auto;
+    } 
 }
 
 .menu {
@@ -26,9 +32,4 @@
 
 .content {
     text-align: initial;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }

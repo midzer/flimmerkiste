@@ -4,6 +4,12 @@ img {
       left: 0;
       height: 100vh;
 }
+@media screen and (max-width: 1071px) {
+      img {
+          height: auto;
+          width: 100vw;
+      } 
+}
 
 a.left {
       position: absolute;
