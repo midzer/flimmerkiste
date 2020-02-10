@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>midzers Flimmerkiste</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Retro Blog von midzer mit DJ Sets verschiedener Genre, einfachen Rezepten, Philosophisches aus dem Alltag und gewürzten Zitaten">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="/assets/js/jsSID.min.js"></script>
@@ -24,39 +24,35 @@
   body {
     font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	  font-size: 1.6em;
-	  font-weight: 300;
-	  letter-spacing: .01em;
+	  
 	  line-height: 1.6;
     background-color: black;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   @media screen and (max-width:1024px) {
     body { font-size: 1em; } /* 14px font */
   }
-  .outer-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-  }
-  .inner-container {
-    display: inline-block;
+  .container {
     position: relative;
   }
   video#bgvid {
     height: 100vh;
-    object-fit: cover;
   }
   </style>
-  <div class="outer-container">
-    <div class="inner-container">
-      <video id="bgvid" muted playsinline>
-        <source src="assets/videos/intro.webm" type="video/webm">
-        <source src="assets/videos/intro.mp4" type="video/mp4">
-      </video>
-      <app-root>Loading...</app-root>
-    </div>
+  <div class="container">
+    <video id="bgvid" muted playsinline>
+      <source src="assets/videos/intro.webm" type="video/webm">
+      <source src="assets/videos/intro.mp4" type="video/mp4">
+    </video>
+    <app-root>Loading...</app-root>
   </div>
   <script defer src="/assets/js/main.js"></script>
 </body>

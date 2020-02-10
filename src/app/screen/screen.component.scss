@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     width: 75.1%;
-    height: 71.7%;
+    height: 72.1%;
     color: $lightGrey;
     background-color: black;
     overflow-y: auto;
@@ -26,4 +26,9 @@
 
 .content {
     text-align: initial;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
