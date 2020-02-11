@@ -1,0 +1,7 @@
+{
+    "name": "Midzers Flimmerkiste",
+    "short_name": "Flimmerkiste",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
