@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class Mp3filePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return 'assets/audio/' + value + '.mp3';
+    return 'https://audio.midzer.de/' + value + '.mp3';
   }
 
 }
