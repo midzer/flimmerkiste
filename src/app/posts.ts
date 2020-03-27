@@ -97,7 +97,7 @@ export var POSTS: Post[] = [
         category: 'DJ Sets'
     },
     {
-        name: 'Crème bavaroise',
+        name: 'Creme bavaroise',
         date: '2016/04/23',
         category: 'DJ Sets'
     },
