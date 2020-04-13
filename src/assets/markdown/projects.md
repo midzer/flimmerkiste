@@ -9,3 +9,5 @@ Ich bastle sehr gerne an Webseiten. Dabei entstehen sowohl kommerzielle, als auc
 * [KabeSalod](https://kabesalod.de/) - Zocken mit Augustiner
 
 * [Lokal Ninja](https://lokal.ninja/) - Lokale Geschäfte mühelos finden
+
+* [Pfiff' ausm Ampergai](https://ampergai.de/) - Blog auf boarisch mid kurze Gschichtn ausm Lem
