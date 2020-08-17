@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("bgvid").play();
-  });
-  document.getElementById("bgvid").onended = function() {
-    var screen = document.getElementById("screen");
-    screen.style.cursor = "auto";
-    screen.style.webkitAnimationPlayState = "running";
-};
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.getElementById('bgvid');
+  video.onended = function() {
+    var screen = document.getElementById('screen');
+    screen.style.cursor = 'auto';
+    screen.style.webkitAnimationPlayState = 'running';
+  };
+  video.play();
+  document.querySelector('app-root').style.display = 'block';
+});
