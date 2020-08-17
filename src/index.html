@@ -13,49 +13,49 @@
   <meta name="theme-color" content="#ffffff">
   <script src="/assets/js/jsSID.min.js"></script>
   <script src="/assets/js/objectFitPolyfill.min.js"></script>
+  <style>
+    *,
+    *:after,
+    *:before {
+      box-sizing: inherit;
+    }
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+    body {
+      font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+      font-size: 1.6em;
+      line-height: 1.6;
+      background-color: black;
+      margin: 0;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+    .container {
+      position: relative;
+    }
+    #bgvid {
+      height: 100vh;
+      width: auto;
+    }
+    @media screen and (max-width: 1071px) { 
+      #bgvid {
+        height: auto;
+        width: 100vw;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    app-root {
+      display: none;
+    }
+    </style>
 </head>
 <body>
-  <style>
-  *,
-  *:after,
-  *:before {
-	  box-sizing: inherit;
-  }
-  html {
-	  box-sizing: border-box;
-	  font-size: 62.5%;
-  }
-  body {
-    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-	  font-size: 1.6em;
-	  line-height: 1.6;
-    background-color: black;
-    margin: 0;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-  .container {
-    position: relative;
-  }
-  #bgvid {
-    height: 100vh;
-    width: auto;
-  }
-  @media screen and (max-width: 1071px) { 
-    #bgvid {
-      height: auto;
-      width: 100vw;
-    }
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  app-root {
-    display: none;
-  }
-  </style>
   <div class="container">
     <video id="bgvid" muted playsinline>
       <source src="https://video.midzer.de/intro.webm" type="video/webm">
