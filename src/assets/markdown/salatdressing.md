@@ -1,14 +1,14 @@
 # Salatdressing
 
-* 8 EL Branntwein- oder Apfelessig
+* 8 EL weißer Balsamico
 * 16 EL Olivenöl
-* 1 EL Balsamico
+* 1 EL schwarzer Balsamico Crema
 * Senf
 * Honig oder Zucker
 * Pfeffer, Salz
 * ggf. Chiliflocken
 
-Den Essig, Öl und Balsamico in eine Rührschüssel geben.
+Den weißen Balsamico, Öl und Crema in eine Rührschüssel geben.
 
 Dann etwas mittelscharfen Senf dazugeben. Nicht zu viel, sonst wird das Dressing sehr scharf. Mit Honig oder Zucker süßen. Zum Würzen Pfeffer und Salz verwenden, gerne ein paar Chiliflocken dazugeben.
 
