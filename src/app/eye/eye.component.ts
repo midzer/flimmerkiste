@@ -14,7 +14,7 @@ export class EyeComponent implements OnInit {
   transparent: string = 'transparent.png';
   minDelay: number = 15000;
   maxDelay: number = 42000;
-  duration: number = 500;
+  duration: number = 1000;
   source: string;
 
   constructor(@Inject(APP_CONFIG) config: AppConfig) {
