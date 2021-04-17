@@ -16,6 +16,8 @@ import { Blank2dashPipe } from './blank2dash.pipe';
 import { APP_CONFIG, APP_DI_CONFIG } from "./app-config";
 import { ContentComponent } from './content/content.component';
 import { Mp3filePipe } from './mp3file.pipe';
+import { Mp4filePipe } from './mp4file.pipe';
+import { WebmfilePipe } from './webmfile.pipe';
 
 const routes: Routes = [
   { path: '', component: OverviewComponent },
@@ -32,7 +34,9 @@ const routes: Routes = [
     OverviewComponent,
     Blank2dashPipe,
     ContentComponent,
-    Mp3filePipe
+    Mp3filePipe,
+    Mp4filePipe,
+    WebmfilePipe
   ],
   imports: [
     BrowserModule,

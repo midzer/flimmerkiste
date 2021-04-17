@@ -14,6 +14,7 @@ export class ContentComponent implements OnInit {
   name: string;
   posts = POSTS;
   hasAudio: boolean = false;
+  hasVideo: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +30,11 @@ export class ContentComponent implements OnInit {
         if ((this.posts[i].category == 'DJ Sets' || this.posts[i].category == 'Audio')
             && this.posts[i].name.toLowerCase() == name) {
           this.hasAudio = true;
+          break;
+        }
+        if (this.posts[i].category == 'Video'
+            && this.posts[i].name.toLowerCase() == name) {
+          this.hasVideo = true;
           break;
         }
       }
