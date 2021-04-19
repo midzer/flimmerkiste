@@ -4,6 +4,8 @@ audio {
   width: 50%;
 }
 
-video {
-  width: 100%;
+@media screen and (max-width: 576px) {
+  video {
+    width: 100%;
+  } 
 }
