@@ -6,25 +6,38 @@ img {
 }
 @media screen and (max-width: 1071px) {
       img {
-          height: auto;
-          width: 100vw;
-      } 
+            position: fixed;
+            width: 100vw;
+            height: auto;
+      }
 }
 
-a.left {
+a {
       position: absolute;
-      top: 86.94%;
-      left: 76.82%;
-      width: 9.03%;
-      height: 7.5%;
       cursor: pointer;
-}
 
-a.right {
-      position: absolute;
-      top: 87.5%;
-      left: 91.23%;
-      width: 8.16%;
-      height: 7.08%;
-      cursor: pointer;
+      &.left {
+            top: 86.94%;
+            left: 76.82%;
+            width: 9.03%;
+            height: 7.5%;
+      }
+
+      &.right {
+            top: 87.5%;
+            left: 91.23%;
+            width: 8.16%;
+            height: 7.08%;
+      }
+}
+@media screen and (max-width: 1071px) {
+      a {
+            &.left {
+                  top: 28.94%;
+            }
+
+            &.right {
+                  top: 29.5%;
+            }
+      }
 }
