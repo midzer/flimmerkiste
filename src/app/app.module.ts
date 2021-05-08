@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NgxMdModule } from 'ngx-md';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
@@ -43,7 +43,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    NgxMdModule.forRoot()
+    MarkdownModule.forRoot()
   ],
   providers: [
     {
