@@ -6,5 +6,5 @@ document.addEventListener('DOMContentLoaded', function() {
     screen.style.webkitAnimationPlayState = 'running';
   };
   video.play();
-  document.querySelector('app-root').style.display = 'block';
+  document.querySelector('app-root').style.display = 'initial';
 });
