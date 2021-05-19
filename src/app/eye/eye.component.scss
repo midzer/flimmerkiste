@@ -3,12 +3,14 @@ img {
       top: 0;
       left: 0;
       height: 100vh;
+      margin-left: -1px;
 }
 @media screen and (max-width: 1071px) {
       img {
             position: fixed;
             width: 100vw;
             height: auto;
+            margin-left: 0;
       }
 }
 
