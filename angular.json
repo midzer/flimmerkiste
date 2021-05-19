@@ -27,7 +27,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jsSID.js"
+            ]
           },
           "configurations": {
             "production": {
