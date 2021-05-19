@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('bgvid');
   video.onended = function() {
-    var screen = document.getElementById('screen');
+    const screen = document.getElementById('screen');
     screen.style.cursor = 'auto';
     screen.style.webkitAnimationPlayState = 'running';
   };
