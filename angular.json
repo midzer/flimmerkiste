@@ -22,7 +22,9 @@
               "src/assets",
               "src/favicon.ico",
               "src/apple-touch-icon.png",
-              "src/site.webmanifest"
+              "src/site.webmanifest",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": [
               "src/styles.scss"

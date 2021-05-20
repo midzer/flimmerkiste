@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://midzer.de/</loc>
+  </url>
+  
+  <url>
+    <loc>https://midzer.de/about</loc>
+  </url>
+  
+  <url>
+    <loc>https://midzer.de/projects</loc>
+  </url>
+  
+  <url>
+    <loc>https://midzer.de/links</loc>
+  </url>
+  
+  <url>
+    <loc>https://midzer.de/contact</loc>
+  </url>
+  
+</urlset>
