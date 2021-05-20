@@ -1,7 +1,7 @@
 <ul class="posts">
   <li *ngFor="let post of posts">
     <div class="post">
-      <span class="date">{{post.date}}</span>
+      <div class="date">{{post.date}}</div>
       <a [routerLink]="[post.name | lowercase | blank2dash]">{{post.name}}</a>
       <span class="badge">{{post.category}}</span>
     </div>
