@@ -23,11 +23,12 @@
 .menu {
     display: inline-block;
     list-style-type: none;
+    padding-left: 0;
 }
 
 .menu > li {
     float: left;
-    padding: 0 1em;
+    margin: 1rem;
 }
 
 .content {
