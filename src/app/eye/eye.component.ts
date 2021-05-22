@@ -8,13 +8,6 @@ import { APP_CONFIG, AppConfig } from '../app-config'
 })
 export class EyeComponent implements OnInit {
   imgPath: string;
-  leftEye: string = 'left-eye.png';
-  rightEye: string = 'right-eye.png';
-  bothEyes: string = 'both-eyes.png';
-  transparent: string = 'transparent.png';
-  minDelay: number = 23000;
-  maxDelay: number = 42000;
-  duration: number = 1000;
   source: string;
 
   constructor(@Inject(APP_CONFIG) config: AppConfig) {
@@ -23,31 +16,37 @@ export class EyeComponent implements OnInit {
    }
 
   ngOnInit() {
-    setTimeout(this.loop, this.minDelay);
+    this.loop();
   }
 
-  loop= () => {
-    switch (Math.floor((Math.random() * 3)))
+  blink = (): void => {
+    let eye: string;
+    switch (Math.floor(Math.random() * 3))
     {
       case 0:
-      this.blink(this.leftEye);
-      break;
+        eye = 'left';
+        break;
       case 1:
-      this.blink(this.rightEye);
-      break;
+        eye = 'right';
+        break;
       case 2:
-      this.blink(this.bothEyes);
-      break;
+        eye = 'both';
+        break;
     }
-    setTimeout(this.loop, Math.floor((Math.random() * this.maxDelay) + this.minDelay));
+    this.setEye(eye);
+    this.loop();
   }
 
-  blink(eye: string): void {
-    this.source = this.imgPath + eye;
-    setTimeout(this.clear, this.duration);
+  setEye = (eye: string): void => {
+    this.source = this.imgPath + eye + '-eye.png';
+    setTimeout(this.clear, 1000);
   }
 
-  clear= () => {
-    this.source = this.imgPath + this.transparent;
+  clear = (): void => {
+    this.source = this.imgPath + 'transparent.png';
+  }
+
+  loop = (): void => {
+    setTimeout(this.blink, Math.floor(Math.random() * 42000 + 23000));
   }
 }
