@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   video.onended = function() {
     const screen = document.getElementById('screen');
     screen.style.cursor = 'auto';
-    screen.style.webkitAnimationPlayState = 'running';
+    screen.style.animationPlayState = 'running';
   };
   video.play();
   document.querySelector('app-root').style.display = 'initial';
