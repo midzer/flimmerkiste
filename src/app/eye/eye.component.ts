@@ -12,7 +12,7 @@ export class EyeComponent implements OnInit {
   rightEye: string = 'right-eye.png';
   bothEyes: string = 'both-eyes.png';
   transparent: string = 'transparent.png';
-  minDelay: number = 15000;
+  minDelay: number = 23000;
   maxDelay: number = 42000;
   duration: number = 1000;
   source: string;
