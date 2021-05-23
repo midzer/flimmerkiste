@@ -39,7 +39,7 @@ export class EyeComponent implements OnInit {
 
   setEye = (eye: string): void => {
     this.source = this.imgPath + eye + '.png';
-    setTimeout(this.clear, 2500);
+    setTimeout(this.clear, 5000);
   }
 
   clear = (): void => {
