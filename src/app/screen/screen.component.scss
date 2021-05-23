@@ -12,7 +12,6 @@
     background-color: black;
     overflow-y: auto;
     cursor: pointer;
-    padding: 0.5em;
 }
 @media screen and (max-width: 1071px) {
     .screen {
@@ -32,5 +31,6 @@
 }
 
 .content {
+    padding: 0.5rem;
     text-align: initial;
 }
