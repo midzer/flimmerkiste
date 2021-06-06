@@ -7,20 +7,20 @@
 
 .post {
   margin-top: 1rem;
-}
 
-.post .date {
-  font-size: 0.8em;
-}
+  > .date {
+    font-size: 0.8em;
+  }
 
-.post .badge {
-  display: inline-block;
-  font-size: 0.8em;
-  color: $lightBlue;
-  padding: 0.25em 0.5em;
-  background-color: $darkBlue;
-  border-radius: 4px;
-  margin-left: 0.75em;
+  > .badge {
+    display: inline-block;
+    font-size: 0.8em;
+    color: $lightBlue;
+    padding: 0.25em 0.5em;
+    background-color: $darkBlue;
+    border-radius: 4px;
+    margin-left: 0.75em;
+  }
 }
 
 li a {

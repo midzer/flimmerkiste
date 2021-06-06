@@ -5,6 +5,7 @@ img {
       height: 100vh;
       margin-left: -1px;
 }
+
 @media screen and (max-width: 1071px) {
       img {
             position: fixed;
@@ -17,29 +18,26 @@ img {
 a {
       position: absolute;
       cursor: pointer;
-
-      &.left {
-            top: 86.94%;
-            left: 76.82%;
-            width: 9.03%;
-            height: 7.5%;
-      }
-
-      &.right {
-            top: 87.5%;
-            left: 91.23%;
-            width: 8.16%;
-            height: 7.08%;
-      }
 }
-@media screen and (max-width: 1071px) {
-      a {
-            &.left {
-                  top: 28.94%;
-            }
 
-            &.right {
-                  top: 29.5%;
-            }
+.left {
+      left: 76%;
+}
+
+.right {
+      left: 90%;
+}
+
+.left,
+.right {
+      top: 86%;
+      width: 10%;
+      height: 10%;
+}
+
+@media screen and (max-width: 1071px) {
+      .left,
+      .right {
+            top: 27%;
       }
 }
