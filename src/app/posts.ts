@@ -27,7 +27,7 @@ export var POSTS: Post[] = [
         category: 'Video'
     },
     {
-        name: 'BSD freakout',
+        name: 'BSD Freakout',
         date: '2021/04/17',
         category: 'Video'
     },
