@@ -3,20 +3,19 @@
 
 .social {
     @extend .centerAll;
-    position: fixed;
-    top: 75%;
-    display: flex;
-    flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .social {
     position: absolute;
     top: 31.25%;
     left: 77.69%;
     width: 20.31%;
     height: 16.11%;
-    flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  .social {
+    position: fixed;
+    top: 75%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
