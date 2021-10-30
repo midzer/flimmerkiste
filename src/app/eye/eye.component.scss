@@ -2,17 +2,8 @@ img {
       position: absolute;
       top: 0;
       left: 0;
-      height: 100vh;
-      margin-left: -1px;
-}
-
-@media screen and (max-width: 1071px) {
-      img {
-            position: fixed;
-            width: 100vw;
-            height: auto;
-            margin-left: 0;
-      }
+      width: 100%;
+      max-height: 100vh;
 }
 
 a {
@@ -30,14 +21,14 @@ a {
 
 .left,
 .right {
-      top: 86%;
+      top: 27%;
       width: 10%;
       height: 10%;
 }
 
-@media screen and (max-width: 1071px) {
+@media screen and (min-width: 576px) {
       .left,
       .right {
-            top: 27%;
+            top: 86%;
       }
 }

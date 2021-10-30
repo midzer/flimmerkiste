@@ -7,15 +7,15 @@
     top: 0;
     left: 0;
     width: 75.1%;
-    height: 72.1%;
+    height: 100vh;
     color: $lightGrey;
     background-color: black;
     overflow-y: auto;
     cursor: pointer;
 }
-@media screen and (max-width: 1071px) {
+@media screen and (min-width: 768px) {
     .screen {
-        height: auto;
+        height: 72.1%;
     } 
 }
 
