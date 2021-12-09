@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export var POSTS: Post[] = [
     {
+        name: 'How to skip loading polyfills in modern browsers',
+        date: '2021/12/09',
+        category: 'Tutorials'
+    },
+    {
         name: '90s Boiler Room',
         date: '2021/11/20',
         category: 'Video'
