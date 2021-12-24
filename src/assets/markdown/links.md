@@ -8,19 +8,19 @@
 
 ## Friends
 
-[muesli](https://fribbledom.com/)
-
 [gamambel](https://headstrong.de/)
 
 [jarwski](https://jarwski.com/)
 
-## Hackerspaces
+[muesli](https://fribbledom.com/)
 
-[OpenLab Augsburg](https://openlab-augsburg.de/)
+## Hackerspaces
 
 [muCCC](https://muc.ccc.de/)
 
-## Me @
+[OpenLab Augsburg](https://openlab-augsburg.de/)
+
+## /me @
 
 [chaos.social](https://chaos.social/@midzer)
 
