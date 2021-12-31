@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export var POSTS: Post[] = [
     {
+        name: 'Guads Neis',
+        date: '2022/01/01',
+        category: 'Video'
+    },
+    {
         name: '2 accessible ways to obfuscate an email address in HTML without JavaScript',
         date: '2021/12/17',
         category: 'Tutorials'
