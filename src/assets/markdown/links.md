@@ -24,10 +24,6 @@
 
 ## /me @
 
-[chaos.social](https://chaos.social/@midzer)
-
 [GitHub](https://github.com/midzer)
 
-[SoundCloud](https://soundcloud.com/tinkelow)
-
-[Twitter](https://twitter.com/midzer)
+[Mastodon](https://chaos.social/@midzer)
