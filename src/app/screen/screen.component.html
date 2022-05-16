@@ -1,11 +1,10 @@
 <div id="screen" class="screen" [style.cursor]="cursor" [style.animation-play-state]="state" (click)="show()">
   <header>
-    <img src="/assets/images/title.png" width="543" height="84" alt="Logo midzers Flimmerkiste">
+    <a [routerLink]="['']" routerLinkActive="active">
+      <img src="/assets/images/title.png" width="543" height="84" alt="Logo midzers Flimmerkiste">
+    </a>
     <nav>
       <ul class="menu">
-        <li>
-          <a [routerLink]="['']" routerLinkActive="active">home</a>
-        </li>
         <li *ngFor="let menuitem of menu">
           <a [routerLink]="[menuitem.name]" routerLinkActive="active">{{menuitem.name}}</a>
         </li>
