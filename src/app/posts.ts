@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export var POSTS: Post[] = [
     {
+        name: 'A minimal approach for automatic, manual and persistent dark mode in websites',
+        date: '2022/05/27',
+        category: 'Tutorials'
+    },
+    {
         name: 'Mondgarten',
         date: '2022/05/25',
         category: 'Audio'
