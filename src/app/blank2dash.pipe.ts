@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class Blank2dashPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return value.split(' ').join('-');
+    return value.split(' ').join('-').replace(',', '');
   }
 
 }
