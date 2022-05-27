@@ -1,16 +1,17 @@
-# A minimal approach for automatic, manual and persistent dark mode in websites
+# A minimal approach to automatic, manual and persistent dark mode for websites
 
-Since the day mobil OS let the user choose their default theme, dark mode functionality in websites is getting more and more popular. There are many ways to implement it:
+Since the day mobil OS started to let the user choose their default theme. Dark mode functionality for websites is getting more and more popular. There are many ways to implement it:
 
-* automatic: just via CSS, even with JS disabled
-* manually: overriding users default color via a button
-* persistent: let's remember it for next visit
+* automatic: just via CSS. Even with JS disabled
+* manually: overriding users default color using a button
+* persistent: remembers it for next visit
 
-Many code examples I found on the net just accomplish two out of those three points. I am going to present a clean, minimal way to achieve all three features at once.
+
+Many code examples I found on the net just accomplish two out of the three. I am going to present a clean and minimal way to achieve all three features at once.
 
 ## CSS
 
-Put this in `<head>` of your document:
+Put this in `<head>` section of your document:
 
 ```
 <style>
@@ -36,11 +37,11 @@ body {
 </style>
 ```
 
-Yeah, I use CSS Variables since IE11 is a no-brainer in 2022 anyway. And you will realize Code is not DRY, because of the repeated dark color information. Miserably, this is necessary though.
+Yes, using CSS Variables since IE11 should be a no-brainer in 2022 anyway. And you will realize Code is not DRY, because of the repeated dark color information. While this is miserably, it is necessary.
 
 ## JS
 
-Because we want no flashing background if color changes on page load, inline this code snippet right before `<body>`:
+Because we want no flashing background if color changes on page load, inlining this code snippet right before `<body>` is the way to go:
 
 ```
 <script>
@@ -84,6 +85,6 @@ document.querySelector('button').onclick = function() {
 </script>
 ```
 
-Well, here's the `onclick` handler for our `<button>`. It inverts current mode, toggles it and saves it in `localStorage`.
+Well, thats the `onclick` handler for our `<button>`. It inverts the current mode, toggles it and saves it in localStorage.
 
-Happy dark mode implementing! :)
+Welcome to the Dark Side. Happy implementing! :)
