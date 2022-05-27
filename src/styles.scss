@@ -29,3 +29,13 @@ markdown a:after {
 markdown a:hover:after, markdown a:focus:after {
     width: 100%;
 }
+
+pre {
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    overflow: auto;
+    color: #fff;
+    background-color: #2b2b2b;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
