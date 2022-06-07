@@ -1,4 +1,4 @@
-# HowTo optimize websites for performance
+# How to optimize websites for performance
 
 ![Header Loading](assets/images/loading.png)
 
