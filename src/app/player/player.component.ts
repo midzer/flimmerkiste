@@ -10,7 +10,7 @@ declare var jsSID: any;
 })
 export class PlayerComponent implements OnInit {
   sidPlayer: any;
-  subTune: number = 1;
+  subTune: number = 0;
   subTunes: number = 13;
   author: string;
   title: string;
@@ -33,17 +33,23 @@ export class PlayerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sidPlayer = new jsSID(16384,0.0005);
-    this.sidPlayer.setloadcallback(this.initTune);
-    this.sidPlayer.setstartcallback(this.showPlaytime);
-    this.sidPlayer.loadinit('assets/sids/Last_Ninja_2.sid', this.subTune);
-    setInterval(this.showPlaytime, 1000);
     this.setButton(this.playVideo);
     this.video = document.getElementById('bgvid') as HTMLVideoElement;
     this.screen = document.getElementById('screen');
   }
 
+  setup(): void {
+    if (!this.sidPlayer) {
+      this.sidPlayer = new jsSID(16384,0.0005);
+      this.sidPlayer.setloadcallback(this.initTune);
+      this.sidPlayer.setstartcallback(this.showPlaytime);
+      this.sidPlayer.loadinit('assets/sids/Last_Ninja_2.sid', this.subTune);
+      setInterval(this.showPlaytime, 1000);
+    }
+  }
+
   play(): void {
+    this.setup();
     if (this.playing) {
       this.sidPlayer.pause();
       this.playing = false;
@@ -57,6 +63,7 @@ export class PlayerComponent implements OnInit {
   }
 
   next(): void {
+    this.setup();
     if (this.subTune === this.sidPlayer.getsubtunes() - 1) {
       this.subTune = 0;
     }
@@ -67,6 +74,7 @@ export class PlayerComponent implements OnInit {
   }
 
   prev(): void {
+    this.setup();
     if (this.subTune === 0) {
       this.subTune = this.sidPlayer.getsubtunes() - 1;
     }
@@ -81,7 +89,6 @@ export class PlayerComponent implements OnInit {
       this.video.pause();
       this.screen.classList.add('fadeIn');
       this.screen.classList.remove('fadeOut');
-      
       this.setButton(this.playVideo);
       this.videoPlaying = false;
       
