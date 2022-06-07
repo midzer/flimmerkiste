@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export var POSTS: Post[] = [
     {
+        name: 'How content-visibility vastly improved page rendering time for Shoogle',
+        date: '2022/06/07',
+        category: 'Tutorials'
+    },
+    {
         name: 'A minimal approach to automatic, manual and persistent dark mode for websites',
         date: '2022/05/27',
         category: 'Tutorials'
@@ -87,7 +92,7 @@ export var POSTS: Post[] = [
         category: 'DJ Sets'
     },
     {
-        name: 'HowTo optimize websites for performance',
+        name: 'How to optimize websites for performance',
         date: '2018/04/19',
         category: 'Tutorials'
     },
