@@ -1,6 +1,6 @@
 # How to optimize websites for performance
 
-![Header Loading](assets/images/loading.png)
+![Header Loading](assets/images/loading.webp)
 
 Mobile bandwidth is limited in many places. Sites may take ages to load on 3G. I’m going to explain ways to vastly improve performance.
 
