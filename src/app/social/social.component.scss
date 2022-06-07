@@ -18,16 +18,3 @@
     flex-direction: column;
   }
 }
-
-svg {
-  width: 2rem;
-  height: auto;
-  margin: 0.5em;
-  fill: $grey;
-  transition: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
-svg:hover {
-  fill: $darkGrey;
-}

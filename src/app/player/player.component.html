@@ -1,9 +1,14 @@
 <div class="player">
-  {{subTune + 1}} / {{subTunes}} - {{playTime}}
   <div class="marquee">
     <span>{{author}} - {{title}}</span>
   </div>
-  <button (click)="play()">{{playButton}}</button>
-  <button (click)="next()">+</button>
-  <button (click)="prev()">-</button>
+  <div>
+    {{subTune + 1}}/{{subTunes}} - {{playTime}}
+    <button (click)="play()">{{playButton}}</button>
+    <button (click)="next()">+</button>
+    <button (click)="prev()">-</button>
+  </div>
+  <div (click)="toggle()">
+    <img class="svg" [src]="videoButton" alt="Video abspielen">
+  </div>
 </div><!-- player -->

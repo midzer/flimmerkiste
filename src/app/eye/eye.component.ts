@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { APP_CONFIG, AppConfig } from '../app-config'
+import { APP_CONFIG, AppConfig } from '../app-config';
 
 @Component({
   selector: 'app-eye',

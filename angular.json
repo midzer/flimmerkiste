@@ -20,6 +20,7 @@
             "assets": [
               "src/_redirects",
               "src/assets",
+              "src/video",
               "src/favicon.ico",
               "src/apple-touch-icon.png",
               "src/site.webmanifest",

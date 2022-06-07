@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { MENU } from '../menu'
 
@@ -8,18 +8,8 @@ import { MENU } from '../menu'
   styleUrls: ['./screen.component.scss']
 })
 
-export class ScreenComponent implements OnInit {
+export class ScreenComponent {
   menu = MENU;
   cursor: string;
   state: string;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  show(): void {
-    this.cursor = 'auto';
-    this.state = 'running';
-  }
 }

@@ -2,7 +2,6 @@
 @import '../../variables.scss';
 
 .screen {
-    @extend .fadeIn;
     position: absolute;
     top: 0;
     left: 0;
@@ -11,7 +10,6 @@
     color: $lightGrey;
     background-color: black;
     overflow-y: auto;
-    cursor: pointer;
 }
 @media screen and (min-width: 768px) {
     .screen {

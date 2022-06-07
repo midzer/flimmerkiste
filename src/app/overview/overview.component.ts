@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { POSTS } from '../posts'
 
@@ -7,12 +7,6 @@ import { POSTS } from '../posts'
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
-export class OverviewComponent implements OnInit {
+export class OverviewComponent {
   posts = POSTS;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
