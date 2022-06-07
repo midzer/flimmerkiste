@@ -43,4 +43,7 @@ testem.log
 Thumbs.db
 
 # Audio
-src/assets/audio/
+src/audio/
+
+# Video
+src/video/
