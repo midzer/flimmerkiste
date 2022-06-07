@@ -18,6 +18,7 @@ import { ContentComponent } from './content/content.component';
 import { Mp3filePipe } from './mp3file.pipe';
 import { Mp4filePipe } from './mp4file.pipe';
 import { WebmfilePipe } from './webmfile.pipe';
+import { SanitizedUrlPipe } from './sanitized-url.pipe';
 
 const routes: Routes = [
   { path: '', component: OverviewComponent },
@@ -36,7 +37,8 @@ const routes: Routes = [
     ContentComponent,
     Mp3filePipe,
     Mp4filePipe,
-    WebmfilePipe
+    WebmfilePipe,
+    SanitizedUrlPipe
   ],
   imports: [
     BrowserModule,

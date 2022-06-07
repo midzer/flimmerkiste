@@ -43,7 +43,7 @@ export class EyeComponent implements OnInit {
   }
 
   clear = (): void => {
-    this.source = this.imgPath + 'transparent.webp';
+    this.source = 'data:,';
   }
 
   loop = (): void => {
