@@ -6,6 +6,11 @@ img {
       max-height: 100vh;
 }
 
+// Fix for Safari
+img[src="data:,"] {
+      display: none;
+}
+
 div {
       position: absolute;
       cursor: pointer;
