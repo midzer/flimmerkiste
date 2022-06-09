@@ -8,7 +8,7 @@ In Chrom* Dev Tools under `Performance` you can test your page load performance.
 
 ## CSS to the rescue
 
-In former times we used alot of JavaScript for different things. Today, there are other techniques like `loading="lazy"` available which are built right in the browser. No need to write extra code, time to make the shit lightweight! This has several benefits as outlined already in [another post on this website](https://midzer.de/how-to-optimize-websites-for-performance).
+In former times we used alot of JavaScript for different things. Today, there are other techniques like `loading="lazy"` available which are built right in the browser. No need to write extra code, time to make the shit lightweight! This has several benefits as outlined already in [another post on this website](/how-to-optimize-websites-for-performance).
 
 So what does `content-visibility`? Basically, you can hide a specific sub-tree with it, but in contrast to `display: none` it still remains in the DOM. So any future showing of the content inside will be much faster. Awesome, let's try it!
 
