@@ -17,7 +17,6 @@
     color: $lightBlue;
     background-color: $darkBlue;
     margin-left: 0.75em;
-    letter-spacing: 1px;
     padding: 0.35em 0.65em;
     font-size: 0.75em;
     font-weight: 700;
@@ -26,6 +25,8 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.375rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }
 
