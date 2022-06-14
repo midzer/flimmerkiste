@@ -55,7 +55,12 @@
     </video>
     <app-root>Loading...</app-root>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Fix horizontal app shifting
+      document.querySelector('.container').style.display = 'block';
+    });
+  </script>
   <noscript>Sorry, this page needs JavaScript :(</noscript>
-  <script defer src="/assets/js/main.js"></script>
 </body>
 </html>
