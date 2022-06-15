@@ -1,13 +1,12 @@
-@import '../../helper.scss';
-@import '../../variables.scss';
-
 .social {
-    @extend .centerAll;
-    position: absolute;
-    top: 31.25%;
-    left: 77.69%;
-    width: 20.31%;
-    height: 16.11%;
+  position: absolute;
+  top: 31.25%;
+  left: 77.69%;
+  width: 20.31%;
+  height: 16.11%;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 @media screen and (max-width: 767px) {
