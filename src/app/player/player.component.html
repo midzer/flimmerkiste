@@ -8,5 +8,5 @@
     <button (click)="next()">+</button>
     <button (click)="prev()">-</button>
   </div>
-  <img (click)="toggle()" class="svg mt-1" [src]="videoButton" width="32" height="32" alt="Video abspielen">
+  <img (click)="toggle()" class="svg mt-1" [src]="videoButton | sanitizedUrl" width="32" height="32" alt="Video abspielen">
 </div><!-- player -->
