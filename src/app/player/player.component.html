@@ -1,12 +1,12 @@
 <div class="player">
-  <div class="marquee">
+  <div class="marquee hidden">
     <span>{{author}} - {{title}}</span>
   </div>
-  <div>
-    {{subTune + 1}}/{{subTunes}} - {{playTime}}
+  <div>{{subTune + 1}}/{{subTunes}} - {{playTime}}</div>
+  <div class="buttons">
     <button (click)="play()">{{playButton}}</button>
     <button (click)="next()">+</button>
     <button (click)="prev()">-</button>
+    <img (click)="toggle()" [src]="videoButton | sanitizedUrl" width="32" height="32" alt="Video abspielen">
   </div>
-  <img (click)="toggle()" class="svg mt-1" [src]="videoButton | sanitizedUrl" width="32" height="32" alt="Video abspielen">
 </div><!-- player -->

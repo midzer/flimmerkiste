@@ -63,22 +63,3 @@ pre {
     from { opacity: 1}
     to   { opacity: 0}
 }
-
-.svg,
-svg {
-    width: 2rem;
-    height: auto;
-    margin: 0.5em;
-    fill: $grey;
-    transition: 0.3s;
-    transition-timing-function: ease-in-out;
-}
-
-.svg:hover,
-svg:hover {
-    fill: $darkGrey;
-}
-
-.mt-1 {
-    margin-top: 1rem;
-}

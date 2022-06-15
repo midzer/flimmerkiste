@@ -41,6 +41,7 @@ export class PlayerComponent implements OnInit {
       this.sidPlayer.setstartcallback(this.showPlaytime);
       this.sidPlayer.loadinit('assets/sids/Last_Ninja_2.sid', this.subTune);
       setInterval(this.showPlaytime, 1000);
+      document.querySelector('.marquee').classList.remove('hidden');
     }
   }
 

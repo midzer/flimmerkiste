@@ -38,3 +38,28 @@
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+}
+
+@media screen and (min-width: 576px) {
+    .buttons {
+        flex-direction: row;
+        align-items: start;
+    }
+}
+
+button {
+    width: 32px;
+    height: 32px;
+}
