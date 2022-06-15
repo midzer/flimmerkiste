@@ -56,18 +56,19 @@
   <script>
     function setContainerVisible (loaded) {
       if (loaded) {
-        document.querySelector('.container').style.visibility = 'visible';
+        container.style.visibility = 'visible';
       }
     }
+    const container = document.querySelector('.container');
     let domloaded, videoloaded;
-    document.getElementById('bgvid').addEventListener('canplay', function() {
+    document.getElementById('bgvid').addEventListener('loadeddata', function() {
       videoloaded = true;
       setContainerVisible(domloaded);
-    });
+    }, { once: true });
     document.addEventListener('DOMContentLoaded', function() {
       domloaded = true;
       setContainerVisible(videoloaded);
-    });
+    }, { once: true });
   </script>
   <noscript>Sorry, this page needs JavaScript :(</noscript>
 </body>
