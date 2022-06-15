@@ -21,14 +21,15 @@
     body {
       font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
       line-height: 1.6;
-      background-color: black;
-      color: white;
+      background-color: #000;
       margin: 0;
       display: flex;
       justify-content: center;
+      max-height: 100vh;
+      overflow-y: hidden;
     }
     .container {
-      display: none;
+      visibility: hidden;
     }
     @media screen and (min-width: 576px) {
       .container {
@@ -58,7 +59,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Fix horizontal app shifting
-      document.querySelector('.container').style.display = 'block';
+      document.querySelector('.container').style.visibility = 'visible';
     });
   </script>
   <noscript>Sorry, this page needs JavaScript :(</noscript>
