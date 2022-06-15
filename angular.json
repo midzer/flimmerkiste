@@ -21,8 +21,6 @@
               "src/_redirects",
               "src/assets",
               "src/video",
-              "src/favicon.ico",
-              "src/apple-touch-icon.png",
               "src/site.webmanifest",
               "src/robots.txt",
               "src/sitemap.xml"
@@ -88,8 +86,7 @@
               "src/styles.scss"
             ],
             "assets": [
-              "src/assets",
-              "src/favicon.ico"
+              "src/assets"
             ]
           }
         }
