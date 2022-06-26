@@ -6,7 +6,10 @@
     <nav>
       <ul class="menu">
         <li *ngFor="let menuitem of menu">
-          <a [routerLink]="[menuitem.name]" routerLinkActive="active">{{menuitem.name}}</a>
+          <a [routerLink]="[menuitem.name]">{{menuitem.name}}</a>
+        </li>
+        <li>
+          <a href="https://archiv.midzer.de">archiv</a>
         </li>
       </ul>
     </nav>
