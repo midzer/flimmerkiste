@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export var POSTS: Post[] = [
     {
+        name: 'Die Dualitaet des Seins',
+        date: '2022/06/30',
+        category: 'Philosophisches'
+    },
+    {
         name: 'How content-visibility vastly improved page rendering time for Shoogle',
         date: '2022/06/07',
         category: 'Tutorials'
