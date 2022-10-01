@@ -10,6 +10,7 @@ Herbstzeit-Apfelzeit. Wieso diese tolle Frucht nicht sinnvoll und schmackhaft ve
 * Saft von 1 Zitrone
 * 2 Eier
 * 3 Päckchen Vanillesoßenpulver
+* 1 Tortenboden
 
 ## Zubereitung
 
