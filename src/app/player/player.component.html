@@ -9,4 +9,9 @@
     <button (click)="prev()">-</button>
     <img (click)="toggle()" [src]="videoButton | sanitizedUrl" width="32" height="32" alt="Video abspielen">
   </div>
+  <select [(ngModel)]="selectedSid" (ngModelChange)="selectChange($event)">
+    <option *ngFor="let sid of sids" [ngValue]="sid">
+        {{sid}}
+    </option>
+</select>
 </div><!-- player -->

@@ -49,7 +49,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height: 60%;
 }
 
 @media screen and (min-width: 576px) {
@@ -62,4 +61,8 @@
 button {
     width: 32px;
     height: 32px;
+}
+
+select {
+    max-width: 100%;
 }
