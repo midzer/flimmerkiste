@@ -64,3 +64,17 @@ button {
 select {
     max-width: 100%;
 }
+
+canvas {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    aspect-ratio: 2;
+}
+
+@media screen and (max-width: 576px) {
+    canvas {
+        top: 0;
+        aspect-ratio: 0.5;
+    } 
+}
