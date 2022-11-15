@@ -20,6 +20,8 @@
 
 [muCCC](https://muc.ccc.de/)
 
+[Nerdpol Dachau](https://nerdpol.space/)
+
 [OpenLab Augsburg](https://openlab-augsburg.de/)
 
 ## /me @
