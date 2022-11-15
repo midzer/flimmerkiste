@@ -53,6 +53,10 @@ export class PlayerComponent implements OnInit {
         this.backBuffer.data[(i << 2) + 2] = 0x00;
         this.backBuffer.data[(i << 2) + 3] = 0xFF;
     }
+    this.ctx.fillStyle = "#FFFFFF";
+    this.ctx.font = "42px Monospace";
+    this.ctx.fillText('Click Play Button', 75, 100);
+    this.ctx.fillText('to start visuals!', 75, 200);
   }
   
   async fetchJSON(path: string): Promise<string[]> {
