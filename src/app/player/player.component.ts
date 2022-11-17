@@ -199,7 +199,7 @@ export class PlayerComponent implements OnInit {
     freq = Math.floor(frequency0 * 0.3) + 1;
     ampl = amplitude0 * 255;
     if (ampl > 255) ampl = 255;
-    if (freq <= 399) {
+    if (freq > 1 && freq <= 399) {
         let offset = 2400 * (399 - freq) + column
         data[offset + 0] = ampl;
         data[offset + 2400] = ampl * 0.5;
@@ -208,7 +208,7 @@ export class PlayerComponent implements OnInit {
     freq = Math.floor(frequency1 * 0.3) + 1;
     ampl = amplitude1 * 255;
     if (ampl > 255) ampl = 255;
-    if (freq <= 399) {
+    if (freq > 1 && freq <= 399) {
         let offset = 2400 * (399 - freq) + column + 1;
         data[offset] = ampl;
         data[offset + 2400] = ampl * 0.5;
@@ -217,7 +217,7 @@ export class PlayerComponent implements OnInit {
     freq = Math.floor(frequency2 * 0.3) + 1;
     ampl = amplitude2 * 255;
     if (ampl > 255) ampl = 255;
-    if (freq <= 399) {
+    if (freq > 1 && freq <= 399) {
         let offset = 2400 * (399 - freq) + column + 2;
         data[offset] = ampl;
         data[offset + 2400] = ampl * 0.5;
