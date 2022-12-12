@@ -1,6 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables.scss';
 
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.container {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        position: relative;
+    }
+}
+
+#bgvid {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-height: 100vh;
+}
+
 .menu > li > a, .menu > li > a:hover, .menu > li > a:focus,
 markdown a, markdown a:hover, markdown a:focus {
     text-decoration: none;

@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   constructor() {}
+
+  ngAfterViewInit() {
+    const container = document.querySelector('.container') as HTMLElement;
+    container.style.visibility = 'visible';
+  }
 }

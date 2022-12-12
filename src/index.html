@@ -11,37 +11,6 @@
   <link rel="me" href="https://chaos.social/@midzer">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <style>
-    *,
-    *:after,
-    *:before {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-      line-height: 1.6;
-      background-color: #000;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      max-height: 100vh;
-      overflow-y: hidden;
-    }
-    .container {
-      visibility: hidden;
-    }
-    @media screen and (min-width: 576px) {
-      .container {
-        position: relative;
-      }
-    }
-    #bgvid {
-      display: block;
-      height: auto;
-      width: 100%;
-      max-height: 100vh;
-    }
-    </style>
 </head>
 <body>
   <div class="container">
@@ -51,23 +20,6 @@
     </video>
     <app-root></app-root>
   </div>
-  <script>
-    function setContainerVisible (loaded) {
-      if (loaded) {
-        container.style.visibility = 'visible';
-      }
-    }
-    const container = document.querySelector('.container');
-    let domloaded, videoloaded;
-    document.getElementById('bgvid').addEventListener('loadeddata', function() {
-      videoloaded = true;
-      setContainerVisible(domloaded);
-    }, { once: true });
-    document.addEventListener('DOMContentLoaded', function() {
-      domloaded = true;
-      setContainerVisible(videoloaded);
-    }, { once: true });
-  </script>
   <noscript>Sorry, this page needs JavaScript :(</noscript>
 </body>
 </html>
