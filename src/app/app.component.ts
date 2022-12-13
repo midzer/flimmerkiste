@@ -9,7 +9,7 @@ export class AppComponent {
 
   constructor() {}
 
-  ngAfterViewInit() {
+  ngOnInit() {
     const container = document.querySelector('.container') as HTMLElement;
     container.style.visibility = 'visible';
   }
