@@ -26,7 +26,108 @@ export class PlayerComponent implements OnInit {
   pauseVideo: string = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='2' stroke='%238a8a8a' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M8 4h10a2 2 0 0 1 2 2v10m-.592 3.42c-.362 .359 -.859 .58 -1.408 .58h-12a2 2 0 0 1 -2 -2v-12c0 -.539 .213 -1.028 .56 -1.388'%3E%3C/path%3E%3Cpath d='M8 8v12'%3E%3C/path%3E%3Cpath d='M16 4v8m0 4v4'%3E%3C/path%3E%3Cpath d='M4 8h4'%3E%3C/path%3E%3Cpath d='M4 16h4'%3E%3C/path%3E%3Cpath d='M4 12h8m4 0h4'%3E%3C/path%3E%3Cpath d='M16 8h4'%3E%3C/path%3E%3Cpath d='M3 3l18 18'%3E%3C/path%3E%3C/svg%3E`;
   videoButton: string;
   
-  sids: string[];
+  sids: string[] = [
+    "ACE_II",
+    "Antics_Dulcedo_Cogitationis",
+    "Arkanoid",
+    "Ark_Pandora",
+    "Armalyte",
+    "Auf_Wiedersehen_Monty",
+    "Baby_of_Can_Guru",
+    "Batman_long",
+    "Battle_Valley",
+    "Bionic_Commando",
+    "BMX_Kidz",
+    "Bulldog",
+    "Chordian",
+    "Cobra",
+    "Combat_Crazy",
+    "Comic_Bakery",
+    "Commando",
+    "Compleeto",
+    "Cooperation_Demo",
+    "Crazy_Comets_remix",
+    "Crazy_Comets",
+    "Cybernoid_II",
+    "Cybernoid",
+    "Defender_of_the_Crown",
+    "Delta",
+    "DNA_Warrior",
+    "Driller",
+    "Eliminator",
+    "FAME_1",
+    "Gauntlet_III",
+    "Gerry_the_Germ",
+    "Ghosts_n_Goblins",
+    "Ghouls_n_Ghosts",
+    "Glider_Rider",
+    "Grand_Prix_Circuit",
+    "Great_Giana_Sisters",
+    "Green_Beret",
+    "Hawkeye",
+    "Hysteria",
+    "IK_plus",
+    "International_Karate",
+    "Katakis",
+    "Kentilla",
+    "Kinetix",
+    "Knucklebusters",
+    "Last_Ninja",
+    "Last_Ninja_2",
+    "Last_Ninja_3",
+    "Lightforce",
+    "Master_of_Magic",
+    "Mega_Apocalypse",
+    "Miami_Vice",
+    "Mikie",
+    "Monty_on_the_Run",
+    "Mutants",
+    "Myth",
+    "Nemesis_the_Warlock",
+    "Nightdawn",
+    "Ocean_Loader_3",
+    "One_Man_and_his_Droid",
+    "Parallax",
+    "Platoon",
+    "Rambo_First_Blood_Part_II",
+    "Ramparts",
+    "R_I_S_K",
+    "RoboCop",
+    "RoboCop_3",
+    "Rocky_Star",
+    "R-Type",
+    "Sanxion",
+    "Savage",
+    "Scroll_Machine",
+    "Scumball",
+    "Short_Circuit",
+    "Snare",
+    "Spellbound",
+    "Stormlord",
+    "Supremacy",
+    "Sweet",
+    "Synth_Sample",
+    "SYS4096",
+    "Terra_Cresta",
+    "Tetris",
+    "Thing_Bounces_Back",
+    "Thrust",
+    "Thunderforce",
+    "Times_of_Lore",
+    "To_be_on_Top",
+    "Trap",
+    "Turbo_Outrun",
+    "Uridium",
+    "Vikings",
+    "Warhawk",
+    "Way_of_the_Exploding_Fist",
+    "Wizardry",
+    "Wizball",
+    "Yie_Ar_Kung_Fu",
+    "Zamzara",
+    "Zig_Zag",
+    "Zoids"
+  ];
   selectedSid: string = 'Last_Ninja_2';
 
   canvas: HTMLCanvasElement;
@@ -37,11 +138,10 @@ export class PlayerComponent implements OnInit {
 
   constructor() {}
 
-  async ngOnInit() {
+  ngOnInit() {
     this.setButton(this.playVideo);
     this.video = document.getElementById('bgvid') as HTMLVideoElement;
     this.screen = document.getElementById('screen');
-    this.sids = await this.fetchJSON('assets/json/sids.json');
     this.canvas = document.querySelector('canvas');
     this.canvas.width = 600;
     this.canvas.height = 400;
@@ -58,26 +158,41 @@ export class PlayerComponent implements OnInit {
     this.ctx.fillText('Click me', 50, 175);
     this.ctx.fillText('to start', 50, 300);
   }
-  
-  async fetchJSON(path: string): Promise<string[]> {
-    const response = await fetch(path);
-    return response.json();
-  }
 
   setup(): void {
     if (!this.sidPlayer) {
-      this.sidPlayer = new jsSID(16384,0.0005);
-      this.sidPlayer.loadinit('assets/sids/' + this.selectedSid + '.sid', this.subTune);
-      this.sidPlayer.setloadcallback(this.initTune);
-      this.sidPlayer.setstartcallback(this.showPlaytime);
-      this.sidPlayer.setplaycallback(this.playCallback);
-      setInterval(this.showPlaytime, 1000);
-      document.querySelector('.marquee').classList.remove('hidden');
+      this.loadScript('jsSID.js').then(() => {
+        this.sidPlayer = new jsSID(16384,0.0005);
+        this.sidPlayer.loadinit('assets/sids/' + this.selectedSid + '.sid', this.subTune);
+        this.sidPlayer.setloadcallback(this.initTune);
+        this.sidPlayer.setstartcallback(this.showPlaytime);
+        this.sidPlayer.setplaycallback(this.playCallback);
+        setInterval(this.showPlaytime, 1000);
+        document.querySelector('.marquee').classList.remove('hidden');
+        this.startPlaying();
+      });
     }
+    else {
+      this.startPlaying();
+    }
+  }
+
+  loadScript (file): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.async = true
+      script.src = `/assets/js/${file}`
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
   }
 
   play(): void {
     this.setup();
+  }
+
+  startPlaying(): void {
     if (this.playing) {
       this.sidPlayer.pause();
       this.playing = false;
@@ -86,38 +201,40 @@ export class PlayerComponent implements OnInit {
     }
     else {
       this.sidPlayer.playcont();
-      this.setPlaying();
+      this.playing = true;
+      this.playButton = this.pauseIcon;
       this.redrawSpectrum();
     }
   }
-  
-  setPlaying(): void {
-    this.playing = true;
-    this.playButton = this.pauseIcon;
-  }
 
   next(): void {
-    this.setup();
-    if (this.subTune === this.sidPlayer.getsubtunes() - 1) {
-      this.subTune = 0;
+    if (this.sidPlayer) {
+      if (this.subTune === this.sidPlayer.getsubtunes() - 1) {
+        this.subTune = 0;
+      }
+      else {
+        ++this.subTune;
+      }
+      this.sidPlayer.start(this.subTune);
     }
     else {
-      ++this.subTune;
+      this.setup();
     }
-    this.sidPlayer.start(this.subTune);
-    this.setPlaying();
   }
 
   prev(): void {
-    this.setup();
-    if (this.subTune === 0) {
-      this.subTune = this.sidPlayer.getsubtunes() - 1;
+    if (this.sidPlayer) {
+      if (this.subTune === 0) {
+        this.subTune = this.sidPlayer.getsubtunes() - 1;
+      }
+      else {
+        --this.subTune;
+      }
+      this.sidPlayer.start(this.subTune);
     }
     else {
-      --this.subTune;
+      this.setup();
     }
-    this.sidPlayer.start(this.subTune);
-    this.setPlaying();
   }
 
   toggle(): void {
