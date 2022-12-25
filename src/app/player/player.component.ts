@@ -154,9 +154,9 @@ export class PlayerComponent implements OnInit {
         this.backBuffer.data[(i << 2) + 3] = 0xFF;
     }
     this.ctx.fillStyle = "#FFFFFF";
-    this.ctx.font = "96px Monospace";
-    this.ctx.fillText('Click me', 50, 175);
-    this.ctx.fillText('to start', 50, 300);
+    this.ctx.font = "108px Monospace";
+    this.ctx.fillText('Click me', 25, 150);
+    this.ctx.fillText('to start', 25, 275);
   }
 
   setup(): void {
