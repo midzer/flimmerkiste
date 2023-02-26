@@ -8,6 +8,9 @@ export var MENU: Menuitem[] = [
       name: 'memes'
   },
   {
+      name: 'ports'
+  },
+  {
       name: 'links'
   },
   {
