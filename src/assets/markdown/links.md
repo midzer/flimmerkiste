@@ -18,6 +18,8 @@
 
 ## Hackerspaces
 
+[Chaostreff Flensburg](https://chaostreff-flensburg.de/)
+
 [muCCC](https://muc.ccc.de/)
 
 [Nerdpol Dachau](https://nerdpol.space/)
