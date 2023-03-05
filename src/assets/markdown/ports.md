@@ -2,20 +2,10 @@
 
 Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Open-Source Spielen.
 
-## Bomberman
+## Bombermaaan
 
 * Erscheinungsjahr: 1983
-* [Wiki](https://de.wikipedia.org/wiki/Bomberman)
-
-### Bombermaaan
-
-* Bis zu 5 Spieler an einem Computer, Grafikfehler wegen SDL1.2
-* [Repo](https://github.com/midzer/Bombermaaan) / [Web](https://bombermaaan.netlify.app/)
-
-### Bomberman-SDL2
-
-* Leider nur Singleplayer
-* [Repo](https://github.com/midzer/bomberman-sdl2) / [Web](https://bomberman-sdl.netlify.app/)
+* [Wiki](https://de.wikipedia.org/wiki/Bomberman) / [Repo](https://github.com/midzer/Bombermaaan) / [Web](https://bombermaaan.netlify.app/)
 
 ## Der Clou!
 
@@ -24,9 +14,9 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Open-Source
 
 ## Dune II – Kampf um Arrakis
 
-* Leider ist der Sound buggy
 * Erscheinungsjahr: 1992
 * [Repo](https://github.com/midzer/OpenDUNE) / [Web](https://opendune.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Dune_II_%E2%80%93_Kampf_um_Arrakis)
+* Bugs: Sound
 
 ## Jump 'n Bump
 
