@@ -2,7 +2,7 @@
 
 Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Source Spielen](https://osgameclones.com/).
 
-## Bombermaaan
+## Bombermaaan (Bomberman)
 
 * Erscheinungsjahr: 1983
 * Genre: Arcade
@@ -18,7 +18,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 
 * Erscheinungsjahr: 1994
 * Genre: Einbruchsimulation
-* [Repo](https://github.com/midzer/derclou) / [Web DE](https://derclou.netlify.app/) / [Web EN](https://theclou.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
+* [Repo](https://github.com/midzer/derclou) / [Web DE](https://derclou.netlify.app/) - [Web EN](https://theclou.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
 
 ## Dune II – Kampf um Arrakis
 
@@ -26,6 +26,12 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Genre: Echtzeitstrategie
 * [Repo](https://github.com/midzer/OpenDUNE) / [Web](https://opendune.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Dune_II_%E2%80%93_Kampf_um_Arrakis)
 * Bugs: Sound
+
+## Freegemas (Bejeweled)
+
+* Erscheinungsjahr: 2001
+* Genre: Puzzle
+* [Repo](https://github.com/midzer/freegemas) / [Web](https://freegemas.netlify.app/) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
 
 ## Jump 'n Bump
 
