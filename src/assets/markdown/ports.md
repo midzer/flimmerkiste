@@ -5,7 +5,12 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Open-Source
 ## Bombermaaan
 
 * Erscheinungsjahr: 1983
-* [Wiki](https://de.wikipedia.org/wiki/Bomberman) / [Repo](https://github.com/midzer/Bombermaaan) / [Web](https://bombermaaan.netlify.app/)
+* [Repo](https://github.com/midzer/Bombermaaan) / [Web](https://bombermaaan.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
+
+## Chromium B.S.U.
+
+* Erscheinungsjahr: 2000
+* [Repo](https://github.com/midzer/chromium-bsu) / [Web](https://chromium-bsu.netlify.app/) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
 
 ## Der Clou!
 
