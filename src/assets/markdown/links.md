@@ -14,6 +14,8 @@
 
 [jarwski](https://jarwski.com/)
 
+[Kojote](https://silberkind.de/)
+
 [muesli](https://fribbledom.com/)
 
 ## Hackerspaces
