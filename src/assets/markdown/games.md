@@ -1,4 +1,4 @@
-# Ports
+# Games
 
 Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Source Spielen](https://osgameclones.com/).
 
@@ -7,6 +7,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 1983
 * Genre: Arcade
 * [Repo](https://github.com/midzer/Bombermaaan) / [Web](https://bombermaaan.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
+* Tastatur
+
+## C-Dogs SDL
+
+* Erscheinungsjahr: 1997-2001
+* Genre: Run 'n Gun
+* [Repo](https://github.com/midzer/cdogs-sdl) / [Web](https://cdogs.netlify.app/) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
 * Tastatur
 
 ## Chromium B.S.U.
