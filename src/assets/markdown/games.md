@@ -66,6 +66,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * [Repo](https://github.com/midzer/raptor) / [Web](https://raptor-web.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
 * Maus + Tastatur
 
+## Shiromino
+
+* Erscheinungsjahr: 2017
+* Genre: Arcade
+* [Repo](https://github.com/midzer/shiromino) / [Web](https://shiromino.netlify.app/) / [Wiki](https://tetris.wiki/Shiromino)
+* Tastatur
+
 ## The Legend of Zelda - A Link to the Past
 
 * Erscheinungsjahr: 1992
