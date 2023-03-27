@@ -66,6 +66,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * [Repo](https://github.com/midzer/raptor) / [Web](https://raptor-web.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
 * Maus + Tastatur
 
+## REminiscence (Flashback)
+
+* Erscheinungsjahr: 1992
+* Genre: Cinematic platformer
+* [Repo](https://github.com/midzer/reminiscence) / [Web](https://reminiscence-cd.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Flashback_(Computerspiel))
+* Tastatur
+
 ## Shiromino
 
 * Erscheinungsjahr: 2017
