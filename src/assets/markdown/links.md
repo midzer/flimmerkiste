@@ -12,6 +12,8 @@
 
 [gamambel](https://headstrong.de/)
 
+[grindhold](http://www.grindhold.de/)
+
 [jarwski](https://jarwski.com/)
 
 [Kojote](https://silberkind.de/)
