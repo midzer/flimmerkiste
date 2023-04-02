@@ -20,6 +20,8 @@
 
 [muesli](https://fribbledom.com/)
 
+[Profpatsch](https://profpatsch.de/)
+
 ## Hackerspaces
 
 [Chaostreff Flensburg](https://chaostreff-flensburg.de/)
