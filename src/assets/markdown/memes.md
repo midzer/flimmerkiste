@@ -16,4 +16,6 @@
 
 ![One does not simply want Umlauts in domains](assets/memes/one-does-not-simply-want-umlauts-in-domains.webp)
 
+![Stop it Patrick](assets/memes/stop-it-patrick.webp)
+
 ![Wieso extra eine Navbar](assets/memes/wieso-extra-eine-navbar.webp)
