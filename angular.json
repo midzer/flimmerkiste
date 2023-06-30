@@ -26,7 +26,11 @@
               "src/sitemap.xml"
             ],
             "styles": [
-              "src/styles.scss"
+              {
+                "input": "src/styles.scss",
+                "bundleName": "styles",
+                "inject": false
+              }
             ],
             "scripts": [
             ],
@@ -34,9 +38,9 @@
               "scripts": true,
               "styles": {
                 "minify": true,
-                "inlineCritical": true
+                "inlineCritical": false
               },
-              "fonts": true
+              "fonts": false
             }
           },
           "configurations": {
