@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://midzer.de/</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://midzer.de/about</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://midzer.de/games</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://midzer.de/memes</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://midzer.de/links</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://midzer.de/contact</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
-    <loc>https://archive.midzer.de/</loc>
-    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
-  </url>
-  <url>
     <loc>https://midzer.de/eierlikoerkuchen</loc>
     <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
   </url>
@@ -278,6 +250,34 @@
   </url>
   <url>
     <loc>https://midzer.de/intro</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://midzer.de/</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://midzer.de/about</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://midzer.de/games</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://midzer.de/memes</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://midzer.de/links</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://midzer.de/contact</loc>
+    <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
+  </url>
+  <url>
+    <loc>https://archive.midzer.de/</loc>
     <lastmod>Wed Jun 28 2023 04:17:36 GMT+0200 (Central European Summer Time)</lastmod>
   </url>
 </urlset>
