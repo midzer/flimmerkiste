@@ -1,3 +1,4 @@
 /robots.txt    /robots.txt   200
 /sitemap.xml    /sitemap.xml   200
+/feed.json    /feed.json   200
 /*    /index.html   200

@@ -1,0 +1,358 @@
+{
+	"version": "https://jsonfeed.org/version/1.1",
+	"title": "midzers Flimmerkiste",
+	"home_page_url": "https://midzer.de/",
+	"feed_url": "https://midzer.de/feed.json",
+	"items": [
+		{
+			"id": "https://midzer.de/eierlikoerkuchen",
+			"url": "https://midzer.de/eierlikoerkuchen",
+			"date_published": "2023-04-25"
+		},
+		{
+			"id": "https://midzer.de/a-short-guideline-for-getting-stuff-done-without-ai",
+			"url": "https://midzer.de/a-short-guideline-for-getting-stuff-done-without-ai",
+			"date_published": "2023-04-02"
+		},
+		{
+			"id": "https://midzer.de/omas-faschingskrapfen",
+			"url": "https://midzer.de/omas-faschingskrapfen",
+			"date_published": "2023-02-19"
+		},
+		{
+			"id": "https://midzer.de/eine-frage-des-geldes",
+			"url": "https://midzer.de/eine-frage-des-geldes",
+			"date_published": "2023-02-08"
+		},
+		{
+			"id": "https://midzer.de/avocado-mit-shrimps",
+			"url": "https://midzer.de/avocado-mit-shrimps",
+			"date_published": "2022-12-28"
+		},
+		{
+			"id": "https://midzer.de/schwedische-apfeltorte",
+			"url": "https://midzer.de/schwedische-apfeltorte",
+			"date_published": "2022-09-26"
+		},
+		{
+			"id": "https://midzer.de/yummylicious",
+			"url": "https://midzer.de/yummylicious",
+			"date_published": "2022-08-20"
+		},
+		{
+			"id": "https://midzer.de/von-gut-und-boese",
+			"url": "https://midzer.de/von-gut-und-boese",
+			"date_published": "2022-08-04"
+		},
+		{
+			"id": "https://midzer.de/die-dualitaet-des-seins",
+			"url": "https://midzer.de/die-dualitaet-des-seins",
+			"date_published": "2022-06-30"
+		},
+		{
+			"id": "https://midzer.de/how-content-visibility-vastly-improved-page-rendering-time-for-shoogle",
+			"url": "https://midzer.de/how-content-visibility-vastly-improved-page-rendering-time-for-shoogle",
+			"date_published": "2022-06-07"
+		},
+		{
+			"id": "https://midzer.de/a-minimal-approach-to-automatic-manual-and-persistent-dark-mode-for-websites",
+			"url": "https://midzer.de/a-minimal-approach-to-automatic-manual-and-persistent-dark-mode-for-websites",
+			"date_published": "2022-05-27"
+		},
+		{
+			"id": "https://midzer.de/mondgarten",
+			"url": "https://midzer.de/mondgarten",
+			"date_published": "2022-05-25"
+		},
+		{
+			"id": "https://midzer.de/guads-neis",
+			"url": "https://midzer.de/guads-neis",
+			"date_published": "2022-01-01"
+		},
+		{
+			"id": "https://midzer.de/2-accessible-ways-to-obfuscate-an-email-address-in-html-without-javascript",
+			"url": "https://midzer.de/2-accessible-ways-to-obfuscate-an-email-address-in-html-without-javascript",
+			"date_published": "2021-12-17"
+		},
+		{
+			"id": "https://midzer.de/how-to-skip-loading-polyfills-in-modern-browsers",
+			"url": "https://midzer.de/how-to-skip-loading-polyfills-in-modern-browsers",
+			"date_published": "2021-12-19"
+		},
+		{
+			"id": "https://midzer.de/90s-boiler-room",
+			"url": "https://midzer.de/90s-boiler-room",
+			"date_published": "2021-11-20"
+		},
+		{
+			"id": "https://midzer.de/ola-party",
+			"url": "https://midzer.de/ola-party",
+			"date_published": "2021-10-24"
+		},
+		{
+			"id": "https://midzer.de/tanzgeplenkel",
+			"url": "https://midzer.de/tanzgeplenkel",
+			"date_published": "2021-07-11"
+		},
+		{
+			"id": "https://midzer.de/infest",
+			"url": "https://midzer.de/infest",
+			"date_published": "2021-06-03"
+		},
+		{
+			"id": "https://midzer.de/traumlandschaften",
+			"url": "https://midzer.de/traumlandschaften",
+			"date_published": "2021-05-29"
+		},
+		{
+			"id": "https://midzer.de/nominierung",
+			"url": "https://midzer.de/nominierung",
+			"date_published": "2021-04-28"
+		},
+		{
+			"id": "https://midzer.de/bsd-freakout",
+			"url": "https://midzer.de/bsd-freakout",
+			"date_published": "2021-04-17"
+		},
+		{
+			"id": "https://midzer.de/salatdressing",
+			"url": "https://midzer.de/salatdressing",
+			"date_published": "2020-08-25"
+		},
+		{
+			"id": "https://midzer.de/quarkspatzen",
+			"url": "https://midzer.de/quarkspatzen",
+			"date_published": "2019-02-24"
+		},
+		{
+			"id": "https://midzer.de/pancakes",
+			"url": "https://midzer.de/pancakes",
+			"date_published": "2018-11-23"
+		},
+		{
+			"id": "https://midzer.de/bits-and-bytes",
+			"url": "https://midzer.de/bits-and-bytes",
+			"date_published": "2018-06-02"
+		},
+		{
+			"id": "https://midzer.de/retro-dreams",
+			"url": "https://midzer.de/retro-dreams",
+			"date_published": "2018-05-19"
+		},
+		{
+			"id": "https://midzer.de/how-to-optimize-websites-for-performance",
+			"url": "https://midzer.de/how-to-optimize-websites-for-performance",
+			"date_published": "2018-04-19"
+		},
+		{
+			"id": "https://midzer.de/prielcrafted",
+			"url": "https://midzer.de/prielcrafted",
+			"date_published": "2018-04-08"
+		},
+		{
+			"id": "https://midzer.de/roaming-frequencies",
+			"url": "https://midzer.de/roaming-frequencies",
+			"date_published": "2018-02-05"
+		},
+		{
+			"id": "https://midzer.de/das-wort-zum-sonntag",
+			"url": "https://midzer.de/das-wort-zum-sonntag",
+			"date_published": "2018-01-28"
+		},
+		{
+			"id": "https://midzer.de/transzendentales-potpourri",
+			"url": "https://midzer.de/transzendentales-potpourri",
+			"date_published": "2017-12-15"
+		},
+		{
+			"id": "https://midzer.de/relative-gedankennavigation",
+			"url": "https://midzer.de/relative-gedankennavigation",
+			"date_published": "2017-07-18"
+		},
+		{
+			"id": "https://midzer.de/oachkatzlbeats",
+			"url": "https://midzer.de/oachkatzlbeats",
+			"date_published": "2017-07-02"
+		},
+		{
+			"id": "https://midzer.de/die-schlosseiche-von-eisolzried",
+			"url": "https://midzer.de/die-schlosseiche-von-eisolzried",
+			"date_published": "2017-06-03"
+		},
+		{
+			"id": "https://midzer.de/lockpickingsimulator-2017",
+			"url": "https://midzer.de/lockpickingsimulator-2017",
+			"date_published": "2017-05-15"
+		},
+		{
+			"id": "https://midzer.de/pausenfiller",
+			"url": "https://midzer.de/pausenfiller",
+			"date_published": "2017-01-17"
+		},
+		{
+			"id": "https://midzer.de/bergfestzelebration-iii",
+			"url": "https://midzer.de/bergfestzelebration-iii",
+			"date_published": "2016-11-30"
+		},
+		{
+			"id": "https://midzer.de/retrogeschunkel",
+			"url": "https://midzer.de/retrogeschunkel",
+			"date_published": "2016-08-15"
+		},
+		{
+			"id": "https://midzer.de/marionettenzauber",
+			"url": "https://midzer.de/marionettenzauber",
+			"date_published": "2016-08-06"
+		},
+		{
+			"id": "https://midzer.de/darknet-von-daniel-suarez",
+			"url": "https://midzer.de/darknet-von-daniel-suarez",
+			"date_published": "2016-07-20"
+		},
+		{
+			"id": "https://midzer.de/midnight-flow",
+			"url": "https://midzer.de/midnight-flow",
+			"date_published": "2016-07-20"
+		},
+		{
+			"id": "https://midzer.de/creme-bavaroise",
+			"url": "https://midzer.de/creme-bavaroise",
+			"date_published": "2016-05-14"
+		},
+		{
+			"id": "https://midzer.de/go-pr0---mind-wanking",
+			"url": "https://midzer.de/go-pr0---mind-wanking",
+			"date_published": "2016-04-09"
+		},
+		{
+			"id": "https://midzer.de/sandgefluester",
+			"url": "https://midzer.de/sandgefluester",
+			"date_published": "2016-03-24"
+		},
+		{
+			"id": "https://midzer.de/guacamole",
+			"url": "https://midzer.de/guacamole",
+			"date_published": "2016-03-10"
+		},
+		{
+			"id": "https://midzer.de/ojja-mit-tbikha-de-sfax",
+			"url": "https://midzer.de/ojja-mit-tbikha-de-sfax",
+			"date_published": "2016-02-08"
+		},
+		{
+			"id": "https://midzer.de/bergfestzelebration-ii",
+			"url": "https://midzer.de/bergfestzelebration-ii",
+			"date_published": "2016-01-27"
+		},
+		{
+			"id": "https://midzer.de/quinoa-pfanne",
+			"url": "https://midzer.de/quinoa-pfanne",
+			"date_published": "2016-01-16"
+		},
+		{
+			"id": "https://midzer.de/groovesmoothie",
+			"url": "https://midzer.de/groovesmoothie",
+			"date_published": "2015-12-03"
+		},
+		{
+			"id": "https://midzer.de/kopfgeister",
+			"url": "https://midzer.de/kopfgeister",
+			"date_published": "2015-11-04"
+		},
+		{
+			"id": "https://midzer.de/rauchen-als-akt-des-passiven-widerstands",
+			"url": "https://midzer.de/rauchen-als-akt-des-passiven-widerstands",
+			"date_published": "2015-10-21"
+		},
+		{
+			"id": "https://midzer.de/inner-vision",
+			"url": "https://midzer.de/inner-vision",
+			"date_published": "2015-10-13"
+		},
+		{
+			"id": "https://midzer.de/endoplasmatisches-retikolum",
+			"url": "https://midzer.de/endoplasmatisches-retikolum",
+			"date_published": "2015-09-02"
+		},
+		{
+			"id": "https://midzer.de/bergfestzelebration",
+			"url": "https://midzer.de/bergfestzelebration",
+			"date_published": "2015-08-21"
+		},
+		{
+			"id": "https://midzer.de/wer-rastet-der-rostet",
+			"url": "https://midzer.de/wer-rastet-der-rostet",
+			"date_published": "2015-07-23"
+		},
+		{
+			"id": "https://midzer.de/style-ohne-hipstergewand",
+			"url": "https://midzer.de/style-ohne-hipstergewand",
+			"date_published": "2015-06-02"
+		},
+		{
+			"id": "https://midzer.de/ueber-die-alpen-und-zurueck",
+			"url": "https://midzer.de/ueber-die-alpen-und-zurueck",
+			"date_published": "2015-05-24"
+		},
+		{
+			"id": "https://midzer.de/trommelfundgrube",
+			"url": "https://midzer.de/trommelfundgrube",
+			"date_published": "2015-05-23"
+		},
+		{
+			"id": "https://midzer.de/gimme-a-break",
+			"url": "https://midzer.de/gimme-a-break",
+			"date_published": "2015-05-22"
+		},
+		{
+			"id": "https://midzer.de/mit-pauken-und-tubas",
+			"url": "https://midzer.de/mit-pauken-und-tubas",
+			"date_published": "2015-05-21"
+		},
+		{
+			"id": "https://midzer.de/trend-zur-langsamkeit",
+			"url": "https://midzer.de/trend-zur-langsamkeit",
+			"date_published": "2015-05-19"
+		},
+		{
+			"id": "https://midzer.de/intro",
+			"url": "https://midzer.de/intro",
+			"date_published": "2015-05-18"
+		},
+		{
+			"id": "https://midzer.de/",
+			"url": "https://midzer.de/",
+			"date_published": "2015-05-17"
+		},
+		{
+			"id": "https://midzer.de/about",
+			"url": "https://midzer.de/about",
+			"date_published": "2015-05-17"
+		},
+		{
+			"id": "https://midzer.de/games",
+			"url": "https://midzer.de/games",
+			"date_published": "2015-05-17"
+		},
+		{
+			"id": "https://midzer.de/memes",
+			"url": "https://midzer.de/memes",
+			"date_published": "2015-05-17"
+		},
+		{
+			"id": "https://midzer.de/links",
+			"url": "https://midzer.de/links",
+			"date_published": "2015-05-17"
+		},
+		{
+			"id": "https://midzer.de/contact",
+			"url": "https://midzer.de/contact",
+			"date_published": "2015-05-17"
+		},
+		{
+			"id": "https://archive.midzer.de/",
+			"url": "https://archive.midzer.de/",
+			"date_published": "2015-05-17"
+		}
+	]
+}

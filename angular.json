@@ -23,7 +23,8 @@
               "src/video",
               "src/site.webmanifest",
               "src/robots.txt",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              "src/feed.json"
             ],
             "styles": [
               {
