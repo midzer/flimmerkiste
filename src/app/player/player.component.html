@@ -4,14 +4,15 @@
   </div>
   <div>{{subTune + 1}}/{{subTunes}} - {{playTime}}</div>
   <div class="buttons">
-    <button (click)="play()">{{playButton}}</button>
-    <button (click)="next()">+</button>
-    <button (click)="prev()">-</button>
-    <img (click)="toggle()" [src]="videoButton | sanitizedUrl" width="32" height="32" alt="Video abspielen">
+    <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play track"></button>
+    <button (click)="next()"><img src="assets/images/player-track-next.svg" width="24" height="24" alt="Next track"></button>
+    <button (click)="prev()"><img src="assets/images/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
+    <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
+    <button (click)="playMusic()"><img [src]="musicButtonIcon" width="24" height="24" alt="Play music"></button>
   </div>
   <select [(ngModel)]="selectedSid" (ngModelChange)="selectChange($event)">
     <option *ngFor="let sid of sids" [ngValue]="sid">
-        {{sid}}
+      {{sid}}
     </option>
   </select>
   <canvas (click)="play()"></canvas>

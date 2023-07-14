@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var jsSID: any;
+declare var ScripTracker: any;
 
 @Component({
   selector: 'app-player',
@@ -15,16 +16,22 @@ export class PlayerComponent implements OnInit {
   title: string;
   playTime: string = '00:00';
   playing: boolean = false;
-  playIcon: string = '\u25BA';
-  pauseIcon: string = '\u23F8';
+  playIcon: string = 'assets/images/player-play.svg';
+  pauseIcon: string = 'assets/images/player-pause.svg';
   playButton: string = this.playIcon;
   
   screen: HTMLElement;
   video: HTMLVideoElement;
   videoPlaying: boolean = false;
-  playVideo: string = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='2' stroke='%238a8a8a' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Crect x='4' y='4' width='16' height='16' rx='2'%3E%3C/rect%3E%3Cline x1='8' y1='4' x2='8' y2='20'%3E%3C/line%3E%3Cline x1='16' y1='4' x2='16' y2='20'%3E%3C/line%3E%3Cline x1='4' y1='8' x2='8' y2='8'%3E%3C/line%3E%3Cline x1='4' y1='16' x2='8' y2='16'%3E%3C/line%3E%3Cline x1='4' y1='12' x2='20' y2='12'%3E%3C/line%3E%3Cline x1='16' y1='8' x2='20' y2='8'%3E%3C/line%3E%3Cline x1='16' y1='16' x2='20' y2='16'%3E%3C/line%3E%3C/svg%3E`;
-  pauseVideo: string = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke-width='2' stroke='%238a8a8a' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M8 4h10a2 2 0 0 1 2 2v10m-.592 3.42c-.362 .359 -.859 .58 -1.408 .58h-12a2 2 0 0 1 -2 -2v-12c0 -.539 .213 -1.028 .56 -1.388'%3E%3C/path%3E%3Cpath d='M8 8v12'%3E%3C/path%3E%3Cpath d='M16 4v8m0 4v4'%3E%3C/path%3E%3Cpath d='M4 8h4'%3E%3C/path%3E%3Cpath d='M4 16h4'%3E%3C/path%3E%3Cpath d='M4 12h8m4 0h4'%3E%3C/path%3E%3Cpath d='M16 8h4'%3E%3C/path%3E%3Cpath d='M3 3l18 18'%3E%3C/path%3E%3C/svg%3E`;
-  videoButton: string;
+  playVideoIcon: string = 'assets/images/movie.svg';
+  pauseVideoIcon: string = 'assets/images/movie-off.svg';
+  videoButtonIcon: string = this.playVideoIcon;
+
+  modPlayer: any;
+  playingMusic: boolean = false;
+  playMusicIcon: string = 'assets/images/music.svg';
+  pauseMusicIcon: string = 'assets/images/music-off.svg';
+  musicButtonIcon: string = this.playMusicIcon;
   
   sids: string[] = [
     "ACE_II",
@@ -139,7 +146,6 @@ export class PlayerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.setButton(this.playVideo);
     this.video = document.getElementById('bgvid') as HTMLVideoElement;
     this.screen = document.getElementById('screen');
     this.canvas = document.querySelector('canvas');
@@ -177,6 +183,19 @@ export class PlayerComponent implements OnInit {
     }
   }
 
+  setupMusic(): void {
+    if (!this.modPlayer) {
+      this.loadScript('scriptracker-1.1.1.min.js').then(() => {
+        this.modPlayer = new ScripTracker();
+        this.modPlayer.on(ScripTracker.Events.playerReady, () => { this.startPlayingMusic() });
+        this.modPlayer.loadModule('assets/mods/db_3dg.xm');
+      });
+    }
+    else {
+      this.startPlayingMusic();
+    }
+  }
+
   loadScript (file): Promise<any> {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script')
@@ -192,18 +211,35 @@ export class PlayerComponent implements OnInit {
     this.setup();
   }
 
+  playMusic(): void {
+    this.setupMusic();
+  }
+
   startPlaying(): void {
     if (this.playing) {
       this.sidPlayer.pause();
-      this.playing = false;
       this.playButton = this.playIcon;
-      window.cancelAnimationFrame(this.requestID);   
+      window.cancelAnimationFrame(this.requestID);
+      this.playing = false;
     }
     else {
       this.sidPlayer.playcont();
-      this.playing = true;
       this.playButton = this.pauseIcon;
       this.redrawSpectrum();
+      this.playing = true;
+    }
+  }
+
+  startPlayingMusic(): void {
+    if (this.playingMusic) {
+      this.modPlayer.stop();
+      this.musicButtonIcon = this.playMusicIcon;
+      this.playingMusic = false;
+    }
+    else {
+      this.modPlayer.play();
+      this.musicButtonIcon = this.pauseMusicIcon;
+      this.playingMusic = true;
     }
   }
 
@@ -242,20 +278,20 @@ export class PlayerComponent implements OnInit {
       this.video.pause();
       this.screen.classList.add('fadeIn');
       this.screen.classList.remove('fadeOut');
-      this.setButton(this.playVideo);
+      this.setVideoButton(this.playVideoIcon);
       this.videoPlaying = false;
     }
     else {
       this.video.play();
       this.screen.classList.add('fadeOut');
       this.screen.classList.remove('fadeIn');
-      this.setButton(this.pauseVideo);
+      this.setVideoButton(this.pauseVideoIcon);
       this.videoPlaying = true;
     }
   }
 
-  setButton = (video: string): void => {
-    this.videoButton = video;
+  setVideoButton = (video: string): void => {
+    this.videoButtonIcon = video;
   }
 
   initTune= () => {
