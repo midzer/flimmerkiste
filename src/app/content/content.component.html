@@ -3,7 +3,7 @@
     <source src="{{name | mp3file}}" type="audio/mpeg">
     Dein Browser unterstützt kein Audio-Element
 </audio>
-<markdown [src]="path"></markdown>
+<markdown [src]="path" (load)="onLoad()"></markdown>
 <video *ngIf="hasVideo == true" controls playsinline preload="metadata">
     <source src="{{name | webmfile}}" type='video/webm;codecs="vp9,opus"'>
     <source src="{{name | mp4file}}" type='video/mp4;codecs="avc1.42c01e,mp4a.40.2"'>
