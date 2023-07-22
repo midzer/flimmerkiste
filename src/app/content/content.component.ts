@@ -48,17 +48,19 @@ export class ContentComponent implements OnInit {
         const audio = document.querySelector('audio');
         const items = Array.from(document.querySelectorAll('ol > li'));
         items.forEach(item => {
-          const duration = item.textContent.substring(0, 7);
-          item.addEventListener('click', event => {
+          item.innerHTML = '<span class="jump">' + item.textContent.substring(0, 7) + '</span> ' + item.textContent.substring(8);
+        });
+        const jumpers = Array.from(document.querySelectorAll('ol > li > span'));
+        jumpers.forEach(jumper => {
+          jumper.addEventListener('click', event => {
             event.preventDefault();
             if (audio.readyState === 4) {
-              audio.currentTime = this.convertDurationtoSeconds(duration);
+              audio.currentTime = this.convertDurationtoSeconds(jumper.textContent.substring(0, 7));
             }
             if (audio.paused) {
               audio.play();
             }
           }, false);
-          item.innerHTML = '<span class="jump">' + duration + '</span> ' + item.textContent.substring(8);
         });
       }, 500);
     }
