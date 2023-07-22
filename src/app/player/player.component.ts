@@ -35,7 +35,7 @@ export class PlayerComponent implements OnInit {
   oldPos: number;
 
 
-  optgroupLabel: string = 'sids';
+  optgroupLabel: string = 'SIDS';
   loadedTune: string;
   selectedTune: string = 'Last_Ninja_2';
   mods: string[] = [
@@ -166,7 +166,7 @@ export class PlayerComponent implements OnInit {
   }
 
   setup(label: string): void {
-    if (label === 'mods') {
+    if (label === 'MODS') {
       this.setupModPlayer();
       this.sidPlayer = null;
     }
