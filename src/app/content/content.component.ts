@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -7,7 +7,8 @@ import { POSTS } from '../posts'
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
   path: string;
@@ -41,7 +42,30 @@ export class ContentComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    if (this.hasAudio) {
+      window.setTimeout(() => {
+        const audio = document.querySelector('audio');
+        const items = Array.from(document.querySelectorAll('ol > li'));
+        items.forEach(item => {
+          const duration = item.textContent.substring(0, 7);
+          item.addEventListener('click', event => {
+            event.preventDefault();
+            audio.currentTime = this.convertDurationtoSeconds(duration);
+            audio.play();
+          }, false);
+          item.innerHTML = '<span class="jump">' + duration + '</span> ' + item.textContent.substring(8);
+        });
+      }, 500);
+    }
+  }
+
   goBack(): void {
     this.location.back();
+  }
+
+  convertDurationtoSeconds(duration: string): number {
+    const [hours, minutes, seconds] = duration.split(':');
+    return Number(hours) * 60 * 60 + Number(minutes) * 60 + Number(seconds);
   }
 }

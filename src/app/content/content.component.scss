@@ -1,17 +1,18 @@
 @import 'variables.scss';
 
-audio {
-  display: block;
-  margin-top: 0.5em;
-  width: 50%;
-}
-
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-markdown::ng-deep {
+app-content {
+  audio {
+    display: block;
+    margin-top: 0.5em;
+    width: 50%;
+  }
+  
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .jump,
   a {
     display: inline-block;
     color: $blue;
@@ -19,7 +20,8 @@ markdown::ng-deep {
     text-decoration: none;
     outline: none;
     outline: 0;
-
+    cursor: pointer;
+  
     &::after {
       display: block;
       content: "";
@@ -28,12 +30,12 @@ markdown::ng-deep {
       background-color: $blue;
       transition: width 0.5s ease;
     }
-
+  
     &:hover::after {
       width: 100%;
     }
   }
-
+  
   pre {
     padding: 1rem 1.5rem;
     max-width: 100%;
@@ -43,7 +45,7 @@ markdown::ng-deep {
     border: 1px solid #666;
     border-radius: 5px;
   }
-
+  
   img {
     max-width: 100%;
     height: auto;
