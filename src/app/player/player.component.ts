@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var jsSID: any;
 declare var ScripTracker: any;
+declare var jsSID: any;
 
 @Component({
   selector: 'app-player',
@@ -9,11 +9,12 @@ declare var ScripTracker: any;
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  modPlayer: any;
   sidPlayer: any;
   subTune: number = 0;
   subTunes: number = 13;
-  author: string;
-  title: string;
+  info: string;
+  intervalID: number;
   playTime: string = '00:00';
   playing: boolean = false;
   playIcon: string = 'assets/images/player-play.svg';
@@ -27,12 +28,20 @@ export class PlayerComponent implements OnInit {
   pauseVideoIcon: string = 'assets/images/movie-off.svg';
   videoButtonIcon: string = this.playVideoIcon;
 
-  modPlayer: any;
-  playingMusic: boolean = false;
-  playMusicIcon: string = 'assets/images/music.svg';
-  pauseMusicIcon: string = 'assets/images/music-off.svg';
-  musicButtonIcon: string = this.playMusicIcon;
-  
+  canvas: HTMLCanvasElement;
+  ctx: CanvasRenderingContext2D;
+  backBuffer: ImageData;
+  requestID: number;
+  oldPos: number;
+
+
+  optgroupLabel: string = 'sids';
+  loadedTune: string;
+  selectedTune: string = 'Last_Ninja_2';
+  mods: string[] = [
+    "contraduct_design",
+    "db_3dg"
+  ];
   sids: string[] = [
     "ACE_II",
     "Antics_Dulcedo_Cogitationis",
@@ -135,19 +144,10 @@ export class PlayerComponent implements OnInit {
     "Zig_Zag",
     "Zoids"
   ];
-  selectedSid: string = 'Last_Ninja_2';
-
-  canvas: HTMLCanvasElement;
-  ctx: CanvasRenderingContext2D;
-  backBuffer: ImageData;
-  requestID: number;
-  oldPos: number;
 
   constructor() {}
 
   ngOnInit() {
-    this.video = document.getElementById('bgvid') as HTMLVideoElement;
-    this.screen = document.getElementById('screen');
     this.canvas = document.querySelector('canvas');
     this.canvas.width = 600;
     this.canvas.height = 400;
@@ -160,40 +160,50 @@ export class PlayerComponent implements OnInit {
         this.backBuffer.data[(i << 2) + 3] = 0xFF;
     }
     this.ctx.fillStyle = "#FFFFFF";
-    this.ctx.font = "108px Monospace";
-    this.ctx.fillText('Click me', 25, 150);
-    this.ctx.fillText('to start', 25, 275);
+    this.ctx.font = "100px Monospace";
+    this.ctx.fillText('Click me', 50, 150);
+    this.ctx.fillText('to start', 50, 300);
   }
 
-  setup(): void {
-    if (!this.sidPlayer) {
-      this.loadScript('jsSID.js').then(() => {
-        this.sidPlayer = new jsSID(16384,0.0005);
-        this.sidPlayer.loadinit('assets/sids/' + this.selectedSid + '.sid', this.subTune);
-        this.sidPlayer.setloadcallback(this.initTune);
-        this.sidPlayer.setstartcallback(this.showPlaytime);
-        this.sidPlayer.setplaycallback(this.playCallback);
-        setInterval(this.showPlaytime, 1000);
-        document.querySelector('.marquee').classList.remove('hidden');
-        this.startPlaying();
-      });
+  setup(label: string): void {
+    if (label === 'mods') {
+      this.setupModPlayer();
+      this.sidPlayer = null;
     }
     else {
-      this.startPlaying();
+      this.setupSidPlayer();
+      this.modPlayer = null;
     }
+    this.optgroupLabel = label;
   }
 
-  setupMusic(): void {
-    if (!this.modPlayer) {
-      this.loadScript('scriptracker-1.1.1.min.js').then(() => {
-        this.modPlayer = new ScripTracker();
-        this.modPlayer.on(ScripTracker.Events.playerReady, () => { this.startPlayingMusic() });
-        this.modPlayer.loadModule('assets/mods/db_3dg.xm');
+  setupSidPlayer(): void {
+    this.loadScript('jsSID.js').then(() => {
+      this.sidPlayer = new jsSID(16384,0.0005);
+      this.sidPlayer.setloadcallback(this.initTune);
+      this.sidPlayer.setplaycallback(this.playCallback);
+      this.loadTune();
+      this.toggleTune();
+    });
+  }
+
+  setupModPlayer(): void {
+    this.loadScript('scriptracker-1.1.1.min.js').then(() => {
+      this.modPlayer = new ScripTracker();
+      this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+        this.subTune = 0;
+        this.subTunes = songLength;
+        this.info = songName;
+        this.playing = false;
+        this.toggleTune();
       });
-    }
-    else {
-      this.startPlayingMusic();
-    }
+      this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
+        this.subTune = currentOrder - 1;
+        this.subTunes = songLength;
+        this.playTime = 'Pt ' + patternIndex;
+      });
+      this.loadTune();
+    });
   }
 
   loadScript (file): Promise<any> {
@@ -208,43 +218,45 @@ export class PlayerComponent implements OnInit {
   }
 
   play(): void {
-    this.setup();
+    if (this.loadedTune && this.loadedTune === this.selectedTune) {
+      this.toggleTune();
+    }
+    else {
+      this.setup(this.getLabel());
+    }
   }
 
-  playMusic(): void {
-    this.setupMusic();
-  }
-
-  startPlaying(): void {
+  toggleTune(): void {
     if (this.playing) {
-      this.sidPlayer.pause();
+      if (this.modPlayer) {
+        this.modPlayer.stop();
+      }
+      else {
+        window.clearInterval(this.intervalID);
+        this.sidPlayer.pause();
+        window.cancelAnimationFrame(this.requestID);
+      }
       this.playButton = this.playIcon;
-      window.cancelAnimationFrame(this.requestID);
-      this.playing = false;
     }
     else {
-      this.sidPlayer.playcont();
+      if (this.modPlayer) {
+        this.modPlayer.play();
+      }
+      else {
+        this.intervalID = window.setInterval(this.showPlaytime, 1000);
+        this.sidPlayer.playcont();
+        this.redrawSpectrum();
+      }
       this.playButton = this.pauseIcon;
-      this.redrawSpectrum();
-      this.playing = true;
     }
-  }
-
-  startPlayingMusic(): void {
-    if (this.playingMusic) {
-      this.modPlayer.stop();
-      this.musicButtonIcon = this.playMusicIcon;
-      this.playingMusic = false;
-    }
-    else {
-      this.modPlayer.play();
-      this.musicButtonIcon = this.pauseMusicIcon;
-      this.playingMusic = true;
-    }
+    this.playing = !this.playing;
   }
 
   next(): void {
-    if (this.sidPlayer) {
+    if (this.modPlayer) {
+      this.modPlayer.nextOrder();
+    }
+    else if (this.sidPlayer) {
       if (this.subTune === this.sidPlayer.getsubtunes() - 1) {
         this.subTune = 0;
       }
@@ -254,12 +266,15 @@ export class PlayerComponent implements OnInit {
       this.sidPlayer.start(this.subTune);
     }
     else {
-      this.setup();
+      this.setup(this.getLabel());
     }
   }
 
   prev(): void {
-    if (this.sidPlayer) {
+    if (this.modPlayer) {
+      this.modPlayer.prevOrder();
+    }
+    else if (this.sidPlayer) {
       if (this.subTune === 0) {
         this.subTune = this.sidPlayer.getsubtunes() - 1;
       }
@@ -269,35 +284,38 @@ export class PlayerComponent implements OnInit {
       this.sidPlayer.start(this.subTune);
     }
     else {
-      this.setup();
+      this.setup(this.getLabel());
     }
   }
 
-  toggle(): void {
+  toggleVideo(): void {
+    if (!this.video) {
+      this.video = document.getElementById('bgvid') as HTMLVideoElement;
+    }
+    if (!this.screen) {
+      this.screen = document.getElementById('screen');
+    }
     if (this.videoPlaying) {
       this.video.pause();
       this.screen.classList.add('fadeIn');
       this.screen.classList.remove('fadeOut');
-      this.setVideoButton(this.playVideoIcon);
-      this.videoPlaying = false;
+      this.videoButtonIcon = this.playVideoIcon;
     }
     else {
       this.video.play();
       this.screen.classList.add('fadeOut');
       this.screen.classList.remove('fadeIn');
-      this.setVideoButton(this.pauseVideoIcon);
-      this.videoPlaying = true;
+      this.videoButtonIcon = this.pauseVideoIcon;
     }
-  }
-
-  setVideoButton = (video: string): void => {
-    this.videoButtonIcon = video;
+    this.videoPlaying = !this.videoPlaying;
   }
 
   initTune= () => {
-    this.subTunes = this.sidPlayer.getsubtunes();
-    this.author = this.removeNullFromString(this.sidPlayer.getauthor());
-    this.title = this.removeNullFromString(this.sidPlayer.gettitle());
+    if (this.sidPlayer) {
+      this.subTunes = this.sidPlayer.getsubtunes();
+      this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+                  this.removeNullFromString(this.sidPlayer.gettitle());
+    }
   }
 
   removeNullFromString(str: string): string {
@@ -305,21 +323,46 @@ export class PlayerComponent implements OnInit {
   }
 
   showPlaytime= () => {
-    const time = parseInt(this.sidPlayer.getplaytime());
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-    this.playTime = this.prependZero(minutes) + ':' + this.prependZero(seconds);
+    if (this.sidPlayer) {
+      const time = parseInt(this.sidPlayer.getplaytime());
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      this.playTime = this.prependZero(minutes) + ':' + this.prependZero(seconds);
+    }
   }
 
   prependZero(num: number): string {
     return num.toString().padStart(2, '0');
   }
-  
-  selectChange($event) {
-    if (this.sidPlayer) {
-      this.subTune = 0;
-      this.sidPlayer.loadinit('assets/sids/' + this.selectedSid + '.sid', this.subTune);
+
+  loadTune(): void {
+    if (this.modPlayer) {
+      this.modPlayer.loadModule('assets/mods/' + this.selectedTune + '.xm');
     }
+    else {
+      this.subTune = 0;
+      this.sidPlayer.loadinit('assets/sids/' + this.selectedTune + '.sid', this.subTune);
+    }
+    this.loadedTune = this.selectedTune;
+  }
+  
+  selectChange() {
+    if (!this.playing) {
+      return;
+    }
+    const label = this.getLabel();
+    if (label === this.optgroupLabel) {
+      this.loadTune();
+    }
+    else {
+      this.toggleTune();
+      this.setup(label);
+    }
+  }
+
+  getLabel(): string {
+    const optgroup = document.querySelector('select option:checked').parentElement as HTMLOptGroupElement;
+    return optgroup.label;
   }
 
   playCallback= (i, freq1, freq2, freq3) => {

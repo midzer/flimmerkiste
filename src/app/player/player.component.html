@@ -1,19 +1,27 @@
 <div class="player">
-  <div class="marquee hidden">
-    <span>{{author}} - {{title}}</span>
+  <div class="d-flex">
+    <div class="info">{{subTune + 1}}/{{subTunes}} {{playTime}}</div>
+    <div class="marquee">
+      <span>{{info}}</span>
+    </div>
   </div>
-  <div>{{subTune + 1}}/{{subTunes}} - {{playTime}}</div>
   <div class="buttons">
     <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play track"></button>
     <button (click)="next()"><img src="assets/images/player-track-next.svg" width="24" height="24" alt="Next track"></button>
     <button (click)="prev()"><img src="assets/images/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
-    <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
-    <button (click)="playMusic()"><img [src]="musicButtonIcon" width="24" height="24" alt="Play music"></button>
+    <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange()">
+      <optgroup label="mods">
+        <option *ngFor="let mod of mods" [ngValue]="mod">
+          {{mod}}
+        </option>
+      </optgroup>
+      <optgroup label="sids">
+        <option *ngFor="let sid of sids" [ngValue]="sid">
+          {{sid}}
+        </option>
+      </optgroup>
+    </select>
   </div>
-  <select [(ngModel)]="selectedSid" (ngModelChange)="selectChange($event)">
-    <option *ngFor="let sid of sids" [ngValue]="sid">
-      {{sid}}
-    </option>
-  </select>
   <canvas (click)="play()"></canvas>
+  <button (click)="toggleVideo()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
 </div><!-- player -->

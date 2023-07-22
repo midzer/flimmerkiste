@@ -2,18 +2,20 @@
 
 .player {
     position: absolute;
-    top: 7.78%;
-    left: 77.69%;
-    width: 20.31%;
+    top: 7.5%;
+    left: 77.5%;
+    width: 20.7%;
     height: 20%;
     color: $lightGrey;
     text-align: center;
 }
-@media screen and (max-width: 576px) {
-    .player {
-        position: fixed;
-        top: 42%;
-    } 
+
+.d-flex {
+    display: flex;
+}
+
+.info {
+    white-space: nowrap;
 }
 
 .marquee {
@@ -30,7 +32,7 @@
 }
 
 .marquee span:hover {
-    animation-play-state: paused
+    animation-play-state: paused;
 }
 
 /* Make it move */
@@ -39,42 +41,45 @@
     100% { transform: translate(-100%, 0); }
 }
 
-.hidden {
-    visibility: hidden;
-}
-
 .buttons {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-@media screen and (min-width: 576px) {
-    .buttons {
-        align-items: start;
-    }
 }
 
 button {
     padding: 0.125rem;
 }
 
-select {
-    max-width: 100%;
+button:last-child {
+    margin-top: 10%;
 }
 
 canvas {
-    position: relative;
-    top: 50%;
-    width: 100%;
-    aspect-ratio: 2;
+    aspect-ratio: 3;
     cursor: pointer;
 }
 
+.marquee,
+canvas,
+select {
+    width: 100%;
+}
+
 @media screen and (max-width: 576px) {
+    .player {
+        position: fixed;
+        top: 42%;
+    }
+
+    .d-flex,
+    .buttons {
+        flex-wrap: wrap;
+    }
+
     canvas {
-        top: 0;
         aspect-ratio: 0.75;
-    } 
+    }
+
+    button:last-child {
+        margin-top: 0;
+    }
 }
