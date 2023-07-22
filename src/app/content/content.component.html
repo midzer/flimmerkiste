@@ -1,10 +1,10 @@
 <button (click)="goBack()">&#9664;</button>
-<audio *ngIf="hasAudio == true" controls preload="metadata">
+<audio *ngIf="hasAudio == true" controls playsinline preload="metadata">
     <source src="{{name | mp3file}}" type="audio/mpeg">
     Dein Browser unterstützt kein Audio-Element
 </audio>
 <markdown [src]="path"></markdown>
-<video *ngIf="hasVideo == true" controls preload="metadata">
+<video *ngIf="hasVideo == true" controls playsinline preload="metadata">
     <source src="{{name | webmfile}}" type='video/webm;codecs="vp9,opus"'>
     <source src="{{name | mp4file}}" type='video/mp4;codecs="avc1.42c01e,mp4a.40.2"'>
     Dein Browser unterstützt kein Video-Element
