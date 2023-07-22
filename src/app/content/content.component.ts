@@ -46,21 +46,17 @@ export class ContentComponent implements OnInit {
     if (this.hasAudio) {
       window.setTimeout(() => {
         const audio = document.querySelector('audio');
-
-        // iPhone/iPad need to play first, then set the time
-        let initdone = false;
-        audio.addEventListener('canplaythrough', () => {
-          initdone = true;
-        });
         const items = Array.from(document.querySelectorAll('ol > li'));
         items.forEach(item => {
           const duration = item.textContent.substring(0, 7);
           item.addEventListener('click', event => {
             event.preventDefault();
-            if (initdone) {
+            if (audio.readyState === 4) {
               audio.currentTime = this.convertDurationtoSeconds(duration);
             }
-            audio.play();
+            if (audio.paused) {
+              audio.play();
+            }
           }, false);
           item.innerHTML = '<span class="jump">' + duration + '</span> ' + item.textContent.substring(8);
         });
