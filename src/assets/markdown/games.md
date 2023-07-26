@@ -59,6 +59,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * [Repo](https://github.com/midzer/jumpnbump) / [Web](https://jumpnbump.netlify.app/) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
 * Tastatur
 
+## LBreakoutHD (Breakout)
+
+* Erscheinungsjahr: 1976
+* Genre: Arcade
+* [Repo](https://github.com/midzer/lbreakouthd) / [Web](https://lbreakouthd.netlify.app/) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
+* Maus + Tastatur + Touch
+
 ## Raptor - Call of the Shadows
 
 * Erscheinungsjahr: 1994
