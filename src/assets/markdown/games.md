@@ -45,6 +45,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * [Repo](https://github.com/midzer/freegemas) / [Web](https://freegemas.netlify.app/) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
 * Maus + Tastatur + Touch
 
+## Freegish (Gish)
+
+* Erscheinungsjahr: 2004
+* Genre: Platform
+* [Repo](https://github.com/midzer/freegish) / [Web](https://freegish.netlify.app/) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
+* Tastatur
+
 ## Freeserf (The Settlers)
 
 * Erscheinungsjahr: 1993
