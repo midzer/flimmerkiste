@@ -39,6 +39,7 @@ export class PlayerComponent implements OnInit {
   loadedTune: string;
   selectedTune: string = 'Last_Ninja_2';
   mods: string[] = [
+    "beek-substitutionology",
     "contraduct_design",
     "db_3dg"
   ];
