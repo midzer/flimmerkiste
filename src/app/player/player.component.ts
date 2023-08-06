@@ -164,6 +164,22 @@ export class PlayerComponent implements OnInit {
     this.ctx.font = "100px Monospace";
     this.ctx.fillText('Click me', 50, 150);
     this.ctx.fillText('to start', 50, 300);
+
+    const hash = window.location.hash;
+    if (hash) {
+      const tune = window.decodeURIComponent(hash).replace('#', '');
+      let label;
+      if (this.sids.includes(tune)) {
+        label = 'SIDS';
+      }
+      else if (this.mods.includes(tune)) {
+        label = 'MODS';
+      }
+      if (label) {
+        this.selectedTune = tune;
+        this.setup(label);
+      }
+    }
   }
 
   setup(label: string): void {
