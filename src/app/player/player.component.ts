@@ -315,8 +315,16 @@ export class PlayerComponent implements OnInit {
 
   copy(event) {
     const btn = event.target;
-    btn.dataset.descr = 'Tune copied!';
-    setTimeout(() => { btn.dataset.descr = 'Copy tune'; }, 1337);
+    const copyTune = btn.dataset.descr;
+    const info = btn.firstElementChild;
+    info.classList.add('copied');
+    const oldInfo = this.info;
+    btn.dataset.descr = this.info = 'Copied!';
+    setTimeout(() => {
+      btn.dataset.descr = copyTune;
+      this.info = oldInfo;
+      info.classList.remove('copied');
+    }, 1337);
     navigator.clipboard.writeText(window.location.origin + window.location.pathname + '#' + this.selectedTune);
   }
 
