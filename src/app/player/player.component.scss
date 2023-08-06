@@ -23,6 +23,20 @@
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
+    position: relative;
+}
+
+.marquee[data-descr] {
+    cursor: copy;
+}
+  
+.marquee[data-descr]:hover::after,
+.marquee[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #000;
 }
 
 .marquee span {

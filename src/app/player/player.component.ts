@@ -313,6 +313,13 @@ export class PlayerComponent implements OnInit {
     }
   }
 
+  copy(event) {
+    const btn = event.target;
+    btn.dataset.descr = 'Tune copied!';
+    setTimeout(() => { btn.dataset.descr = 'Copy tune'; }, 1337);
+    navigator.clipboard.writeText(window.location.origin + window.location.pathname + '#' + this.selectedTune);
+  }
+
   toggleVideo(): void {
     if (!this.video) {
       this.video = document.getElementById('bgvid') as HTMLVideoElement;
