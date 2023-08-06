@@ -177,7 +177,15 @@ export class PlayerComponent implements OnInit {
       }
       if (label) {
         this.selectedTune = tune;
-        this.setup(label);
+        if (window.navigator.maxTouchPoints > 1) {
+          // Hack to play on mobile
+          window.addEventListener('click', () => {
+            this.setup(label);
+          }, { once: true });
+        }
+        else {
+          this.setup(label);
+        }
       }
     }
   }
