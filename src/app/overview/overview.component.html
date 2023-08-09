@@ -3,7 +3,7 @@
     <div class="post">
       <div class="date">{{post.date}}</div>
       <a [routerLink]="[post.name | lowercase | blank2dash]">{{post.name}}</a>
-      <span class="badge">{{post.category}}</span>
+      <span class="badge" (click)="toggleCategory($event)">{{post.category}}</span>
     </div>
   </li>
 </ul>

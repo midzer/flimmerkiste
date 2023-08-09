@@ -27,6 +27,12 @@
     border-radius: 0.375rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      filter: brightness(0.85);
+    }
   }
 }
 
