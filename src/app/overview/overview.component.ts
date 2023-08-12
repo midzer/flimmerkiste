@@ -11,16 +11,20 @@ import { Post } from '../post';
 export class OverviewComponent {
   posts = POSTS;
 
-  toggleCategory(event) {
-    const badge = event.target;
-    if (badge.classList.contains('active')) {
+  toggleCategory(category) {
+    const badges = Array.from(document.querySelectorAll('.badge'));
+    if (badges[0].classList.contains('active')) {
       this.posts = POSTS;
     }
     else {
       this.posts = this.posts.filter((post: Post) => {
-        return post.category.includes(event.target.textContent);
+        return post.category.includes(category);
       });
     }
-    badge.classList.toggle('active');
+    window.requestAnimationFrame(() => {
+      badges.forEach(badge => {
+        badge.classList.toggle('active');
+      });
+    });
   }
 }
