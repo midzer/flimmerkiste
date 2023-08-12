@@ -10,6 +10,4 @@ import { MENU } from '../menu'
 
 export class ScreenComponent {
   menu = MENU;
-  cursor: string;
-  state: string;
 }
