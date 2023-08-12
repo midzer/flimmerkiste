@@ -26,16 +26,17 @@ export class ContentComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.name = params['name'];
       this.path = 'assets/markdown/' + this.name + '.md';
-      var name = this.name.split('-').join(' ');
-      for (var i = 0; i < this.posts.length; i++) {
-        if ((this.posts[i].category == 'DJ Sets' || this.posts[i].category == 'Audio')
-            && this.posts[i].name.toLowerCase() == name) {
-          this.hasAudio = true;
-          break;
-        }
-        if (this.posts[i].category == 'Video'
-            && this.posts[i].name.toLowerCase() == name) {
-          this.hasVideo = true;
+      const name = this.name.split('-').join(' ');
+      for (let i = 0; i < this.posts.length; i++) {
+        const post = this.posts[i];
+        if (post.name.toLowerCase() === name) {
+          const category = post.category;
+          if (category === 'DJ Sets' || category === 'Audio') {
+            this.hasAudio = true;
+          }
+          if (category === 'Video') {
+            this.hasVideo = true;
+          }
           break;
         }
       }
