@@ -10,10 +10,10 @@ import { Post } from '../post';
 })
 export class OverviewComponent {
   posts = POSTS;
+  active = false;
 
-  toggleCategory(category) {
-    const badges = Array.from(document.querySelectorAll('.badge'));
-    if (badges[0].classList.contains('active')) {
+  toggleCategory(category: string): void {
+    if (this.active) {
       this.posts = POSTS;
     }
     else {
@@ -21,10 +21,6 @@ export class OverviewComponent {
         return post.category.includes(category);
       });
     }
-    window.requestAnimationFrame(() => {
-      badges.forEach(badge => {
-        badge.classList.toggle('active');
-      });
-    });
+    this.active = !this.active;
   }
 }

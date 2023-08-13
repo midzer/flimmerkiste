@@ -1,9 +1,7 @@
-<ul class="posts">
+<ul>
   <li *ngFor="let post of posts">
-    <div class="post">
-      <div class="date">{{post.date}}</div>
+      <div>{{post.date}}</div>
       <a [routerLink]="[post.name | lowercase | blank2dash]">{{post.name}}</a>
-      <span class="badge" (click)="toggleCategory(post.category)">{{post.category}}</span>
-    </div>
+      <span [class.active]="active" (click)="toggleCategory(post.category)">{{post.category}}</span>
   </li>
 </ul>

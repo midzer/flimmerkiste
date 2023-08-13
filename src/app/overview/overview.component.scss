@@ -1,62 +1,62 @@
 @import '../../variables.scss';
 
-.posts {
+ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-.post {
+li {
   margin-top: 1rem;
+}
 
-  > .date {
-    font-size: 0.8em;
-  }
+div {
+  font-size: 0.8em;
+}
 
-  > .badge {
-    display: inline-block;
-    color: $lightBlue;
-    background-color: $darkBlue;
-    margin-left: 0.75em;
-    padding: 0.35em 0.65em;
-    font-size: 0.75em;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.375rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
+span {
+  display: inline-block;
+  color: $lightBlue;
+  background-color: $darkBlue;
+  margin-left: 0.75em;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.375rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
 
-    &:hover,
-    &.active {
-      filter: brightness(0.75);
-    }
+  &:hover,
+  &.active {
+    filter: brightness(0.75);
   }
 }
 
-li a {
+a {
 	color: $blue;
   text-decoration: none;
 	transition: color .3s;
   margin-left: -5px;
-}
 
-li a:hover {
-	color: $lightBlue;
-}
+  &:hover {
+    color: $lightBlue;
+  }
 
-a:before {
-  content: '\203A';
-	font-weight: bold;
-	position: relative;
-	opacity: 0;
-	left: 0;
-	transition: left .3s, opacity .3s;
-}
+  &::before {
+    content: '\203A';
+    font-weight: bold;
+    position: relative;
+    opacity: 0;
+    left: 0;
+    transition: left .3s, opacity .3s;
+  }
 
-a:hover:before {
-	opacity: 1;
-	left: -5px;
+  &:hover::before {
+    opacity: 1;
+    left: -5px;
+  }
 }
