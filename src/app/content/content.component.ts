@@ -27,14 +27,14 @@ export class ContentComponent implements OnInit {
       this.name = params['name'];
       this.path = 'assets/markdown/' + this.name + '.md';
       const name = this.name.split('-').join(' ');
-      for (let i = 0; i < this.posts.length; i++) {
+      for (let i = this.posts.length - 1; i >= 0 ; i--) {
         const post = this.posts[i];
         if (post.name.toLowerCase() === name) {
           const category = post.category;
           if (category === 'DJ Sets' || category === 'Audio') {
             this.hasAudio = true;
           }
-          if (category === 'Video') {
+          else if (category === 'Video') {
             this.hasVideo = true;
           }
           break;
