@@ -330,20 +330,17 @@ export class PlayerComponent implements OnInit {
       this.video = document.getElementById('bgvid') as HTMLVideoElement;
     }
     if (!this.screen) {
-      this.screen = document.getElementById('screen');
+      this.screen = document.querySelector('app-screen');
     }
     if (this.videoPlaying) {
       this.video.pause();
-      this.screen.classList.add('fadeIn');
-      this.screen.classList.remove('fadeOut');
       this.videoButtonIcon = this.playVideoIcon;
     }
     else {
       this.video.play();
-      this.screen.classList.add('fadeOut');
-      this.screen.classList.remove('fadeIn');
       this.videoButtonIcon = this.pauseVideoIcon;
     }
+    this.screen.classList.toggle('hide');
     this.videoPlaying = !this.videoPlaying;
   }
 

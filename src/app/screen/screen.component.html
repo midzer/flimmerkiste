@@ -1,22 +1,18 @@
-<div id="screen" class="screen fade">
-  <header>
-    <a [routerLink]="['']" routerLinkActive="active">
-      <img src="/assets/images/title.webp" width="543" height="84" alt="Logo midzers Flimmerkiste">
-    </a>
-    <nav>
-      <ul class="menu">
-        <li *ngFor="let menuitem of menu">
-          <a [routerLink]="[menuitem.name]">{{menuitem.name}}</a>
-        </li>
-        <li>
-          <a href="https://archive.midzer.de">archive</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-  </main>
-</div><!-- screen -->
+<header>
+  <a [routerLink]="['']" routerLinkActive="active">
+    <img src="/assets/images/title.webp" width="543" height="84" alt="Logo midzers Flimmerkiste">
+  </a>
+  <nav>
+    <ul>
+      <li *ngFor="let menuitem of menu">
+        <a [routerLink]="[menuitem.name]">{{menuitem.name}}</a>
+      </li>
+      <li>
+        <a href="https://archive.midzer.de">archive</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
