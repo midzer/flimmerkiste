@@ -1,5 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { APP_CONFIG, AppConfig } from '../app-config';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-eye',
@@ -7,13 +6,7 @@ import { APP_CONFIG, AppConfig } from '../app-config';
   styleUrls: ['./eye.component.scss']
 })
 export class EyeComponent implements OnInit {
-  imgPath: string;
-  source: string;
-
-  constructor(@Inject(APP_CONFIG) config: AppConfig) {
-    this.imgPath = config.imgPath;
-    this.clear();
-   }
+  source: string = 'data:,';
 
   ngOnInit() {
     this.loop();
@@ -38,8 +31,8 @@ export class EyeComponent implements OnInit {
   }
 
   setEye = (eye: string): void => {
-    this.source = this.imgPath + eye + '.png';
-    setTimeout(this.clear, 5000);
+    this.source = 'assets/images/' + eye + '.png';
+    setTimeout(this.clear, 1337);
   }
 
   clear = (): void => {

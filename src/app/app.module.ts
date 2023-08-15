@@ -10,8 +10,6 @@ import { ScreenComponent } from './screen/screen.component';
 
 import { SanitizedUrlPipe } from './sanitized-url.pipe';
 
-import { APP_CONFIG, APP_DI_CONFIG } from "./app-config";
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +22,6 @@ import { APP_CONFIG, APP_DI_CONFIG } from "./app-config";
     BrowserModule,
     FormsModule,
     AppRoutingModule
-  ],
-  providers: [
-    {
-      provide: APP_CONFIG,
-      useValue: APP_DI_CONFIG
-    }
   ],
   bootstrap: [AppComponent]
 })
