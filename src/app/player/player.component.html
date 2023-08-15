@@ -11,12 +11,12 @@
     <button (click)="prev()"><img src="assets/images/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
     <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange()">
       <optgroup label="MODS">
-        <option *ngFor="let mod of mods" [ngValue]="mod">
+        <option *ngFor="let mod of mods; trackBy: trackByFunc" [ngValue]="mod">
           {{mod}}
         </option>
       </optgroup>
       <optgroup label="SIDS">
-        <option *ngFor="let sid of sids" [ngValue]="sid">
+        <option *ngFor="let sid of sids; trackBy: trackByFunc" [ngValue]="sid">
           {{sid}}
         </option>
       </optgroup>
