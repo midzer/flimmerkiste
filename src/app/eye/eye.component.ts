@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-eye',
   templateUrl: './eye.component.html',
   styleUrls: ['./eye.component.scss']
 })
-export class EyeComponent implements OnInit {
+export class EyeComponent implements AfterViewInit {
   source: string = 'data:,';
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.loop();
   }
 
