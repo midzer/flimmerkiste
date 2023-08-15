@@ -34,7 +34,6 @@ export class PlayerComponent implements OnInit {
   requestID: number;
   oldPos: number;
 
-
   optgroupLabel: string = 'SIDS';
   loadedTune: string;
   selectedTune: string = 'Last_Ninja_2';
@@ -150,16 +149,14 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit() {
     this.canvas = document.querySelector('canvas');
-    this.canvas.width = 600;
-    this.canvas.height = 400;
     this.ctx = this.canvas.getContext('2d');
     this.backBuffer = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
-    for (let i = 0; i < this.canvas.width * this.canvas.height; i++) {
-        this.backBuffer.data[(i << 2) + 0] = 0x00;
-        this.backBuffer.data[(i << 2) + 1] = 0x00;
-        this.backBuffer.data[(i << 2) + 2] = 0x00;
-        this.backBuffer.data[(i << 2) + 3] = 0xFF;
-    }
+    /*for (let i = 0; i < canvas.width * canvas.height; i++) {
+      this.backBuffer.data[(i << 2) + 0] = 0x00;
+      this.backBuffer.data[(i << 2) + 1] = 0x00;
+      this.backBuffer.data[(i << 2) + 2] = 0x00;
+      this.backBuffer.data[(i << 2) + 3] = 0xFF;
+    }*/
     this.ctx.fillStyle = "#FFFFFF";
     this.ctx.font = "100px Monospace";
     this.ctx.fillText('Click me', 50, 150);
@@ -233,9 +230,9 @@ export class PlayerComponent implements OnInit {
 
   loadScript (file): Promise<any> {
     return new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.async = true
-      script.src = `/assets/js/${file}`
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `/assets/js/${file}`;
       script.onload = resolve;
       script.onerror = reject;
       document.head.appendChild(script);
