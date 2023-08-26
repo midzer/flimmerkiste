@@ -106,7 +106,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Genre: Arcade
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
 * Tastatur
-* [Spielen!](/wasm/shironimo/)
+* [Spielen!](/wasm/shiromino/)
 
 ## The Legend of Zelda - A Link to the Past
 
