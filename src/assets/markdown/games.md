@@ -1,6 +1,6 @@
 # Games
 
-Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Source Spielen](https://osgameclones.com/).
+Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Source Spielen](https://osgameclones.com/). Falls dadurch etwaiges Urheberrecht verletzt wurde, schreibt mir gerne und ich nehme die betreffenden Daten offline.
 
 ## Bombermaaan (Bomberman)
 
