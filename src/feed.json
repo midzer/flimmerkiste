@@ -5,6 +5,11 @@
 	"feed_url": "https://midzer.de/feed.json",
 	"items": [
 		{
+			"id": "how-to-win-an-online-conversation-legally",
+			"url": "https://midzer.de/how-to-win-an-online-conversation-legally",
+			"date_published": "2023-09-04"
+		},
+		{
 			"id": "eierlikoerkuchen",
 			"url": "https://midzer.de/eierlikoerkuchen",
 			"date_published": "2023-04-25"
