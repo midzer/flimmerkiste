@@ -2,6 +2,14 @@
 
 Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Source Spielen](https://osgameclones.com/). Falls dadurch etwaiges Urheberrecht verletzt wurde, schreibt mir gerne und ich nehme die betreffenden Daten offline.
 
+## AstroMenace
+
+* Erscheinungsjahr: 2007
+* Genre: Top-Down-Shooter
+* [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
+* Maus, Tastatur
+* [Spielen!](/wasm/astromenace/)
+
 ## Bombermaaan (Bomberman)
 
 * Erscheinungsjahr: 1983
@@ -23,7 +31,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 2000
 * Genre: Top-Down-Shooter
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
-* Maus + Tastatur + Touch
+* Maus, Tastatur, Touch
 * [Spielen!](/wasm/chromium-bsu/)
 
 ## Der Clou!
@@ -40,8 +48,8 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 1992
 * Genre: Echtzeitstrategie
 * [Repo](https://github.com/midzer/OpenDUNE) / [Wiki](https://de.wikipedia.org/wiki/Dune_II_%E2%80%93_Kampf_um_Arrakis)
-* Maus + Tastatur
-* Bugs: Sound
+* Maus, Tastatur
+* Bugs: Kein Sound
 * [Spielen!](/wasm/opendune/)
 
 ## Freegemas (Bejeweled)
@@ -49,7 +57,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 2001
 * Genre: Puzzle
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
-* Maus + Tastatur + Touch
+* Maus, Tastatur, Touch
 * [Spielen!](/wasm/freegemas/)
 
 ## Freegish (Gish)
@@ -65,7 +73,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 1993
 * Genre: Aufbausimulation
 * [Repo](https://github.com/midzer/freeserf) / [Wiki](https://de.wikipedia.org/wiki/Die_Siedler)
-* Maus + Tastatur + Touch
+* Maus, Tastatur, Touch
 * [Spielen!](/wasm/freeserf/)
 
 ## Jump 'n Bump
@@ -81,7 +89,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 1976
 * Genre: Arcade
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
-* Maus + Tastatur + Touch
+* Maus, Tastatur, Touch
 * [Spielen!](/wasm/lbreakouthd/)
 
 ## Raptor - Call of the Shadows
@@ -89,7 +97,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Erscheinungsjahr: 1994
 * Genre: Top-Down-Shooter
 * [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
-* Maus + Tastatur
+* Maus, Tastatur
 * [Spielen!](/wasm/raptor/)
 
 ## REminiscence (Flashback)
