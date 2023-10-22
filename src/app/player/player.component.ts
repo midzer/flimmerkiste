@@ -41,7 +41,10 @@ export class PlayerComponent implements OnInit {
     "beams_of_light",
     "beek-substitutionology",
     "contraduct_design",
-    "db_3dg"
+    "db_3dg",
+    "dt_orion",
+    "external",
+    "her4"
   ];
   sids: string[] = [
     "ACE_II",
