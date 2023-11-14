@@ -67,14 +67,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "flimmerkiste:build"
+            "buildTarget": "flimmerkiste:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "flimmerkiste:build:production"
+              "buildTarget": "flimmerkiste:build:production"
             },
             "development": {
-              "browserTarget": "flimmerkiste:build:development"
+              "buildTarget": "flimmerkiste:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "flimmerkiste:build"
+            "buildTarget": "flimmerkiste:build"
           }
         },
         "test": {
