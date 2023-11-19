@@ -43,6 +43,14 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * [Deutschsprachige Version spielen!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
+## Doom
+
+* Erscheinungsjahr: 1993
+* Genre: Ego-Shooter
+* [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
+* Maus, Tastatur
+* [Spielen!](/wasm/doom/)
+
 ## Dune II – Kampf um Arrakis
 
 * Erscheinungsjahr: 1992
