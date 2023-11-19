@@ -143,7 +143,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 ## Wolfenstein 3D
 
 * Erscheinungsjahr: 1994
-* Genre: Egoshooter
+* Genre: Ego-Shooter
 * [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
 * Tastatur
 * [Spielen!](/wasm/wolfenstein/)
