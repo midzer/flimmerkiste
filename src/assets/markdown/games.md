@@ -140,6 +140,14 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Tastatur
 * [Spielen!](/wasm/zelda3/)
 
+## Vectoroids (Asteroids)
+
+* Erscheinungsjahr: 1979
+* Genre: Arcade
+* [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
+* Tastatur
+* [Spielen!](/wasm/vectoroids/)
+
 ## WipEout
 
 * Erscheinungsjahr: 1995
