@@ -116,6 +116,14 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Tastatur
 * [Spielen!](/wasm/reminiscence/)
 
+## SDL-Ball (Breakout)
+
+* Erscheinungsjahr: 2008-2014
+* Genre: Arcade
+* [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
+* Maus, Tastatur, Touch
+* [Spielen!](/wasm/sdl-ball/)
+
 ## Shiromino
 
 * Erscheinungsjahr: 2017
