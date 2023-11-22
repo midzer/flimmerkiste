@@ -140,6 +140,14 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Maus, Tastatur, Touch
 * [Spielen!](/wasm/sdl-ball/)
 
+## SDL Sopwith (Sopwith)
+
+* Erscheinungsjahr: 1984
+* Genre: Shoot 'em up
+* [Repo](https://github.com/midzer/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
+* Tastatur
+* [Spielen!](/wasm/sdl-sopwith/)
+
 ## Shiromino
 
 * Erscheinungsjahr: 2017
