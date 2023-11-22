@@ -108,6 +108,14 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Maus, Tastatur, Touch
 * [Spielen!](/wasm/lbreakouthd/)
 
+## Prince of Persia
+
+* Erscheinungsjahr: 1989
+* Genre: Jump 'n' Run
+* [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
+* Tastatur
+* [Spielen!](/wasm/prince/)
+
 ## Raptor - Call of the Shadows
 
 * Erscheinungsjahr: 1994
