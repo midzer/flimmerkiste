@@ -60,6 +60,14 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 * Bugs: Kein Sound
 * [Spielen!](/wasm/opendune/)
 
+## Fallout
+
+* Erscheinungsjahr: 1997
+* Genre: Rollenspiel
+* [Repo](https://github.com/midzer/fallout1-ce) / [Wiki](https://de.wikipedia.org/wiki/Fallout_(Computerspiel))
+* Maus, Tastatur
+* [Spielen!](/wasm/fallout/)
+
 ## Freegemas (Bejeweled)
 
 * Erscheinungsjahr: 2001
