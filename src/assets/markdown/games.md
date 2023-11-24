@@ -136,9 +136,9 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von [Open-Sourc
 
 * Erscheinungsjahr: 1995-2023
 * Genre: Puzzle
-* [Repo](https://github.com/midzer/rocksndiamonds) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
+* [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Maus, Tastatur
-* [Spielen!](/wasm/rocksndiamonds/)
+* [Spielen! (extern)](https://www.artsoft.org/rocksndiamonds/play/)
 
 ## SDL-Ball (Breakout)
 
