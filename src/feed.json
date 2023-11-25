@@ -5,8 +5,13 @@
 	"feed_url": "https://midzer.de/feed.json",
 	"items": [
 		{
-			"id": "how-to-win-an-online-conversation-legally",
-			"url": "https://midzer.de/how-to-win-an-online-conversation-legally",
+			"id": "obatzda",
+			"url": "https://midzer.de/obatzda",
+			"date_published": "2023-11-25"
+		},
+		{
+			"id": "how-to-disrupt-an-online-conversation-legally",
+			"url": "https://midzer.de/how-to-disrupt-an-online-conversation-legally",
 			"date_published": "2023-09-04"
 		},
 		{

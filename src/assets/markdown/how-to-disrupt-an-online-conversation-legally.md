@@ -1,4 +1,4 @@
-# How to win an online converation legally
+# How to disrupt an online converation legally
 
 Note: the techniques for subversive communication described in this post should only be used in experimental environments. Use at your own risk.
 
