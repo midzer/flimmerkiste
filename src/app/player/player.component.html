@@ -9,7 +9,7 @@
     <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play track"></button>
     <button (click)="next()"><img src="assets/images/player-track-next.svg" width="24" height="24" alt="Next track"></button>
     <button (click)="prev()"><img src="assets/images/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
-    <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange()">
+    <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange()" aria-label="Select tune">
       <optgroup label="MODS">
         <option *ngFor="let mod of mods" [ngValue]="mod">
           {{mod}}
