@@ -78,6 +78,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, [Ope
 * Demo
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
 * Maus, Tastatur, Touch
+* [Spielen!](/wasm/heroes2/)
 
 ## Freegemas (Bejeweled)
 
