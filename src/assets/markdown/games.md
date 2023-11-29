@@ -11,6 +11,15 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, [Ope
 * Maus, Tastatur
 * [Spielen!](/wasm/astromenace/)
 
+## Ballerburg SDL (Ballerburg)
+
+* Erscheinungsjahr: 1987
+* Genre: Artillery-Spiel
+* FOSS
+* [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
+* Maus, Tastatur, Touch
+* [Spielen! (extern)](https://baller.tuxfamily.org/online/)
+
 ## Bombermaaan (Bomberman)
 
 * Erscheinungsjahr: 1983
