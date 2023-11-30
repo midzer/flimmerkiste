@@ -1,6 +1,6 @@
 # Games
 
-Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, [Open-Source Spielen](https://osgameclones.com/) und Shareware.
+Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Freeware/Shareware und [Open-Source Spielen](https://osgameclones.com/).
 
 ## AstroMenace
 
@@ -28,6 +28,25 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, [Ope
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
 * Tastatur
 * [Spielen!](/wasm/bombermaaan/)
+
+## Command & Conquer
+
+* Genre: Echtzeitstrategie
+* Freeware
+* [Repo](https://github.com/midzer/Vanilla-Conquer)
+* Maus, Tastatur, Touch
+
+### Tiberian Dawn
+
+* Erscheinungsjahr: 1995
+* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
+* [Spielen!](/wasm/tiberiandawn/)
+
+### Red Alert
+
+* Erscheinungsjahr: 1996
+* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
+* [Spielen!](/wasm/redalert/)
 
 ## C-Dogs SDL
 
