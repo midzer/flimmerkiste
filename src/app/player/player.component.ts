@@ -45,6 +45,7 @@ export class PlayerComponent implements OnInit {
     "dt_orion",
     "external",
     "her4",
+    "lamour_toujours_remix",
     "soda7-digitags",
     "sv_sac05",
     "titan_02",
