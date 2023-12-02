@@ -44,7 +44,12 @@ export class PlayerComponent implements OnInit {
     "db_3dg",
     "dt_orion",
     "external",
-    "her4"
+    "her4",
+    "soda7-digitags",
+    "sv_sac05",
+    "titan_02",
+    "transfu3",
+    "tu_itr29"
   ];
   sids: string[] = [
     "ACE_II",
