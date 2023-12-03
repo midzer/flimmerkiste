@@ -40,13 +40,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1995
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
-* [Spielen!](/wasm/tiberiandawn/)
+* [Spielen!](/wasm/tiberian-dawn/)
 
 ### Red Alert
 
 * Erscheinungsjahr: 1996
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
-* [Spielen!](/wasm/redalert/)
+* [Spielen!](/wasm/red-alert/)
 
 ## C-Dogs SDL
 
@@ -107,6 +107,15 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
 * Maus, Tastatur, Touch
 * [Spielen!](/wasm/heroes2/)
+
+## Flare (Diablo)
+
+* Erscheinungsjahr: 1997
+* Genre: Action-Rollenspiel
+* FOSS
+* [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
+* Maus, Tastatur
+* [Spielen!](/wasm/flare/)
 
 ## Freegemas (Bejeweled)
 
