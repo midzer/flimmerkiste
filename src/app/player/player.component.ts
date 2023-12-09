@@ -35,7 +35,6 @@ export class PlayerComponent implements OnInit {
   oldPos: number;
 
   optgroupLabel: string = 'SIDS';
-  loadedTune: string;
   selectedTune: string = 'Last_Ninja_2';
   mods: string[] = [
     "beams_of_light",
@@ -198,50 +197,55 @@ export class PlayerComponent implements OnInit {
   }
 
   setup(label: string): void {
+    let script,
+        setupPlayer;
     if (label === 'MODS') {
-      this.setupModPlayer();
       this.sidPlayer = null;
+      script = 'scriptracker-1.1.1.min.js';
+      setupPlayer = this.setupModPlayer;
     }
     else {
-      this.setupSidPlayer();
       this.modPlayer = null;
+      script = 'jsSID.js';
+      setupPlayer = this.setupSidPlayer;
     }
     this.optgroupLabel = label;
-  }
-
-  setupSidPlayer(): void {
-    this.loadScript('jsSID.js').then(() => {
-      this.sidPlayer = new jsSID(16384,0.0005);
-      this.sidPlayer.setloadcallback(this.initTune);
-      this.sidPlayer.setplaycallback(this.playCallback);
+    this.loadScript(script).then(() => {
+      setupPlayer();
       this.loadTune();
-      this.toggleTune();
     });
   }
 
-  setupModPlayer(): void {
-    this.loadScript('scriptracker-1.1.1.min.js').then(() => {
-      this.modPlayer = new ScripTracker();
-      this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
-        this.subTune = 0;
-        this.subTunes = songLength;
-        this.info = songName;
-        this.playing = false;
-        this.toggleTune();
-      });
-      this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
-        this.subTune = currentOrder - 1;
-        this.subTunes = songLength;
-        this.playTime = 'Pt ' + patternIndex;
-      });
-      this.loadTune();
+  setupSidPlayer = () => {
+    this.sidPlayer = new jsSID(16384,0.0005);
+    this.sidPlayer.setloadcallback(() => {
+      this.subTunes = this.sidPlayer.getsubtunes();
+      this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+                  this.removeNullFromString(this.sidPlayer.gettitle());
+      this.toggleTune();
+    });
+    this.sidPlayer.setplaycallback((i, freq1, freq2, freq3) => {
+      this.onUpdateSpectrum(i, freq1 * 5, freq2 * 5, freq3 * 5, 1, 1, 1);
+    });
+  }
+
+  setupModPlayer = () => {
+    this.modPlayer = new ScripTracker();
+    this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+      this.subTune = 0;
+      this.subTunes = songLength;
+      this.info = songName;
+      this.playing = false;
+      this.toggleTune();
+    });
+    this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
+      this.subTune = currentOrder - 1;
     });
   }
 
   loadScript (file): Promise<any> {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.async = true;
       script.src = `/assets/js/${file}`;
       script.onload = resolve;
       script.onerror = reject;
@@ -250,7 +254,7 @@ export class PlayerComponent implements OnInit {
   }
 
   play(): void {
-    if (this.loadedTune && this.loadedTune === this.selectedTune) {
+    if (this.modPlayer || this.sidPlayer) {
       this.toggleTune();
     }
     else {
@@ -264,22 +268,22 @@ export class PlayerComponent implements OnInit {
         this.modPlayer.stop();
       }
       else {
-        window.clearInterval(this.intervalID);
         this.sidPlayer.pause();
         window.cancelAnimationFrame(this.requestID);
       }
       this.playButton = this.playIcon;
+      window.clearInterval(this.intervalID);
     }
     else {
       if (this.modPlayer) {
         this.modPlayer.play();
       }
       else {
-        this.intervalID = window.setInterval(this.showPlaytime, 1000);
         this.sidPlayer.playcont();
         this.redrawSpectrum();
       }
       this.playButton = this.pauseIcon;
+      this.intervalID = window.setInterval(this.showPlaytime, 1000);
     }
     this.playing = !this.playing;
   }
@@ -298,7 +302,7 @@ export class PlayerComponent implements OnInit {
       this.sidPlayer.start(this.subTune);
     }
     else {
-      this.setup(this.getLabel());
+      this.play();
     }
   }
 
@@ -316,11 +320,11 @@ export class PlayerComponent implements OnInit {
       this.sidPlayer.start(this.subTune);
     }
     else {
-      this.setup(this.getLabel());
+      this.play();
     }
   }
 
-  copy(event) {
+  copy(event): void {
     const btn = event.target;
     const copyTune = btn.dataset.descr;
     const info = btn.firstElementChild;
@@ -354,25 +358,22 @@ export class PlayerComponent implements OnInit {
     this.videoPlaying = !this.videoPlaying;
   }
 
-  initTune= () => {
-    if (this.sidPlayer) {
-      this.subTunes = this.sidPlayer.getsubtunes();
-      this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
-                  this.removeNullFromString(this.sidPlayer.gettitle());
-    }
-  }
-
   removeNullFromString(str: string): string {
     return str.replace(/\0[\s\S]*$/g,'');
   }
 
-  showPlaytime= () => {
-    if (this.sidPlayer) {
+  showPlaytime = () => {
+    let playTime;
+    if (this.modPlayer) {
+      playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+    }
+    else {
       const time = parseInt(this.sidPlayer.getplaytime());
       const minutes = Math.floor(time / 60);
       const seconds = time % 60;
-      this.playTime = this.prependZero(minutes) + ':' + this.prependZero(seconds);
+      playTime = this.prependZero(minutes) + ':' + this.prependZero(seconds);
     }
+    this.playTime = playTime;
   }
 
   prependZero(num: number): string {
@@ -383,23 +384,22 @@ export class PlayerComponent implements OnInit {
     if (this.modPlayer) {
       this.modPlayer.loadModule('assets/mods/' + this.selectedTune + '.xm');
     }
-    else {
+    else if (this.sidPlayer) {
       this.subTune = 0;
       this.sidPlayer.loadinit('assets/sids/' + this.selectedTune + '.sid', this.subTune);
     }
-    this.loadedTune = this.selectedTune;
   }
   
-  selectChange() {
+  selectChange(): void {
     if (!this.playing) {
       return;
     }
+    this.toggleTune();
     const label = this.getLabel();
     if (label === this.optgroupLabel) {
       this.loadTune();
     }
     else {
-      this.toggleTune();
       this.setup(label);
     }
   }
@@ -409,11 +409,7 @@ export class PlayerComponent implements OnInit {
     return optgroup.label;
   }
 
-  playCallback= (i, freq1, freq2, freq3) => {
-    this.onUpdateSpectrum(i, freq1 * 5, freq2 * 5, freq3 * 5, 1, 1, 1);
-  }
-
-  redrawSpectrum= () => {
+  redrawSpectrum = () => {
     this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
     let pos = ((this.sidPlayer.getplaytime() * 44100.) >> 6) % this.canvas.width;
     if (pos === this.oldPos) {
@@ -424,7 +420,7 @@ export class PlayerComponent implements OnInit {
     this.ctx.putImageData(this.backBuffer, this.canvas.width - pos, 0);
   }
 
-  onUpdateSpectrum (i, frequency0, frequency1, frequency2, amplitude0, amplitude1, amplitude2) {
+  onUpdateSpectrum (i, frequency0, frequency1, frequency2, amplitude0, amplitude1, amplitude2): void {
     let freq = 0
     let ampl = 0
     let column = ((i >> 7) % 600) * 4;
