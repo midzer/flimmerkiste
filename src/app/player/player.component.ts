@@ -11,6 +11,7 @@ declare var jsSID: any;
 export class PlayerComponent implements OnInit {
   modPlayer: any;
   sidPlayer: any;
+  oggPlayer: HTMLAudioElement;
   subTune: number = 0;
   subTunes: number = 13;
   info: string;
@@ -154,6 +155,10 @@ export class PlayerComponent implements OnInit {
     "Zoids"
   ];
 
+  oggs: string[] = [
+    "Sauron - OOOPS!"
+  ];
+
   constructor() {}
 
   ngOnInit() {
@@ -181,6 +186,9 @@ export class PlayerComponent implements OnInit {
       else if (this.mods.includes(tune)) {
         label = 'MODS';
       }
+      else if (this.oggs.includes(tune)) {
+        label = 'OGGS';
+      }
       if (label) {
         this.selectedTune = tune;
         if (window.navigator.maxTouchPoints > 1) {
@@ -197,50 +205,66 @@ export class PlayerComponent implements OnInit {
   }
 
   setup(label: string): void {
-    let script,
-        setupPlayer;
+    this.modPlayer = null;
+    this.sidPlayer = null;
+    this.oggPlayer = null;
     if (label === 'MODS') {
-      this.sidPlayer = null;
-      script = 'scriptracker-1.1.1.min.js';
-      setupPlayer = this.setupModPlayer;
+      this.setupModPlayer();
+    }
+    else if (label === 'SIDS') {
+      this.setupSidPlayer();
     }
     else {
-      this.modPlayer = null;
-      script = 'jsSID.js';
-      setupPlayer = this.setupSidPlayer;
+      this.setupOggPlayer();
     }
     this.optgroupLabel = label;
-    this.loadScript(script).then(() => {
-      setupPlayer();
-      this.loadTune();
-    });
   }
 
   setupSidPlayer = () => {
-    this.sidPlayer = new jsSID(16384,0.0005);
-    this.sidPlayer.setloadcallback(() => {
-      this.subTunes = this.sidPlayer.getsubtunes();
-      this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
-                  this.removeNullFromString(this.sidPlayer.gettitle());
-      this.toggleTune();
-    });
-    this.sidPlayer.setplaycallback((i, freq1, freq2, freq3) => {
-      this.onUpdateSpectrum(i, freq1 * 5, freq2 * 5, freq3 * 5, 1, 1, 1);
+    this.loadScript('jsSID.js').then(() => {
+      this.sidPlayer = new jsSID(16384,0.0005);
+      this.sidPlayer.setloadcallback(() => {
+        this.subTunes = this.sidPlayer.getsubtunes();
+        this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+                    this.removeNullFromString(this.sidPlayer.gettitle());
+        this.toggleTune();
+      });
+      this.sidPlayer.setplaycallback((i, freq1, freq2, freq3) => {
+        this.onUpdateSpectrum(i, freq1 * 5, freq2 * 5, freq3 * 5, 1, 1, 1);
+      });
+      this.loadSid();
     });
   }
 
   setupModPlayer = () => {
-    this.modPlayer = new ScripTracker();
-    this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
-      this.subTune = 0;
-      this.subTunes = songLength;
-      this.info = songName;
-      this.playing = false;
-      this.toggleTune();
+    this.loadScript('scriptracker-1.1.1.min.js').then(() => {
+      this.modPlayer = new ScripTracker();
+      this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+        this.subTune = 0;
+        this.subTunes = songLength;
+        this.info = songName;
+        this.playing = false;
+        this.toggleTune();
+      });
+      this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
+        this.subTune = currentOrder - 1;
+      });
+      this.loadMod();
     });
-    this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
-      this.subTune = currentOrder - 1;
+  }
+
+  setupOggPlayer = () => {
+    this.oggPlayer = new Audio();
+    this.oggPlayer.addEventListener('loadeddata', () => {
+      if (this.oggPlayer.readyState >= 2) {
+        this.toggleTune();
+      }
     });
+    this.oggPlayer.loop = true;
+    this.subTune = 0;
+    this.subTunes = 1;
+    this.info = this.selectedTune;
+    this.loadOgg();
   }
 
   loadScript (file): Promise<any> {
@@ -254,7 +278,7 @@ export class PlayerComponent implements OnInit {
   }
 
   play(): void {
-    if (this.modPlayer || this.sidPlayer) {
+    if (this.modPlayer || this.sidPlayer || this.oggPlayer) {
       this.toggleTune();
     }
     else {
@@ -267,9 +291,12 @@ export class PlayerComponent implements OnInit {
       if (this.modPlayer) {
         this.modPlayer.stop();
       }
-      else {
+      else if (this.sidPlayer) {
         this.sidPlayer.pause();
         window.cancelAnimationFrame(this.requestID);
+      }
+      else {
+        this.oggPlayer.pause();
       }
       this.playButton = this.playIcon;
       window.clearInterval(this.intervalID);
@@ -278,9 +305,12 @@ export class PlayerComponent implements OnInit {
       if (this.modPlayer) {
         this.modPlayer.play();
       }
-      else {
+      else if (this.sidPlayer) {
         this.sidPlayer.playcont();
         this.redrawSpectrum();
+      }
+      else {
+        this.oggPlayer.play();
       }
       this.playButton = this.pauseIcon;
       this.intervalID = window.setInterval(this.showPlaytime, 1000);
@@ -301,6 +331,9 @@ export class PlayerComponent implements OnInit {
       }
       this.sidPlayer.start(this.subTune);
     }
+    else if (this.oggPlayer) {
+      this.oggPlayer.currentTime += 10;
+    }
     else {
       this.play();
     }
@@ -318,6 +351,9 @@ export class PlayerComponent implements OnInit {
         --this.subTune;
       }
       this.sidPlayer.start(this.subTune);
+    }
+    else if (this.oggPlayer) {
+      this.oggPlayer.currentTime -= 10;
     }
     else {
       this.play();
@@ -363,17 +399,22 @@ export class PlayerComponent implements OnInit {
   }
 
   showPlaytime = () => {
-    let playTime;
     if (this.modPlayer) {
-      playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+      this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+    }
+    else if (this.sidPlayer) {
+      this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());  
     }
     else {
-      const time = parseInt(this.sidPlayer.getplaytime());
-      const minutes = Math.floor(time / 60);
-      const seconds = time % 60;
-      playTime = this.prependZero(minutes) + ':' + this.prependZero(seconds);
+      this.playTime = this.createPlayTime(this.oggPlayer.currentTime);
     }
-    this.playTime = playTime;
+  }
+
+  createPlayTime(input: any): string {
+    const time = parseInt(input);
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return this.prependZero(minutes) + ':' + this.prependZero(seconds);
   }
 
   prependZero(num: number): string {
@@ -382,12 +423,28 @@ export class PlayerComponent implements OnInit {
 
   loadTune(): void {
     if (this.modPlayer) {
-      this.modPlayer.loadModule('assets/mods/' + this.selectedTune + '.xm');
+      this.loadMod();
     }
     else if (this.sidPlayer) {
-      this.subTune = 0;
-      this.sidPlayer.loadinit('assets/sids/' + this.selectedTune + '.sid', this.subTune);
+      this.loadSid();
     }
+    else {
+      this.loadOgg();
+    }
+  }
+
+  loadMod(): void {
+    this.modPlayer.loadModule('assets/mods/' + this.selectedTune + '.xm');
+  }
+
+  loadSid(): void {
+    this.subTune = 0;
+    this.sidPlayer.loadinit('assets/sids/' + this.selectedTune + '.sid', this.subTune);
+  }
+
+  loadOgg(): void {
+    this.oggPlayer.src = 'assets/oggs/' + this.selectedTune + '.ogg';
+    this.oggPlayer.load();
   }
   
   selectChange(): void {

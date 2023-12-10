@@ -15,6 +15,11 @@
           {{mod}}
         </option>
       </optgroup>
+      <optgroup label="OGGS">
+        <option *ngFor="let ogg of oggs" [ngValue]="ogg">
+          {{ogg}}
+        </option>
+      </optgroup>
       <optgroup label="SIDS">
         <option *ngFor="let sid of sids" [ngValue]="sid">
           {{sid}}
