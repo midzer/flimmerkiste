@@ -171,10 +171,9 @@ export class PlayerComponent implements OnInit {
       this.backBuffer.data[(i << 2) + 2] = 0x00;
       this.backBuffer.data[(i << 2) + 3] = 0xFF;
     }*/
-    this.ctx.fillStyle = "#FFFFFF";
-    this.ctx.font = "100px Monospace";
-    this.ctx.fillText('Click me', 50, 150);
-    this.ctx.fillText('to start', 50, 300);
+    this.ctx.fillStyle = "#fff";
+    this.ctx.font = "128px Monospace";
+    this.ctx.fillText('Play =)', 25, 225);
 
     const hash = window.location.hash;
     if (hash) {
@@ -229,8 +228,8 @@ export class PlayerComponent implements OnInit {
                     this.removeNullFromString(this.sidPlayer.gettitle());
         this.toggleTune();
       });
-      this.sidPlayer.setplaycallback((i, freq1, freq2, freq3) => {
-        this.onUpdateSpectrum(i, freq1 * 5, freq2 * 5, freq3 * 5, 1, 1, 1);
+      this.sidPlayer.setplaycallback((i, freq1, freq2, freq3, ampl1, ampl2, ampl3) => {
+        this.onUpdateSpectrum(i, freq1, freq2, freq3, ampl1, ampl2, ampl3);
       });
       this.loadSid();
     });
@@ -478,8 +477,8 @@ export class PlayerComponent implements OnInit {
   }
 
   onUpdateSpectrum (i, frequency0, frequency1, frequency2, amplitude0, amplitude1, amplitude2): void {
-    let freq = 0
-    let ampl = 0
+    let freq = 0;
+    let ampl = 0;
     let column = ((i >> 7) % 600) * 4;
     let data = this.backBuffer.data;
     for (let j = 0; j < 400; j++) {
@@ -489,8 +488,8 @@ export class PlayerComponent implements OnInit {
         data[offset + 2] = 0x00;
         data[offset + 3] = 0xFF;
     }
-    freq = Math.floor(frequency0 * 0.3) + 1;
-    ampl = amplitude0 * 255;
+    freq = Math.floor(frequency0 / 256) + 1;
+    ampl = amplitude0 / 44100;
     if (ampl > 255) ampl = 255;
     if (freq > 1 && freq <= 399) {
         let offset = 2400 * (399 - freq) + column
@@ -498,8 +497,8 @@ export class PlayerComponent implements OnInit {
         data[offset + 2400] = ampl * 0.5;
         data[offset - 2400] = ampl * 0.5;
     }
-    freq = Math.floor(frequency1 * 0.3) + 1;
-    ampl = amplitude1 * 255;
+    freq = Math.floor(frequency1 / 256) + 1;
+    ampl = amplitude1 / 44100;
     if (ampl > 255) ampl = 255;
     if (freq > 1 && freq <= 399) {
         let offset = 2400 * (399 - freq) + column + 1;
@@ -507,8 +506,8 @@ export class PlayerComponent implements OnInit {
         data[offset + 2400] = ampl * 0.5;
         data[offset - 2400] = ampl * 0.5;
     }
-    freq = Math.floor(frequency2 * 0.3) + 1;
-    ampl = amplitude2 * 255;
+    freq = Math.floor(frequency2 / 256) + 1;
+    ampl = amplitude2 / 44100;
     if (ampl > 255) ampl = 255;
     if (freq > 1 && freq <= 399) {
         let offset = 2400 * (399 - freq) + column + 2;

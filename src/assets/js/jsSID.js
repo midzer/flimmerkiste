@@ -21,8 +21,8 @@ function jsSID (bufferlen, background_noise)
  else { var jsSID_scriptNode = jsSID_audioCtx.createScriptProcessor(bufferlen,0,1); }
  
  jsSID_scriptNode.onaudioprocess = function(e) { //scriptNode will be replaced by AudioWorker in new browsers sooner or later
-  var outBuffer = e.outputBuffer; var outData = outBuffer.getChannelData(0); 
-  for (var sample = 0; sample < outBuffer.length; sample++) { outData[sample]=play(); samplecnt++; if ((sample & 127) === 0 && playcallback) playcallback(samplecnt, ADSRstate[0], ADSRstate[1], ADSRstate[2]); }
+  var outBuffer = e.outputBuffer; var outData = outBuffer.getChannelData(0);
+  for (var sample = 0; sample < outBuffer.length; sample++) { outData[sample]=play(); samplecnt++; if ((samplecnt % 512) === 0 && playcallback) playcallback(samplecnt, prevwfout[0], prevwfout[1], prevwfout[2], prevaccu[0], prevaccu[1], prevaccu[2]); }
  }
  
  
