@@ -4,7 +4,7 @@
     position: absolute;
     top: 7.5%;
     left: 77.5%;
-    width: 20.7%;
+    width: 20.6%;
     height: 20%;
     color: $lightGrey;
     text-align: center;
@@ -56,20 +56,19 @@
     100% { transform: translate(-100%, 0); }
 }
 
-.buttons {
-    display: flex;
+button,
+select {
+    border-style: none;
+    padding: 0.125rem;
+    border: 1px solid;
 }
 
 button {
-    padding: 0.125rem;
-}
-
-button:last-child {
-    margin-top: 10vh;
+    flex-grow: 1;   
 }
 
 canvas {
-    aspect-ratio: 3;
+    aspect-ratio: 4.2;
     cursor: pointer;
 }
 
@@ -85,16 +84,11 @@ select {
         top: 42%;
     }
 
-    .d-flex,
-    .buttons {
+    .d-flex {
         flex-wrap: wrap;
     }
 
     canvas {
         aspect-ratio: 0.75;
-    }
-
-    button:last-child {
-        margin-top: 0;
     }
 }
