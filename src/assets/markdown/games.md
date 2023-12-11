@@ -89,6 +89,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1992
 * Genre: Echtzeitstrategie
+* Commercial
 * [Repo](https://github.com/midzer/OpenDUNE) / [Wiki](https://de.wikipedia.org/wiki/Dune_II_%E2%80%93_Kampf_um_Arrakis)
 * Maus, Tastatur
 
@@ -96,6 +97,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1997
 * Genre: Rollenspiel
+* Commercial
 * [Repo](https://github.com/midzer/fallout1-ce) / [Wiki](https://de.wikipedia.org/wiki/Fallout_(Computerspiel))
 * Maus, Tastatur
 
@@ -139,8 +141,18 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1993
 * Genre: Aufbausimulation
+* Commercial
 * [Repo](https://github.com/midzer/freeserf) / [Wiki](https://de.wikipedia.org/wiki/Die_Siedler)
 * Maus, Tastatur, Touch
+
+## FreeSiege
+
+* Erscheinungsjahr: 2009
+* Genre: Puzzlespiel
+* FOSS
+* [Repo](https://github.com/midzer/freesiege)
+* Tastatur
+* [Spielen!](/wasm/freesiege/)
 
 ## Jump 'n Bump
 
@@ -182,6 +194,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1992
 * Genre: Cinematic platformer
+* Commercial
 * [Repo](https://github.com/midzer/reminiscence) / [Wiki](https://de.wikipedia.org/wiki/Flashback_(Computerspiel))
 * Tastatur
 
@@ -225,6 +238,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1992
 * Genre: Action-Adventure
+* Commercial
 * [Repo](https://github.com/midzer/zelda3) / [Wiki](https://de.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past)
 * Tastatur
 
@@ -241,6 +255,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1995
 * Genre: Rennspiel
+* Commercial
 * [Repo](https://github.com/midzer/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
 * Tastatur
 
