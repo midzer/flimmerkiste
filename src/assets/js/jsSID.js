@@ -22,14 +22,14 @@ function jsSID (bufferlen, background_noise)
  
  jsSID_scriptNode.onaudioprocess = function(e) { //scriptNode will be replaced by AudioWorker in new browsers sooner or later
   var outBuffer = e.outputBuffer; var outData = outBuffer.getChannelData(0);
-  for (var sample = 0; sample < outBuffer.length; sample++) { outData[sample]=play(); samplecnt++; if ((samplecnt % 512) === 0 && playcallback) playcallback(samplecnt, prevwfout[0], prevwfout[1], prevwfout[2], prevaccu[0], prevaccu[1], prevaccu[2]); }
+  for (var sample = 0; sample < outBuffer.length; sample++) { outData[sample]=play(); }
  }
  
  
  //user functions callable from outside
  this.loadstart = function(sidurl,subt) { this.loadinit(sidurl,subt); if (startcallback!==null) startcallback(); this.playcont(); }
 
- this.loadinit = function(sidurl,subt) { loaded=0; this.pause(); samplecnt=0; initSID(); subtune=subt; //stop playback before loading new tune
+ this.loadinit = function(sidurl,subt) { loaded=0; this.pause(); initSID(); subtune=subt; //stop playback before loading new tune
   var request = new XMLHttpRequest(); request.open('GET',sidurl,true); request.responseType = 'arraybuffer';
 
   request.onload = function() {  //request.onreadystatechange=function(){ if (this.readyState!==4) return; ... could be used too
@@ -66,12 +66,12 @@ function jsSID (bufferlen, background_noise)
  this.getprefmodel = function() { return preferred_SID_model[0]; }
  this.getmodel = function() { return SID_model; }
  this.getoutput = function() { return (output/OUTPUT_SCALEDOWN)*(memory[0xD418]&0xF); }
- this.getframe = function() { return samplecnt; }
  this.getplaytime = function() { return playtime; }
+ this.getSIDAddress = function(chip) { return SID_address[chip]; }
+ this.readregister = function(register) { return memory[register]; }
  this.setmodel = function(model) { SID_model = model; }
  this.setvolume = function(vol) { volume = vol; }
  this.setloadcallback = function(fname) { loadcallback=fname; }
- this.setplaycallback = function(fname) { playcallback=fname; }
  this.setstartcallback = function(fname) { startcallback=fname; }
  this.setendcallback = function(fname,seconds) { endcallback=fname; playlength=seconds; }
  
@@ -87,10 +87,10 @@ function jsSID (bufferlen, background_noise)
  var loadaddr=0x1000, initaddr=0x1000, playaddf=0x1003, playaddr=0x1003, subtune = 0, subtune_amount=1, playlength=0; //framespeed = 1; 
  var preferred_SID_model=[8580.0,8580.0,8580.0]; var SID_model=8580.0; var SID_address=[0xD400,0,0];
  var memory = new Uint8Array(65536); //for(var i=0;i<memory.length;i++) memory[i]=0;
- var loaded=0, initialized=0, finished=0, loadcallback=null, playcallback=null, startcallback=null; endcallback=null, playtime=0, ended=0;
+ var loaded=0, initialized=0, finished=0, loadcallback=null, startcallback=null, endcallback=null, playtime=0, ended=0;
  var clk_ratio = C64_PAL_CPUCLK/samplerate;
  var frame_sampleperiod = samplerate/PAL_FRAMERATE; //samplerate/(PAL_FRAMERATE*framespeed);
- var framecnt=1, samplecnt=0, volume=1.0, CPUtime=0, pPC;
+ var framecnt=1, volume=1.0, CPUtime=0, pPC;
  var SIDamount=1, mix=0;
  
  function init(subt) { 

@@ -31,9 +31,7 @@ export class PlayerComponent implements OnInit {
 
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
-  backBuffer: ImageData;
   requestID: number;
-  oldPos: number;
 
   optgroupLabel: string = 'SIDS';
   selectedTune: string = 'Last_Ninja_2';
@@ -162,19 +160,6 @@ export class PlayerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.canvas = document.querySelector('canvas');
-    this.ctx = this.canvas.getContext('2d');
-    this.backBuffer = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
-    /*for (let i = 0; i < canvas.width * canvas.height; i++) {
-      this.backBuffer.data[(i << 2) + 0] = 0x00;
-      this.backBuffer.data[(i << 2) + 1] = 0x00;
-      this.backBuffer.data[(i << 2) + 2] = 0x00;
-      this.backBuffer.data[(i << 2) + 3] = 0xFF;
-    }*/
-    this.ctx.fillStyle = "#fff";
-    this.ctx.font = "128px Monospace";
-    this.ctx.fillText('Play =)', 25, 225);
-
     const hash = window.location.hash;
     if (hash) {
       const tune = window.decodeURIComponent(hash).replace('#', '');
@@ -227,9 +212,6 @@ export class PlayerComponent implements OnInit {
         this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
                     this.removeNullFromString(this.sidPlayer.gettitle());
         this.toggleTune();
-      });
-      this.sidPlayer.setplaycallback((i, freq1, freq2, freq3, ampl1, ampl2, ampl3) => {
-        this.onUpdateSpectrum(i, freq1, freq2, freq3, ampl1, ampl2, ampl3);
       });
       this.loadSid();
     });
@@ -466,54 +448,48 @@ export class PlayerComponent implements OnInit {
   }
 
   redrawSpectrum = () => {
-    this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
-    let pos = ((this.sidPlayer.getplaytime() * 44100.) >> 6) % this.canvas.width;
-    if (pos === this.oldPos) {
-      return;
+    if (!this.canvas) {
+      this.canvas = document.querySelector('canvas');
+      this.ctx = this.canvas.getContext('2d');
     }
-    this.oldPos = pos;
-    this.ctx.putImageData(this.backBuffer, -pos, 0);
-    this.ctx.putImageData(this.backBuffer, this.canvas.width - pos, 0);
+    this.onUpdateSpectrum();
+    this.ctx.drawImage(this.canvas,
+      0, 1, this.canvas.width, this.canvas.height,
+      -1, 1, this.canvas.width, this.canvas.height);
+    this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
   }
 
-  onUpdateSpectrum (i, frequency0, frequency1, frequency2, amplitude0, amplitude1, amplitude2): void {
-    let freq = 0;
-    let ampl = 0;
-    let column = ((i >> 7) % 600) * 4;
-    let data = this.backBuffer.data;
-    for (let j = 0; j < 400; j++) {
-        let offset = 2400 * j + column;
-        data[offset + 0] = 0x00;
-        data[offset + 1] = 0x00;
-        data[offset + 2] = 0x00;
-        data[offset + 3] = 0xFF;
+  onUpdateSpectrum(): void {
+
+    // Color the right line background to begin with
+    this.ctx.fillStyle = '#000';
+		this.ctx.fillRect(this.canvas.width - 1, 0, 1, this.canvas.height);
+    for (let voice = 0; voice < 3; voice++) {
+      const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
+      let y = (freq / 0xFFFF) * this.canvas.height;
+      y = y | 0;
+
+      let strokeStyle;
+      if (voice === 0) {
+        strokeStyle = '#955529';
+      }
+      else if (voice === 1) {
+        strokeStyle = '#ca7570'; 
+      }
+      else {
+        strokeStyle = '#2c339e';
+      }
+
+      this.ctx.lineWidth = 2;
+      this.ctx.strokeStyle = strokeStyle;
+      this.ctx.beginPath();
+      this.ctx.moveTo(this.canvas.width, this.canvas.height - y);
+      this.ctx.lineTo(this.canvas.width -1, this.canvas.height - y);
+      this.ctx.stroke();
     }
-    freq = Math.floor(frequency0 / 256) + 1;
-    ampl = amplitude0 / 44100;
-    if (ampl > 255) ampl = 255;
-    if (freq > 1 && freq <= 399) {
-        let offset = 2400 * (399 - freq) + column
-        data[offset + 0] = ampl;
-        data[offset + 2400] = ampl * 0.5;
-        data[offset - 2400] = ampl * 0.5;
-    }
-    freq = Math.floor(frequency1 / 256) + 1;
-    ampl = amplitude1 / 44100;
-    if (ampl > 255) ampl = 255;
-    if (freq > 1 && freq <= 399) {
-        let offset = 2400 * (399 - freq) + column + 1;
-        data[offset] = ampl;
-        data[offset + 2400] = ampl * 0.5;
-        data[offset - 2400] = ampl * 0.5;
-    }
-    freq = Math.floor(frequency2 / 256) + 1;
-    ampl = amplitude2 / 44100;
-    if (ampl > 255) ampl = 255;
-    if (freq > 1 && freq <= 399) {
-        let offset = 2400 * (399 - freq) + column + 2;
-        data[offset] = ampl;
-        data[offset + 2400] = ampl * 0.5;
-        data[offset - 2400] = ampl * 0.5;
-    }
+  }
+
+  readRegister(register, chip) {
+    return this.sidPlayer.readregister(register + this.sidPlayer.getSIDAddress(chip));
   }
 }

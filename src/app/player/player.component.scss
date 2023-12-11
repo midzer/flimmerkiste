@@ -60,7 +60,7 @@ button,
 select {
     border-style: none;
     padding: 0.125rem;
-    border: 1px solid;
+    border: 1px solid #000;
 }
 
 button {
@@ -68,8 +68,7 @@ button {
 }
 
 canvas {
-    aspect-ratio: 4.2;
-    cursor: pointer;
+    aspect-ratio: 4.5;
 }
 
 .marquee,
