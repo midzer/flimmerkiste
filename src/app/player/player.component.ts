@@ -269,6 +269,8 @@ export class PlayerComponent implements OnInit {
 
   toggleTune(): void {
     if (this.playing) {
+      this.playButton = this.playIcon;
+      window.clearInterval(this.intervalID);
       if (this.modPlayer) {
         this.modPlayer.stop();
       }
@@ -279,10 +281,10 @@ export class PlayerComponent implements OnInit {
       else {
         this.oggPlayer.pause();
       }
-      this.playButton = this.playIcon;
-      window.clearInterval(this.intervalID);
     }
     else {
+      this.playButton = this.pauseIcon;
+      this.intervalID = window.setInterval(this.showPlaytime, 1000);
       if (this.modPlayer) {
         this.modPlayer.play();
       }
@@ -293,8 +295,6 @@ export class PlayerComponent implements OnInit {
       else {
         this.oggPlayer.play();
       }
-      this.playButton = this.pauseIcon;
-      this.intervalID = window.setInterval(this.showPlaytime, 1000);
     }
     this.playing = !this.playing;
   }
@@ -460,10 +460,9 @@ export class PlayerComponent implements OnInit {
   }
 
   onUpdateSpectrum(): void {
-
-    // Color the right line background to begin with
     this.ctx.fillStyle = '#000';
 		this.ctx.fillRect(this.canvas.width - 1, 0, 1, this.canvas.height);
+    
     for (let voice = 0; voice < 3; voice++) {
       const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
       let y = (freq / 0xFFFF) * this.canvas.height;
