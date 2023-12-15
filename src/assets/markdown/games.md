@@ -18,7 +18,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
 * Maus, Tastatur, Touch
-* [Spielen! (extern)](https://baller.tuxfamily.org/online/)
+* [Extern spielen!](https://baller.tuxfamily.org/online/)
 
 ## Bombermaaan (Bomberman)
 
@@ -205,7 +205,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Maus, Tastatur
-* [Spielen! (extern)](https://www.artsoft.org/rocksndiamonds/play/)
+* [Extern spielen!](https://www.artsoft.org/rocksndiamonds/play/)
 
 ## SDL-Ball (Breakout)
 
@@ -256,8 +256,9 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * Erscheinungsjahr: 1995
 * Genre: Rennspiel
 * Commercial
-* [Repo](https://github.com/midzer/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
+* [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
 * Tastatur
+* [Extern spielen!](https://phoboslab.org/wipegame/)
 
 ## Wolfenstein 3D
 
