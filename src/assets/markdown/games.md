@@ -9,7 +9,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
 * Maus, Tastatur
-* [Spielen!](/wasm/astromenace/)
+* [Play!](/wasm/astromenace/)
 
 ## Ballerburg SDL (Ballerburg)
 
@@ -18,7 +18,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
 * Maus, Tastatur, Touch
-* [Extern spielen!](https://baller.tuxfamily.org/online/)
+* [Play external!](https://baller.tuxfamily.org/online/)
 
 ## Bombermaaan (Bomberman)
 
@@ -27,7 +27,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
 * Tastatur
-* [Spielen!](/wasm/bombermaaan/)
+* [Play!](/wasm/bombermaaan/)
 
 ## Command & Conquer
 
@@ -40,13 +40,13 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 
 * Erscheinungsjahr: 1995
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
-* [Spielen!](/wasm/tiberian-dawn/)
+* [Play!](/wasm/tiberian-dawn/)
 
 ### Red Alert
 
 * Erscheinungsjahr: 1996
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
-* [Spielen!](/wasm/red-alert/)
+* [Play!](/wasm/red-alert/)
 
 ## C-Dogs SDL
 
@@ -55,7 +55,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
 * Tastatur
-* [Spielen!](/wasm/cdogs/)
+* [Play!](/wasm/cdogs/)
 
 ## Chromium B.S.U.
 
@@ -64,7 +64,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
 * Maus, Tastatur, Touch
-* [Spielen!](/wasm/chromium-bsu/)
+* [Play!](/wasm/chromium-bsu/)
 
 ## Der Clou!
 
@@ -73,7 +73,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
 * Tastatur
-* [Deutschsprachige Version spielen!](/wasm/derclou/)
+* [Play german version!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
 ## Doom
@@ -83,7 +83,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * Shareware
 * [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
 * Maus, Tastatur
-* [Spielen!](/wasm/doom/)
+* [Play!](/wasm/doom/)
 
 ## Dune II – Kampf um Arrakis
 
@@ -108,7 +108,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * Demo
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
 * Maus, Tastatur, Touch
-* [Spielen!](/wasm/heroes2/)
+* [Play!](/wasm/heroes2/)
 
 ## Flare (Diablo)
 
@@ -117,7 +117,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
 * Maus, Tastatur
-* [Spielen!](/wasm/flare/)
+* [Play!](/wasm/flare/)
 
 ## Freegemas (Bejeweled)
 
@@ -126,7 +126,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
 * Maus, Tastatur, Touch
-* [Spielen!](/wasm/freegemas/)
+* [Play!](/wasm/freegemas/)
 
 ## Freegish (Gish)
 
@@ -135,7 +135,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/freegish) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
 * Tastatur
-* [Spielen!](/wasm/freegish/)
+* [Play!](/wasm/freegish/)
 
 ## Freeserf (The Settlers)
 
@@ -152,7 +152,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/freesiege)
 * Tastatur
-* [Spielen!](/wasm/freesiege/)
+* [Play!](/wasm/freesiege/)
 
 ## Jump 'n Bump
 
@@ -161,7 +161,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/jumpnbump) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
 * Tastatur
-* [Spielen!](/wasm/jumpnbump/)
+* [Play!](/wasm/jumpnbump/)
 
 ## LBreakoutHD (Breakout)
 
@@ -170,7 +170,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
-* [Spielen!](/wasm/lbreakouthd/)
+* [Play!](/wasm/lbreakouthd/)
 
 ## Prince of Persia
 
@@ -179,7 +179,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
 * Tastatur
-* [Spielen!](/wasm/prince/)
+* [Play!](/wasm/prince/)
 
 ## Raptor - Call of the Shadows
 
@@ -188,7 +188,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * Shareware
 * [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
 * Maus, Tastatur
-* [Spielen!](/wasm/raptor/)
+* [Play!](/wasm/raptor/)
 
 ## REminiscence (Flashback)
 
@@ -205,7 +205,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Maus, Tastatur
-* [Extern spielen!](https://www.artsoft.org/rocksndiamonds/play/)
+* [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
 ## SDL-Ball (Breakout)
 
@@ -214,7 +214,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
-* [Spielen!](/wasm/sdl-ball/)
+* [Play!](/wasm/sdl-ball/)
 
 ## SDL Sopwith (Sopwith)
 
@@ -223,7 +223,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
 * Tastatur
-* [Spielen!](/wasm/sdl-sopwith/)
+* [Play!](/wasm/sdl-sopwith/)
 
 ## Shiromino
 
@@ -232,7 +232,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
 * Tastatur
-* [Spielen!](/wasm/shiromino/)
+* [Play!](/wasm/shiromino/)
 
 ## The Legend of Zelda - A Link to the Past
 
@@ -249,7 +249,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * FOSS
 * [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
 * Tastatur
-* [Spielen!](/wasm/vectoroids/)
+* [Play!](/wasm/vectoroids/)
 
 ## WipEout
 
@@ -258,7 +258,7 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * Commercial
 * [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
 * Tastatur
-* [Extern spielen!](https://phoboslab.org/wipegame/)
+* [Play external!](https://phoboslab.org/wipegame/)
 
 ## Wolfenstein 3D
 
@@ -267,4 +267,4 @@ Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Free
 * Shareware
 * [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
 * Tastatur
-* [Spielen!](/wasm/wolfenstein/)
+* [Play!](/wasm/wolfenstein/)
