@@ -355,13 +355,13 @@
 			"date_published": "2015-05-17"
 		},
 		{
-			"id": "contact",
-			"url": "https://midzer.de/contact",
+			"id": "archive",
+			"url": "https://midzer.de/archive",
 			"date_published": "2015-05-17"
 		},
 		{
-			"id": "archive",
-			"url": "https://archive.midzer.de/",
+			"id": "contact",
+			"url": "https://midzer.de/contact",
 			"date_published": "2015-05-17"
 		}
 	]
