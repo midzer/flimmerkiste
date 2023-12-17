@@ -11,7 +11,7 @@ declare var jsSID: any;
 export class PlayerComponent implements OnInit {
   modPlayer: any;
   sidPlayer: any;
-  oggPlayer: HTMLAudioElement;
+  flacPlayer: HTMLAudioElement;
   subTune: number = 0;
   subTunes: number = 13;
   info: string;
@@ -154,7 +154,7 @@ export class PlayerComponent implements OnInit {
     "Zoids"
   ];
 
-  oggs: string[] = [
+  flacs: string[] = [
     "Sauron - OOOPS!"
   ];
 
@@ -164,27 +164,32 @@ export class PlayerComponent implements OnInit {
     const hash = window.location.hash;
     if (hash) {
       const tune = window.decodeURIComponent(hash).replace('#', '');
-      if (tune) {
-        this.selectedTune = tune;
-        if (window.navigator.maxTouchPoints > 1) {
-          // Hack to play on mobile
-          window.addEventListener('click', () => {
-            this.loadTune(tune);
-          }, { once: true });
-        }
-        else {
+      if (this.sids.includes(tune)) {
+        this.optgroupLabel = 'SID';
+      }
+      else if (this.mods.includes(tune)) {
+        this.optgroupLabel = 'MOD';
+      }
+      else if (this.flacs.includes(tune)) {
+        this.optgroupLabel = 'FLAC';
+      }
+      if (window.navigator.maxTouchPoints > 1) {
+        // Hack to play on mobile
+        window.addEventListener('click', () => {
           this.loadTune(tune);
-        }
+        }, { once: true });
+      }
+      else {
+        this.loadTune(tune);
       }
     }
   }
 
-  initSid = (tune) => {
+  initSid = (tune: string) => {
     this.loadScript('jsSID.js').then(() => {
       this.sidPlayer = new jsSID(16384,0.0005);
       this.sidPlayer.setloadcallback(() => {
-        this.setPlayButton(this.pauseIcon);
-        this.startPlaying('SID');
+        this.startPlaying();
         this.subTunes = this.sidPlayer.getsubtunes();
         this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
                     this.removeNullFromString(this.sidPlayer.gettitle());
@@ -200,12 +205,11 @@ export class PlayerComponent implements OnInit {
     }
   }
 
-  initMod = (tune) => {
+  initMod = (tune: string) => {
     this.loadScript('scriptracker-1.1.1.min.js').then(() => {
       this.modPlayer = new ScripTracker();
       this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
-        this.setPlayButton(this.pauseIcon);
-        this.startPlaying('MOD');
+        this.startPlaying();
         this.subTune = 0;
         this.subTunes = songLength;
         this.info = songName;
@@ -217,16 +221,15 @@ export class PlayerComponent implements OnInit {
     });
   }
 
-  initOgg = (tune) => {
-    this.oggPlayer = new Audio();
-    this.oggPlayer.loop = true;
-    this.oggPlayer.addEventListener('loadeddata', () => {
-      if (this.oggPlayer.readyState >= 2) {
-        this.setPlayButton(this.pauseIcon);
-        this.startPlaying('OGG');
+  initFlac = (tune: string) => {
+    this.flacPlayer = new Audio();
+    this.flacPlayer.loop = true;
+    this.flacPlayer.addEventListener('loadeddata', () => {
+      if (this.flacPlayer.readyState >= 2) {
+        this.startPlaying();
       }
     });
-    this.loadOgg(tune);
+    this.loadFlac(tune);
   }
 
   loadScript (file: string): Promise<any> {
@@ -243,50 +246,64 @@ export class PlayerComponent implements OnInit {
     this.playButton = icon;
   }
 
-  startPlaying(label: string): void {
-    if (label === 'SID') {
-      this.sidPlayer.playcont();
-      this.redrawSpectrum();
+  setPlayTime = () => {
+    switch (this.optgroupLabel) {
+      case 'SID':
+        this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());
+        break;
+      case 'MOD':
+        this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+        break;
+      case 'FLAC':
+        this.playTime = this.createPlayTime(this.flacPlayer.currentTime);
+        break;
     }
-    else if (label === 'MOD') {
-      this.modPlayer.play();
+  }
+
+  startPlaying(): void {
+    this.setPlayButton(this.pauseIcon);
+    switch (this.optgroupLabel) {
+      case 'SID':
+        this.sidPlayer.playcont();
+        this.redrawSpectrum();
+        break;
+      case 'MOD':
+        this.modPlayer.play();
+        break;
+      case 'FLAC':
+        this.flacPlayer.play();
+        break;
     }
-    else {
-      this.oggPlayer.play();
-    }
-    this.intervalID = window.setInterval(this.showPlaytime, 1000);
+    this.intervalID = window.setInterval(this.setPlayTime, 1000);
     this.playing = true;
   }
 
   stopPlaying(): void {
-    this.playButton = this.playIcon;
+    switch (this.optgroupLabel) {
+      case 'SID':
+        this.sidPlayer.pause();
+        window.cancelAnimationFrame(this.requestID);
+        break;
+      case 'MOD':
+        this.modPlayer.stop();
+        break;
+      case 'FLAC':
+        this.flacPlayer.pause();
+        break;
+    }
+    window.clearInterval(this.intervalID);
     this.playing = false;
   }
 
-  stopPlayer(label: string): void {
-    if (label === 'SID') {
-      this.sidPlayer.pause();
-      window.cancelAnimationFrame(this.requestID);
-    }
-    else if (label === 'MOD') {
-      this.modPlayer.stop();
-    }
-    else {
-      this.oggPlayer.pause();
-    }
-    window.clearInterval(this.intervalID);
-  }
-
   play(): void {
+    this.optgroupLabel = this.getLabel();
     if (this.selectedTune === this.loadedTune) {
-      const label = this.getLabel();
       if (this.playing) {
-        this.setPlayButton(this.pauseIcon);
-        this.stopPlayer(label);
+        this.setPlayButton(this.playIcon);
+        this.stopPlaying();
       }
       else {
-        this.setPlayButton(this.playIcon);
-        this.startPlaying(label);
+        this.startPlaying();
       }
     }
     else {
@@ -307,8 +324,8 @@ export class PlayerComponent implements OnInit {
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.nextOrder();
     }
-    else if (this.oggPlayer && this.optgroupLabel === 'OGG') {
-      this.oggPlayer.currentTime += 10;
+    else if (this.flacPlayer && this.optgroupLabel === 'FLAC') {
+      this.flacPlayer.currentTime += 10;
     }
     else {
       this.play();
@@ -328,8 +345,8 @@ export class PlayerComponent implements OnInit {
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.prevOrder();
     }
-    else if (this.oggPlayer && this.optgroupLabel === 'OGG') {
-      this.oggPlayer.currentTime -= 10;
+    else if (this.flacPlayer && this.optgroupLabel === 'FLAC') {
+      this.flacPlayer.currentTime -= 10;
     }
     else {
       this.play();
@@ -374,18 +391,6 @@ export class PlayerComponent implements OnInit {
     return str.replace(/\0[\s\S]*$/g,'');
   }
 
-  showPlaytime = () => {
-    if (this.modPlayer) {
-      this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
-    }
-    else if (this.sidPlayer) {
-      this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());  
-    }
-    else {
-      this.playTime = this.createPlayTime(this.oggPlayer.currentTime);
-    }
-  }
-
   createPlayTime(input: any): string {
     const time = parseInt(input);
     const minutes = Math.floor(time / 60);
@@ -397,21 +402,21 @@ export class PlayerComponent implements OnInit {
     return num.toString().padStart(2, '0');
   }
 
-  loadMod(tune: string): void {
-    this.modPlayer.loadModule('assets/mods/' + tune + '.xm');
-  }
-
   loadSid(tune: string): void {
     this.subTune = 0;
     this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune);
   }
 
-  loadOgg(tune: string): void {
+  loadMod(tune: string): void {
+    this.modPlayer.loadModule('assets/mods/' + tune + '.xm');
+  }
+
+  loadFlac(tune: string): void {
     this.subTune = 0;
     this.subTunes = 1;
     this.info = tune;
-    this.oggPlayer.src = 'assets/oggs/' + tune + '.ogg';
-    this.oggPlayer.load();
+    this.flacPlayer.src = 'assets/flacs/' + tune + '.flac';
+    this.flacPlayer.load();
   }
 
   loadTune(tune: string): void {
@@ -434,29 +439,27 @@ export class PlayerComponent implements OnInit {
         this.initMod(tune);
       }
     }
-    else if (this.oggs.includes(tune)) {
-      if (this.oggPlayer) {
-        this.loadOgg(tune);
+    else if (this.flacs.includes(tune)) {
+      if (this.flacPlayer) {
+        this.loadFlac(tune);
       }
       else {
-        this.initOgg(tune);
+        this.initFlac(tune);
       }
     }
     else {
-      alert('No player to load ' + tune);
+      return alert('Can not load ' + tune);
     }
-    this.loadedTune = tune;
+    this.loadedTune = this.selectedTune = tune;
   }
 
   selectChange(): void {
-    const label = this.getLabel();
-    if (label !== this.optgroupLabel) {
-      if (this.playing) {
-        this.stopPlayer(this.optgroupLabel);
-        this.loadTune(this.selectedTune);
-      }
-      this.optgroupLabel = label;
+    if (!this.playing) {
+      return;
     }
+    this.stopPlaying();
+    this.optgroupLabel = this.getLabel();
+    this.loadTune(this.selectedTune);
   }
 
   getLabel(): string {
