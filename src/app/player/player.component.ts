@@ -33,8 +33,9 @@ export class PlayerComponent implements OnInit {
   ctx: CanvasRenderingContext2D;
   requestID: number;
 
-  optgroupLabel: string = 'SIDS';
+  optgroupLabel: string = 'SID';
   selectedTune: string = 'Last_Ninja_2';
+  loadedTune: string;
   mods: string[] = [
     "beams_of_light",
     "beek-substitutionology",
@@ -163,92 +164,72 @@ export class PlayerComponent implements OnInit {
     const hash = window.location.hash;
     if (hash) {
       const tune = window.decodeURIComponent(hash).replace('#', '');
-      let label;
-      if (this.sids.includes(tune)) {
-        label = 'SIDS';
-      }
-      else if (this.mods.includes(tune)) {
-        label = 'MODS';
-      }
-      else if (this.oggs.includes(tune)) {
-        label = 'OGGS';
-      }
-      if (label) {
+      if (tune) {
         this.selectedTune = tune;
         if (window.navigator.maxTouchPoints > 1) {
           // Hack to play on mobile
           window.addEventListener('click', () => {
-            this.setup(label);
+            this.loadTune(tune);
           }, { once: true });
         }
         else {
-          this.setup(label);
+          this.loadTune(tune);
         }
       }
     }
   }
 
-  setup(label: string): void {
-    this.modPlayer = null;
-    this.sidPlayer = null;
-    this.oggPlayer = null;
-    if (label === 'MODS') {
-      this.setupModPlayer();
-    }
-    else if (label === 'SIDS') {
-      this.setupSidPlayer();
-    }
-    else {
-      this.setupOggPlayer();
-    }
-    this.optgroupLabel = label;
-  }
-
-  setupSidPlayer = () => {
+  initSid = (tune) => {
     this.loadScript('jsSID.js').then(() => {
       this.sidPlayer = new jsSID(16384,0.0005);
       this.sidPlayer.setloadcallback(() => {
+        this.setPlayButton(this.pauseIcon);
+        this.startPlaying('SID');
         this.subTunes = this.sidPlayer.getsubtunes();
         this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
                     this.removeNullFromString(this.sidPlayer.gettitle());
-        this.toggleTune();
       });
-      this.loadSid();
+      this.loadSid(tune);
     });
+    // Prepare canvas
+    if (!this.canvas) {
+      this.canvas = document.querySelector('canvas');
+      this.ctx = this.canvas.getContext('2d');
+      this.ctx.fillStyle = '#000';
+      this.ctx.lineWidth = 2;
+    }
   }
 
-  setupModPlayer = () => {
+  initMod = (tune) => {
     this.loadScript('scriptracker-1.1.1.min.js').then(() => {
       this.modPlayer = new ScripTracker();
       this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+        this.setPlayButton(this.pauseIcon);
+        this.startPlaying('MOD');
         this.subTune = 0;
         this.subTunes = songLength;
         this.info = songName;
-        this.playing = false;
-        this.toggleTune();
       });
       this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
         this.subTune = currentOrder - 1;
       });
-      this.loadMod();
+      this.loadMod(tune);
     });
   }
 
-  setupOggPlayer = () => {
+  initOgg = (tune) => {
     this.oggPlayer = new Audio();
+    this.oggPlayer.loop = true;
     this.oggPlayer.addEventListener('loadeddata', () => {
       if (this.oggPlayer.readyState >= 2) {
-        this.toggleTune();
+        this.setPlayButton(this.pauseIcon);
+        this.startPlaying('OGG');
       }
     });
-    this.oggPlayer.loop = true;
-    this.subTune = 0;
-    this.subTunes = 1;
-    this.info = this.selectedTune;
-    this.loadOgg();
+    this.loadOgg(tune);
   }
 
-  loadScript (file): Promise<any> {
+  loadScript (file: string): Promise<any> {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
       script.src = `/assets/js/${file}`;
@@ -258,52 +239,63 @@ export class PlayerComponent implements OnInit {
     });
   }
 
-  play(): void {
-    if (this.modPlayer || this.sidPlayer || this.oggPlayer) {
-      this.toggleTune();
-    }
-    else {
-      this.setup(this.getLabel());
-    }
+  setPlayButton(icon: string): void {
+    this.playButton = icon;
   }
 
-  toggleTune(): void {
-    if (this.playing) {
-      this.playButton = this.playIcon;
-      window.clearInterval(this.intervalID);
-      if (this.modPlayer) {
-        this.modPlayer.stop();
-      }
-      else if (this.sidPlayer) {
-        this.sidPlayer.pause();
-        window.cancelAnimationFrame(this.requestID);
+  startPlaying(label: string): void {
+    if (label === 'SID') {
+      this.sidPlayer.playcont();
+      this.redrawSpectrum();
+    }
+    else if (label === 'MOD') {
+      this.modPlayer.play();
+    }
+    else {
+      this.oggPlayer.play();
+    }
+    this.intervalID = window.setInterval(this.showPlaytime, 1000);
+    this.playing = true;
+  }
+
+  stopPlaying(): void {
+    this.playButton = this.playIcon;
+    this.playing = false;
+  }
+
+  stopPlayer(label: string): void {
+    if (label === 'SID') {
+      this.sidPlayer.pause();
+      window.cancelAnimationFrame(this.requestID);
+    }
+    else if (label === 'MOD') {
+      this.modPlayer.stop();
+    }
+    else {
+      this.oggPlayer.pause();
+    }
+    window.clearInterval(this.intervalID);
+  }
+
+  play(): void {
+    if (this.selectedTune === this.loadedTune) {
+      const label = this.getLabel();
+      if (this.playing) {
+        this.setPlayButton(this.pauseIcon);
+        this.stopPlayer(label);
       }
       else {
-        this.oggPlayer.pause();
+        this.setPlayButton(this.playIcon);
+        this.startPlaying(label);
       }
     }
     else {
-      this.playButton = this.pauseIcon;
-      this.intervalID = window.setInterval(this.showPlaytime, 1000);
-      if (this.modPlayer) {
-        this.modPlayer.play();
-      }
-      else if (this.sidPlayer) {
-        this.sidPlayer.playcont();
-        this.redrawSpectrum();
-      }
-      else {
-        this.oggPlayer.play();
-      }
+      this.loadTune(this.selectedTune);
     }
-    this.playing = !this.playing;
   }
 
   next(): void {
-    if (this.modPlayer) {
-      this.modPlayer.nextOrder();
-    }
-    else if (this.sidPlayer) {
+    if (this.sidPlayer && this.optgroupLabel === 'SID') {
       if (this.subTune === this.sidPlayer.getsubtunes() - 1) {
         this.subTune = 0;
       }
@@ -312,7 +304,10 @@ export class PlayerComponent implements OnInit {
       }
       this.sidPlayer.start(this.subTune);
     }
-    else if (this.oggPlayer) {
+    else if (this.modPlayer && this.optgroupLabel === 'MOD') {
+      this.modPlayer.nextOrder();
+    }
+    else if (this.oggPlayer && this.optgroupLabel === 'OGG') {
       this.oggPlayer.currentTime += 10;
     }
     else {
@@ -321,10 +316,7 @@ export class PlayerComponent implements OnInit {
   }
 
   prev(): void {
-    if (this.modPlayer) {
-      this.modPlayer.prevOrder();
-    }
-    else if (this.sidPlayer) {
+    if (this.sidPlayer && this.optgroupLabel === 'SID') {
       if (this.subTune === 0) {
         this.subTune = this.sidPlayer.getsubtunes() - 1;
       }
@@ -333,7 +325,10 @@ export class PlayerComponent implements OnInit {
       }
       this.sidPlayer.start(this.subTune);
     }
-    else if (this.oggPlayer) {
+    else if (this.modPlayer && this.optgroupLabel === 'MOD') {
+      this.modPlayer.prevOrder();
+    }
+    else if (this.oggPlayer && this.optgroupLabel === 'OGG') {
       this.oggPlayer.currentTime -= 10;
     }
     else {
@@ -356,7 +351,7 @@ export class PlayerComponent implements OnInit {
     navigator.clipboard.writeText(window.location.origin + window.location.pathname + '#' + this.selectedTune);
   }
 
-  toggleVideo(): void {
+  toggle(): void {
     if (!this.video) {
       this.video = document.getElementById('bgvid') as HTMLVideoElement;
     }
@@ -364,12 +359,12 @@ export class PlayerComponent implements OnInit {
       this.screen = document.querySelector('app-screen');
     }
     if (this.videoPlaying) {
-      this.video.pause();
       this.videoButtonIcon = this.playVideoIcon;
+      this.video.pause();
     }
     else {
-      this.video.play();
       this.videoButtonIcon = this.pauseVideoIcon;
+      this.video.play();
     }
     this.screen.classList.toggle('hide');
     this.videoPlaying = !this.videoPlaying;
@@ -402,43 +397,65 @@ export class PlayerComponent implements OnInit {
     return num.toString().padStart(2, '0');
   }
 
-  loadTune(): void {
-    if (this.modPlayer) {
-      this.loadMod();
-    }
-    else if (this.sidPlayer) {
-      this.loadSid();
-    }
-    else {
-      this.loadOgg();
-    }
+  loadMod(tune: string): void {
+    this.modPlayer.loadModule('assets/mods/' + tune + '.xm');
   }
 
-  loadMod(): void {
-    this.modPlayer.loadModule('assets/mods/' + this.selectedTune + '.xm');
-  }
-
-  loadSid(): void {
+  loadSid(tune: string): void {
     this.subTune = 0;
-    this.sidPlayer.loadinit('assets/sids/' + this.selectedTune + '.sid', this.subTune);
+    this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune);
   }
 
-  loadOgg(): void {
-    this.oggPlayer.src = 'assets/oggs/' + this.selectedTune + '.ogg';
+  loadOgg(tune: string): void {
+    this.subTune = 0;
+    this.subTunes = 1;
+    this.info = tune;
+    this.oggPlayer.src = 'assets/oggs/' + tune + '.ogg';
     this.oggPlayer.load();
   }
-  
-  selectChange(): void {
-    if (!this.playing) {
-      return;
+
+  loadTune(tune: string): void {
+    if (this.ctx) {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
-    this.toggleTune();
-    const label = this.getLabel();
-    if (label === this.optgroupLabel) {
-      this.loadTune();
+    if (this.sids.includes(tune)) {
+      if (this.sidPlayer) {
+        this.loadSid(tune);
+      }
+      else {
+        this.initSid(tune);
+      }
+    }
+    else if (this.mods.includes(tune)) {
+      if (this.modPlayer) {
+        this.loadMod(tune);
+      }
+      else {
+        this.initMod(tune);
+      }
+    }
+    else if (this.oggs.includes(tune)) {
+      if (this.oggPlayer) {
+        this.loadOgg(tune);
+      }
+      else {
+        this.initOgg(tune);
+      }
     }
     else {
-      this.setup(label);
+      alert('No player to load ' + tune);
+    }
+    this.loadedTune = tune;
+  }
+
+  selectChange(): void {
+    const label = this.getLabel();
+    if (label !== this.optgroupLabel) {
+      if (this.playing) {
+        this.stopPlayer(this.optgroupLabel);
+        this.loadTune(this.selectedTune);
+      }
+      this.optgroupLabel = label;
     }
   }
 
@@ -448,42 +465,36 @@ export class PlayerComponent implements OnInit {
   }
 
   redrawSpectrum = () => {
-    if (!this.canvas) {
-      this.canvas = document.querySelector('canvas');
-      this.ctx = this.canvas.getContext('2d');
-    }
     this.onUpdateSpectrum();
     this.ctx.drawImage(this.canvas,
-      0, 1, this.canvas.width, this.canvas.height,
-      -1, 1, this.canvas.width, this.canvas.height);
+      1, 0, this.canvas.width, this.canvas.height - 1,
+      1, 1, this.canvas.width, this.canvas.height - 1);
     this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
   }
 
   onUpdateSpectrum(): void {
-    this.ctx.fillStyle = '#000';
-		this.ctx.fillRect(this.canvas.width - 1, 0, 1, this.canvas.height);
+    // Fill logic from https://github.com/Chordian/deepsid/blob/master/js/viz.js
+    // Color the top line background
+    this.ctx.fillRect(0, 0, this.canvas.width, 1);
     
+    // Color the voices
     for (let voice = 0; voice < 3; voice++) {
       const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
-      let y = (freq / 0xFFFF) * this.canvas.height;
-      y = y | 0;
-
-      let strokeStyle;
-      if (voice === 0) {
-        strokeStyle = '#955529';
+      let x = (freq / 0xFFFF) * this.canvas.width;
+      x = x | 0;
+      switch(voice) {
+        case 0:
+          this.ctx.strokeStyle = '#955529';
+          break;
+        case 1:
+          this.ctx.strokeStyle = '#ca7570';
+          break;
+        case 2:
+          this.ctx.strokeStyle = '#2c339e';
       }
-      else if (voice === 1) {
-        strokeStyle = '#ca7570'; 
-      }
-      else {
-        strokeStyle = '#2c339e';
-      }
-
-      this.ctx.lineWidth = 2;
-      this.ctx.strokeStyle = strokeStyle;
       this.ctx.beginPath();
-      this.ctx.moveTo(this.canvas.width, this.canvas.height - y);
-      this.ctx.lineTo(this.canvas.width -1, this.canvas.height - y);
+      this.ctx.moveTo(x, 0);
+      this.ctx.lineTo(x, 1);
       this.ctx.stroke();
     }
   }
