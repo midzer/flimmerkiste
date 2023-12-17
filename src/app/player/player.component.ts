@@ -164,15 +164,6 @@ export class PlayerComponent implements OnInit {
     const hash = window.location.hash;
     if (hash) {
       const tune = window.decodeURIComponent(hash).replace('#', '');
-      if (this.sids.includes(tune)) {
-        this.optgroupLabel = 'SID';
-      }
-      else if (this.mods.includes(tune)) {
-        this.optgroupLabel = 'MOD';
-      }
-      else if (this.flacs.includes(tune)) {
-        this.optgroupLabel = 'FLAC';
-      }
       if (window.navigator.maxTouchPoints > 1) {
         // Hack to play on mobile
         window.addEventListener('click', () => {
@@ -189,7 +180,7 @@ export class PlayerComponent implements OnInit {
     this.loadScript('jsSID.js').then(() => {
       this.sidPlayer = new jsSID(16384,0.0005);
       this.sidPlayer.setloadcallback(() => {
-        this.startPlaying();
+        this.startPlaying(tune);
         this.subTunes = this.sidPlayer.getsubtunes();
         this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
                     this.removeNullFromString(this.sidPlayer.gettitle());
@@ -209,7 +200,7 @@ export class PlayerComponent implements OnInit {
     this.loadScript('scriptracker-1.1.1.min.js').then(() => {
       this.modPlayer = new ScripTracker();
       this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
-        this.startPlaying();
+        this.startPlaying(tune);
         this.subTune = 0;
         this.subTunes = songLength;
         this.info = songName;
@@ -226,7 +217,7 @@ export class PlayerComponent implements OnInit {
     this.flacPlayer.loop = true;
     this.flacPlayer.addEventListener('loadeddata', () => {
       if (this.flacPlayer.readyState >= 2) {
-        this.startPlaying();
+        this.startPlaying(tune);
       }
     });
     this.loadFlac(tune);
@@ -246,35 +237,34 @@ export class PlayerComponent implements OnInit {
     this.playButton = icon;
   }
 
-  setPlayTime = () => {
-    switch (this.optgroupLabel) {
-      case 'SID':
-        this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());
-        break;
-      case 'MOD':
-        this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
-        break;
-      case 'FLAC':
-        this.playTime = this.createPlayTime(this.flacPlayer.currentTime);
-        break;
+  setPlayTime = (tune) => {
+    if (this.sids.includes(tune)) {
+      this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());
+    }
+    else if (this.mods.includes(tune)) {
+      this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+    }
+    else if (this.flacs.includes(tune)) {
+      this.playTime = this.createPlayTime(this.flacPlayer.currentTime);
     }
   }
 
-  startPlaying(): void {
+  startPlaying(tune: string): void {
     this.setPlayButton(this.pauseIcon);
-    switch (this.optgroupLabel) {
-      case 'SID':
-        this.sidPlayer.playcont();
-        this.redrawSpectrum();
-        break;
-      case 'MOD':
-        this.modPlayer.play();
-        break;
-      case 'FLAC':
-        this.flacPlayer.play();
-        break;
+    if (this.sids.includes(tune)) {
+      this.sidPlayer.playcont();
+      this.redrawSpectrum();
     }
-    this.intervalID = window.setInterval(this.setPlayTime, 1000);
+    else if (this.mods.includes(tune)) {
+      this.modPlayer.play();
+    }
+    else if (this.flacs.includes(tune)) {
+      this.flacPlayer.play();
+    }
+    else {
+      return alert('Can not play ' + tune);
+    }
+    this.intervalID = window.setInterval(this.setPlayTime, 1000, tune);
     this.playing = true;
   }
 
@@ -296,14 +286,13 @@ export class PlayerComponent implements OnInit {
   }
 
   play(): void {
-    this.optgroupLabel = this.getLabel();
     if (this.selectedTune === this.loadedTune) {
       if (this.playing) {
         this.setPlayButton(this.playIcon);
         this.stopPlaying();
       }
       else {
-        this.startPlaying();
+        this.startPlaying(this.selectedTune);
       }
     }
     else {
@@ -430,6 +419,7 @@ export class PlayerComponent implements OnInit {
       else {
         this.initSid(tune);
       }
+      this.optgroupLabel = 'SID';
     }
     else if (this.mods.includes(tune)) {
       if (this.modPlayer) {
@@ -438,6 +428,7 @@ export class PlayerComponent implements OnInit {
       else {
         this.initMod(tune);
       }
+      this.optgroupLabel = 'MOD';
     }
     else if (this.flacs.includes(tune)) {
       if (this.flacPlayer) {
@@ -446,6 +437,7 @@ export class PlayerComponent implements OnInit {
       else {
         this.initFlac(tune);
       }
+      this.optgroupLabel = 'FLAC';
     }
     else {
       return alert('Can not load ' + tune);
@@ -458,13 +450,7 @@ export class PlayerComponent implements OnInit {
       return;
     }
     this.stopPlaying();
-    this.optgroupLabel = this.getLabel();
     this.loadTune(this.selectedTune);
-  }
-
-  getLabel(): string {
-    const optgroup = document.querySelector('select option:checked').parentElement as HTMLOptGroupElement;
-    return optgroup.label;
   }
 
   redrawSpectrum = () => {
