@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 declare var ScripTracker: any;
 declare var jsSID: any;
@@ -8,7 +8,7 @@ declare var jsSID: any;
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss']
 })
-export class PlayerComponent implements OnInit {
+export class PlayerComponent implements AfterViewInit {
   modPlayer: any;
   sidPlayer: any;
   flacPlayer: HTMLAudioElement;
@@ -160,7 +160,7 @@ export class PlayerComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
     const hash = window.location.hash;
     if (hash) {
       const tune = window.decodeURIComponent(hash).replace('#', '');
