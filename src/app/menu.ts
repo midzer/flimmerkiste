@@ -14,6 +14,9 @@ export var MENU: Menuitem[] = [
         name: 'links'
     },
     {
+        name: 'archive'
+    },
+    {
         name: 'contact'
     }
 ];
