@@ -6,37 +6,35 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./eye.component.scss']
 })
 export class EyeComponent implements AfterViewInit {
-  source: string = 'data:,';
+  eye: string = 'data:,';
 
   ngAfterViewInit() {
     this.loop();
   }
 
   blink = (): void => {
-    let eye: string;
     switch (Math.floor(Math.random() * 3))
     {
       case 0:
-        eye = 'left';
+        this.setEye('left');
         break;
       case 1:
-        eye = 'right';
+        this.setEye('right');
         break;
       case 2:
-        eye = 'both';
+        this.setEye('both');
         break;
     }
-    this.setEye(eye);
     this.loop();
   }
 
   setEye = (eye: string): void => {
-    this.source = 'assets/images/' + eye + '.png';
+    this.eye = 'assets/images/' + eye + '.png';
     setTimeout(this.clear, 1337);
   }
 
   clear = (): void => {
-    this.source = 'data:,';
+    this.eye = 'data:,';
   }
 
   loop = (): void => {
