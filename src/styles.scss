@@ -1,13 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    line-height: 1.6;
     background-color: #000;
     margin: 0;
     display: flex;
     justify-content: center;
-    max-height: 100vh;
-    overflow-y: hidden;
 }
 
 @media screen and (min-width: 576px) {

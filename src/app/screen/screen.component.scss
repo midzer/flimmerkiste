@@ -4,10 +4,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 75.1%;
+    width: 75.7%;
     height: 100vh;
-    color: $lightGrey;
-    background-color: black;
+    background-color: #000;
     overflow-y: auto;
     opacity: 1;
     transition: opacity 1s;
@@ -18,7 +17,7 @@
 
 @media screen and (min-width: 768px) {
     :host {
-        height: 72.5%;
+        height: 72.6%;
     }
 }
 
@@ -35,7 +34,6 @@ ul {
     a {
         display: inline-block;
         color: $blue;
-        line-height: 1.1;
         text-decoration: none;
         padding: 0.5rem;
     
