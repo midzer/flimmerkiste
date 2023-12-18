@@ -4,9 +4,7 @@
     position: absolute;
     top: 7.5%;
     left: 77.5%;
-    width: 20.6%;
-    height: 20%;
-    text-align: center;
+    width: 20.7%;
 }
 
 .d-flex {
@@ -67,7 +65,7 @@ button {
 }
 
 canvas {
-    aspect-ratio: 4.5;
+    height: 8vh;
 }
 
 .marquee,
@@ -84,9 +82,5 @@ select {
 
     .d-flex {
         flex-wrap: wrap;
-    }
-
-    canvas {
-        aspect-ratio: 0.75;
     }
 }
