@@ -35,7 +35,7 @@ ul {
         display: inline-block;
         color: $blue;
         text-decoration: none;
-        padding: 0.5rem;
+        padding: 0.375rem;
     
         &::after {
           display: block;
@@ -52,9 +52,14 @@ ul {
     }
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+}
+
 main {
-    padding: 0 0.5rem;
-    text-align: initial;
+    padding: 0 0.375rem;
 }
 
 img {
