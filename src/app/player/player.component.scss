@@ -1,5 +1,3 @@
-@import '../../variables.scss';
-
 .player {
     position: absolute;
     top: 7.5%;
@@ -16,11 +14,10 @@
 }
 
 .marquee {
-    margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-    box-sizing: border-box;
     position: relative;
+    text-align: center;
 }
 
 .marquee[data-descr] {
@@ -49,8 +46,8 @@
 
 /* Make it move */
 @keyframes marquee {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+    from { transform: translate(0); }
+    to   { transform: translate(-100%); }
 }
 
 button,
