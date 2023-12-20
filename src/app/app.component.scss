@@ -1,7 +1,5 @@
-@import '../variables.scss';
-
 :host {
     font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
-    color: $lightGrey;
+    color: var(--lightgrey);
 }

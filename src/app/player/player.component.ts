@@ -191,7 +191,7 @@ export class PlayerComponent implements AfterViewInit {
     if (!this.canvas) {
       this.canvas = document.querySelector('canvas');
       this.ctx = this.canvas.getContext('2d');
-      this.ctx.fillStyle = '#000';
+      this.ctx.fillStyle = 'var(--bgcolor)';
       this.ctx.lineWidth = 2;
     }
   }
@@ -359,7 +359,7 @@ export class PlayerComponent implements AfterViewInit {
 
   toggle(): void {
     if (!this.video) {
-      this.video = document.getElementById('bgvid') as HTMLVideoElement;
+      this.video = document.querySelector('video') as HTMLVideoElement;
     }
     if (!this.screen) {
       this.screen = document.querySelector('app-screen');

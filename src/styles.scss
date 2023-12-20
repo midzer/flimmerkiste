@@ -1,6 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bgcolor: #000;
+    --grey: #8a8a8a;
+    --lightgrey: #b3b3b3;
+    --darkgrey: #5e5e5e;
+    --blue: #867ae0;
+    --lightblue: #74cdc9;
+    --darkblue: #2d2b99;
+    --white: #fff;
+}
+
 body {
-    background-color: #000;
+    background-color: var(--bgcolor);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -12,7 +22,7 @@ body {
     }
 }
 
-#bgvid {
+video {
     display: block;
     height: auto;
     width: 100%;

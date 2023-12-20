@@ -1,5 +1,3 @@
-@import '../../variables.scss';
-
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -15,8 +13,8 @@ div {
 
 span {
   display: inline-block;
-  color: $lightBlue;
-  background-color: $darkBlue;
+  color: var(--lightblue);
+  background-color: var(--darkblue);
   margin-left: 0.75em;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
@@ -37,13 +35,13 @@ span {
 }
 
 a {
-	color: $blue;
+	color: var(--blue);
   text-decoration: none;
 	transition: color .3s;
   margin-left: -5px;
 
   &:hover {
-    color: $lightBlue;
+    color: var(--lightblue);
   }
 
   &::before {

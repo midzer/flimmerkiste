@@ -30,7 +30,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    background-color: #000;
+    background-color: var(--bgcolor);
 }
 
 .marquee > span {
@@ -54,7 +54,7 @@ button,
 select {
     border-style: none;
     padding: 0.125rem;
-    border: 1px solid #000;
+    border: 1px solid var(--bgcolor);
 }
 
 button {
