@@ -3,6 +3,7 @@
     top: 7.5%;
     left: 77.5%;
     width: 20.7%;
+    text-align: center;
 }
 
 .d-flex {
@@ -17,7 +18,6 @@
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    text-align: center;
 }
 
 .marquee[data-descr] {
@@ -71,6 +71,25 @@ select {
     width: 100%;
 }
 
+.heart {
+    margin-top: 2rem;
+    width: 100px;
+    height: auto;
+    animation: pulse 1s infinite ease;
+}
+  
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
 @media screen and (max-width: 576px) {
     .player {
         position: fixed;
@@ -79,5 +98,9 @@ select {
 
     .d-flex {
         flex-wrap: wrap;
+    }
+
+    .heart {
+        width: 100%;
     }
 }
