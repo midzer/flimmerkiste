@@ -1,15 +1,15 @@
 <header>
   <a [routerLink]="['']" routerLinkActive="active">
-    <img src="/assets/images/title.webp" width="543" height="84" alt="Logo midzers Flimmerkiste">
+    <img src="/assets/images/header.webp" width="536" height="42" alt="Flimmerkiste">
   </a>
-  <nav>
-    <ul>
-      <li *ngFor="let menuitem of menu">
-        <a [routerLink]="[menuitem.name]">{{menuitem.name}}</a>
-      </li>
-    </ul>
-  </nav>
 </header>
+<nav>
+  <ul>
+    <li *ngFor="let menuitem of menu">
+      <a [routerLink]="[menuitem.name]">{{menuitem.name}}</a>
+    </li>
+  </ul>
+</nav>
 <main>
   <router-outlet></router-outlet>
 </main>

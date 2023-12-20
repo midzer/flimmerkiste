@@ -1,6 +1,6 @@
 {
-    "name": "midzers Flimmerkiste",
-    "short_name": "Flimmerkiste",
+    "name": "Flimmerkiste",
+    "short_name": "flimmerkiste",
     "theme_color": "#000",
     "background_color": "#000",
     "display": "standalone"
