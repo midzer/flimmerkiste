@@ -1,270 +1,247 @@
 # Games
 
-Mit [Emscripten](https://emscripten.org/) erstelle ich Web-Ports von Demos, Freeware/Shareware und [Open-Source Spielen](https://osgameclones.com/).
+Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spielen, meist entdeckt bei [Open Source Game Clones](https://osgameclones.com/).
 
-## AstroMenace
+## Free Open Source Software
+
+### AstroMenace
 
 * Erscheinungsjahr: 2007
-* Genre: Top-Down-Shooter
-* FOSS
+* Top-Down-Shooter
+* Singleplayer 
 * [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
 * Maus, Tastatur
 * [Play!](/wasm/astromenace/)
 
-## Ballerburg SDL (Ballerburg)
+### Ballerburg SDL (Ballerburg)
 
 * Erscheinungsjahr: 1987
-* Genre: Artillery-Spiel
-* FOSS
+* Artillery-Spiel
+* Single- und Multiplayer
 * [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
 * Maus, Tastatur, Touch
 * [Play external!](https://baller.tuxfamily.org/online/)
 
-## Bombermaaan (Bomberman)
+### Bombermaaan (Bomberman)
 
 * Erscheinungsjahr: 1983
-* Genre: Arcade
-* FOSS
+* Arcade
+* Single - und Multiplayer
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
 * Tastatur
 * [Play!](/wasm/bombermaaan/)
 
-## Command & Conquer
-
-* Genre: Echtzeitstrategie
-* Freeware
-* [Repo](https://github.com/midzer/Vanilla-Conquer)
-* Maus, Tastatur, Touch
-
-### Tiberian Dawn
-
-* Erscheinungsjahr: 1995
-* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
-* [Play!](/wasm/tiberian-dawn/)
-
-### Red Alert
-
-* Erscheinungsjahr: 1996
-* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
-* [Play!](/wasm/red-alert/)
-
-## C-Dogs SDL
+### C-Dogs SDL
 
 * Erscheinungsjahr: 1997-2001
-* Genre: Run 'n Gun
-* FOSS
+* Run 'n Gun
+* Singleplayer
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
 * Tastatur
 * [Play!](/wasm/cdogs/)
 
-## Chromium B.S.U.
+### Chromium B.S.U.
 
 * Erscheinungsjahr: 2000
-* Genre: Top-Down-Shooter
-* FOSS
+* Top-Down-Shooter
+* Singleplayer
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/chromium-bsu/)
 
-## Der Clou!
+### Der Clou!
 
 * Erscheinungsjahr: 1994
-* Genre: Einbruchsimulation
-* FOSS
+* Einbruchsimulation
+* Singleplayer
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
 * Tastatur
 * [Play german version!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
-## Doom
-
-* Erscheinungsjahr: 1993
-* Genre: Ego-Shooter
-* Shareware
-* [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
-* Maus, Tastatur
-* [Play!](/wasm/doom/)
-
-## Dune II – Kampf um Arrakis
-
-* Erscheinungsjahr: 1992
-* Genre: Echtzeitstrategie
-* Commercial
-* [Repo](https://github.com/midzer/OpenDUNE) / [Wiki](https://de.wikipedia.org/wiki/Dune_II_%E2%80%93_Kampf_um_Arrakis)
-* Maus, Tastatur
-
-## Fallout
+### Flare (Diablo)
 
 * Erscheinungsjahr: 1997
-* Genre: Rollenspiel
-* Commercial
-* [Repo](https://github.com/midzer/fallout1-ce) / [Wiki](https://de.wikipedia.org/wiki/Fallout_(Computerspiel))
-* Maus, Tastatur
-
-## fheroes2 (Heroes of Might and Magic II)
-
-* Erscheinungsjahr: 1996
-* Genre: Rundenbasiertes Strategiespiel
-* Demo
-* [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
-* Maus, Tastatur, Touch
-* [Play!](/wasm/heroes2/)
-
-## Flare (Diablo)
-
-* Erscheinungsjahr: 1997
-* Genre: Action-Rollenspiel
-* FOSS
+* Action-Rollenspiel
+* Singleplayer
 * [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
 * Maus, Tastatur
 * [Play!](/wasm/flare/)
 
-## Freegemas (Bejeweled)
+### Freegemas (Bejeweled)
 
 * Erscheinungsjahr: 2001
-* Genre: Puzzle
-* FOSS
+* Puzzle
+* Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/freegemas/)
 
-## Freegish (Gish)
+### Freegish (Gish)
 
 * Erscheinungsjahr: 2004
-* Genre: Platform
-* FOSS
+* Platform
+* Singleplayer
 * [Repo](https://github.com/midzer/freegish) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
 * Tastatur
 * [Play!](/wasm/freegish/)
 
-## Freeserf (The Settlers)
-
-* Erscheinungsjahr: 1993
-* Genre: Aufbausimulation
-* Commercial
-* [Repo](https://github.com/midzer/freeserf) / [Wiki](https://de.wikipedia.org/wiki/Die_Siedler)
-* Maus, Tastatur, Touch
-
-## FreeSiege
+### FreeSiege
 
 * Erscheinungsjahr: 2009
-* Genre: Puzzlespiel
-* FOSS
+* Puzzlespiel
+* Single- und Multiplayer
 * [Repo](https://github.com/midzer/freesiege)
 * Tastatur
 * [Play!](/wasm/freesiege/)
 
-## Jump 'n Bump
+### Jump 'n Bump
 
 * Erscheinungsjahr: 1998
-* Genre: Jump 'n' Run
-* FOSS
+* Jump 'n' Run
+* Multiplayer
 * [Repo](https://github.com/midzer/jumpnbump) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
 * Tastatur
 * [Play!](/wasm/jumpnbump/)
 
-## LBreakoutHD (Breakout)
+### LBreakoutHD (Breakout)
 
 * Erscheinungsjahr: 1976
-* Genre: Arcade
-* FOSS
+* Arcade
+* Singleplayer
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/lbreakouthd/)
 
-## Prince of Persia
+### Prince of Persia
 
 * Erscheinungsjahr: 1989
-* Genre: Jump 'n' Run
-* FOSS
+* Jump 'n' Run
+* Singleplayer
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
 * Tastatur
 * [Play!](/wasm/prince/)
 
-## Raptor - Call of the Shadows
-
-* Erscheinungsjahr: 1994
-* Genre: Top-Down-Shooter
-* Shareware
-* [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
-* Maus, Tastatur
-* [Play!](/wasm/raptor/)
-
-## REminiscence (Flashback)
-
-* Erscheinungsjahr: 1992
-* Genre: Cinematic platformer
-* Commercial
-* [Repo](https://github.com/midzer/reminiscence) / [Wiki](https://de.wikipedia.org/wiki/Flashback_(Computerspiel))
-* Tastatur
-
-## Rocks'n'Diamonds (Boulder Dash)
+### Rocks'n'Diamonds (Boulder Dash)
 
 * Erscheinungsjahr: 1995-2023
-* Genre: Puzzle
-* FOSS
+* Puzzle
+* Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Maus, Tastatur
 * [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
-## SDL-Ball (Breakout)
+### SDL-Ball (Breakout)
 
 * Erscheinungsjahr: 2008-2014
-* Genre: Arcade
-* FOSS
+* Arcade
+* Singleplayer
 * [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/sdl-ball/)
 
-## SDL Sopwith (Sopwith)
+### SDL Sopwith (Sopwith)
 
 * Erscheinungsjahr: 1984
-* Genre: Shoot 'em up
-* FOSS
+* Shoot 'em up
+* Singleplayer
 * [Repo](https://github.com/midzer/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
 * Tastatur
 * [Play!](/wasm/sdl-sopwith/)
 
-## Shiromino
+### Shiromino
 
 * Erscheinungsjahr: 2017
-* Genre: Arcade
-* FOSS
+* Arcade
+* Singleplayer
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
 * Tastatur
 * [Play!](/wasm/shiromino/)
 
-## The Legend of Zelda - A Link to the Past
-
-* Erscheinungsjahr: 1992
-* Genre: Action-Adventure
-* Commercial
-* [Repo](https://github.com/midzer/zelda3) / [Wiki](https://de.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past)
-* Tastatur
-
-## Vectoroids (Asteroids)
+### Vectoroids (Asteroids)
 
 * Erscheinungsjahr: 1979
-* Genre: Arcade
-* FOSS
+* Arcade
+* Singleplayer
 * [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
 * Tastatur
 * [Play!](/wasm/vectoroids/)
 
-## WipEout
+## Freeware
+
+### Command & Conquer
+
+* Echtzeitstrategie
+* Singleplayer
+* [Repo](https://github.com/midzer/Vanilla-Conquer)
+* Maus, Tastatur, Touch
+
+#### Tiberian Dawn
 
 * Erscheinungsjahr: 1995
-* Genre: Rennspiel
-* Commercial
-* [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
-* Tastatur
-* [Play external!](https://phoboslab.org/wipegame/)
+* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
+* [Play!](/wasm/tiberian-dawn/)
 
-## Wolfenstein 3D
+#### Red Alert
+
+* Erscheinungsjahr: 1996
+* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
+* [Play!](/wasm/red-alert/)
+
+## Shareware
+
+### Doom
+
+* Erscheinungsjahr: 1993
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
+* Maus, Tastatur
+* [Play!](/wasm/doom/)
+
+### Jazz² (Jazz Jackrabbit 2)
+
+* Erscheinungsjahr: 1998
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
+* Tastatur
+* [Play external!](https://deat.tk/jazz2/wasm/)
+
+### Raptor - Call of the Shadows
 
 * Erscheinungsjahr: 1994
-* Genre: Ego-Shooter
-* Shareware
+* Top-Down-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
+* Maus, Tastatur
+* [Play!](/wasm/raptor/)
+
+### Wolfenstein 3D
+
+* Erscheinungsjahr: 1994
+* Ego-Shooter
+* Singleplayer
 * [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
 * Tastatur
 * [Play!](/wasm/wolfenstein/)
+
+## Demos
+
+### fheroes2 (Heroes of Might and Magic II)
+
+* Erscheinungsjahr: 1996
+* Rundenbasiertes Strategiespiel
+* Singleplayer
+* [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
+* Maus, Tastatur, Touch
+* [Play!](/wasm/heroes2/)
+
+### WipEout
+
+* Erscheinungsjahr: 1995
+* Rennspiel
+* Singleplayer
+* [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
+* Tastatur
+* [Play external!](https://phoboslab.org/wipegame/)
