@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eye',
@@ -8,8 +9,31 @@ import { Component, AfterViewInit } from '@angular/core';
 export class EyeComponent implements AfterViewInit {
   eye: string = 'data:,';
 
+  constructor(
+    private router: Router
+  ) {}
+
   ngAfterViewInit() {
     this.loop();
+
+    const sequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+    let state = 0;
+    document.addEventListener('keyup', (ev) => {
+      const key = ev.keyCode;
+
+			if (key === sequence[state] || key === sequence[(state = 0)]) {
+				// move next
+				++state;
+				
+				if (state === sequence.length) {
+          // sequence complete
+          this.router.navigateByUrl('/hidden');
+          
+          // reset
+          state = 0;	
+				}
+			}
+    });
   }
 
   blink = (): void => {
