@@ -190,6 +190,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ## Shareware
 
+### Descent I
+
+* Erscheinungsjahr: 1995
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://de.wikipedia.org/wiki/Descent_(Computerspiel))
+* Tastatur
+* [Play!](/wasm/descent1/)
+
 ### Doom
 
 * Erscheinungsjahr: 1993
