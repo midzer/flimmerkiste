@@ -37,6 +37,7 @@ export class PlayerComponent implements AfterViewInit {
   selectedTune: string = 'Last_Ninja_2';
   loadedTune: string;
   mods: string[] = [
+    "aryx",
     "beams_of_light",
     "beek-substitutionology",
     "contraduct_design",
