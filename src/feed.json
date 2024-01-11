@@ -5,6 +5,11 @@
 	"feed_url": "https://midzer.de/feed.json",
 	"items": [
 		{
+			"id": "the-future-is-remix",
+			"url": "https://midzer.de/the-future-is-remix",
+			"date_published": "2024-01-11"
+		},
+		{
 			"id": "obatzda",
 			"url": "https://midzer.de/obatzda",
 			"date_published": "2023-11-25"
