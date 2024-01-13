@@ -1,6 +1,6 @@
 .player {
-    position: absolute;
-    top: 7.5%;
+    position: fixed;
+    top: 42%;    
     left: 77.5%;
     width: 20.7%;
     text-align: center;
@@ -8,6 +8,7 @@
 
 .d-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .info {
@@ -73,7 +74,7 @@ select {
 
 .heart {
     margin-top: 3vmax;
-    width: 100px;
+    width: 100%;
     height: auto;
     animation: pulse 1s infinite ease;
 }
@@ -90,17 +91,17 @@ select {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
     .player {
-        position: fixed;
-        top: 42%;
+        position: absolute;
+        top: 7.5%;
     }
 
     .d-flex {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .heart {
-        width: 100%;
+        width: 100px;        
     }
 }
