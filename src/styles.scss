@@ -20,11 +20,16 @@ body {
     .container {
         position: relative;
     }
+
+    video {
+        width: auto;
+        height: 100%;
+        max-height: 100vh;
+    }
 }
 
 video {
     display: block;
-    height: auto;
     width: 100%;
-    max-height: 100vh;
+    height: auto;
 }
