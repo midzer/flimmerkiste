@@ -1,9 +1,11 @@
 .player {
     position: fixed;
-    top: 42%;    
+    top: 42%;
     left: 77.5%;
     width: 20.7%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .d-flex {
@@ -66,28 +68,25 @@ canvas {
     height: 8vh;
 }
 
+.heart,
 .marquee,
 canvas,
 select {
     width: 100%;
 }
 
-.heart {
-    margin-top: 3vmax;
-    width: 100%;
-    height: auto;
-    animation: pulse 1s infinite ease;
+a {
+    margin-top: auto;
 }
-  
+
+.heart {
+    height: auto;
+    animation: 1s ease infinite pulse;
+}
+
 @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
+    to {
       transform: scale(0.8);
-    }
-    100% {
-      transform: scale(1);
     }
 }
 
@@ -95,6 +94,7 @@ select {
     .player {
         position: absolute;
         top: 7.5%;
+        bottom: 50%;
     }
 
     .d-flex {
@@ -102,6 +102,6 @@ select {
     }
 
     .heart {
-        width: 100px;        
+        width: 18vh;
     }
 }
