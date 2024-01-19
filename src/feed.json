@@ -5,6 +5,11 @@
 	"feed_url": "https://midzer.de/feed.json",
 	"items": [
 		{
+			"id": "kaiserschmarrn",
+			"url": "https://midzer.de/kaiserschmarrn",
+			"date_published": "2024-01-19"
+		},
+		{
 			"id": "the-future-is-remix",
 			"url": "https://midzer.de/the-future-is-remix",
 			"date_published": "2024-01-11"
