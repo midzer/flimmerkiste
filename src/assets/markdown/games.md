@@ -208,7 +208,16 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play!](/wasm/doom/)
 
-### Jazz² (Jazz Jackrabbit 2)
+### Heroes of Might and Magic II
+
+* Erscheinungsjahr: 1996
+* Rundenbasiertes Strategiespiel
+* Singleplayer
+* [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
+* Maus, Tastatur, Touch
+* [Play!](/wasm/heroes2/)
+
+### Jazz Jackrabbit 2
 
 * Erscheinungsjahr: 1998
 * Jump 'n' Run
@@ -216,6 +225,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
 * Tastatur
 * [Play external!](https://deat.tk/jazz2/wasm/)
+
+### Quake
+
+* Erscheinungsjahr: 1996
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/quakespasm) / [Wiki](https://de.wikipedia.org/wiki/Quake)
+* Maus, Tastatur
+* [Play!](/wasm/quake/)
 
 ### Raptor - Call of the Shadows
 
@@ -226,26 +244,6 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play!](/wasm/raptor/)
 
-### Wolfenstein 3D
-
-* Erscheinungsjahr: 1994
-* Ego-Shooter
-* Singleplayer
-* [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
-* Tastatur
-* [Play!](/wasm/wolfenstein/)
-
-## Demos
-
-### fheroes2 (Heroes of Might and Magic II)
-
-* Erscheinungsjahr: 1996
-* Rundenbasiertes Strategiespiel
-* Singleplayer
-* [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
-* Maus, Tastatur, Touch
-* [Play!](/wasm/heroes2/)
-
 ### WipEout
 
 * Erscheinungsjahr: 1995
@@ -254,3 +252,12 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
 * Tastatur
 * [Play external!](https://phoboslab.org/wipegame/)
+
+### Wolfenstein 3D
+
+* Erscheinungsjahr: 1994
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
+* Tastatur
+* [Play!](/wasm/wolfenstein/)
