@@ -52,7 +52,8 @@ export class PlayerComponent implements AfterViewInit {
     "sv_sac05",
     "titan_02",
     "transfu3",
-    "tu_itr29"
+    "tu_itr29",
+    "yum,cookie"
   ];
   sids: string[] = [
     "ACE_II",
