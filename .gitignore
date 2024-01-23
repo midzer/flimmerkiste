@@ -49,6 +49,4 @@ src/audio/
 src/video/
 
 # Player
-src/assets/sids/
-src/assets/mods/
 src/assets/flacs/
