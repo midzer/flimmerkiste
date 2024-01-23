@@ -8,6 +8,8 @@
 
 ## Friends
 
+[Alex313031](https://thorium.rocks/)
+
 [audi70re](https://audito.re/)
 
 [gamambel](https://headstrong.de/)
