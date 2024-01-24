@@ -11,7 +11,12 @@ declare var jsSID: any;
 export class PlayerComponent implements AfterViewInit {
   modPlayer: any;
   sidPlayer: any;
-  flacPlayer: HTMLAudioElement;
+  flacPlayer: AudioContext;
+  analyserNode : AnalyserNode;
+  javascriptNode: ScriptProcessorNode;
+  sourceNode: AudioBufferSourceNode;
+  buffer: AudioBuffer;
+  startedAt: number = 0;
   subTune: number = 0;
   subTunes: number = 13;
   info: string;
@@ -168,63 +173,22 @@ export class PlayerComponent implements AfterViewInit {
     const hash = window.location.hash;
     if (hash) {
       const tune = window.decodeURIComponent(hash).replace('#', '');
+      if (this.sids.includes(tune) || this.mods.includes(tune) || this.flacs.includes(tune)) {
+        this.selectedTune = tune;
+      }
+      else {
+        alert(tune + ' does not exist. Playing default.');
+      }
       if (window.navigator.maxTouchPoints > 1) {
         // Hack to play on mobile
         window.addEventListener('click', () => {
-          this.loadTune(tune);
+          this.play();
         }, { once: true });
       }
       else {
-        this.loadTune(tune);
+        this.play();
       }
     }
-  }
-
-  initSid = (tune: string) => {
-    this.loadScript('jsSID.js').then(() => {
-      this.sidPlayer = new jsSID(16384,0.0005);
-      this.sidPlayer.setloadcallback(() => {
-        this.startPlaying(tune);
-        this.subTunes = this.sidPlayer.getsubtunes();
-        this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
-                    this.removeNullFromString(this.sidPlayer.gettitle());
-      });
-      this.loadSid(tune);
-    });
-    // Prepare canvas
-    if (!this.canvas) {
-      this.canvas = document.querySelector('canvas');
-      this.ctx = this.canvas.getContext('2d');
-      this.ctx.fillStyle = 'var(--bgcolor)';
-      this.ctx.lineWidth = 2;
-    }
-  }
-
-  initMod = (tune: string) => {
-    this.loadScript('scriptracker-1.1.1.min.js').then(() => {
-      this.modPlayer = new ScripTracker();
-      this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
-        this.startPlaying(tune);
-        this.subTune = 0;
-        this.subTunes = songLength;
-        this.info = songName;
-      });
-      this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
-        this.subTune = currentOrder - 1;
-      });
-      this.loadMod(tune);
-    });
-  }
-
-  initFlac = (tune: string) => {
-    this.flacPlayer = new Audio();
-    this.flacPlayer.loop = true;
-    this.flacPlayer.addEventListener('loadeddata', () => {
-      if (this.flacPlayer.readyState >= 2) {
-        this.startPlaying(tune);
-      }
-    });
-    this.loadFlac(tune);
   }
 
   loadScript (file: string): Promise<any> {
@@ -237,38 +201,37 @@ export class PlayerComponent implements AfterViewInit {
     });
   }
 
-  setPlayButton(icon: string): void {
-    this.playButton = icon;
+  setPlayTime = () => {
+    switch (this.optgroupLabel) {
+      case 'SID':
+        this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());
+        break;
+      case 'MOD':
+        this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+        break;
+      case 'FLAC':
+        let time = 0;
+        if (this.startedAt) {
+          time = this.flacPlayer.currentTime - this.startedAt;
+        }
+        this.playTime = this.createPlayTime(time);
+        break;
+    }
   }
 
-  setPlayTime = (tune) => {
-    if (this.sids.includes(tune)) {
-      this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());
+  startPlaying(): void {
+    switch (this.optgroupLabel) {
+      case 'SID':
+        this.sidPlayer.playcont();
+        this.redrawSpectrum();
+        break;
+      case 'MOD':
+        this.modPlayer.play();
+        break;
+      case 'FLAC':
+        this.flacPlayer.resume();
+        break;
     }
-    else if (this.mods.includes(tune)) {
-      this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
-    }
-    else if (this.flacs.includes(tune)) {
-      this.playTime = this.createPlayTime(this.flacPlayer.currentTime);
-    }
-  }
-
-  startPlaying(tune: string): void {
-    this.setPlayButton(this.pauseIcon);
-    if (this.sids.includes(tune)) {
-      this.sidPlayer.playcont();
-      this.redrawSpectrum();
-    }
-    else if (this.mods.includes(tune)) {
-      this.modPlayer.play();
-    }
-    else if (this.flacs.includes(tune)) {
-      this.flacPlayer.play();
-    }
-    else {
-      return alert('Can not play ' + tune);
-    }
-    this.intervalID = window.setInterval(this.setPlayTime, 1000, tune);
     this.playing = true;
   }
 
@@ -282,25 +245,26 @@ export class PlayerComponent implements AfterViewInit {
         this.modPlayer.stop();
         break;
       case 'FLAC':
-        this.flacPlayer.pause();
+        this.flacPlayer.suspend();
         break;
     }
-    window.clearInterval(this.intervalID);
     this.playing = false;
   }
 
   play(): void {
-    if (this.selectedTune === this.loadedTune) {
-      if (this.playing) {
-        this.setPlayButton(this.playIcon);
-        this.stopPlaying();
-      }
-      else {
-        this.startPlaying(this.selectedTune);
-      }
+    if (this.playing) {
+      this.playButton = this.playIcon;
+      window.clearInterval(this.intervalID);
+      this.stopPlaying();
     }
     else {
-      this.loadTune(this.selectedTune);
+      this.playButton = this.pauseIcon;
+      this.intervalID = window.setInterval(this.setPlayTime, 500);
+      if (this.selectedTune !== this.loadedTune) {
+        this.loadTune(this.selectedTune);
+        return;
+      }
+      this.startPlaying();
     }
   }
 
@@ -318,7 +282,7 @@ export class PlayerComponent implements AfterViewInit {
       this.modPlayer.nextOrder();
     }
     else if (this.flacPlayer && this.optgroupLabel === 'FLAC') {
-      this.flacPlayer.currentTime += 10;
+      this.playBuffer(this.flacPlayer.currentTime - this.startedAt + 10);
     }
     else {
       this.play();
@@ -339,7 +303,7 @@ export class PlayerComponent implements AfterViewInit {
       this.modPlayer.prevOrder();
     }
     else if (this.flacPlayer && this.optgroupLabel === 'FLAC') {
-      this.flacPlayer.currentTime -= 10;
+      this.playBuffer(this.flacPlayer.currentTime - this.startedAt - 10);
     }
     else {
       this.play();
@@ -395,57 +359,125 @@ export class PlayerComponent implements AfterViewInit {
     return num.toString().padStart(2, '0');
   }
 
-  loadSid(tune: string): void {
-    this.subTune = 0;
-    this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune);
-  }
-
-  loadMod(tune: string): void {
-    this.modPlayer.loadModule('assets/mods/' + tune + '.xm');
-  }
-
-  loadFlac(tune: string): void {
-    this.subTune = 0;
-    this.subTunes = 1;
-    this.info = tune;
-    this.flacPlayer.src = 'assets/flacs/' + tune + '.flac';
-    this.flacPlayer.load();
-  }
-
-  loadTune(tune: string): void {
-    if (this.ctx) {
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  playBuffer(offset: number): void {
+    if (this.sourceNode) {
+      this.sourceNode.stop();
+      this.sourceNode.disconnect();
+      this.sourceNode = null;
     }
+    this.sourceNode = this.flacPlayer.createBufferSource();
+    this.sourceNode.buffer = this.buffer;
+    this.sourceNode.loop = true;
+
+    this.sourceNode.connect(this.flacPlayer.destination);
+    this.sourceNode.connect(this.analyserNode);
+    this.analyserNode.connect(this.javascriptNode);
+    this.javascriptNode.connect(this.flacPlayer.destination);
+
+    if (offset < 0) {
+      offset = 0;
+    }
+    this.sourceNode.start(0, offset);
+    this.startedAt = this.flacPlayer.currentTime - offset;
+    this.startPlaying();
+  }
+
+  async loadTune(tune: string): Promise<void> {
+    this.subTune = 0;
     if (this.sids.includes(tune)) {
-      if (this.sidPlayer) {
-        this.loadSid(tune);
-      }
-      else {
-        this.initSid(tune);
-      }
       this.optgroupLabel = 'SID';
+      if (!this.sidPlayer) {
+        await this.loadScript('jsSID.js');
+        this.sidPlayer = new jsSID(16384, 0.0005);
+        this.sidPlayer.setloadcallback(() => {
+          this.startPlaying();
+          this.subTunes = this.sidPlayer.getsubtunes();
+          this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+            this.removeNullFromString(this.sidPlayer.gettitle());
+        });
+      }
+      this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune);
     }
     else if (this.mods.includes(tune)) {
-      if (this.modPlayer) {
-        this.loadMod(tune);
-      }
-      else {
-        this.initMod(tune);
-      }
       this.optgroupLabel = 'MOD';
+      if (!this.modPlayer) {
+        await this.loadScript('scriptracker-1.1.1.min.js');
+        this.modPlayer = new ScripTracker();
+        this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+          this.startPlaying();
+          this.subTunes = songLength;
+          this.info = songName;
+        });
+        this.modPlayer.on(ScripTracker.Events.order, (player_1, currentOrder, songLength_1, patternIndex) => {
+          this.subTune = currentOrder - 1;
+        });
+      }
+      this.modPlayer.loadModule('assets/mods/' + tune + '.xm');
     }
     else if (this.flacs.includes(tune)) {
-      if (this.flacPlayer) {
-        this.loadFlac(tune);
-      }
-      else {
-        this.initFlac(tune);
-      }
       this.optgroupLabel = 'FLAC';
+      if (!this.flacPlayer) {
+        this.flacPlayer = new AudioContext();
+        this.analyserNode = new AnalyserNode(this.flacPlayer);
+        this.javascriptNode = this.flacPlayer.createScriptProcessor(
+          1024,
+          1,
+          1
+        );
+        // Visualization example taken from
+        // https://github.com/mdn/webaudio-examples/tree/main/audio-analyser
+        // Set up the event handler that is triggered every time enough samples have been collected
+        // then trigger the audio analysis and draw the results
+        this.javascriptNode.onaudioprocess = () => {
+          // Draw the display when the audio is playing
+          if (this.flacPlayer.state === 'running') {
+            // Read the frequency values
+            const amplitudeArray = new Uint8Array(
+              this.analyserNode.frequencyBinCount
+            );
+
+            // Get the time domain data for this sample
+            this.analyserNode.getByteTimeDomainData(amplitudeArray);
+
+            // Draw the time domain in the canvas
+            window.requestAnimationFrame(() => {
+              // Get the canvas 2d context
+              //const canvasContext = canvasElt.getContext("2d");
+
+              // Clear the canvas
+              this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+              // Draw the amplitude inside the canvas
+              this.ctx.fillStyle = 'white';
+              for (let i = 0; i < amplitudeArray.length; i++) {
+                const value = amplitudeArray[i] / 256;
+                const y = this.canvas.height - this.canvas.height * value;
+                this.ctx.fillRect(i, y, 1, 1);
+              }
+            });
+          }
+        };
+      }
+      this.subTunes = 1;
+      this.info = 'Fetching FLAC...';
+      try {
+        const response = await fetch('assets/flacs/' + tune + '.flac');
+        this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
+          this.buffer = buffer;
+          this.playBuffer(0);
+        });
+      }
+      catch (err) {
+        console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+      }
+      this.info = tune;
     }
-    else {
-      return alert('Can not load ' + tune);
+    // Prepare canvas
+    if (!this.canvas) {
+      this.canvas = document.querySelector('canvas');
+      this.ctx = this.canvas.getContext('2d');
     }
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.loadedTune = this.selectedTune = tune;
   }
 
@@ -468,9 +500,11 @@ export class PlayerComponent implements AfterViewInit {
   onUpdateSpectrum(): void {
     // Fill logic from https://github.com/Chordian/deepsid/blob/master/js/viz.js
     // Color the top line background
+    this.ctx.fillStyle = 'black';
     this.ctx.fillRect(0, 0, this.canvas.width, 1);
     
     // Color the voices
+    this.ctx.lineWidth = 2;
     for (let voice = 0; voice < 3; voice++) {
       const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
       let x = (freq / 0xFFFF) * this.canvas.width;
