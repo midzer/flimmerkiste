@@ -11,22 +11,22 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "@angular/common": "^17.1.0",
-    "@angular/compiler": "^17.1.0",
-    "@angular/core": "^17.1.0",
-    "@angular/forms": "^17.1.0",
-    "@angular/platform-browser": "^17.1.0",
-    "@angular/platform-browser-dynamic": "^17.1.0",
-    "@angular/router": "^17.1.0",
+    "@angular/common": "^17.1.1",
+    "@angular/compiler": "^17.1.1",
+    "@angular/core": "^17.1.1",
+    "@angular/forms": "^17.1.1",
+    "@angular/platform-browser": "^17.1.1",
+    "@angular/platform-browser-dynamic": "^17.1.1",
+    "@angular/router": "^17.1.1",
     "ngx-markdown": "^17.1.1",
     "rxjs": "^7.8.1",
     "zone.js": "^0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.1.0",
-    "@angular/cli": "^17.1.0",
-    "@angular/compiler-cli": "^17.1.0",
-    "@types/node": "^16.18.74",
+    "@angular-devkit/build-angular": "^17.1.1",
+    "@angular/cli": "^17.1.1",
+    "@angular/compiler-cli": "^17.1.1",
+    "@types/node": "^16.18.75",
     "typescript": "~5.2.2"
   }
 }
