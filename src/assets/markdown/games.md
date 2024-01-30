@@ -10,7 +10,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Top-Down-Shooter
 * Singleplayer 
 * [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
-* Maus, Tastatur
+* Maus, Gamepad, Tastatur
 * [Play!](/wasm/astromenace/)
 
 ### Ballerburg SDL (Ballerburg)
@@ -55,7 +55,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Einbruchsimulation
 * Singleplayer
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
-* Tastatur
+* Maus, Tastatur
 * [Play german version!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
@@ -74,7 +74,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Puzzle
 * Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
-* Maus, Tastatur, Touch
+* Maus, Gamepad, Tastatur, Touch
 * [Play!](/wasm/freegemas/)
 
 ### Freegish (Gish)
@@ -92,7 +92,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Puzzlespiel
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/freesiege)
-* Tastatur
+* Gamepad, Tastatur
 * [Play!](/wasm/freesiege/)
 
 ### Jump 'n Bump
@@ -119,7 +119,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
-* Tastatur
+* Gamepad, Tastatur
 * [Play!](/wasm/prince/)
 
 ### Rocks'n'Diamonds (Boulder Dash)
@@ -128,7 +128,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Puzzle
 * Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
-* Maus, Tastatur
+* Maus, Gamepad, Tastatur
 * [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
 ### SDL-Ball (Breakout)
@@ -232,7 +232,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/quakespasm) / [Wiki](https://de.wikipedia.org/wiki/Quake)
-* Maus, Tastatur
+* Maus, Gamepad, Tastatur
 * [Play!](/wasm/quake/)
 
 ### Raptor - Call of the Shadows
