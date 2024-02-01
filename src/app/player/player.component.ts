@@ -23,15 +23,15 @@ export class PlayerComponent implements AfterViewInit {
   intervalID: number;
   playTime: string = '00:00';
   playing: boolean = false;
-  playIcon: string = 'assets/images/player-play.svg';
-  pauseIcon: string = 'assets/images/player-pause.svg';
+  playIcon: string = 'assets/icons/player-play.svg';
+  pauseIcon: string = 'assets/icons/player-pause.svg';
   playButton: string = this.playIcon;
   
   screen: HTMLElement;
   video: HTMLVideoElement;
   videoPlaying: boolean = false;
-  playVideoIcon: string = 'assets/images/movie.svg';
-  pauseVideoIcon: string = 'assets/images/movie-off.svg';
+  playVideoIcon: string = 'assets/icons/movie.svg';
+  pauseVideoIcon: string = 'assets/icons/movie-off.svg';
   videoButtonIcon: string = this.playVideoIcon;
 
   canvas: HTMLCanvasElement;
@@ -322,7 +322,7 @@ export class PlayerComponent implements AfterViewInit {
       this.info = oldInfo;
       info.classList.remove('copied');
     }, 1337);
-    navigator.clipboard.writeText(window.location.origin + window.location.pathname + '#' + this.selectedTune);
+    navigator.clipboard.writeText(window.location.href + '#' + this.selectedTune);
   }
 
   toggle(): void {

@@ -8,8 +8,8 @@
   <div class="d-flex">
     <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
     <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play track"></button>
-    <button (click)="next()"><img src="assets/images/player-track-next.svg" width="24" height="24" alt="Next track"></button>
-    <button (click)="prev()"><img src="assets/images/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
+    <button (click)="next()"><img src="assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
+    <button (click)="prev()"><img src="assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
   </div>
   <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange()" aria-label="Select tune">
     <optgroup label="SID">

@@ -13,6 +13,7 @@ import { POSTS } from '../posts'
 export class ContentComponent implements OnInit {
   path: string;
   name: string;
+  postName: string;
   posts = POSTS;
   hasAudio: boolean = false;
   hasVideo: boolean = false;
@@ -37,6 +38,7 @@ export class ContentComponent implements OnInit {
           else if (category === 'Video') {
             this.hasVideo = true;
           }
+          this.postName = post.name;
           break;
         }
       }
@@ -69,6 +71,28 @@ export class ContentComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  share(event): void {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Flimmerkiste',
+        text: this.postName,
+        url: window.location.href
+      })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+    }
+    else {
+      navigator.clipboard.writeText(window.location.href);
+    }
+    const btn = event.target;
+    const img = btn.firstElementChild;
+    const iconPath = 'assets/icons/';
+    img.src = iconPath + 'clipboard-check.svg';
+    setTimeout(() => {
+      img.src = iconPath + 'share.svg';
+    }, 1337);
   }
 
   convertDurationtoSeconds(duration: string): number {

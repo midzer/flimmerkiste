@@ -51,3 +51,7 @@ app-content {
     border-radius: 5px;
   }
 }
+
+button > * {
+  pointer-events: none;
+}
