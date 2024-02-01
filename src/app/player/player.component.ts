@@ -19,7 +19,7 @@ export class PlayerComponent implements AfterViewInit {
   startedAt: number = 0;
   subTune: number = 0;
   subTunes: number = 13;
-  info: string;
+  info: string = 'Props to original authors';
   intervalID: number;
   playTime: string = '00:00';
   playing: boolean = false;
