@@ -50,8 +50,12 @@ app-content {
     border: 1px solid var(--grey);
     border-radius: 5px;
   }
-}
 
-button > * {
-  pointer-events: none;
+  button {
+    margin-right: 1rem;
+  }
+
+  button > * {
+    pointer-events: none;
+  }
 }
