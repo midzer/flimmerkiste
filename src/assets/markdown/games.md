@@ -15,7 +15,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Ballerburg SDL
 
-* Ballerburg Remake von 1987
+* Remake von Ballerburg (1987)
 * Artillery-Spiel
 * Single- und Multiplayer
 * [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
@@ -24,7 +24,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Bombermaaan
 
-* Bomberman Clone von 1983
+* Clone von Bomberman (1983)
 * Arcade
 * Single - und Multiplayer
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
@@ -51,7 +51,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Der Clou!
 
-* Offical von 1994
+* Official von 1994
 * Einbruchsimulation
 * Singleplayer
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
@@ -61,7 +61,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Flare
 
-* Diablo Clone von 1997
+* Clone von Diablo (1997)
 * Action-Rollenspiel
 * Singleplayer
 * [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
@@ -70,7 +70,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Freegemas
 
-* Bejeweled Clone von 2001
+* Clone von Bejeweled (2001)
 * Puzzle
 * Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
@@ -79,7 +79,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Freegish
 
-* Gish Clone von 2004
+* Clone von Gish (2004)
 * Platform
 * Singleplayer
 * [Repo](https://github.com/midzer/freegish) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
@@ -97,7 +97,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Hurrican
 
-* Turrican Clone von 1990
+* Clone von Turrican (1990)
 * Jump 'n' Shoot
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/hurrican) / [Wiki](https://de.wikipedia.org/wiki/Turrican)
@@ -115,7 +115,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### LBreakoutHD
 
-* Breakout Clone von 1976
+* Clone von Breakout (1976)
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
@@ -133,7 +133,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Rocks'n'Diamonds
 
-* Boulder Dash Clone von 1995
+* Clone von Boulder Dash (1984)
 * Puzzle
 * Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
@@ -142,7 +142,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### SDL-Ball
 
-* Breakout Clone von 1976
+* Clone von Breakout (1976)
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
@@ -151,7 +151,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### SDL Sopwith
 
-* Sopwith Remake von 1984
+* Remake von Sopwith (1984)
 * Shoot 'em up
 * Singleplayer
 * [Repo](https://github.com/midzer/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
@@ -160,7 +160,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Shiromino
 
-* Tetris Clone von 1984
+* Clone von Tetris (1984)
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
@@ -169,7 +169,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Vectoroids
 
-* Asteroids Clone von 1979
+* Clone von Asteroids (1979)
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
@@ -201,7 +201,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Descent I
 
-* Offical von 1995
+* Official von 1995
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://de.wikipedia.org/wiki/Descent_(Computerspiel))
@@ -210,7 +210,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Doom
 
-* Offical von 1993
+* Official von 1993
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
@@ -228,7 +228,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Jazz Jackrabbit 2
 
-* Offical von 1998
+* Official von 1998
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
