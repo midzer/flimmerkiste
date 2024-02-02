@@ -6,25 +6,25 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### AstroMenace
 
-* Erscheinungsjahr: 2007
+* Original von 2007
 * Top-Down-Shooter
-* Singleplayer 
+* Singleplayer
 * [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
 * Maus, Gamepad, Tastatur
 * [Play!](/wasm/astromenace/)
 
-### Ballerburg SDL (Ballerburg)
+### Ballerburg SDL
 
-* Erscheinungsjahr: 1987
+* Ballerburg Remake von 1987
 * Artillery-Spiel
 * Single- und Multiplayer
 * [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
 * Maus, Tastatur, Touch
 * [Play external!](https://baller.tuxfamily.org/online/)
 
-### Bombermaaan (Bomberman)
+### Bombermaaan
 
-* Erscheinungsjahr: 1983
+* Bomberman Clone von 1983
 * Arcade
 * Single - und Multiplayer
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
@@ -33,7 +33,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### C-Dogs SDL
 
-* Erscheinungsjahr: 1997-2001
+* Original von 1997
 * Run 'n Gun
 * Singleplayer
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
@@ -42,7 +42,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Chromium B.S.U.
 
-* Erscheinungsjahr: 2000
+* Original von 2000
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
@@ -51,7 +51,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Der Clou!
 
-* Erscheinungsjahr: 1994
+* Offical von 1994
 * Einbruchsimulation
 * Singleplayer
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
@@ -59,27 +59,27 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Play german version!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
-### Flare (Diablo)
+### Flare
 
-* Erscheinungsjahr: 1997
+* Diablo Clone von 1997
 * Action-Rollenspiel
 * Singleplayer
 * [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
 * Maus, Tastatur
 * [Play!](/wasm/flare/)
 
-### Freegemas (Bejeweled)
+### Freegemas
 
-* Erscheinungsjahr: 2001
+* Bejeweled Clone von 2001
 * Puzzle
 * Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
 * Maus, Gamepad, Tastatur, Touch
 * [Play!](/wasm/freegemas/)
 
-### Freegish (Gish)
+### Freegish
 
-* Erscheinungsjahr: 2004
+* Gish Clone von 2004
 * Platform
 * Singleplayer
 * [Repo](https://github.com/midzer/freegish) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
@@ -88,25 +88,34 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### FreeSiege
 
-* Erscheinungsjahr: 2009
+* Original von 2009
 * Puzzlespiel
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/freesiege)
 * Gamepad, Tastatur
 * [Play!](/wasm/freesiege/)
 
+### Hurrican
+
+* Turrican Clone von 1990
+* Jump 'n' Shoot
+* Single- und Multiplayer
+* [Repo](https://github.com/midzer/hurrican) / [Wiki](https://de.wikipedia.org/wiki/Turrican)
+* Tastatur
+* [Play!](/wasm/hurrican/)
+
 ### Jump 'n Bump
 
-* Erscheinungsjahr: 1998
+* Original von 1998
 * Jump 'n' Run
 * Multiplayer
 * [Repo](https://github.com/midzer/jumpnbump) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
 * Tastatur
 * [Play!](/wasm/jumpnbump/)
 
-### LBreakoutHD (Breakout)
+### LBreakoutHD
 
-* Erscheinungsjahr: 1976
+* Breakout Clone von 1976
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
@@ -115,34 +124,34 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Prince of Persia
 
-* Erscheinungsjahr: 1989
+* Official von 1989
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
 * Gamepad, Tastatur
 * [Play!](/wasm/prince/)
 
-### Rocks'n'Diamonds (Boulder Dash)
+### Rocks'n'Diamonds
 
-* Erscheinungsjahr: 1995-2023
+* Boulder Dash Clone von 1995
 * Puzzle
 * Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Maus, Gamepad, Tastatur
 * [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
-### SDL-Ball (Breakout)
+### SDL-Ball
 
-* Erscheinungsjahr: 2008-2014
+* Breakout Clone von 1976
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/sdl-ball/)
 
-### SDL Sopwith (Sopwith)
+### SDL Sopwith
 
-* Erscheinungsjahr: 1984
+* Sopwith Remake von 1984
 * Shoot 'em up
 * Singleplayer
 * [Repo](https://github.com/midzer/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
@@ -151,16 +160,16 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Shiromino
 
-* Erscheinungsjahr: 2017
+* Tetris Clone von 1984
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
 * Tastatur
 * [Play!](/wasm/shiromino/)
 
-### Vectoroids (Asteroids)
+### Vectoroids
 
-* Erscheinungsjahr: 1979
+* Asteroids Clone von 1979
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
@@ -178,13 +187,13 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 #### Tiberian Dawn
 
-* Erscheinungsjahr: 1995
+* Official von 1995
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
 * [Play!](/wasm/tiberian-dawn/)
 
 #### Red Alert
 
-* Erscheinungsjahr: 1996
+* Official von 1996
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
 * [Play!](/wasm/red-alert/)
 
@@ -192,7 +201,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Descent I
 
-* Erscheinungsjahr: 1995
+* Offical von 1995
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://de.wikipedia.org/wiki/Descent_(Computerspiel))
@@ -201,7 +210,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Doom
 
-* Erscheinungsjahr: 1993
+* Offical von 1993
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
@@ -210,7 +219,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Heroes of Might and Magic II
 
-* Erscheinungsjahr: 1996
+* Official von 1996
 * Rundenbasiertes Strategiespiel
 * Singleplayer
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
@@ -219,7 +228,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Jazz Jackrabbit 2
 
-* Erscheinungsjahr: 1998
+* Offical von 1998
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
@@ -228,7 +237,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Quake
 
-* Erscheinungsjahr: 1996
+* Official von 1996
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/quakespasm) / [Wiki](https://de.wikipedia.org/wiki/Quake)
@@ -237,7 +246,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Raptor - Call of the Shadows
 
-* Erscheinungsjahr: 1994
+* Official von 1994
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
@@ -246,7 +255,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### WipEout
 
-* Erscheinungsjahr: 1995
+* Official von 1995
 * Rennspiel
 * Singleplayer
 * [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
@@ -255,7 +264,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Wolfenstein 3D
 
-* Erscheinungsjahr: 1994
+* Official von 1994
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
