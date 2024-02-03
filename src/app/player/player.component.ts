@@ -42,23 +42,48 @@ export class PlayerComponent implements AfterViewInit {
   selectedTune: string = 'Last_Ninja_2';
   loadedTune: string;
   mods: string[] = [
-    "aryx",
-    "beams_of_light",
-    "beek-substitutionology",
-    "contraduct_design",
-    "db_3dg",
-    "dt_core",
-    "dt_orion",
-    "external",
-    "funky_fish_-_r2-d2",
-    "her4",
-    "lamour_toujours_remix",
-    "soda7-digitags",
-    "sv_sac05",
-    "titan_02",
-    "transfu3",
-    "tu_itr29",
-    "yum,cookie"
+    "068.xm",
+    "1990chip.mod",
+    "AGGRESSiON - Easy DVD Creator 1.1.0 kg.xm",
+    "aryx.s3m",
+    "bappalander.mod",
+    "beams_of_light.mod",
+    "beek-substitutionology.xm",
+    "chip_mania.xm",
+    "chop_chip.mod",
+    "class01.mod",
+    "class11.mod",
+    "contraduct_design.xm",
+    "db_3dg.xm",
+    "df97.xm",
+    "disease_-_beautiful_insanity.xm",
+    "dt_core.xm",
+    "dt_orion.xm",
+    "ELYSIUM.MOD",
+    "estrayk_-_classic.mod",
+    "external.xm",
+    "fap.xm",
+    "funky_fish_-_r2-d2.xm",
+    "her3.mod",
+    "her4.mod",
+    "hybris-ingame.mod",
+    "hyperfuk.mod",
+    "it_is_a_good_day.mod",
+    "knas.xm",
+    "kuk.xm",
+    "lamour_toujours_remix.xm",
+    "lhs_myth1.xm",
+    "paso-pleasure_to_paso.mod",
+    "plofs.xm",
+    "rainfore.mod",
+    "soda7-digitags.xm",
+    "sv_sac05.xm",
+    "titan_02.xm",
+    "toilet.xm",
+    "transfu3.mod",
+    "tu_itr29.mod",
+    "tz-abmin.mod",
+    "yum,cookie.xm"
   ];
   sids: string[] = [
     "ACE_II",
@@ -412,7 +437,7 @@ export class PlayerComponent implements AfterViewInit {
           this.subTune = currentOrder - 1;
         });
       }
-      this.modPlayer.loadModule('assets/mods/' + tune + '.xm');
+      this.modPlayer.loadModule('assets/mods/' + tune);
     }
     else if (this.flacs.includes(tune)) {
       this.optgroupLabel = 'FLAC';
