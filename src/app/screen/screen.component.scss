@@ -5,7 +5,7 @@
     width: 75.7%;
     height: 100vh;
     background-color: var(--bgcolor);
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 1;
     transition: opacity 1s;
     &.hide {
