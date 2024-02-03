@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { POSTS } from '../posts'
+import { fetchJSON } from '../helper/fetch';
 
 @Component({
   selector: 'app-content',
@@ -14,7 +14,6 @@ export class ContentComponent implements OnInit {
   path: string;
   name: string;
   postName: string;
-  posts = POSTS;
   hasAudio: boolean = false;
   hasVideo: boolean = false;
 
@@ -23,13 +22,14 @@ export class ContentComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    const posts = await fetchJSON('posts');
     this.route.params.subscribe(params => {
       this.name = params['name'];
       this.path = 'assets/markdown/' + this.name + '.md';
       const name = this.name.split('-').join(' ');
-      for (let i = this.posts.length - 1; i >= 0 ; i--) {
-        const post = this.posts[i];
+      for (let i = posts.length - 1; i >= 0 ; i--) {
+        const post = posts[i];
         if (post.name.toLowerCase() === name) {
           const category = post.category;
           if (category === 'DJ Sets' || category === 'Audio') {
