@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { fetchJSON } from '../helper/fetch';
+import { POSTS } from '../posts';
 import { Post } from '../post';
 
 @Component({
@@ -8,23 +8,18 @@ import { Post } from '../post';
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
-export class OverviewComponent implements OnInit {
-  posts: Post[];
-  allPosts: Post[];
+export class OverviewComponent {
+  posts = POSTS;
   active = false;
 
   constructor() {}
 
-  async ngOnInit() {
-    this.posts = this.allPosts = await fetchJSON('posts');
-  }
-
   toggleCategory(category: string): void {
     if (this.active) {
-      this.posts = this.allPosts;
+      this.posts = POSTS;
     }
     else {
-      this.posts = this.allPosts.filter((post: Post) => {
+      this.posts = POSTS.filter((post: Post) => {
         return post.category.includes(category);
       });
     }
