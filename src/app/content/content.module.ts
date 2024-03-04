@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 
+import { gfmHeadingId } from 'marked-gfm-heading-id';
+
 import { ContentRoutingModule } from './content-routing.module';
 import { ContentComponent } from './content.component';
 
@@ -15,7 +17,9 @@ import { WebmfilePipe } from '../webmfile.pipe';
     CommonModule,
     ContentRoutingModule,
     HttpClientModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot({
+      markedExtensions: [gfmHeadingId()],
+    })
   ],
   declarations: [
     ContentComponent,

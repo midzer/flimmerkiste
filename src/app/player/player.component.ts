@@ -55,9 +55,10 @@ export class PlayerComponent implements AfterViewInit {
       fetchJSON('mods'),
       fetchJSON('flacs')
     ]);
-    const hash = window.location.hash;
-    if (hash) {
-      const tune = window.decodeURIComponent(hash).replace('#', '');
+    const query = window.location.search;
+    if (query) {
+      const params = new URLSearchParams(query);
+      const tune = params.get('tune');
       if (this.sids.includes(tune) || this.mods.includes(tune) || this.flacs.includes(tune)) {
         this.selectedTune = tune;
       }
@@ -207,7 +208,11 @@ export class PlayerComponent implements AfterViewInit {
       this.info = oldInfo;
       info.classList.remove('copied');
     }, 1337);
-    navigator.clipboard.writeText(window.location.href + '#' + this.selectedTune);
+    navigator.clipboard.writeText(
+      window.location.origin +
+      window.location.pathname +
+      '?tune=' + this.selectedTune +
+      window.location.hash);
   }
 
   toggle(): void {

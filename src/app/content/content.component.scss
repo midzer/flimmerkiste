@@ -58,4 +58,17 @@ app-content {
   button > * {
     pointer-events: none;
   }
+
+  [id] {
+    scroll-margin-top: 50px;
+
+    &:hover > .anchor-link {
+      opacity: 1;
+    }
+  }
+
+  .anchor-link {
+    margin-left: 0.25rem;
+    opacity: 0;
+  }
 }

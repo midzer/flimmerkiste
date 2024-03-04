@@ -67,6 +67,23 @@ export class ContentComponent implements OnInit {
         item.insertAdjacentElement('afterbegin', span);
       });
     }
+    const hash = window.location.hash;
+    if (hash) {
+      const id = window.decodeURIComponent(hash).replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+    const elements = document.querySelectorAll('[id]:not(h1)');
+    elements.forEach(element => {
+      const id = element.id;
+      const anchor = document.createElement('a');
+      anchor.className = 'anchor-link';
+      anchor.href = window.location.origin + window.location.pathname + '#' + id;
+      anchor.textContent = '#';
+      element.append(anchor);
+    });
   }
 
   goBack(): void {
