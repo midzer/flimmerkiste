@@ -50,3 +50,6 @@ src/video/
 
 # Player
 src/assets/flacs/
+
+# Images
+src/assets/images/

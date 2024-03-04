@@ -19,3 +19,5 @@ Man wurde älter und der Zockdrang ließ nach. Civilization 4, ein rundenbasiert
 ## Heute
 
 Working by doing und nebenher bisserl an Webseiten schrauben.
+
+![midzer vor einer geschlossenen Imbissbude auf einem Rastplatz](/assets/images/midzer.webp)
