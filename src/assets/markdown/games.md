@@ -240,9 +240,18 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Official von 1996
 * Ego-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/quakespasm) / [Wiki](https://de.wikipedia.org/wiki/Quake)
+* [Repo](https://github.com/GMH-Code/Quake-WASM) / [Wiki](https://de.wikipedia.org/wiki/Quake)
 * Maus, Gamepad, Tastatur
-* [Play!](/wasm/quake/)
+* [Play external!](https://quake.m-h.org.uk/)
+
+### Quake 3
+
+* Official von 1999
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/lrusso/Quake3) / [Wiki](https://de.wikipedia.org/wiki/Quake_III_Arena)
+* Maus, Gamepad, Tastatur
+* [Play external!](https://lrusso.github.io/Quake3/Quake3.htm)
 
 ### Raptor - Call of the Shadows
 
