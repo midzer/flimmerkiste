@@ -63,15 +63,16 @@ export class PlayerComponent implements AfterViewInit {
         this.selectedTune = tune;
       }
       else {
-        alert(tune + ' does not exist. Playing default.');
+        return alert(tune + ' does not exist.');
       }
       if (window.navigator.maxTouchPoints > 1) {
-        // Hack to play on mobile
-        window.addEventListener('click', () => {
-          this.play();
-        }, { once: true });
+        return alert(tune + ' selected. Play it manually.');
       }
-      else {
+      // @ts-ignore
+      if (window.navigator.getAutoplayPolicy && window.navigator.getAutoplayPolicy('audiocontext') !== "allowed") {
+        return alert('Autoplay is not allowed.')
+      }
+      if (window.confirm('Do you want to play ' + tune + '?')) {
         this.play();
       }
     }
