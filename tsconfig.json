@@ -21,10 +21,10 @@
     "lib": [
       "ES2022",
       "dom"
-    ],
-    "strictPropertyInitialization": false
+    ]
   },
   "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
