@@ -8,8 +8,8 @@ describe('EyeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EyeComponent ]
-    })
+    imports: [EyeComponent]
+})
     .compileComponents();
   }));
 

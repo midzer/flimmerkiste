@@ -1,10 +1,14 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { SanitizedUrlPipe } from '../sanitized-url.pipe';
+
 @Component({
-  selector: 'app-eye',
-  templateUrl: './eye.component.html',
-  styleUrls: ['./eye.component.scss']
+    selector: 'app-eye',
+    templateUrl: './eye.component.html',
+    styleUrls: ['./eye.component.scss'],
+    standalone: true,
+    imports: [SanitizedUrlPipe]
 })
 export class EyeComponent implements AfterViewInit {
   eye: string = 'data:,';

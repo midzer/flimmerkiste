@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'mp3file'
+    name: 'mp3file',
+    standalone: true
 })
 export class Mp3filePipe implements PipeTransform {
 

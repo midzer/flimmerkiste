@@ -1,4 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { fetchJSON } from '../helper/fetch';
 
@@ -6,9 +8,11 @@ declare var ScripTracker: any;
 declare var jsSID: any;
 
 @Component({
-  selector: 'app-player',
-  templateUrl: './player.component.html',
-  styleUrls: ['./player.component.scss']
+    selector: 'app-player',
+    templateUrl: './player.component.html',
+    styleUrls: ['./player.component.scss'],
+    standalone: true,
+    imports: [FormsModule, NgFor]
 })
 export class PlayerComponent implements AfterViewInit {
   modPlayer: any;

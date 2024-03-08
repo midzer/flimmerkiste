@@ -1,14 +1,20 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { Location, NgIf } from '@angular/common';
 
 import { POSTS } from '../posts';
+import { WebmfilePipe } from '../webmfile.pipe';
+import { Mp4filePipe } from '../mp4file.pipe';
+import { Mp3filePipe } from '../mp3file.pipe';
+import { MarkdownComponent } from 'ngx-markdown';
 
 @Component({
-  selector: 'app-content',
-  templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-content',
+    templateUrl: './content.component.html',
+    styleUrls: ['./content.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [NgIf, MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe]
 })
 export class ContentComponent implements OnInit {
   path: string;

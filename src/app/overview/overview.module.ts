@@ -7,13 +7,11 @@ import { OverviewComponent } from './overview.component';
 import { Blank2dashPipe } from '../blank2dash.pipe';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    OverviewRoutingModule
-  ],
-  declarations: [
-    OverviewComponent,
-    Blank2dashPipe
-  ]
+    imports: [
+        CommonModule,
+        OverviewRoutingModule,
+        OverviewComponent,
+        Blank2dashPipe
+    ]
 })
 export class OverviewModule { }

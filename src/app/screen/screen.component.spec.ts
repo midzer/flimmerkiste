@@ -8,8 +8,8 @@ describe('ScreenComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScreenComponent ]
-    })
+    imports: [ScreenComponent]
+})
     .compileComponents();
   }));
 

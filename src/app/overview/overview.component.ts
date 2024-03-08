@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { NgFor, LowerCasePipe } from '@angular/common';
+
+import { Blank2dashPipe } from '../blank2dash.pipe';
 
 import { POSTS } from '../posts';
 import { Post } from '../post';
 
 @Component({
-  selector: 'app-overview',
-  templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.scss']
+    selector: 'app-overview',
+    templateUrl: './overview.component.html',
+    styleUrls: ['./overview.component.scss'],
+    standalone: true,
+    imports: [NgFor, RouterLink, LowerCasePipe, Blank2dashPipe]
 })
 export class OverviewComponent {
   posts = POSTS;

@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'mp4file'
+    name: 'mp4file',
+    standalone: true
 })
 export class Mp4filePipe implements PipeTransform {
 

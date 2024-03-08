@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'webmfile'
+    name: 'webmfile',
+    standalone: true
 })
 export class WebmfilePipe implements PipeTransform {
 

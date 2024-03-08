@@ -13,19 +13,17 @@ import { Mp4filePipe } from '../mp4file.pipe';
 import { WebmfilePipe } from '../webmfile.pipe';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ContentRoutingModule,
-    HttpClientModule,
-    MarkdownModule.forRoot({
-      markedExtensions: [gfmHeadingId()],
-    })
-  ],
-  declarations: [
-    ContentComponent,
-    Mp3filePipe,
-    Mp4filePipe,
-    WebmfilePipe
-  ]
+    imports: [
+        CommonModule,
+        ContentRoutingModule,
+        HttpClientModule,
+        MarkdownModule.forRoot({
+            markedExtensions: [gfmHeadingId()],
+        }),
+        ContentComponent,
+        Mp3filePipe,
+        Mp4filePipe,
+        WebmfilePipe
+    ]
 })
 export class ContentModule { }
