@@ -31,7 +31,7 @@ export class EyeComponent implements AfterViewInit {
 				
 				if (state === sequence.length) {
           // sequence complete
-          this.router.navigateByUrl('/hidden');
+          this.router.navigateByUrl('/ninja');
           
           // reset
           state = 0;	
