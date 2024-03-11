@@ -51,8 +51,8 @@ src/video/
 # Player
 src/assets/flacs/
 
-# Images
-src/assets/images/
+# Pictures
+src/assets/pictures/
 
 # Other
 ninja.md
