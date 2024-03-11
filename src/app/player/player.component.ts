@@ -48,7 +48,9 @@ export class PlayerComponent implements AfterViewInit {
   selectedTune: string = 'Last_Ninja_2';
   loadedTune: string;
   mods: string[];
-  sids: string[];
+  sids: string[] = [
+    'Last_Ninja_2'
+  ];
   flacs: string[];
 
   constructor() {}
