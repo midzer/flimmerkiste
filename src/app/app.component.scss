@@ -11,6 +11,10 @@ video {
 }
 
 @media screen and (min-width: 576px) {
+    .container {
+        position: relative;
+    }
+    
     video {
         max-height: 100vh;
     }
