@@ -20,4 +20,4 @@ Man wurde älter und der Zockdrang ließ nach. Civilization 4, ein rundenbasiert
 
 Working by doing und nebenher bisserl an Webseiten schrauben.
 
-![midzer vor einer geschlossenen Imbissbude auf einem Rastplatz](/assets/pictures/midzer.webp)
+<img src="/assets/pictures/midzer.webp" loading="lazy" width="1000" height="750" alt="midzer vor einer geschlossenen Imbissbude auf einem Rastplatz">
