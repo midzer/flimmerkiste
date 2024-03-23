@@ -6,16 +6,17 @@
 
 video {
     display: block;
-    width: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
     height: auto;
 }
 
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
     .container {
         position: relative;
     }
     
     video {
-        max-height: 100vh;
+        width: auto;
     }
 }
