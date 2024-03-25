@@ -6,7 +6,12 @@
 <nav>
   <ul>
     <li *ngFor="let menuitem of menu">
-      <a [routerLink]="[menuitem.name]">{{menuitem.name}}</a>
+      <a [routerLink]="[menuitem.name]">
+        <svg class="icon icon--{{menuitem.icon}}" role="img" aria-hidden="true">
+          <use [attr.xlink:href]="'/assets/icons/sprite.svg#' + menuitem.icon"></use>
+        </svg>
+        {{ menuitem.name }}
+      </a>
     </li>
   </ul>
 </nav>

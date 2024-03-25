@@ -2,21 +2,27 @@ import { Menuitem } from './menuitem';
 
 export var MENU: Menuitem[] = [
     {
-        name: 'about'
+        name: 'about',
+        icon: 'info-square'
     },
     {
-        name: 'games'
+        name: 'games',
+        icon: 'device-gamepad'
     },
     {
-        name: 'memes'
+        name: 'memes',
+        icon: 'photo'
     },
     {
-        name: 'links'
+        name: 'links',
+        icon: 'link'
     },
     {
-        name: 'archive'
+        name: 'archive',
+        icon: 'archive'
     },
     {
-        name: 'contact'
+        name: 'contact',
+        icon: 'message'
     }
 ];
