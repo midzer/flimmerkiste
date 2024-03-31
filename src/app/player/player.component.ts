@@ -55,7 +55,7 @@ export class PlayerComponent implements AfterViewInit {
 
   constructor() {}
 
-  async ngAfterViewInit() {
+  setup = async () => {
     [this.sids, this.mods, this.flacs] = await Promise.all([
       fetchJSON('sids'),
       fetchJSON('mods'),
@@ -81,6 +81,15 @@ export class PlayerComponent implements AfterViewInit {
       if (window.confirm('Do you want to play ' + tune + '?')) {
         this.play();
       }
+    }
+  }
+
+  ngAfterViewInit() {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(this.setup, { timeout: 1000 })
+    }
+    else {
+      setTimeout(this.setup, 1000);
     }
   }
 
