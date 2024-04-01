@@ -6,7 +6,7 @@
 </audio>
 <markdown [src]="path" (load)="onLoad()" [disableSanitizer]="true"></markdown>
 <video *ngIf="hasVideo == true" controls playsinline preload="metadata">
-    <source src="{{name | webmfile}}" type='video/webm"'>
-    <source src="{{name | mp4file}}" type='video/mp4;codecs="avc1.42c01e,mp4a.40.2"'>
+    <source src="{{name | webmfile}}" type='video/webm; codecs="av01.0.12M.08, mp4a.40.2"'>
+    <source src="{{name | mp4file}}" type='video/mp4; codecs="avc1.42c01e, mp4a.40.2"'>
     Your browser does not support video element
 </video>
