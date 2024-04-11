@@ -59,6 +59,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Play german version!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
+### Dungeon Rush
+
+* Remake von Snake (1998)
+* Arcade
+* Single- und Multiplayer
+* [Repo](https://github.com/midzer/DungeonRush)
+* Maus, Touch
+* [Play!](/wasm/dungeonrush/)
+
 ### Flare
 
 * Clone von Diablo (1997)
