@@ -22,6 +22,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play external!](https://baller.tuxfamily.org/online/)
 
+### Blobby Volley 2
+
+* Original von 2000
+* Arcade
+* Single- und Multiplayer
+* [Repo](https://github.com/danielknobe/blobbyvolley2) / [Wiki](https://de.wikipedia.org/wiki/Blobby_Volley)
+* Maus, Tastatur
+* [Play external!](http://blobbyvolley.de/data/bv2wa/)
+
 ### Bombermaaan
 
 * Clone von Bomberman (1983)
