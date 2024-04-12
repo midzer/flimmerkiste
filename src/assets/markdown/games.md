@@ -235,6 +235,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play!](/wasm/doom/)
 
+### Duke Nukem II
+
+* Official von 1993
+* Jump 'n' Shoot
+* Singleplayer
+* [Repo](https://github.com/lethal-guitar/RigelEngine) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem)
+* Tastatur
+* [Play external!](https://rigelengine.nikolai-wuttke.de/)
+
 ### Heroes of Might and Magic II
 
 * Official von 1996
