@@ -1,4 +1,4 @@
-[
+export const SIDS = [
     "ACE_II",
     "Antics_Dulcedo_Cogitationis",
     "Arkanoid",

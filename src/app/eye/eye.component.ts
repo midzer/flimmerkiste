@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { SanitizedUrlPipe } from '../sanitized-url.pipe';
@@ -10,14 +10,14 @@ import { SanitizedUrlPipe } from '../sanitized-url.pipe';
     standalone: true,
     imports: [SanitizedUrlPipe]
 })
-export class EyeComponent implements AfterViewInit {
+export class EyeComponent implements OnInit {
   eye: string = 'data:,';
 
   constructor(
     private router: Router
   ) {}
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.loop();
 
     const sequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];

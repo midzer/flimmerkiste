@@ -1,8 +1,10 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { fetchJSON } from '../helper/fetch';
+import { FLACS } from './flacs';
+import { MODS } from './mods';
+import { SIDS } from './sids';
 
 declare var ScripTracker: any;
 declare var jsSID: any;
@@ -14,7 +16,7 @@ declare var jsSID: any;
     standalone: true,
     imports: [FormsModule, NgFor]
 })
-export class PlayerComponent implements AfterViewInit {
+export class PlayerComponent implements OnInit {
   modPlayer: any;
   sidPlayer: any;
   flacPlayer: AudioContext;
@@ -47,20 +49,13 @@ export class PlayerComponent implements AfterViewInit {
   optgroupLabel: string = 'SID';
   selectedTune: string = 'Last_Ninja_2';
   loadedTune: string;
-  mods: string[];
-  sids: string[] = [
-    'Last_Ninja_2'
-  ];
-  flacs: string[];
+  mods: string[] = MODS;
+  sids: string[] = SIDS;
+  flacs: string[] = FLACS;
 
   constructor() {}
 
-  setup = async () => {
-    [this.sids, this.mods, this.flacs] = await Promise.all([
-      fetchJSON('sids'),
-      fetchJSON('mods'),
-      fetchJSON('flacs')
-    ]);
+  ngOnInit() {
     const query = window.location.search;
     if (query) {
       const params = new URLSearchParams(query);
@@ -81,15 +76,6 @@ export class PlayerComponent implements AfterViewInit {
       if (window.confirm('Do you want to play ' + tune + '?')) {
         this.play();
       }
-    }
-  }
-
-  ngAfterViewInit() {
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(this.setup, { timeout: 1000 })
-    }
-    else {
-      setTimeout(this.setup, 1000);
     }
   }
 
