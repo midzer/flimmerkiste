@@ -57,25 +57,29 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit() {
     const query = window.location.search;
-    if (query) {
-      const params = new URLSearchParams(query);
-      const tune = params.get('tune');
-      if (this.sids.includes(tune) || this.mods.includes(tune) || this.flacs.includes(tune)) {
-        this.selectedTune = tune;
-      }
-      else {
-        return alert(tune + ' does not exist.');
-      }
-      if (window.navigator.maxTouchPoints > 1) {
-        return alert(tune + ' selected. Play it manually.');
-      }
-      // @ts-ignore
-      if (window.navigator.getAutoplayPolicy && window.navigator.getAutoplayPolicy('audiocontext') !== "allowed") {
-        return alert('Autoplay is not allowed.')
-      }
-      if (window.confirm('Do you want to play ' + tune + '?')) {
-        this.play();
-      }
+    if (!query) {
+      return;
+    }
+    const params = new URLSearchParams(query);
+    const tune = params.get('tune');
+    if (!tune) {
+      return;
+    }
+    if (this.sids.includes(tune) || this.mods.includes(tune) || this.flacs.includes(tune)) {
+      this.selectedTune = tune;
+    }
+    else {
+      return alert(tune + ' does not exist.');
+    }
+    if (window.navigator.maxTouchPoints > 1) {
+      return alert(tune + ' selected. Play it manually.');
+    }
+    // @ts-ignore
+    if (window.navigator.getAutoplayPolicy && window.navigator.getAutoplayPolicy('audiocontext') !== "allowed") {
+      return alert('Autoplay is not allowed.')
+    }
+    if (window.confirm('Do you want to play ' + tune + '?')) {
+      this.play();
     }
   }
 
