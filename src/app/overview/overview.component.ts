@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor, LowerCasePipe } from '@angular/common';
 
@@ -14,21 +14,43 @@ import { Post } from '../post';
     standalone: true,
     imports: [NgFor, RouterLink, LowerCasePipe, Blank2dashPipe]
 })
-export class OverviewComponent {
+export class OverviewComponent implements OnInit {
   posts = POSTS;
   active = false;
 
   constructor() {}
 
-  toggleCategory(category: string): void {
-    if (this.active) {
-      this.posts = POSTS;
+  ngOnInit() {
+    const query = window.location.search;
+    if (!query) {
+      return;
     }
-    else {
+    const params = new URLSearchParams(query);
+    const category = params.get('cat');
+    if (!category) {
+      return;
+    }
+    this.posts = POSTS.filter((post: Post) => {
+      return post.category.includes(category);
+    });
+    this.active = true;
+  }
+
+  toggleCategory(category: string): void {
+    this.active = !this.active;
+    const searchParams = new URLSearchParams(window.location.search);
+    if (this.active) {
       this.posts = POSTS.filter((post: Post) => {
         return post.category.includes(category);
       });
+      searchParams.set('cat', category);
     }
-    this.active = !this.active;
+    else {
+      this.posts = POSTS;
+      searchParams.delete('cat');
+    }
+    const params = searchParams.toString();
+    const newRelativePathQuery = window.location.pathname + (params ? '?' + params : '');
+    window.history.replaceState({}, '', newRelativePathQuery);
   }
 }
