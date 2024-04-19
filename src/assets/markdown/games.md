@@ -6,7 +6,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### AstroMenace
 
-* Original von 2007
+* Original (2007)
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
@@ -24,7 +24,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Blobby Volley 2
 
-* Original von 2000
+* Original (2000)
 * Arcade
 * Single- und Multiplayer
 * [Repo](https://github.com/danielknobe/blobbyvolley2) / [Wiki](https://de.wikipedia.org/wiki/Blobby_Volley)
@@ -35,15 +35,24 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 * Clone von Bomberman (1983)
 * Arcade
-* Single - und Multiplayer
+* Single- und Multiplayer
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
 * Tastatur
 * [Play!](/wasm/bombermaaan/)
 
+### Cave Story
+
+* Original (2004)
+* Platform-Abenteuer
+* Singleplayer
+* [Repo](https://github.com/midzer/nxengine-evo) / [Wiki](https://de.wikipedia.org/wiki/Cave_Story)
+* Tastatur
+* [Play!](/wasm/cavestory/)
+
 ### C-Dogs SDL
 
-* Original von 1997
-* Run 'n Gun
+* Original (1997)
+* Run 'n' Gun
 * Singleplayer
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
 * Tastatur
@@ -51,16 +60,25 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Chromium B.S.U.
 
-* Original von 2000
+* Original (2000)
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/chromium-bsu/)
 
+### Cro-Mag Rally
+
+* Original (2000)
+* Racing
+* Single- und Multiplayer
+* [Repo](https://github.com/midzer/CroMagRally) / [Wiki](https://en.wikipedia.org/wiki/Cro-Mag_Rally)
+* Tastatur
+* [Play!](/wasm/cromagrally/)
+
 ### Der Clou!
 
-* Official von 1994
+* Official (1994)
 * Einbruchsimulation
 * Singleplayer
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
@@ -70,11 +88,11 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Dungeon Rush
 
-* Remake von Snake (1998)
+* Inspiriert von Snake (1998)
 * Arcade
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/DungeonRush)
-* Maus, Touch
+* Tastatur, Touch
 * [Play!](/wasm/dungeonrush/)
 
 ### Flare
@@ -106,7 +124,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### FreeSiege
 
-* Original von 2009
+* Original (2009)
 * Puzzlespiel
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/freesiege)
@@ -124,7 +142,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Jump 'n Bump
 
-* Original von 1998
+* Original (1998)
 * Jump 'n' Run
 * Multiplayer
 * [Repo](https://github.com/midzer/jumpnbump) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
@@ -142,7 +160,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Prince of Persia
 
-* Official von 1989
+* Official (1989)
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
@@ -172,9 +190,9 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Remake von Sopwith (1984)
 * Shoot 'em up
 * Singleplayer
-* [Repo](https://github.com/midzer/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
+* [Repo](https://github.com/fragglet/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
 * Tastatur
-* [Play!](/wasm/sdl-sopwith/)
+* [Play external!](https://fragglet.github.io/sdl-sopwith/)
 
 ### Shiromino
 
@@ -205,13 +223,13 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 #### Tiberian Dawn
 
-* Official von 1995
+* Official (1995)
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
 * [Play!](/wasm/tiberian-dawn/)
 
 #### Red Alert
 
-* Official von 1996
+* Official (1996)
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
 * [Play!](/wasm/red-alert/)
 
@@ -219,7 +237,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Descent I
 
-* Official von 1995
+* Official (1995)
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://de.wikipedia.org/wiki/Descent_(Computerspiel))
@@ -228,7 +246,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Doom
 
-* Official von 1993
+* Official (1993)
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
@@ -237,7 +255,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Duke Nukem II
 
-* Official von 1993
+* Official (1993)
 * Jump 'n' Shoot
 * Singleplayer
 * [Repo](https://github.com/lethal-guitar/RigelEngine) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem)
@@ -246,7 +264,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Heroes of Might and Magic II
 
-* Official von 1996
+* Official (1996)
 * Rundenbasiertes Strategiespiel
 * Singleplayer
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
@@ -255,7 +273,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Jazz Jackrabbit 2
 
-* Official von 1998
+* Official (1998)
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
@@ -264,7 +282,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Quake
 
-* Official von 1996
+* Official (1996)
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/GMH-Code/Quake-WASM) / [Wiki](https://de.wikipedia.org/wiki/Quake)
@@ -273,7 +291,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Quake 3
 
-* Official von 1999
+* Official (1999)
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/lrusso/Quake3) / [Wiki](https://de.wikipedia.org/wiki/Quake_III_Arena)
@@ -282,7 +300,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Raptor - Call of the Shadows
 
-* Official von 1994
+* Official (1994)
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
@@ -291,7 +309,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### WipEout
 
-* Official von 1995
+* Official (1995)
 * Rennspiel
 * Singleplayer
 * [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
@@ -300,7 +318,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ### Wolfenstein 3D
 
-* Official von 1994
+* Official (1994)
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
