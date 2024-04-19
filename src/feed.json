@@ -5,6 +5,11 @@
 	"feed_url": "https://midzer.de/feed.json",
 	"items": [
 		{
+			"id": "porting-games-for-the-web-with-emscripten",
+			"url": "https://midzer.de/porting-games-for-the-web-with-emscripten",
+			"date_published": "2024-04-19"
+		},
+		{
 			"id": "kaiserschmarrn",
 			"url": "https://midzer.de/kaiserschmarrn",
 			"date_published": "2024-01-19"
