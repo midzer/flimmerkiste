@@ -140,6 +140,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play!](/wasm/hurrican/)
 
+### Jagged Alliance 2
+
+* Original (1999)
+* Taktik- und Strategiespiel
+* Singleplayer
+* [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://de.wikipedia.org/wiki/Jagged_Alliance_2)
+* Maus, Tastatur
+* [Play!](/wasm/jaggedalliance2/)
+
 ### Jump 'n Bump
 
 * Original (1998)
@@ -252,6 +261,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
 * Maus, Tastatur
 * [Play!](/wasm/doom/)
+
+### Doom 3
+
+* Official (2004)
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/gabrielcuvillier/d3wasm) / [Wiki](https://de.wikipedia.org/wiki/Doom_3)
+* Maus, Tastatur
+* [Play external!](http://wasm.continuation-labs.com/d3demo/)
 
 ### Duke Nukem II
 
