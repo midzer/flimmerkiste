@@ -1,3 +1,3 @@
 # Archive
 
-<iframe src="/archive/" title="archive" scrolling="no"></iframe>
+<iframe src="/archive/" title="archive" scrolling="yes"></iframe>
