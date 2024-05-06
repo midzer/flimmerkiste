@@ -5,6 +5,7 @@ export const MODS = [
     "aryx.s3m",
     "bappalander.mod",
     "beams_of_light.mod",
+    "beat_to_the_pulp.mod",
     "beek-substitutionology.xm",
     "chip_mania.xm",
     "chop_chip.mod",
