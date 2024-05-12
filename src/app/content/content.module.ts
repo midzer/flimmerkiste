@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 
 import { gfmHeadingId } from 'marked-gfm-heading-id';
@@ -12,18 +12,13 @@ import { Mp3filePipe } from '../mp3file.pipe';
 import { Mp4filePipe } from '../mp4file.pipe';
 import { WebmfilePipe } from '../webmfile.pipe';
 
-@NgModule({
-    imports: [
-        CommonModule,
+@NgModule({ imports: [CommonModule,
         ContentRoutingModule,
-        HttpClientModule,
         MarkdownModule.forRoot({
             markedExtensions: [gfmHeadingId()],
         }),
         ContentComponent,
         Mp3filePipe,
         Mp4filePipe,
-        WebmfilePipe
-    ]
-})
+        WebmfilePipe], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class ContentModule { }

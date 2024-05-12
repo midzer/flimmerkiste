@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -25,11 +25,11 @@ export class PlayerComponent implements OnInit {
   sourceNode: AudioBufferSourceNode;
   buffer: AudioBuffer;
   startedAt: number = 0;
-  subTune: number = 0;
-  subTunes: number = 13;
-  info: string = 'Props to original authors';
+  subTune = signal(0);
+  subTunes = signal(13);
+  info = signal('Props to original authors');
   intervalID: number;
-  playTime: string = '00:00';
+  playTime = signal('00:00');
   playing: boolean = false;
   playIcon: string = 'assets/icons/player-play.svg';
   pauseIcon: string = 'assets/icons/player-pause.svg';
@@ -96,17 +96,17 @@ export class PlayerComponent implements OnInit {
   setPlayTime = () => {
     switch (this.optgroupLabel) {
       case 'SID':
-        this.playTime = this.createPlayTime(this.sidPlayer.getplaytime());
+        this.playTime.set(this.createPlayTime(this.sidPlayer.getplaytime()));
         break;
       case 'MOD':
-        this.playTime = 'Pt ' + this.modPlayer.pattern.patternIndex;
+        this.playTime.set('Pt ' + this.modPlayer.pattern.patternIndex);
         break;
       case 'FLAC':
         let time = 0;
         if (this.startedAt) {
           time = this.flacPlayer.currentTime - this.startedAt;
         }
-        this.playTime = this.createPlayTime(time);
+        this.playTime.set(this.createPlayTime(time));
         break;
     }
   }
@@ -162,13 +162,13 @@ export class PlayerComponent implements OnInit {
 
   next(): void {
     if (this.sidPlayer && this.optgroupLabel === 'SID') {
-      if (this.subTune === this.sidPlayer.getsubtunes() - 1) {
-        this.subTune = 0;
+      if (this.subTune() === this.sidPlayer.getsubtunes() - 1) {
+        this.subTune.set(0);
       }
       else {
-        ++this.subTune;
+        this.subTune.set(this.subTune() + 1);
       }
-      this.sidPlayer.start(this.subTune);
+      this.sidPlayer.start(this.subTune());
     }
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.nextOrder();
@@ -183,13 +183,13 @@ export class PlayerComponent implements OnInit {
 
   prev(): void {
     if (this.sidPlayer && this.optgroupLabel === 'SID') {
-      if (this.subTune === 0) {
-        this.subTune = this.sidPlayer.getsubtunes() - 1;
+      if (this.subTune() === 0) {
+        this.subTune.set(this.sidPlayer.getsubtunes() - 1);
       }
       else {
-        --this.subTune;
+        this.subTune.set(this.subTune() -1);
       }
-      this.sidPlayer.start(this.subTune);
+      this.sidPlayer.start(this.subTune());
     }
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.prevOrder();
@@ -207,11 +207,13 @@ export class PlayerComponent implements OnInit {
     const copyTune = btn.dataset.descr;
     const info = btn.firstElementChild;
     info.classList.add('copied');
-    const oldInfo = this.info;
-    btn.dataset.descr = this.info = 'Copied!';
+    const oldInfo = this.info();
+    const copied = 'Copied!';
+    this.info.set(copied);
+    btn.dataset.descr = copied;
     setTimeout(() => {
       btn.dataset.descr = copyTune;
-      this.info = oldInfo;
+      this.info.set(oldInfo);
       info.classList.remove('copied');
     }, 1337);
     navigator.clipboard.writeText(
@@ -279,7 +281,7 @@ export class PlayerComponent implements OnInit {
   }
 
   async loadTune(tune: string): Promise<void> {
-    this.subTune = 0;
+    this.subTune.set(0);
     if (this.sids.includes(tune)) {
       this.optgroupLabel = 'SID';
       if (!this.sidPlayer) {
@@ -287,12 +289,12 @@ export class PlayerComponent implements OnInit {
         this.sidPlayer = new jsSID(16384, 0.0005);
         this.sidPlayer.setloadcallback(() => {
           this.startPlaying();
-          this.subTunes = this.sidPlayer.getsubtunes();
-          this.info = this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
-            this.removeNullFromString(this.sidPlayer.gettitle());
+          this.subTunes.set(this.sidPlayer.getsubtunes());
+          this.info.set(this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+            this.removeNullFromString(this.sidPlayer.gettitle()));
         });
       }
-      this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune);
+      this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune());
     }
     else if (this.mods.includes(tune)) {
       this.optgroupLabel = 'MOD';
@@ -301,11 +303,11 @@ export class PlayerComponent implements OnInit {
         this.modPlayer = new ScripTracker();
         this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
           this.startPlaying();
-          this.subTunes = songLength;
-          this.info = songName;
+          this.subTunes.set(songLength);
+          this.info.set(songName);
         });
         this.modPlayer.on(ScripTracker.Events.order, (player_1, currentOrder, songLength_1, patternIndex) => {
-          this.subTune = currentOrder - 1;
+          this.subTune.set(currentOrder - 1);
         });
       }
       this.modPlayer.loadModule('assets/mods/' + tune);
@@ -354,8 +356,8 @@ export class PlayerComponent implements OnInit {
           }
         };
       }
-      this.subTunes = 1;
-      this.info = 'Fetching FLAC...';
+      this.subTunes.set(1);
+      this.info.set('Fetching FLAC...');
       try {
         const response = await fetch('assets/flacs/' + tune + '.flac');
         this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
@@ -366,7 +368,7 @@ export class PlayerComponent implements OnInit {
       catch (err) {
         console.error(`Unable to fetch the audio file. Error: ${err.message}`);
       }
-      this.info = tune;
+      this.info.set(tune);
     }
     // Prepare canvas
     if (!this.canvas) {
