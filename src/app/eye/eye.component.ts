@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { SanitizedUrlPipe } from '../sanitized-url.pipe';
@@ -11,7 +11,7 @@ import { SanitizedUrlPipe } from '../sanitized-url.pipe';
     imports: [SanitizedUrlPipe]
 })
 export class EyeComponent implements OnInit {
-  eye: string = 'data:,';
+  eye = signal('data:,');
 
   constructor(
     private router: Router
@@ -57,12 +57,12 @@ export class EyeComponent implements OnInit {
   }
 
   setEye = (eye: string): void => {
-    this.eye = 'assets/images/' + eye + '.png';
+    this.eye.set('assets/images/' + eye + '.png');
     setTimeout(this.clear, 1337);
   }
 
   clear = (): void => {
-    this.eye = 'data:,';
+    this.eye.set('data:,');
   }
 
   loop = (): void => {

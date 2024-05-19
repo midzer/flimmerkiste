@@ -1,3 +1,3 @@
-<img [src]="eye | sanitizedUrl" alt="Ninja head">
+<img [src]="eye() | sanitizedUrl" alt="Ninja head">
 <div class="left" (click)="setEye('left')" role="button" tabindex="-1" aria-label="Blink left eye"></div>
 <div class="right" (click)="setEye('right')" role="button" tabindex="-1" aria-label="Blink right eye"></div>
