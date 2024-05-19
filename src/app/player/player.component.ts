@@ -74,7 +74,7 @@ export class PlayerComponent implements OnInit {
     }
     // @ts-ignore
     if (window.navigator.getAutoplayPolicy && window.navigator.getAutoplayPolicy('audiocontext') !== "allowed") {
-      return alert('Autoplay is not allowed.')
+      return alert('Autoplay is not allowed.');
     }
     if (window.confirm('Do you want to play ' + tune + '?')) {
       this.play();
@@ -86,15 +86,8 @@ export class PlayerComponent implements OnInit {
       case 'SID':
         this.playTime.set(this.createPlayTime(this.sidPlayer.getplaytime()));
         break;
-      case 'MOD':
-        this.playTime.set('Pt ' + this.modPlayer.pattern.patternIndex);
-        break;
       case 'FLAC':
-        let time = 0;
-        if (this.startedAt) {
-          time = this.flacPlayer.currentTime - this.startedAt;
-        }
-        this.playTime.set(this.createPlayTime(time));
+        this.playTime.set(this.createPlayTime(this.flacPlayer.currentTime - this.startedAt));
         break;
     }
   }
@@ -296,8 +289,9 @@ export class PlayerComponent implements OnInit {
           this.subTunes.set(songLength);
           this.info.set(songName);
         });
-        this.modPlayer.on(ScripTracker.Events.order, (player_1, currentOrder, songLength_1, patternIndex) => {
+        this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
           this.subTune.set(currentOrder - 1);
+          this.playTime.set('Pt ' + patternIndex);
         });
       }
       this.modPlayer.loadModule('assets/mods/' + tune);
