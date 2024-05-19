@@ -51,8 +51,6 @@ export class PlayerComponent implements OnInit {
   sids: string[] = SIDS;
   flacs: string[] = FLACS;
 
-  constructor() {}
-
   ngOnInit() {
     const query = window.location.search;
     if (!query) {
@@ -132,7 +130,7 @@ export class PlayerComponent implements OnInit {
     }
     else {
       this.playButton = this.pauseIcon;
-      this.intervalID = window.setInterval(this.setPlayTime, 500);
+      this.intervalID = window.setInterval(this.setPlayTime, 1000);
       if (this.selectedTune !== this.loadedTune) {
         this.loadTune(this.selectedTune);
         return;
