@@ -6,8 +6,6 @@ import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
 
-declare var jsSID: any;
-
 @Component({
     selector: 'app-player',
     templateUrl: './player.component.html',
@@ -81,16 +79,6 @@ export class PlayerComponent implements OnInit {
     if (window.confirm('Do you want to play ' + tune + '?')) {
       this.play();
     }
-  }
-
-  loadScript (file: string): Promise<any> {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = `/assets/js/${file}`;
-      script.onload = resolve;
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
   }
 
   setPlayTime = () => {
@@ -285,7 +273,7 @@ export class PlayerComponent implements OnInit {
     if (this.sids.includes(tune)) {
       this.optgroupLabel = 'SID';
       if (!this.sidPlayer) {
-        await this.loadScript('jsSID.js');
+        const { jsSID } = await import('../../modules/jsSID.js');
         this.sidPlayer = new jsSID(16384, 0.0005);
         this.sidPlayer.setloadcallback(() => {
           this.startPlaying();

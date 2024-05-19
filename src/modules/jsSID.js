@@ -8,7 +8,7 @@ function playSID(sidurl,subtune) { //convenience function to create default-name
 }
 
 
-function jsSID (bufferlen, background_noise)
+export function jsSID (bufferlen, background_noise)
 {
 
  this.author='Hermit'; this.sourcecode='http://hermit.sidrip.com'; this.version='0.9.1'; this.year='2016';
@@ -444,9 +444,9 @@ function jsSID (bufferlen, background_noise)
    wfarray[i]*=12;  }
  }
 
- TriSaw_8580 = new Array(4096);  createCombinedWF(TriSaw_8580,0.8,2.4,0.64); //precalculate combined waveform
- PulseSaw_8580 = new Array(4096);  createCombinedWF(PulseSaw_8580,1.4,1.9,0.68);
- PulseTriSaw_8580 = new Array(4096); createCombinedWF(PulseTriSaw_8580,0.8,2.5,0.64); 
+ var TriSaw_8580 = new Array(4096);  createCombinedWF(TriSaw_8580,0.8,2.4,0.64); //precalculate combined waveform
+ var PulseSaw_8580 = new Array(4096);  createCombinedWF(PulseSaw_8580,1.4,1.9,0.68);
+ var PulseTriSaw_8580 = new Array(4096); createCombinedWF(PulseTriSaw_8580,0.8,2.5,0.64); 
  
  var period0 = Math.max(clk_ratio,9);
  var ADSRperiods = [period0,32*1,63*1,95*1,149*1,220*1,267*1,313*1,392*1,977*1,1954*1,3126*1,3907*1,11720*1,19532*1,31251*1];
