@@ -6,7 +6,6 @@ import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
 
-declare var ScripTracker: any;
 declare var jsSID: any;
 
 @Component({
@@ -44,6 +43,7 @@ export class PlayerComponent implements OnInit {
 
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
+  backgroundImg: HTMLImageElement;
   requestID: number;
 
   optgroupLabel: string = 'SID';
@@ -115,7 +115,6 @@ export class PlayerComponent implements OnInit {
     switch (this.optgroupLabel) {
       case 'SID':
         this.sidPlayer.playcont();
-        this.redrawSpectrum();
         break;
       case 'MOD':
         this.modPlayer.play();
@@ -124,6 +123,7 @@ export class PlayerComponent implements OnInit {
         this.flacPlayer.resume();
         break;
     }
+    this.redrawSpectrum();
     this.playing = true;
   }
 
@@ -131,7 +131,6 @@ export class PlayerComponent implements OnInit {
     switch (this.optgroupLabel) {
       case 'SID':
         this.sidPlayer.pause();
-        window.cancelAnimationFrame(this.requestID);
         break;
       case 'MOD':
         this.modPlayer.stop();
@@ -140,6 +139,7 @@ export class PlayerComponent implements OnInit {
         this.flacPlayer.suspend();
         break;
     }
+    window.cancelAnimationFrame(this.requestID);
     this.playing = false;
   }
 
@@ -299,8 +299,10 @@ export class PlayerComponent implements OnInit {
     else if (this.mods.includes(tune)) {
       this.optgroupLabel = 'MOD';
       if (!this.modPlayer) {
-        await this.loadScript('scriptracker-1.1.1.min.js');
+        const { ScripTracker } = await import('../../modules/scriptracker.js');
         this.modPlayer = new ScripTracker();
+        this.analyserNode = this.modPlayer.audioContext.createAnalyser();
+        this.modPlayer.audioScriptNode.connect(this.analyserNode);
         this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
           this.startPlaying();
           this.subTunes.set(songLength);
@@ -322,39 +324,6 @@ export class PlayerComponent implements OnInit {
           1,
           1
         );
-        // Visualization example taken from
-        // https://github.com/mdn/webaudio-examples/tree/main/audio-analyser
-        // Set up the event handler that is triggered every time enough samples have been collected
-        // then trigger the audio analysis and draw the results
-        this.javascriptNode.onaudioprocess = () => {
-          // Draw the display when the audio is playing
-          if (this.flacPlayer.state === 'running') {
-            // Read the frequency values
-            const amplitudeArray = new Uint8Array(
-              this.analyserNode.frequencyBinCount
-            );
-
-            // Get the time domain data for this sample
-            this.analyserNode.getByteTimeDomainData(amplitudeArray);
-
-            // Draw the time domain in the canvas
-            window.requestAnimationFrame(() => {
-              // Get the canvas 2d context
-              //const canvasContext = canvasElt.getContext("2d");
-
-              // Clear the canvas
-              this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-              // Draw the amplitude inside the canvas
-              this.ctx.fillStyle = 'white';
-              for (let i = 0; i < amplitudeArray.length; i++) {
-                const value = amplitudeArray[i] / 256;
-                const y = this.canvas.height - this.canvas.height * value;
-                this.ctx.fillRect(i, y, 1, 1);
-              }
-            });
-          }
-        };
       }
       this.subTunes.set(1);
       this.info.set('Fetching FLAC...');
@@ -375,6 +344,13 @@ export class PlayerComponent implements OnInit {
       this.canvas = document.querySelector('canvas');
       this.ctx = this.canvas.getContext('2d');
     }
+    if (this.analyserNode) {
+      const imgObj = new Image();
+      imgObj.onload = () => {
+          this.backgroundImg = imgObj;
+      }
+      imgObj.src = 'assets/images/darcula-spectrum.png';
+    }
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.loadedTune = this.selectedTune = tune;
   }
@@ -388,10 +364,37 @@ export class PlayerComponent implements OnInit {
   }
 
   redrawSpectrum = () => {
-    this.onUpdateSpectrum();
-    this.ctx.drawImage(this.canvas,
-      1, 0, this.canvas.width, this.canvas.height - 1,
-      1, 1, this.canvas.width, this.canvas.height - 1);
+    if (this.analyserNode) {
+      // Read the frequency values
+      const amplitudeArray = new Uint8Array(
+        this.analyserNode.frequencyBinCount
+      );
+
+      // Get the byte frequency data for this sample
+      this.analyserNode.getByteFrequencyData(amplitudeArray);
+      
+      // Clear the canvas
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+      const SPACER_WIDTH = 8;
+      const BAR_WIDTH = 5;
+      const OFFSET = 100;
+      const numBars = Math.round(this.canvas.width / SPACER_WIDTH);
+      let o;
+      for (var i = 0; i < numBars; ++i) {
+        const magnitude = amplitudeArray[i + OFFSET] * this.canvas.height / 255;
+        if (this.backgroundImg) {
+            o = Math.round(this.canvas.height - magnitude);
+            this.ctx.drawImage(this.backgroundImg, 0, 0, BAR_WIDTH, 255, i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude));
+        }
+      }
+    }
+    else {
+      this.onUpdateSpectrum();
+      this.ctx.drawImage(this.canvas,
+        1, 0, this.canvas.width, this.canvas.height - 1,
+        1, 1, this.canvas.width, this.canvas.height - 1);
+    }
     this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
   }
 
