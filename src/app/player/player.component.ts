@@ -273,7 +273,7 @@ export class PlayerComponent implements OnInit {
     if (this.sids.includes(tune)) {
       this.optgroupLabel = 'SID';
       if (!this.sidPlayer) {
-        const { jsSID } = await import('../../modules/jsSID.js');
+        const { jsSID } = await import('./modules/jsSID.js');
         this.sidPlayer = new jsSID(16384, 0.0005);
         this.sidPlayer.setloadcallback(() => {
           this.startPlaying();
@@ -287,7 +287,7 @@ export class PlayerComponent implements OnInit {
     else if (this.mods.includes(tune)) {
       this.optgroupLabel = 'MOD';
       if (!this.modPlayer) {
-        const { ScripTracker } = await import('../../modules/scriptracker.js');
+        const { ScripTracker } = await import('./modules/scriptracker.js');
         this.modPlayer = new ScripTracker();
         this.analyserNode = this.modPlayer.audioContext.createAnalyser();
         this.modPlayer.audioScriptNode.connect(this.analyserNode);
@@ -327,19 +327,6 @@ export class PlayerComponent implements OnInit {
       }
       this.info.set(tune);
     }
-    // Prepare canvas
-    if (!this.canvas) {
-      this.canvas = document.querySelector('canvas');
-      this.ctx = this.canvas.getContext('2d');
-    }
-    if (this.analyserNode) {
-      const imgObj = new Image();
-      imgObj.onload = () => {
-          this.backgroundImg = imgObj;
-      }
-      imgObj.src = 'assets/images/darcula-spectrum.png';
-    }
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.loadedTune = this.selectedTune = tune;
   }
 
@@ -349,10 +336,53 @@ export class PlayerComponent implements OnInit {
     }
     this.stopPlaying();
     this.loadTune(this.selectedTune);
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
   redrawSpectrum = () => {
-    if (this.analyserNode) {
+    if (!this.canvas) {
+      this.canvas = document.querySelector('canvas');
+      this.ctx = this.canvas.getContext('2d');
+    }
+    if (this.optgroupLabel === 'SID') {
+      // Fill logic from https://github.com/Chordian/deepsid/blob/master/js/viz.js
+      // Color the top line background
+      this.ctx.fillStyle = 'black';
+      this.ctx.fillRect(0, 0, this.canvas.width, 1);
+      
+      // Color the voices
+      this.ctx.lineWidth = 2;
+      for (let voice = 0; voice < 3; voice++) {
+        const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
+        let x = (freq / 0xFFFF) * this.canvas.width;
+        x = x | 0;
+        switch(voice) {
+          case 0:
+            this.ctx.strokeStyle = '#955529';
+            break;
+          case 1:
+            this.ctx.strokeStyle = '#ca7570';
+            break;
+          case 2:
+            this.ctx.strokeStyle = '#2c339e';
+        }
+        this.ctx.beginPath();
+        this.ctx.moveTo(x, 0);
+        this.ctx.lineTo(x, 1);
+        this.ctx.stroke();
+      }
+      this.ctx.drawImage(this.canvas,
+        1, 0, this.canvas.width, this.canvas.height - 1,
+        1, 1, this.canvas.width, this.canvas.height - 1);
+    }
+    else {
+      if (!this.backgroundImg) {
+        const imgObj = new Image();
+        imgObj.onload = () => {
+            this.backgroundImg = imgObj;
+        }
+        imgObj.src = 'assets/images/darcula-spectrum.png';
+      }
       // Read the frequency values
       const amplitudeArray = new Uint8Array(
         this.analyserNode.frequencyBinCount
@@ -372,47 +402,12 @@ export class PlayerComponent implements OnInit {
       for (var i = 0; i < numBars; ++i) {
         const magnitude = amplitudeArray[i + OFFSET] * this.canvas.height / 255;
         if (this.backgroundImg) {
-            o = Math.round(this.canvas.height - magnitude);
-            this.ctx.drawImage(this.backgroundImg, 0, 0, BAR_WIDTH, 255, i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude));
+          o = Math.round(this.canvas.height - magnitude);
+          this.ctx.drawImage(this.backgroundImg, 0, 0, BAR_WIDTH, 255, i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude));
         }
       }
     }
-    else {
-      this.onUpdateSpectrum();
-      this.ctx.drawImage(this.canvas,
-        1, 0, this.canvas.width, this.canvas.height - 1,
-        1, 1, this.canvas.width, this.canvas.height - 1);
-    }
     this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
-  }
-
-  onUpdateSpectrum(): void {
-    // Fill logic from https://github.com/Chordian/deepsid/blob/master/js/viz.js
-    // Color the top line background
-    this.ctx.fillStyle = 'black';
-    this.ctx.fillRect(0, 0, this.canvas.width, 1);
-    
-    // Color the voices
-    this.ctx.lineWidth = 2;
-    for (let voice = 0; voice < 3; voice++) {
-      const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
-      let x = (freq / 0xFFFF) * this.canvas.width;
-      x = x | 0;
-      switch(voice) {
-        case 0:
-          this.ctx.strokeStyle = '#955529';
-          break;
-        case 1:
-          this.ctx.strokeStyle = '#ca7570';
-          break;
-        case 2:
-          this.ctx.strokeStyle = '#2c339e';
-      }
-      this.ctx.beginPath();
-      this.ctx.moveTo(x, 0);
-      this.ctx.lineTo(x, 1);
-      this.ctx.stroke();
-    }
   }
 
   readRegister(register, chip) {
