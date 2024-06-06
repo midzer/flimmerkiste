@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://midzer.de/als-ich-mich-selbst-zu-lieben-begann</loc>
+    <lastmod>2024-06-06</lastmod>
+  </url>
+  <url>
     <loc>https://midzer.de/porting-games-for-the-web-with-emscripten</loc>
     <lastmod>2024-04-19</lastmod>
   </url>

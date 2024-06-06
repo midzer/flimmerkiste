@@ -2,6 +2,11 @@ import { Post } from './post';
 
 export const POSTS: Post[] = [
     {
+        name: 'Als ich mich selbst zu lieben begann',
+        date: '2024/06/06',
+        category: 'Zitate'
+    },
+    {
         name: 'Porting games for the web with Emscripten',
         date: '2024/04/19',
         category: 'Tutorials'
