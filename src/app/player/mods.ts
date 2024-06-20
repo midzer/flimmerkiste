@@ -31,6 +31,7 @@ export const MODS = [
     "knas.xm",
     "lamour_toujours_remix.xm",
     "lhs_myth1.xm",
+    "mrgshor6.xm",
     "paso-pleasure_to_paso.mod",
     "plofs.xm",
     "rainfore.mod",
