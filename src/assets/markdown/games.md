@@ -167,6 +167,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play!](/wasm/lbreakouthd/)
 
+### OpenTyrian
+
+* Clone von Tyrian (1995)
+* Top-Down-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/opentyrian) / [Wiki](https://de.wikipedia.org/wiki/Tyrian)
+* Tastatur
+* [Play!](/wasm/opentyrian/)
+
 ### Prince of Persia
 
 * Official (1989)
