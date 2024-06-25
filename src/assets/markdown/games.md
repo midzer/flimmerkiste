@@ -221,6 +221,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play!](/wasm/vectoroids/)
 
+### Water Closet
+
+* Original (2019)
+* Platform
+* Singleplayer
+* [Repo](https://github.com/midzer/waterCloset)
+* Tastatur
+* [Play!](/wasm/water-closet/)
+
 ## Freeware
 
 ### Command & Conquer
