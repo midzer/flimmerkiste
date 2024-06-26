@@ -316,6 +316,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play!](/wasm/heroes2/)
 
+### Jazz Jackrabbit
+
+* Official (1994)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/openjazz) / [Wiki](https://de.wikipedia.org/wiki/Jazz_Jackrabbit)
+* Tastatur
+* [Play!](/wasm/jazz/)
+
 ### Jazz Jackrabbit 2
 
 * Official (1998)
