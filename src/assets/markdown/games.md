@@ -167,6 +167,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play!](/wasm/lbreakouthd/)
 
+### Li-Ri
+
+* Original (2006)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/Li-Ri)
+* Maus, Tastatur, Touch
+* [Play!](/wasm/li-ri/)
+
 ### OpenTyrian
 
 * Clone von Tyrian (1995)
