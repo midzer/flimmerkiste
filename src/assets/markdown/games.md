@@ -176,6 +176,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play!](/wasm/li-ri/)
 
+### Numpty Physics
+
+* Clone von Crayon Physics (2007)
+* Physikspiel
+* Singleplayer
+* [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://de.wikipedia.org/wiki/Crayon_Physics_Deluxe)
+* Maus, Touch
+* [Play!](/wasm/numptyphysics/)
+
 ### OpenTyrian
 
 * Clone von Tyrian (1995)
