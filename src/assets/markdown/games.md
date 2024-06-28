@@ -370,6 +370,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play!](/wasm/raptor/)
 
+### Rise of the Triad
+
+* Official (1994)
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/rottexpr) / [Wiki](https://de.wikipedia.org/wiki/Rise_of_the_Triad)
+* Tastatur
+* [Play!](/wasm/rott/)
+
 ### WipEout
 
 * Official (1995)
