@@ -316,6 +316,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play external!](https://rigelengine.nikolai-wuttke.de/)
 
+### Duke Nukem 3D
+
+* Official (1996)
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/BelgianChocolateDuke3D) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem_3D)
+* Maus, Tastatur
+* [Play!](/wasm/duke3d/)
+
 ### Heroes of Might and Magic II
 
 * Official (1996)
