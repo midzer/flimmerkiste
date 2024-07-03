@@ -22,6 +22,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play external!](https://baller.tuxfamily.org/online/)
 
+### Bloboats
+
+* Original (2006)
+* Arcade
+* Single
+* [Repo](https://github.com/midzer/bloboats)
+* Tastatur
+* [Play!](/wasm/bloboats/)
+
 ### Blobby Volley 2
 
 * Original (2000)
@@ -333,6 +342,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
 * Maus, Tastatur, Touch
 * [Play!](/wasm/heroes2/)
+
+### Homeworld
+
+* Official (1999)
+* Echtzeitstrategie
+* Singleplayer
+* [Repo](https://github.com/GardensOfKadesh/Homeworld) / [Wiki](https://de.wikipedia.org/wiki/Homeworld)
+* Maus, Tastatur
+* [Play external!](https://gardensofkadesh.github.io/)
 
 ### Jazz Jackrabbit
 
