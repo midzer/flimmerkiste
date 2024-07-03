@@ -42,5 +42,6 @@ export const MODS = [
     "transfu3.mod",
     "tu_itr29.mod",
     "tz-abmin.mod",
+    "watersky.xm",
     "yum,cookie.xm"
 ]
