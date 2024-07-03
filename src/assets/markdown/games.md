@@ -26,7 +26,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 * Original (2006)
 * Arcade
-* Single
+* Singleplayer
 * [Repo](https://github.com/midzer/bloboats)
 * Tastatur
 * [Play!](/wasm/bloboats/)
