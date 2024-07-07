@@ -13,6 +13,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Gamepad, Tastatur
 * [Play!](/wasm/astromenace/)
 
+### Asylum
+
+* Remake (1981)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/GMH-Code/Asylum) / [Wiki](https://de.wikipedia.org/wiki/Asylum_(Computerspiel))
+* Tastatur
+* [Play external!](https://asylum.m-h.org.uk/)
+
 ### Ballerburg SDL
 
 * Remake von Ballerburg (1987)
@@ -149,15 +158,6 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play!](/wasm/hurrican/)
 
-### Jagged Alliance 2
-
-* Original (1999)
-* Taktik- und Strategiespiel
-* Singleplayer
-* [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://de.wikipedia.org/wiki/Jagged_Alliance_2)
-* Maus, Tastatur
-* [Play!](/wasm/jaggedalliance2/)
-
 ### Jump 'n Bump
 
 * Original (1998)
@@ -173,7 +173,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
-* Maus, Tastatur, Touch
+* Maus, Tastatur
 * [Play!](/wasm/lbreakouthd/)
 
 ### Li-Ri
@@ -247,6 +247,24 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
 * Tastatur
 * [Play!](/wasm/shiromino/)
+
+### Super Mario War
+
+* Original (2004)
+* Jump 'n' Run
+* Multiplayer
+* [Repo](https://github.com/mmatyas/supermariowar) / [Wiki](https://en.wikipedia.org/wiki/Super_Mario_War)
+* Tastatur
+* [Play external!](https://mmatyas.github.io/smw-js/)
+
+### SuperTux
+
+* Clone von Super Mario (1985)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/SuperTux/supertux) / [Wiki](https://de.wikipedia.org/wiki/SuperTux)
+* Tastatur
+* [Play external!](https://supertux.semphris.com/play/)
 
 ### Vectoroids
 
@@ -351,6 +369,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/GardensOfKadesh/Homeworld) / [Wiki](https://de.wikipedia.org/wiki/Homeworld)
 * Maus, Tastatur
 * [Play external!](https://gardensofkadesh.github.io/)
+
+### Jagged Alliance 2
+
+* Original (1999)
+* Taktik- und Strategiespiel
+* Singleplayer
+* [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://de.wikipedia.org/wiki/Jagged_Alliance_2)
+* Maus, Tastatur
+* [Play!](/wasm/jaggedalliance2/)
 
 ### Jazz Jackrabbit
 
