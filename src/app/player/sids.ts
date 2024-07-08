@@ -38,6 +38,7 @@ export const SIDS = [
     "Great_Giana_Sisters",
     "Green_Beret",
     "Hawkeye",
+    "Hybris",
     "Hysteria",
     "IK_plus",
     "International_Karate",
