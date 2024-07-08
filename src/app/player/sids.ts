@@ -80,7 +80,6 @@ export const SIDS = [
     "Stormlord",
     "Supremacy",
     "Sweet",
-    "Synth_Sample",
     "SYS4096",
     "Terra_Cresta",
     "Tetris",
