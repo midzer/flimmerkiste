@@ -248,6 +248,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play!](/wasm/shiromino/)
 
+### Simutrans
+
+* Original (1999)
+* Transportsimulator
+* Singleplayer
+* [Repo](https://github.com/midzer/simutrans) / [Wiki](https://de.wikipedia.org/wiki/Simutrans)
+* Maus, Tastatur, Touch
+* [Play!](/wasm/simutrans/)
+
 ### Super Mario War
 
 * Original (2004)
