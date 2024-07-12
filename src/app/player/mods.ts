@@ -37,6 +37,7 @@ export const MODS = [
     "rainfore.mod",
     "soda7-digitags.xm",
     "sv_sac05.xm",
+    "tempest1.mod",
     "titan_02.xm",
     "toilet.xm",
     "transfu3.mod",
