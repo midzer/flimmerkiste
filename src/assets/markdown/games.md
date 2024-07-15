@@ -329,12 +329,12 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play!](/wasm/water-closet/)
 
-### XRick
+### xrick
 
 * Clone von Rick Dangerous (1989)
 * Jump 'n' Run
 * Singleplayer
-* [Wiki](https://de.wikipedia.org/wiki/Rick_Dangerous)
+* [Repo](https://github.com/zpqrtbnk/xrick) / [Wiki](https://de.wikipedia.org/wiki/Rick_Dangerous)
 * Tastatur, Touch
 * [Play!](https://www.xrick.net/)
 
