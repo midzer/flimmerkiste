@@ -173,7 +173,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
-* Maus, Tastatur
+* Maus, Tastatur, Touch
 * [Play!](/wasm/lbreakouthd/)
 
 ### Li-Ri
