@@ -4,6 +4,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 ## Free Open Source Software
 
+### Angband
+
+* Original (1993)
+* Roguelike
+* Single- und Multiplayer
+* [Repo](https://github.com/angband/angband) / [Wiki](https://de.wikipedia.org/wiki/Angband)
+* Tastatur
+* [Play external!](https://angband.live/)
+
 ### AstroMenace
 
 * Original (2007)
@@ -31,15 +40,6 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play external!](https://baller.tuxfamily.org/online/)
 
-### Bloboats
-
-* Original (2006)
-* Arcade
-* Singleplayer
-* [Repo](https://github.com/midzer/bloboats)
-* Tastatur
-* [Play!](/wasm/bloboats/)
-
 ### Blobby Volley 2
 
 * Original (2000)
@@ -49,6 +49,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play external!](http://blobbyvolley.de/data/bv2wa/)
 
+### Bloboats
+
+* Original (2006)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/bloboats)
+* Tastatur
+* [Play!](/wasm/bloboats/)
+
 ### Bombermaaan
 
 * Clone von Bomberman (1983)
@@ -57,6 +66,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
 * Tastatur
 * [Play!](/wasm/bombermaaan/)
+
+### Open Fodder
+
+* Clone von Cannon Fodder (1993)
+* Shoot 'em up
+* Singleplayer
+* [Repo](https://github.com/OpenFodder/openfodder) / [Wiki](https://de.wikipedia.org/wiki/Cannon_Fodder)
+* Tastatur
+* [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
 
 ### Cave Story
 
@@ -257,6 +275,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play!](/wasm/simutrans/)
 
+### Space Cadet
+
+* Remake (1995)
+* Pinball
+* Singleplayer
+* [Repo](https://github.com/alula/SpaceCadetPinball) / [Wiki](https://en.wikipedia.org/wiki/Full_Tilt!_Pinball#3D_Pinball_for_Windows_%E2%80%93_Space_Cadet)
+* Tastatur
+* [Play external!](https://alula.github.io/SpaceCadetPinball/)
+
 ### Super Mario War
 
 * Original (2004)
@@ -301,6 +328,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/waterCloset)
 * Tastatur
 * [Play!](/wasm/water-closet/)
+
+### XRick
+
+* Clone von Rick Dangerous (1989)
+* Jump 'n' Run
+* Singleplayer
+* [Wiki](https://de.wikipedia.org/wiki/Rick_Dangerous)
+* Tastatur, Touch
+* [Play!](https://www.xrick.net/)
 
 ## Freeware
 
