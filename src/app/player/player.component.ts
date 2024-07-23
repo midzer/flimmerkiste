@@ -280,8 +280,6 @@ export class PlayerComponent implements OnInit {
       if (!this.modPlayer) {
         const { ScripTracker } = await import('./modules/scriptracker.js');
         this.modPlayer = new ScripTracker();
-        this.analyserNode = this.modPlayer.audioContext.createAnalyser();
-        this.modPlayer.audioScriptNode.connect(this.analyserNode);
         this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
           this.startPlaying();
           this.subTunes.set(songLength);
@@ -292,19 +290,21 @@ export class PlayerComponent implements OnInit {
           this.playTime.set('Pt ' + patternIndex);
         });
       }
+      this.analyserNode = this.modPlayer.audioContext.createAnalyser();
+      this.modPlayer.audioScriptNode.connect(this.analyserNode);
       this.modPlayer.loadModule('assets/mods/' + tune);
     }
     else if (this.flacs.includes(tune)) {
       this.optgroupLabel = 'FLAC';
       if (!this.flacPlayer) {
         this.flacPlayer = new AudioContext();
-        this.analyserNode = new AnalyserNode(this.flacPlayer);
-        this.javascriptNode = this.flacPlayer.createScriptProcessor(
-          1024,
-          1,
-          1
-        );
       }
+      this.analyserNode = new AnalyserNode(this.flacPlayer);
+      this.javascriptNode = this.flacPlayer.createScriptProcessor(
+        1024,
+        1,
+        1
+      );
       this.subTunes.set(1);
       this.info.set('Fetching FLAC...');
       try {
