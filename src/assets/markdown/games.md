@@ -415,6 +415,14 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play!](/wasm/duke3d/)
 
+## Heart of Darkness
+
+* Original (1998)
+* Cinematic platformer
+* [Repo](https://github.com/midzer/hode) / [Wiki](https://de.wikipedia.org/wiki/Heart_of_Darkness_(Computerspiel))
+* Tastatur
+* [Play!](/wasm/hod/)
+
 ### Heroes of Might and Magic II
 
 * Official (1996)
