@@ -67,15 +67,6 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Tastatur
 * [Play!](/wasm/bombermaaan/)
 
-### Open Fodder
-
-* Clone von Cannon Fodder (1993)
-* Shoot 'em up
-* Singleplayer
-* [Repo](https://github.com/OpenFodder/openfodder) / [Wiki](https://de.wikipedia.org/wiki/Cannon_Fodder)
-* Tastatur
-* [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
-
 ### Cave Story
 
 * Original (2004)
@@ -93,6 +84,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
 * Tastatur
 * [Play!](/wasm/cdogs/)
+
+### Celeste
+
+* Original (2018)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/ccleste) / [Wiki](https://de.wikipedia.org/wiki/Celeste_(Computerspiel))
+* Tastatur
+* [Play!](/wasm/celeste/)
 
 ### Chromium B.S.U.
 
@@ -211,6 +211,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://de.wikipedia.org/wiki/Crayon_Physics_Deluxe)
 * Maus, Touch
 * [Play!](/wasm/numptyphysics/)
+
+### Open Fodder
+
+* Clone von Cannon Fodder (1993)
+* Shoot 'em up
+* Singleplayer
+* [Repo](https://github.com/OpenFodder/openfodder) / [Wiki](https://de.wikipedia.org/wiki/Cannon_Fodder)
+* Tastatur
+* [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
 
 ### OpenTyrian
 
@@ -415,7 +424,16 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur
 * [Play!](/wasm/duke3d/)
 
-## Heart of Darkness
+### Fade To Black
+
+* Official (1995)
+* Action-Adventure
+* Singleplayer
+* [Repo](https://github.com/midzer/f2bgl) / [Wiki](https://de.wikipedia.org/wiki/Fade_to_Black_(Computerspiel))
+* Tastatur
+* [Play!](/wasm/f2b/)
+
+### Heart of Darkness
 
 * Original (1998)
 * Cinematic platformer
