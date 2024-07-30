@@ -2,6 +2,8 @@
 
 Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spielen, meist entdeckt bei [Open Source Game Clones](https://osgameclones.com/).
 
+Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamteindruck und Qualität der Portierung. Ungetestete Spiele bekommen (vorübergehend) eine 🐱.
+
 ## Free Open Source Software
 
 ### Angband
@@ -11,6 +13,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/angband/angband) / [Wiki](https://de.wikipedia.org/wiki/Angband)
 * Tastatur
+* 🐱
 * [Play external!](https://angband.live/)
 
 ### AstroMenace
@@ -20,6 +23,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
 * Maus, Gamepad, Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/astromenace/)
 
 ### Asylum
@@ -29,6 +33,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/GMH-Code/Asylum) / [Wiki](https://de.wikipedia.org/wiki/Asylum_(Computerspiel))
 * Tastatur
+* 🥷
 * [Play external!](https://asylum.m-h.org.uk/)
 
 ### Ballerburg SDL
@@ -38,6 +43,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
 * Maus, Tastatur, Touch
+* 🥷🥷🥷🥷
 * [Play external!](https://baller.tuxfamily.org/online/)
 
 ### Blobby Volley 2
@@ -47,6 +53,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/danielknobe/blobbyvolley2) / [Wiki](https://de.wikipedia.org/wiki/Blobby_Volley)
 * Maus, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play external!](http://blobbyvolley.de/data/bv2wa/)
 
 ### Bloboats
@@ -56,6 +63,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/bloboats)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/bloboats/)
 
 ### Bombermaaan
@@ -65,6 +73,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/bombermaaan/)
 
 ### Cave Story
@@ -74,6 +83,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/nxengine-evo) / [Wiki](https://de.wikipedia.org/wiki/Cave_Story)
 * Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/cavestory/)
 
 ### C-Dogs SDL
@@ -83,6 +93,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
 * Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/cdogs/)
 
 ### Celeste
@@ -92,6 +103,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/ccleste) / [Wiki](https://de.wikipedia.org/wiki/Celeste_(Computerspiel))
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/celeste/)
 
 ### Chromium B.S.U.
@@ -101,6 +113,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
 * Maus, Tastatur, Touch
+* 🥷🥷🥷🥷
 * [Play!](/wasm/chromium-bsu/)
 
 ### Cro-Mag Rally
@@ -110,6 +123,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/CroMagRally) / [Wiki](https://en.wikipedia.org/wiki/Cro-Mag_Rally)
 * Tastatur
+* 🥷🥷
 * [Play!](/wasm/cromagrally/)
 
 ### Der Clou!
@@ -119,6 +133,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
 * Maus, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play german version!](/wasm/derclou/)
 * [Play english version!](/wasm/theclou/)
 
@@ -129,6 +144,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/DungeonRush)
 * Tastatur, Touch
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/dungeonrush/)
 
 ### Flare
@@ -138,6 +154,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
 * Maus, Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/flare/)
 
 ### Freegemas
@@ -147,6 +164,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
 * Maus, Gamepad, Tastatur, Touch
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/freegemas/)
 
 ### Freegish
@@ -156,6 +174,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/freegish) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
 * Tastatur
+* 🥷🥷
 * [Play!](/wasm/freegish/)
 
 ### FreeSiege
@@ -165,6 +184,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/freesiege)
 * Gamepad, Tastatur
+* 🥷
 * [Play!](/wasm/freesiege/)
 
 ### Hurrican
@@ -174,6 +194,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Single- und Multiplayer
 * [Repo](https://github.com/midzer/hurrican) / [Wiki](https://de.wikipedia.org/wiki/Turrican)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/hurrican/)
 
 ### Jump 'n Bump
@@ -183,6 +204,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Multiplayer
 * [Repo](https://github.com/midzer/jumpnbump) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/jumpnbump/)
 
 ### LBreakoutHD
@@ -192,6 +214,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
+* 🥷🥷🥷
 * [Play!](/wasm/lbreakouthd/)
 
 ### Li-Ri
@@ -201,6 +224,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/Li-Ri)
 * Maus, Tastatur, Touch
+* 🥷🥷🥷🥷
 * [Play!](/wasm/li-ri/)
 
 ### Numpty Physics
@@ -210,6 +234,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://de.wikipedia.org/wiki/Crayon_Physics_Deluxe)
 * Maus, Touch
+* 🥷🥷🥷🥷
 * [Play!](/wasm/numptyphysics/)
 
 ### Open Fodder
@@ -219,6 +244,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/OpenFodder/openfodder) / [Wiki](https://de.wikipedia.org/wiki/Cannon_Fodder)
 * Tastatur
+* 🐱
 * [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
 
 ### OpenTyrian
@@ -228,6 +254,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/opentyrian) / [Wiki](https://de.wikipedia.org/wiki/Tyrian)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/opentyrian/)
 
 ### Prince of Persia
@@ -237,6 +264,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
 * Gamepad, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/prince/)
 
 ### Rocks'n'Diamonds
@@ -246,6 +274,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Maus, Gamepad, Tastatur
+* 🐱
 * [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
 ### SDL-Ball
@@ -255,6 +284,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
 * Maus, Tastatur, Touch
+* 🥷🥷
 * [Play!](/wasm/sdl-ball/)
 
 ### SDL Sopwith
@@ -264,6 +294,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/fragglet/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
 * Tastatur
+* 🥷🥷🥷
 * [Play external!](https://fragglet.github.io/sdl-sopwith/)
 
 ### Shiromino
@@ -273,6 +304,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
 * Tastatur
+* 🥷🥷
 * [Play!](/wasm/shiromino/)
 
 ### Simutrans
@@ -282,6 +314,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/simutrans) / [Wiki](https://de.wikipedia.org/wiki/Simutrans)
 * Maus, Tastatur, Touch
+* 🐱
 * [Play!](/wasm/simutrans/)
 
 ### Space Cadet
@@ -291,6 +324,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/alula/SpaceCadetPinball) / [Wiki](https://en.wikipedia.org/wiki/Full_Tilt!_Pinball#3D_Pinball_for_Windows_%E2%80%93_Space_Cadet)
 * Tastatur
+* 🐱
 * [Play external!](https://alula.github.io/SpaceCadetPinball/)
 
 ### Super Mario War
@@ -300,6 +334,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Multiplayer
 * [Repo](https://github.com/mmatyas/supermariowar) / [Wiki](https://en.wikipedia.org/wiki/Super_Mario_War)
 * Tastatur
+* 🐱
 * [Play external!](https://mmatyas.github.io/smw-js/)
 
 ### SuperTux
@@ -309,6 +344,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/SuperTux/supertux) / [Wiki](https://de.wikipedia.org/wiki/SuperTux)
 * Tastatur
+* 🐱
 * [Play external!](https://supertux.semphris.com/play/)
 
 ### Tower To Heaven
@@ -318,6 +354,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://codeberg.org/midzer/tth)
 * Gamepad, Maus, Tastatur, Touch
+* 🥷🥷🥷
 * [Play!](/wasm/tth/)
 
 ### Vectoroids
@@ -327,6 +364,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
 * Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/vectoroids/)
 
 ### Violetland
@@ -336,6 +374,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/violetland) / [Wiki](https://en.wikipedia.org/wiki/Crimsonland)
 * Maus, Tastatur, Touch
+* 🥷🥷🥷
 * [Play!](/wasm/violetland/)
 
 ### VVVVVV
@@ -345,6 +384,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/vvvvvv) / [Wiki](https://de.wikipedia.org/wiki/VVVVVV)
 * Tastatur, Touch
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/vvvvvv/)
 
 ### Water Closet
@@ -354,6 +394,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/waterCloset)
 * Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/water-closet/)
 
 ### xrick
@@ -363,6 +404,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/zpqrtbnk/xrick) / [Wiki](https://de.wikipedia.org/wiki/Rick_Dangerous)
 * Tastatur, Touch
+* 🐱
 * [Play!](https://www.xrick.net/)
 
 ## Freeware
@@ -378,12 +420,14 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 
 * Official (1995)
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
+* 🥷🥷🥷🥷
 * [Play!](/wasm/tiberian-dawn/)
 
 #### Red Alert
 
 * Official (1996)
 * [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
+* 🥷🥷🥷🥷
 * [Play!](/wasm/red-alert/)
 
 ## Shareware
@@ -395,6 +439,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://de.wikipedia.org/wiki/Descent_(Computerspiel))
 * Tastatur
+* 🥷🥷
 * [Play!](/wasm/descent1/)
 
 ### Doom
@@ -404,6 +449,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
 * Maus, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/doom/)
 
 ### Doom 3
@@ -413,6 +459,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/gabrielcuvillier/d3wasm) / [Wiki](https://de.wikipedia.org/wiki/Doom_3)
 * Maus, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play external!](http://wasm.continuation-labs.com/d3demo/)
 
 ### Duke Nukem II
@@ -422,6 +469,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/lethal-guitar/RigelEngine) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem)
 * Tastatur
+* 🥷🥷
 * [Play external!](https://rigelengine.nikolai-wuttke.de/)
 
 ### Duke Nukem 3D
@@ -430,6 +478,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Ego-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/BelgianChocolateDuke3D) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem_3D)
+* 🥷🥷🥷
 * Maus, Tastatur
 * [Play!](/wasm/duke3d/)
 
@@ -440,6 +489,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/f2bgl) / [Wiki](https://de.wikipedia.org/wiki/Fade_to_Black_(Computerspiel))
 * Tastatur
+* 🥷
 * [Play!](/wasm/f2b/)
 
 ### Heart of Darkness
@@ -448,6 +498,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Cinematic platformer
 * [Repo](https://github.com/midzer/hode) / [Wiki](https://de.wikipedia.org/wiki/Heart_of_Darkness_(Computerspiel))
 * Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/hod/)
 
 ### Heroes of Might and Magic II
@@ -457,6 +508,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
 * Maus, Tastatur, Touch
+* 🥷🥷🥷
 * [Play!](/wasm/heroes2/)
 
 ### Homeworld
@@ -466,6 +518,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/GardensOfKadesh/Homeworld) / [Wiki](https://de.wikipedia.org/wiki/Homeworld)
 * Maus, Tastatur
+* 🐱
 * [Play external!](https://gardensofkadesh.github.io/)
 
 ### Jagged Alliance 2
@@ -475,6 +528,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://de.wikipedia.org/wiki/Jagged_Alliance_2)
 * Maus, Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/jaggedalliance2/)
 
 ### Jazz Jackrabbit
@@ -484,6 +538,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/openjazz) / [Wiki](https://de.wikipedia.org/wiki/Jazz_Jackrabbit)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/jazz/)
 
 ### Jazz Jackrabbit 2
@@ -493,6 +548,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play external!](https://deat.tk/jazz2/wasm/)
 
 ### Quake
@@ -502,6 +558,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/GMH-Code/Quake-WASM) / [Wiki](https://de.wikipedia.org/wiki/Quake)
 * Maus, Gamepad, Tastatur
+* 🥷🥷🥷🥷
 * [Play external!](https://quake.m-h.org.uk/)
 
 ### Quake 3
@@ -511,6 +568,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/lrusso/Quake3) / [Wiki](https://de.wikipedia.org/wiki/Quake_III_Arena)
 * Maus, Gamepad, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play external!](https://lrusso.github.io/Quake3/Quake3.htm)
 
 ### Raptor - Call of the Shadows
@@ -520,6 +578,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
 * Maus, Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/raptor/)
 
 ### Rise of the Triad
@@ -529,6 +588,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/rottexpr) / [Wiki](https://de.wikipedia.org/wiki/Rise_of_the_Triad)
 * Tastatur
+* 🥷
 * [Play!](/wasm/rott/)
 
 ### WipEout
@@ -538,6 +598,7 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
 * Tastatur
+* 🥷🥷🥷🥷🥷
 * [Play external!](https://phoboslab.org/wipegame/)
 
 ### Wolfenstein 3D
@@ -547,4 +608,5 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Singleplayer
 * [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
 * Tastatur
+* 🥷🥷🥷🥷
 * [Play!](/wasm/wolfenstein/)
