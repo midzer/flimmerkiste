@@ -338,6 +338,15 @@ Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spie
 * Maus, Tastatur, Touch
 * [Play!](/wasm/violetland/)
 
+### VVVVVV
+
+* Original (2010)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/vvvvvv) / [Wiki](https://de.wikipedia.org/wiki/VVVVVV)
+* Tastatur, Touch
+* [Play!](/wasm/vvvvvv/)
+
 ### Water Closet
 
 * Original (2019)
