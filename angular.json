@@ -24,13 +24,6 @@
               "src/sitemap.xml",
               "src/feed.json"
             ],
-            "styles": [
-              {
-                "input": "src/styles.scss",
-                "bundleName": "styles",
-                "inject": true
-              }
-            ],
             "scripts": [
             ],
             "optimization": {
