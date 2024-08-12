@@ -134,8 +134,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
 * Maus, Tastatur
 * 🥷🥷🥷🥷🥷
-* [Play german version!](/wasm/derclou/)
-* [Play english version!](/wasm/theclou/)
+* [Play!](/wasm/derclou/)
 
 ### Dungeon Rush
 
@@ -393,7 +392,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Platform
 * Singleplayer
 * [Repo](https://github.com/midzer/waterCloset)
-* Tastatur
+* Tastatur, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/water-closet/)
 
