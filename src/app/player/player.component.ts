@@ -84,7 +84,7 @@ export class PlayerComponent implements OnInit {
       case 'SID':
         this.playTime.set(this.createPlayTime(this.sidPlayer.getplaytime()));
         break;
-      case 'FLAC':
+      case 'OPUS':
         this.playTime.set(this.createPlayTime(this.flacPlayer.currentTime - this.startedAt));
         break;
     }
@@ -98,7 +98,7 @@ export class PlayerComponent implements OnInit {
       case 'MOD':
         this.modPlayer.play();
         break;
-      case 'FLAC':
+      case 'OPUS':
         this.flacPlayer.resume();
         break;
     }
@@ -114,7 +114,7 @@ export class PlayerComponent implements OnInit {
       case 'MOD':
         this.modPlayer.stop();
         break;
-      case 'FLAC':
+      case 'OPUS':
         this.flacPlayer.suspend();
         break;
     }
@@ -152,7 +152,7 @@ export class PlayerComponent implements OnInit {
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.nextOrder();
     }
-    else if (this.flacPlayer && this.optgroupLabel === 'FLAC') {
+    else if (this.flacPlayer && this.optgroupLabel === 'OPUS') {
       this.playBuffer(this.flacPlayer.currentTime - this.startedAt + 10);
     }
     else {
@@ -173,7 +173,7 @@ export class PlayerComponent implements OnInit {
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.prevOrder();
     }
-    else if (this.flacPlayer && this.optgroupLabel === 'FLAC') {
+    else if (this.flacPlayer && this.optgroupLabel === 'OPUS') {
       this.playBuffer(this.flacPlayer.currentTime - this.startedAt - 10);
     }
     else {
@@ -295,7 +295,7 @@ export class PlayerComponent implements OnInit {
       this.modPlayer.loadModule('assets/mods/' + tune);
     }
     else if (this.flacs.includes(tune)) {
-      this.optgroupLabel = 'FLAC';
+      this.optgroupLabel = 'OPUS';
       if (!this.flacPlayer) {
         this.flacPlayer = new AudioContext();
       }
@@ -306,9 +306,9 @@ export class PlayerComponent implements OnInit {
         1
       );
       this.subTunes.set(1);
-      this.info.set('Fetching FLAC...');
+      this.info.set('Fetching OPUS...');
       try {
-        const response = await fetch('assets/flacs/' + tune + '.flac');
+        const response = await fetch('/assets/flacs/' + tune + '.webm');
         this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
           this.buffer = buffer;
           this.playBuffer(0);
