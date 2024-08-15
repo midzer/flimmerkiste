@@ -32,7 +32,7 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.name = params['name'];
-      this.path = 'assets/markdown/' + this.name + '.md';
+      this.path = '/assets/markdown/' + this.name + '.md';
       const name = this.name.split('-').join(' ');
       for (let i = this.posts.length - 1; i >= 0 ; i--) {
         const post = this.posts[i];
@@ -111,7 +111,7 @@ export class ContentComponent implements OnInit {
     }
     const btn = event.target;
     const img = btn.firstElementChild;
-    const iconPath = 'assets/icons/';
+    const iconPath = '/assets/icons/';
     img.src = iconPath + 'clipboard-check.svg';
     setTimeout(() => {
       img.src = iconPath + 'share.svg';

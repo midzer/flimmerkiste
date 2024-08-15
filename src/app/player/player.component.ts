@@ -28,15 +28,15 @@ export class PlayerComponent implements OnInit {
   intervalID: number;
   playTime = signal('00:00');
   playing: boolean = false;
-  playIcon: string = 'assets/icons/player-play.svg';
-  pauseIcon: string = 'assets/icons/player-pause.svg';
+  playIcon: string = '/assets/icons/player-play.svg';
+  pauseIcon: string = '/assets/icons/player-pause.svg';
   playButton: string = this.playIcon;
   
   screen: HTMLElement;
   video: HTMLVideoElement;
   videoPlaying: boolean = false;
-  playVideoIcon: string = 'assets/icons/movie.svg';
-  pauseVideoIcon: string = 'assets/icons/movie-off.svg';
+  playVideoIcon: string = '/assets/icons/movie.svg';
+  pauseVideoIcon: string = '/assets/icons/movie-off.svg';
   videoButtonIcon: string = this.playVideoIcon;
 
   canvas: HTMLCanvasElement;
@@ -221,6 +221,19 @@ export class PlayerComponent implements OnInit {
     this.videoPlaying = !this.videoPlaying;
   }
 
+  getPath(tune: string): string {
+    switch (this.optgroupLabel) {
+      case 'SID':
+        return '/assets/sids/' + tune + '.sid';
+      case 'MOD':
+        return '/assets/mods/' + tune;
+      case 'OPUS':
+        return '/assets/flacs/' + tune + '.webm';
+      default:
+        return ""
+    }
+  }
+
   removeNullFromString(str: string): string {
     return str.replace(/\0[\s\S]*$/g,'');
   }
@@ -273,7 +286,7 @@ export class PlayerComponent implements OnInit {
             this.removeNullFromString(this.sidPlayer.gettitle()));
         });
       }
-      this.sidPlayer.loadinit('assets/sids/' + tune + '.sid', this.subTune());
+      this.sidPlayer.loadinit(this.getPath(tune), this.subTune());
     }
     else if (this.mods.includes(tune)) {
       this.optgroupLabel = 'MOD';
@@ -292,7 +305,7 @@ export class PlayerComponent implements OnInit {
       }
       this.analyserNode = this.modPlayer.audioContext.createAnalyser();
       this.modPlayer.audioScriptNode.connect(this.analyserNode);
-      this.modPlayer.loadModule('assets/mods/' + tune);
+      this.modPlayer.loadModule(this.getPath(tune));
     }
     else if (this.flacs.includes(tune)) {
       this.optgroupLabel = 'OPUS';
@@ -308,7 +321,7 @@ export class PlayerComponent implements OnInit {
       this.subTunes.set(1);
       this.info.set('Fetching OPUS...');
       try {
-        const response = await fetch('/assets/flacs/' + tune + '.webm');
+        const response = await fetch(this.getPath(tune));
         this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
           this.buffer = buffer;
           this.playBuffer(0);
@@ -373,7 +386,7 @@ export class PlayerComponent implements OnInit {
         imgObj.onload = () => {
             this.backgroundImg = imgObj;
         }
-        imgObj.src = 'assets/images/darcula-spectrum.png';
+        imgObj.src = '/assets/images/darcula-spectrum.png';
       }
       // Read the frequency values
       const amplitudeArray = new Uint8Array(

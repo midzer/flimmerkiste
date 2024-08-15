@@ -68,6 +68,21 @@ canvas {
     height: 8vh;
 }
 
+a[data-descr] {
+    position: relative;
+}
+
+a[data-descr]:hover::after,
+a[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--lightgrey);
+    background-color: var(--bgcolor);
+}
+
 .heart,
 .marquee,
 canvas,
@@ -75,7 +90,7 @@ select {
     width: 100%;
 }
 
-a {
+.heart-link {
     margin-top: auto;
 }
 
