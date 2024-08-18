@@ -441,6 +441,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🥷🥷
 * [Play!](/wasm/descent1/)
 
+### Diablo
+
+* Official (1997)
+* Action-Rollenspiel
+* Singleplayer
+* [Repo](https://github.com/d07RiV/diabloweb) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
+* Maus, Tastatur, Touch
+* 🥷🥷🥷🥷🥷
+* [Play external!](https://d07riv.github.io/diabloweb/)
+
 ### Doom
 
 * Official (1993)
