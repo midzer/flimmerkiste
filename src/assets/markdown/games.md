@@ -326,6 +326,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🐱
 * [Play external!](https://alula.github.io/SpaceCadetPinball/)
 
+### Supaplex
+
+* Original (1991)
+* Puzzle
+* Singleplayer
+* [Repo](https://github.com/midzer/open-supaplex) / [Wiki](https://de.wikipedia.org/wiki/Supaplex)
+* Maus, Tastatur, Touch
+* 🥷🥷🥷
+* [Play!](/wasm/supaplex/)
+
 ### Super Mario War
 
 * Original (2004)
