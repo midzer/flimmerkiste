@@ -246,6 +246,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🐱
 * [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
 
+### OpenTTD
+
+* Clone von Transport Tycoon Deluxe (1995)
+* Wirtschaftsimulation
+* Singleplayer
+* [Repo](https://github.com/OpenTTD/OpenTTD) / [Wiki](https://de.wikipedia.org/wiki/Transport_Tycoon)
+* Tastatur
+* 🥷🥷🥷
+* [Play!](/wasm/openttd/)
+
 ### OpenTyrian
 
 * Clone von Tyrian (1995)
@@ -609,6 +619,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Tastatur
 * 🥷
 * [Play!](/wasm/rott/)
+
+### Shadow Warrior
+
+* Official (1997)
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/jfsw) / [Wiki](https://de.wikipedia.org/wiki/Shadow_Warrior)
+* 🥷🥷🥷
+* Maus, Tastatur
+* [Play!](/wasm/shadow-warrior/)
 
 ### WipEout
 
