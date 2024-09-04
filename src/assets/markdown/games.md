@@ -151,10 +151,10 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Clone von Diablo (1997)
 * Action-Rollenspiel
 * Singleplayer
-* [Repo](https://github.com/midzer/flare-engine) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
+* [Repo](https://github.com/flareteam/flare-game) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
 * Maus, Tastatur
-* 🥷🥷🥷
-* [Play!](/wasm/flare/)
+* 🥷🥷🥷🥷
+* [Play external!](https://dorkster.itch.io/flare-emscripten-version)
 
 ### Freegemas
 
