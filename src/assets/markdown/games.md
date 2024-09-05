@@ -424,7 +424,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * [Repo](https://github.com/zpqrtbnk/xrick) / [Wiki](https://de.wikipedia.org/wiki/Rick_Dangerous)
 * Tastatur, Touch
 * 🐱
-* [Play!](https://www.xrick.net/)
+* [Play external!](https://www.xrick.net/)
 
 ## Freeware
 
