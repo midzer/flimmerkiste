@@ -615,9 +615,9 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1994)
 * Ego-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/rottexpr) / [Wiki](https://de.wikipedia.org/wiki/Rise_of_the_Triad)
-* Tastatur
-* 🥷
+* [Repo](https://github.com/midzer/taradino) / [Wiki](https://de.wikipedia.org/wiki/Rise_of_the_Triad)
+* Maus, Tastatur
+* 🥷🥷🥷
 * [Play!](/wasm/rott/)
 
 ### Shadow Warrior
