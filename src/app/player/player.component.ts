@@ -72,7 +72,7 @@ export class PlayerComponent implements OnInit {
     }
     // @ts-ignore
     if (window.navigator.getAutoplayPolicy && window.navigator.getAutoplayPolicy('audiocontext') !== "allowed") {
-      return alert('Autoplay is not allowed.');
+      return alert('Your browser does not allow autoplay. ' + tune + ' selected. Play it manually.');
     }
     if (window.confirm('Do you want to play ' + tune + '?')) {
       this.play();
