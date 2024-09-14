@@ -226,6 +226,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🥷🥷🥷🥷
 * [Play!](/wasm/li-ri/)
 
+### Neverball
+
+* Clone von Super Monkey Ball (2001)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/Neverball/neverball) / [Wiki](https://de.wikipedia.org/wiki/Neverball)
+* Maus, Touch
+* 🥷🥷🥷🥷🥷
+* [Play external!](https://play.neverball.org/)
+
 ### Numpty Physics
 
 * Clone von Crayon Physics (2007)
