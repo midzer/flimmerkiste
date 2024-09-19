@@ -575,10 +575,10 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1994)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/midzer/openjazz) / [Wiki](https://de.wikipedia.org/wiki/Jazz_Jackrabbit)
+* [Repo](https://github.com/AlisterT/openjazz) / [Wiki](https://de.wikipedia.org/wiki/Jazz_Jackrabbit)
 * Tastatur
 * 🥷🥷🥷🥷
-* [Play!](/wasm/jazz/)
+* [Play external!](https://openjazz.github.io/)
 
 ### Jazz Jackrabbit 2
 
