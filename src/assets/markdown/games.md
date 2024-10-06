@@ -6,6 +6,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 ## Free Open Source Software
 
+### Anarch
+
+* Original (2020)
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://gitlab.com/drummyfish/anarch) / [Wiki](https://libregamewiki.org/Anarch)
+* Maus, Tastatur
+* 🐱
+* [Play external!](https://drummyfish.gitlab.io/anarch/bin/web/anarch.html)
+
 ### Angband
 
 * Original (1993)
@@ -115,6 +125,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Maus, Tastatur, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/chromium-bsu/)
+
+### Commander Keen
+
+* Original (1990)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/jamesfmackenzie/chocolatekeen) / [Wiki](https://de.wikipedia.org/wiki/Commander_Keen)
+* Tastatur
+* 🥷🥷🥷
+* [Play external!](http://www.jamesfmackenzie.com/chocolatekeen)
 
 ### Cro-Mag Rally
 
@@ -246,6 +266,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🥷🥷🥷🥷
 * [Play!](/wasm/numptyphysics/)
 
+### Magic Sushi
+
+* Clone von Bejeweled (2001)
+* Puzzle
+* Singleplayer
+* [Repo](https://github.com/EXL/Magic-Sushi) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
+* Maus, Tastatur, Touch
+* 🥷🥷🥷
+* [Play external!](https://lab.exlmoto.ru/sushi/)
+
 ### Open Fodder
 
 * Clone von Cannon Fodder (1993)
@@ -255,6 +285,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Tastatur
 * 🐱
 * [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
+
+### Open Golf
+
+* Original (2020)
+* Sport
+* Singleplayer
+* [Repo](https://github.com/mgerdes/Open-Golf)
+* Tastatur
+* 🐱
+* [Play external!](https://mgerdes.github.io/minigolf.html)
 
 ### OpenTTD
 
@@ -275,6 +315,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Tastatur
 * 🥷🥷🥷🥷
 * [Play!](/wasm/opentyrian/)
+
+### Pacman
+
+* Clone von Pac-Man (1980)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/floooh/pacman.c) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
+* Tastatur
+* 🥷🥷🥷🥷🥷
+* [Play external!](https://floooh.github.io/pacman.c/pacman.html)
 
 ### Prince of Persia
 
