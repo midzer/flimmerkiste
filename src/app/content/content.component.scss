@@ -59,6 +59,10 @@ app-content {
     pointer-events: none;
   }
 
+  h1 {
+    word-break: break-all;
+  }
+
   [id] {
     scroll-margin-top: 50px;
 
