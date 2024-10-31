@@ -1,9 +1,9 @@
-<header>
-  <a [routerLink]="['']" routerLinkActive="active">
-    <img src="/assets/images/header.webp" width="536" height="42" alt="Flimmerkiste">
-  </a>
-</header>
 <nav>
+  <header>
+    <a [routerLink]="['']" routerLinkActive="active">
+      <img src="/assets/images/header.webp" width="536" height="42" alt="Flimmerkiste">
+    </a>
+  </header>
   <ul>
     <li *ngFor="let menuitem of menu">
       <a [routerLink]="[menuitem.name]">
