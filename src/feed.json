@@ -4,12 +4,17 @@
 	"home_page_url": "https://midzer.de/",
 	"feed_url": "https://midzer.de/feed.json",
 	"items": [
+	        {
+			"id": "omas-kaesetorte",
+			"url": "https://midzer.de/omas-kaesetorte",
+			"date_published": "2024-11-03"
+		},
 		{
 			"id": "als-ich-mich-selbst-zu-lieben-begann",
 			"url": "https://midzer.de/als-ich-mich-selbst-zu-lieben-begann",
 			"date_published": "2024-06-06"
 		},
-	    {
+	        {
 			"id": "porting-games-for-the-web-with-emscripten",
 			"url": "https://midzer.de/porting-games-for-the-web-with-emscripten",
 			"date_published": "2024-04-19"
