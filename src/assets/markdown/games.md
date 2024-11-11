@@ -6,6 +6,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 ## Free Open Source Software
 
+### Abuse
+
+* Original (1996)
+* Run 'n' Gun
+* Singleplayer
+* [Repo](https://github.com/midzer/abuse) / [Wiki](https://de.wikipedia.org/wiki/Abuse)
+* Maus, Tastatur, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/abuse/)
+
 ### Anarch
 
 * Original (2020)
@@ -475,6 +485,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Tastatur, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/water-closet/)
+
+### XGalaga
+
+* Clone von Galaga (1981)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/xgalaga-sdl) / [Wiki](https://de.wikipedia.org/wiki/Galaga)
+* Tastatur, Touch
+* 🥷🥷🥷
+* [Play!](/wasm/xgalaga/)
 
 ### xrick
 
