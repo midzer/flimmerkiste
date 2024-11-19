@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { FLACS } from './flacs';
@@ -11,8 +11,9 @@ import { SIDS } from './sids';
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
     standalone: true,
-    imports: [FormsModule, NgFor, NgIf]
+    imports: [FormsModule, NgFor]
 })
+
 export class PlayerComponent implements OnInit {
   modPlayer: any;
   sidPlayer: any;
@@ -38,6 +39,8 @@ export class PlayerComponent implements OnInit {
   playVideoIcon: string = '/assets/icons/movie.svg';
   pauseVideoIcon: string = '/assets/icons/movie-off.svg';
   videoButtonIcon: string = this.playVideoIcon;
+
+  downloadButtonIcon: string = '/assets/icons/download.svg';
 
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
@@ -222,15 +225,16 @@ export class PlayerComponent implements OnInit {
   }
 
   getPath(label: string, tune: string): string {
+    const path = '/assets/';
     switch (label) {
       case 'SID':
-        return '/assets/sids/' + tune + '.sid';
+        return path + 'sids/' + tune + '.sid';
       case 'MOD':
-        return '/assets/mods/' + tune;
+        return path + 'mods/' + tune;
       case 'OPUS':
-        return '/assets/flacs/' + tune + '.webm';
+        return path + 'flacs/' + tune + '.webm';
       default:
-        return ""
+        return ''
     }
   }
 
@@ -403,11 +407,10 @@ export class PlayerComponent implements OnInit {
       const BAR_WIDTH = 5;
       const OFFSET = 100;
       const numBars = Math.round(this.canvas.width / SPACER_WIDTH);
-      let o;
       for (var i = 0; i < numBars; ++i) {
         const magnitude = amplitudeArray[i + OFFSET] * this.canvas.height / 255;
         if (this.backgroundImg) {
-          o = Math.round(this.canvas.height - magnitude);
+          const o = Math.round(this.canvas.height - magnitude);
           this.ctx.drawImage(this.backgroundImg, 0, 0, BAR_WIDTH, 255, i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude));
         }
       }
@@ -434,7 +437,7 @@ export class PlayerComponent implements OnInit {
     return label;
   }
 
-  async generateZip() {
+  async download() {
     const label = this.getOptgroupLabel(this.selectedTune);
     if (!window.confirm('Do you want to download all ' + label + ' tunes?')) {
       return;

@@ -2,7 +2,7 @@
     position: fixed;
     top: 42%;
     left: 77.5%;
-    width: 20.7%;
+    width: 20.5%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -58,6 +58,7 @@ select {
     border-style: none;
     padding: 0.125rem;
     border: 1px solid var(--bgcolor);
+    cursor: pointer;
 }
 
 button {
@@ -70,6 +71,7 @@ canvas {
 
 a[data-descr] {
     position: relative;
+    cursor: pointer;
 }
 
 a[data-descr]:hover::after,
@@ -81,6 +83,7 @@ a[data-descr]:focus::after {
     transform: translate(-50%, -50%);
     color: var(--lightgrey);
     background-color: var(--bgcolor);
+    width: 100%;
 }
 
 .heart,
