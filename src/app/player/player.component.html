@@ -11,13 +11,13 @@
     <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
     <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
   </div>
-  <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange()" aria-label="Select tune">
-    <optgroup label="SID">
+  <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
+    <optgroup label="SIDS">
       <option *ngFor="let sid of sids" [ngValue]="sid">
         {{sid}}
       </option>
     </optgroup>
-    <optgroup label="MOD">
+    <optgroup label="MODS">
       <option *ngFor="let mod of mods" [ngValue]="mod">
         {{mod}}
       </option>
@@ -28,7 +28,10 @@
       </option>
     </optgroup>
   </select>
-  <a href="{{ getPath(selectedTune) }}" download data-descr="Download tune" attr.aria-label="Download {{ selectedTune }}">
+  <a *ngIf="!playing" (click)="generateZip()" data-descr="Download tunes" aria-label="Download tunes">
+    <canvas></canvas>
+  </a>
+  <a *ngIf="playing" href="{{ getPath(optgroupLabel, selectedTune) }}" download data-descr="Download tune" attr.aria-label="Download {{ selectedTune }}">
     <canvas></canvas>
   </a>
   <a class="heart-link" href="https://www.kommunikationsliebe.org/" rel="noopener">

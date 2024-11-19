@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { FLACS } from './flacs';
@@ -11,7 +11,7 @@ import { SIDS } from './sids';
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
     standalone: true,
-    imports: [FormsModule, NgFor]
+    imports: [FormsModule, NgFor, NgIf]
 })
 export class PlayerComponent implements OnInit {
   modPlayer: any;
@@ -221,8 +221,8 @@ export class PlayerComponent implements OnInit {
     this.videoPlaying = !this.videoPlaying;
   }
 
-  getPath(tune: string): string {
-    switch (this.optgroupLabel) {
+  getPath(label: string, tune: string): string {
+    switch (label) {
       case 'SID':
         return '/assets/sids/' + tune + '.sid';
       case 'MOD':
@@ -274,74 +274,74 @@ export class PlayerComponent implements OnInit {
 
   async loadTune(tune: string): Promise<void> {
     this.subTune.set(0);
-    if (this.sids.includes(tune)) {
-      this.optgroupLabel = 'SID';
-      if (!this.sidPlayer) {
-        const { jsSID } = await import('./modules/jsSID.js');
-        this.sidPlayer = new jsSID(16384, 0.0005);
-        this.sidPlayer.setloadcallback(() => {
-          this.startPlaying();
-          this.subTunes.set(this.sidPlayer.getsubtunes());
-          this.info.set(this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
-            this.removeNullFromString(this.sidPlayer.gettitle()));
-        });
-      }
-      this.sidPlayer.loadinit(this.getPath(tune), this.subTune());
+    this.optgroupLabel = this.getOptgroupLabel(tune);
+    switch (this.optgroupLabel) {
+      case 'SID':
+        if (!this.sidPlayer) {
+          const { jsSID } = await import('./modules/jsSID.js');
+          this.sidPlayer = new jsSID(16384, 0.0005);
+          this.sidPlayer.setloadcallback(() => {
+            this.startPlaying();
+            this.subTunes.set(this.sidPlayer.getsubtunes());
+            this.info.set(this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+              this.removeNullFromString(this.sidPlayer.gettitle()));
+          });
+        }
+        this.sidPlayer.loadinit(this.getPath(this.optgroupLabel, tune), this.subTune());
+        break;
+      case 'MOD':
+        if (!this.modPlayer) {
+          const { ScripTracker } = await import('./modules/scriptracker.js');
+          this.modPlayer = new ScripTracker();
+          this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+            this.startPlaying();
+            this.subTunes.set(songLength);
+            this.info.set(songName);
+          });
+          this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
+            this.subTune.set(currentOrder - 1);
+            this.playTime.set('Pt ' + patternIndex);
+          });
+        }
+        this.analyserNode = this.modPlayer.audioContext.createAnalyser();
+        this.modPlayer.audioScriptNode.connect(this.analyserNode);
+        this.modPlayer.loadModule(this.getPath(this.optgroupLabel, tune));
+        break;
+      case 'OPUS':
+        if (!this.flacPlayer) {
+          this.flacPlayer = new AudioContext();
+        }
+        this.analyserNode = new AnalyserNode(this.flacPlayer);
+        this.javascriptNode = this.flacPlayer.createScriptProcessor(
+          1024,
+          1,
+          1
+        );
+        this.subTunes.set(1);
+        this.info.set('Fetching OPUS...');
+        try {
+          const response = await fetch(this.getPath(this.optgroupLabel, tune));
+          this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
+            this.buffer = buffer;
+            this.playBuffer(0);
+          });
+        }
+        catch (err) {
+          console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+        }
+        this.info.set(tune);
+        break;
     }
-    else if (this.mods.includes(tune)) {
-      this.optgroupLabel = 'MOD';
-      if (!this.modPlayer) {
-        const { ScripTracker } = await import('./modules/scriptracker.js');
-        this.modPlayer = new ScripTracker();
-        this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
-          this.startPlaying();
-          this.subTunes.set(songLength);
-          this.info.set(songName);
-        });
-        this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
-          this.subTune.set(currentOrder - 1);
-          this.playTime.set('Pt ' + patternIndex);
-        });
-      }
-      this.analyserNode = this.modPlayer.audioContext.createAnalyser();
-      this.modPlayer.audioScriptNode.connect(this.analyserNode);
-      this.modPlayer.loadModule(this.getPath(tune));
-    }
-    else if (this.flacs.includes(tune)) {
-      this.optgroupLabel = 'OPUS';
-      if (!this.flacPlayer) {
-        this.flacPlayer = new AudioContext();
-      }
-      this.analyserNode = new AnalyserNode(this.flacPlayer);
-      this.javascriptNode = this.flacPlayer.createScriptProcessor(
-        1024,
-        1,
-        1
-      );
-      this.subTunes.set(1);
-      this.info.set('Fetching OPUS...');
-      try {
-        const response = await fetch(this.getPath(tune));
-        this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
-          this.buffer = buffer;
-          this.playBuffer(0);
-        });
-      }
-      catch (err) {
-        console.error(`Unable to fetch the audio file. Error: ${err.message}`);
-      }
-      this.info.set(tune);
-    }
-    this.loadedTune = this.selectedTune = tune;
+    this.loadedTune = tune;
   }
 
-  selectChange(): void {
-    if (!this.playing) {
-      return;
+  selectChange(event: string): void {
+    if (this.playing) {
+      this.stopPlaying();
+      this.loadTune(event);
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
-    this.stopPlaying();
-    this.loadTune(this.selectedTune);
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.selectedTune = event;
   }
 
   redrawSpectrum = () => {
@@ -417,5 +417,59 @@ export class PlayerComponent implements OnInit {
 
   readRegister(register, chip) {
     return this.sidPlayer.readregister(register + this.sidPlayer.getSIDAddress(chip));
+  }
+
+  getOptgroupLabel(tune: string): string {
+    let label: string;
+    if (this.sids.includes(tune)) {
+      label = 'SID';
+    }
+    else if (this.mods.includes(tune)) {
+      label = 'MOD';
+    }
+    else if (this.flacs.includes(tune)) {
+      label = 'OPUS';
+    }
+
+    return label;
+  }
+
+  async generateZip() {
+    const label = this.getOptgroupLabel(this.selectedTune);
+    if (!window.confirm('Do you want to download all ' + label + ' tunes?')) {
+      return;
+    }
+    let tunes: string[];
+    switch (label) {
+      case 'SID':
+        tunes = this.sids
+        break;
+      case 'MOD':
+        tunes = this.mods
+        break;
+      case 'OPUS':
+        tunes = this.flacs
+        break;
+    }
+
+    const files = await Promise.all(tunes.map(async tune => {
+      const response = await fetch(this.getPath(label, tune));
+      return {
+        name: label === 'MODS' ? tune : tune + "." + label.toLowerCase(),
+        data: new Uint8Array(await response.arrayBuffer())
+      };
+    }));
+
+    const { SimpleZip } = await import('./modules/simplezip.js');
+    const zip = SimpleZip.GenerateZipFrom(files);
+    const blob = new Blob([zip], {type: 'octet/stream'});
+
+    const el = document.createElement('a');
+    el.href = window.URL.createObjectURL(blob);
+    el.target = '_blank';
+    el.download = label + '_PACK_2024-11-19.zip';
+    document.body.appendChild(el);
+    el.click();
+    document.body.removeChild(el);
   }
 }
