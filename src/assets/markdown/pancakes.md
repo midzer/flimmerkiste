@@ -1,5 +1,7 @@
 # Pancakes (American style)
 
+![Frische Pancakes auf einem Teller](/assets/pictures/pancakes.webp)
+
 * 2 Tassen Haferflocken
 * 500g Buttermilch
 
