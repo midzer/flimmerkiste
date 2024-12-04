@@ -1,12 +1,16 @@
 <button (click)="goBack()"><img src="/assets/icons/arrow-back.svg" width="24" height="24" alt="Go back"></button>
 <button (click)="share($event)"><img src="/assets/icons/share.svg" width="24" height="24" alt="Share"></button>
-<audio *ngIf="hasAudio == true" controls playsinline preload="metadata">
+@if (hasAudio == true) {
+  <audio controls playsinline preload="metadata">
     <source src="{{name | mp3file}}" type="audio/mpeg">
     Your browser does not support audio element
-</audio>
+  </audio>
+}
 <markdown [src]="path" (load)="onLoad()" [disableSanitizer]="true"></markdown>
-<video *ngIf="hasVideo == true" controls playsinline preload="metadata">
+@if (hasVideo == true) {
+  <video controls playsinline preload="metadata">
     <source src="{{name | webmfile}}" type='video/webm; codecs="av01.0.12M.08, opus"'>
     <source src="{{name | mp4file}}" type='video/mp4; codecs="avc1.42c01e, mp4a.40.2"'>
     Your browser does not support video element
-</video>
+  </video>
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgFor, LowerCasePipe } from '@angular/common';
+import { LowerCasePipe } from '@angular/common';
 
 import { Blank2dashPipe } from '../blank2dash.pipe';
 
@@ -11,8 +11,7 @@ import { Post } from '../post';
     selector: 'app-overview',
     templateUrl: './overview.component.html',
     styleUrls: ['./overview.component.scss'],
-    standalone: true,
-    imports: [NgFor, RouterLink, LowerCasePipe, Blank2dashPipe]
+    imports: [RouterLink, LowerCasePipe, Blank2dashPipe]
 })
 export class OverviewComponent implements OnInit {
   posts = POSTS;

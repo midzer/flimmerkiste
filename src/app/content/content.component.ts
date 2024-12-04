@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location, NgIf } from '@angular/common';
+import { Location } from '@angular/common';
 
 import { POSTS } from '../posts';
 import { WebmfilePipe } from '../webmfile.pipe';
@@ -13,8 +13,7 @@ import { MarkdownComponent } from 'ngx-markdown';
     templateUrl: './content.component.html',
     styleUrls: ['./content.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [NgIf, MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe]
+    imports: [MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe]
 })
 export class ContentComponent implements OnInit {
   path: string;

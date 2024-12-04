@@ -14,19 +14,25 @@
   </div>
   <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
     <optgroup label="SIDS">
-      <option *ngFor="let sid of sids" [ngValue]="sid">
-        {{sid}}
-      </option>
+      @for (sid of sids; track sid) {
+        <option [ngValue]="sid">
+          {{sid}}
+        </option>
+      }
     </optgroup>
     <optgroup label="MODS">
-      <option *ngFor="let mod of mods" [ngValue]="mod">
-        {{mod}}
-      </option>
+      @for (mod of mods; track mod) {
+        <option [ngValue]="mod">
+          {{mod}}
+        </option>
+      }
     </optgroup>
     <optgroup label="OPUS">
-      <option *ngFor="let flac of flacs" [ngValue]="flac">
-        {{flac}}
-      </option>
+      @for (flac of flacs; track flac) {
+        <option [ngValue]="flac">
+          {{flac}}
+        </option>
+      }
     </optgroup>
   </select>
   <a href="{{ getPath(optgroupLabel, selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">

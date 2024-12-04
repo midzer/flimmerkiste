@@ -1,5 +1,4 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { FLACS } from './flacs';
@@ -10,8 +9,7 @@ import { SIDS } from './sids';
     selector: 'app-player',
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
-    standalone: true,
-    imports: [FormsModule, NgFor]
+    imports: [FormsModule]
 })
 
 export class PlayerComponent implements OnInit {

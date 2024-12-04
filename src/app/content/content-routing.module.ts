@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ContentComponent } from './content.component';
-
-
 const routes: Routes = [
   {
     path: '',
-    component: ContentComponent
+    loadComponent: () => import('./content.component').then(m => m.ContentComponent)
   }
 ];
 

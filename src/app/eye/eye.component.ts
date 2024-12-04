@@ -7,7 +7,6 @@ import { SanitizedUrlPipe } from '../sanitized-url.pipe';
     selector: 'app-eye',
     templateUrl: './eye.component.html',
     styleUrls: ['./eye.component.scss'],
-    standalone: true,
     imports: [SanitizedUrlPipe]
 })
 export class EyeComponent implements OnInit {

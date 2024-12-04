@@ -8,7 +8,6 @@ import { ScreenComponent } from './screen/screen.component';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: true,
     imports: [ScreenComponent, PlayerComponent, EyeComponent]
 })
 export class AppComponent {
