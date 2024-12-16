@@ -4,7 +4,6 @@
     <div (click)="copy($event)" class="marquee" tabindex="0" data-descr="Copy tune URL">
       <span>{{info()}}</span>
     </div>
-    <button (click)="download()"><img [src]="downloadButtonIcon" width="16" height="16" alt="Download tunes"></button>
   </div>
   <div class="d-flex">
     <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
@@ -12,29 +11,32 @@
     <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
     <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
   </div>
-  <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
-    <optgroup label="SIDS">
-      @for (sid of sids; track sid) {
-        <option [ngValue]="sid">
-          {{sid}}
-        </option>
-      }
-    </optgroup>
-    <optgroup label="MODS">
-      @for (mod of mods; track mod) {
-        <option [ngValue]="mod">
-          {{mod}}
-        </option>
-      }
-    </optgroup>
-    <optgroup label="OPUS">
-      @for (flac of flacs; track flac) {
-        <option [ngValue]="flac">
-          {{flac}}
-        </option>
-      }
-    </optgroup>
-  </select>
+  <div class="d-flex">
+    <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
+      <optgroup label="SIDS">
+        @for (sid of sids; track sid) {
+          <option [ngValue]="sid">
+            {{sid}}
+          </option>
+        }
+      </optgroup>
+      <optgroup label="MODS">
+        @for (mod of mods; track mod) {
+          <option [ngValue]="mod">
+            {{mod}}
+          </option>
+        }
+      </optgroup>
+      <optgroup label="OPUS">
+        @for (flac of flacs; track flac) {
+          <option [ngValue]="flac">
+            {{flac}}
+          </option>
+        }
+      </optgroup>
+    </select>
+    <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
+  </div>
   <a href="{{ getPath(optgroupLabel, selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
     <canvas></canvas>
   </a>

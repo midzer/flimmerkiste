@@ -1,7 +1,7 @@
 .player {
     position: fixed;
     top: 42%;
-    left: 77.5%;
+    left: 77.6%;
     width: 20.5%;
     text-align: center;
     display: flex;
@@ -53,6 +53,10 @@
     to   { transform: translate(-100%); }
 }
 
+select {
+    height: 33px; /* wrapped flex items take only the minimum size */
+}
+
 button,
 select {
     border-style: none;
@@ -66,7 +70,7 @@ button {
 }
 
 canvas {
-    height: 8vh;
+    height: 7vh;
 }
 
 a[data-descr] {

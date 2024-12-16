@@ -38,8 +38,6 @@ export class PlayerComponent implements OnInit {
   pauseVideoIcon: string = '/assets/icons/movie-off.svg';
   videoButtonIcon: string = this.playVideoIcon;
 
-  downloadButtonIcon: string = '/assets/icons/download.svg';
-
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
   backgroundImg: HTMLImageElement;
