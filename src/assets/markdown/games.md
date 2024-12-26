@@ -242,7 +242,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/hannah) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
-* Tastatur
+* Tastatur, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/hannah/)
 
