@@ -156,6 +156,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🥷🥷
 * [Play!](/wasm/cromagrally/)
 
+### Cuyo
+
+* Clone von Dr. Mario (1990) 
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/cuyo) / [Wiki](https://de.wikipedia.org/wiki/Dr._Mario)
+* Tastatur, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/cuyo/)
+
 ### Der Clou!
 
 * Official (1994)
@@ -215,6 +225,26 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Gamepad, Tastatur
 * 🥷
 * [Play!](/wasm/freesiege/)
+
+### Gilbert and the doors
+
+* Original
+* Platform
+* Singleplayer
+* [Repo](https://github.com/midzer/gilbert) / [Wiki](https://libregamewiki.org/Gilbert_and_the_doors)
+* Tastatur, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/gilbert/)
+
+### Help Hannah's Horse
+
+* Clone von Pac-Man (1980)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/hannah) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
+* Tastatur
+* 🥷🥷🥷🥷
+* [Play!](/wasm/hannah/)
 
 ### Hurrican
 
@@ -331,10 +361,10 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Clone von Pac-Man (1980)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/floooh/pacman.c) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
-* Tastatur
-* 🥷🥷🥷🥷🥷
-* [Play external!](https://floooh.github.io/pacman.c/pacman.html)
+* [Repo](https://github.com/midzer/pacman) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
+* Tastatur, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/pacman/)
 
 ### Prince of Persia
 
