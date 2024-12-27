@@ -760,6 +760,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Maus, Tastatur
 * [Play!](/wasm/shadow-warrior/)
 
+### Star Wars Jedi Knight: Dark Forces II
+
+* Official (1997)
+* Ego-Shooter
+* Singleplayer
+* [Repo](https://github.com/shinyquagsire23/OpenJKDF2) / [Wiki](https://de.wikipedia.org/wiki/Star_Wars_Jedi_Knight:_Dark_Forces_II)
+* 🥷🥷🥷🥷
+* Maus, Tastatur
+* [Play external!](https://maxthomas.dev/openjkdf2/) (needs WebGL3)
+
 ### WipEout
 
 * Official (1995)
