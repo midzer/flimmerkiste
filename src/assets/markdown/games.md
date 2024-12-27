@@ -96,6 +96,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🥷🥷🥷🥷
 * [Play!](/wasm/bombermaaan/)
 
+### Brogue
+
+* Original (2009)
+* Roguelike
+* Singleplayer
+* [Repo](https://github.com/midzer/BrogueCE) / [Wiki](https://en.wikipedia.org/wiki/Brogue_(video_game))
+* Maus, Tastatur, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/brogue/)
+
 ### Cave Story
 
 * Original (2004)
@@ -365,6 +375,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Tastatur, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/pacman/)
+
+### Powermanga
+
+* Original (1999)
+* Top-Down-Shooter
+* Singleplayer
+* [Repo](https://github.com/midzer/Powermanga) / [Wiki](https://libregamewiki.org/Powermanga)
+* Tastatur, Touch
+* 🥷🥷🥷
+* [Play!](/wasm/powermanga/)
 
 ### Prince of Persia
 
