@@ -496,6 +496,16 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * 🐱
 * [Play external!](https://supertux.semphris.com/play/)
 
+### Torus Trooper
+
+* Original (2004)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/speps/tt) / [Wiki](https://en.wikipedia.org/wiki/Torus_Trooper)
+* Keyboard, Touch
+* 🥷🥷🥷🥷
+* [Play external!](https://torustrooper.xyz/)
+
 ### Tower To Heaven
 
 * Original (2021)
