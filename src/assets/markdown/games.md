@@ -1,8 +1,8 @@
 # Games
 
-Ich erstelle und sammle [Emscripten](https://emscripten.org/) Web-Ports von Spielen, meist entdeckt bei [Open Source Game Clones](https://osgameclones.com/).
+I create and collect [Emscripten](https://emscripten.org/) web ports of games, mostly discovered at [Open Source Game Clones](https://osgameclones.com/).
 
-Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamteindruck und Qualität der Portierung. Ungetestete Spiele bekommen (vorübergehend) eine 🐱.
+I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall impression and quality of the port. Untested games get (temporarily) a 🐱.
 
 ## Free Open Source Software
 
@@ -11,18 +11,18 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (1996)
 * Run 'n' Gun
 * Singleplayer
-* [Repo](https://github.com/midzer/abuse) / [Wiki](https://de.wikipedia.org/wiki/Abuse)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/abuse) / [Wiki](https://en.wikipedia.org/wiki/Abuse_(video_game))
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/abuse/)
 
 ### Anarch
 
 * Original (2020)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
 * [Repo](https://gitlab.com/drummyfish/anarch) / [Wiki](https://libregamewiki.org/Anarch)
-* Maus, Tastatur
+* Keyboard, Mouse
 * 🐱
 * [Play external!](https://drummyfish.gitlab.io/anarch/bin/web/anarch.html)
 
@@ -30,9 +30,9 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 * Original (1993)
 * Roguelike
-* Single- und Multiplayer
-* [Repo](https://github.com/angband/angband) / [Wiki](https://de.wikipedia.org/wiki/Angband)
-* Tastatur
+* Single- and Multiplayer
+* [Repo](https://github.com/angband/angband) / [Wiki](https://en.wikipedia.org/wiki/Angband_(video_game))
+* Keyboard
 * 🐱
 * [Play external!](https://angband.live/)
 
@@ -41,8 +41,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (2007)
 * Top-Down-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/astromenace) / [Wiki](https://de.wikipedia.org/wiki/AstroMenace)
-* Maus, Gamepad, Tastatur
+* [Repo](https://github.com/midzer/astromenace) / [Wiki](https://en.wikipedia.org/wiki/AstroMenace)
+* Gamepad, Keyboard, Mouse
 * 🥷🥷🥷
 * [Play!](/wasm/astromenace/)
 
@@ -51,18 +51,18 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Remake (1981)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/GMH-Code/Asylum) / [Wiki](https://de.wikipedia.org/wiki/Asylum_(Computerspiel))
-* Tastatur
+* [Repo](https://github.com/GMH-Code/Asylum) / [Wiki](https://en.wikipedia.org/wiki/Asylum_(1981_video_game))
+* Keyboard
 * 🥷
 * [Play external!](https://asylum.m-h.org.uk/)
 
 ### Ballerburg SDL
 
-* Remake von Ballerburg (1987)
-* Artillery-Spiel
-* Single- und Multiplayer
-* [Repo](https://baller.tuxfamily.org/) / [Wiki](https://de.wikipedia.org/wiki/Ballerburg)
-* Maus, Tastatur, Touch
+* Remake of Ballerburg (1987)
+* Artillery-Game
+* Single- and Multiplayer
+* [Repo](https://baller.tuxfamily.org/) / [Wiki](https://en.wikipedia.org/wiki/Ballerburg)
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷
 * [Play external!](https://baller.tuxfamily.org/online/)
 
@@ -70,9 +70,9 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 * Original (2000)
 * Arcade
-* Single- und Multiplayer
-* [Repo](https://github.com/danielknobe/blobbyvolley2) / [Wiki](https://de.wikipedia.org/wiki/Blobby_Volley)
-* Maus, Tastatur
+* Single- and Multiplayer
+* [Repo](https://github.com/danielknobe/blobbyvolley2) / [Wiki](https://en.wikipedia.org/wiki/Blobby_Volley)
+* Keyboard, Mouse
 * 🥷🥷🥷🥷🥷
 * [Play external!](http://blobbyvolley.de/data/bv2wa/)
 
@@ -81,18 +81,18 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (2006)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/bloboats)
-* Tastatur
-* 🥷🥷🥷🥷
+* [Repo](https://github.com/midzer/bloboats) / [Wiki](https://libregamewiki.org/Bloboats)
+* Keyboard
+* 🥷🥷🥷
 * [Play!](/wasm/bloboats/)
 
 ### Bombermaaan
 
-* Clone von Bomberman (1983)
+* Clone of Bomberman (1983)
 * Arcade
-* Single- und Multiplayer
-* [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://de.wikipedia.org/wiki/Bomberman)
-* Tastatur
+* Single- and Multiplayer
+* [Repo](https://github.com/midzer/Bombermaaan) / [Wiki](https://en.wikipedia.org/wiki/Bomberman)
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play!](/wasm/bombermaaan/)
 
@@ -102,17 +102,17 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Roguelike
 * Singleplayer
 * [Repo](https://github.com/midzer/BrogueCE) / [Wiki](https://en.wikipedia.org/wiki/Brogue_(video_game))
-* Maus, Tastatur, Touch
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/brogue/)
 
 ### Cave Story
 
 * Original (2004)
-* Platform-Abenteuer
+* Platform-Adventure
 * Singleplayer
-* [Repo](https://github.com/midzer/nxengine-evo) / [Wiki](https://de.wikipedia.org/wiki/Cave_Story)
-* Tastatur
+* [Repo](https://github.com/midzer/nxengine-evo) / [Wiki](https://en.wikipedia.org/wiki/Cave_Story)
+* Keyboard
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/cavestory/)
 
@@ -122,7 +122,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Run 'n' Gun
 * Singleplayer
 * [Repo](https://github.com/midzer/cdogs-sdl) / [Wiki](https://en.wikipedia.org/wiki/C-Dogs)
-* Tastatur
+* Keyboard
 * 🥷🥷🥷
 * [Play!](/wasm/cdogs/)
 
@@ -131,8 +131,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (2018)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/midzer/ccleste) / [Wiki](https://de.wikipedia.org/wiki/Celeste_(Computerspiel))
-* Tastatur
+* [Repo](https://github.com/midzer/ccleste) / [Wiki](https://en.wikipedia.org/wiki/Celeste_(video_game))
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play!](/wasm/celeste/)
 
@@ -142,8 +142,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/chromium-bsu) / [Wiki](https://en.wikipedia.org/wiki/Chromium_B.S.U.)
-* Maus, Tastatur, Touch
-* 🥷🥷🥷🥷
+* Keyboard, Mouse, Touch
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/chromium-bsu/)
 
 ### Commander Keen
@@ -151,8 +151,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (1990)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/jamesfmackenzie/chocolatekeen) / [Wiki](https://de.wikipedia.org/wiki/Commander_Keen)
-* Tastatur
+* [Repo](https://github.com/jamesfmackenzie/chocolatekeen) / [Wiki](https://en.wikipedia.org/wiki/Commander_Keen)
+* Keyboard
 * 🥷🥷🥷
 * [Play external!](http://www.jamesfmackenzie.com/chocolatekeen)
 
@@ -160,79 +160,79 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 * Original (2000)
 * Racing
-* Single- und Multiplayer
+* Single- and Multiplayer
 * [Repo](https://github.com/midzer/CroMagRally) / [Wiki](https://en.wikipedia.org/wiki/Cro-Mag_Rally)
-* Tastatur
+* Keyboard
 * 🥷🥷
 * [Play!](/wasm/cromagrally/)
 
 ### Cuyo
 
-* Clone von Dr. Mario (1990) 
+* Clone of Dr. Mario (1990) 
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/cuyo) / [Wiki](https://de.wikipedia.org/wiki/Dr._Mario)
-* Tastatur, Touch
-* 🥷🥷🥷🥷
+* [Repo](https://github.com/midzer/cuyo) / [Wiki](https://en.wikipedia.org/wiki/Dr._Mario)
+* Keyboard, Touch
+* 🥷🥷🥷
 * [Play!](/wasm/cuyo/)
 
 ### Der Clou!
 
 * Official (1994)
-* Einbruchsimulation
+* Adventure game
 * Singleplayer
-* [Repo](https://github.com/midzer/derclou) / [Wiki](https://de.wikipedia.org/wiki/Der_Clou!)
-* Maus, Tastatur
+* [Repo](https://github.com/midzer/derclou) / [Wiki](https://en.wikipedia.org/wiki/The_Clue!)
+* Keyboard, Mouse
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/derclou/)
 
 ### Dungeon Rush
 
-* Inspiriert von Snake (1998)
+* Inspired by Snake (1998)
 * Arcade
-* Single- und Multiplayer
+* Single- and Multiplayer
 * [Repo](https://github.com/midzer/DungeonRush)
-* Tastatur, Touch
+* Keyboard, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/dungeonrush/)
 
 ### Flare
 
-* Clone von Diablo (1997)
-* Action-Rollenspiel
+* Inspired by Diablo (1997)
+* Action role-playing game
 * Singleplayer
-* [Repo](https://github.com/flareteam/flare-game) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
-* Maus, Tastatur
-* 🥷🥷🥷🥷
+* [Repo](https://github.com/flareteam/flare-game) / [Wiki](https://en.wikipedia.org/wiki/Diablo_(video_game))
+* Keyboard, Mouse
+* 🥷🥷🥷
 * [Play external!](https://dorkster.itch.io/flare-emscripten-version)
 
 ### Freegemas
 
-* Clone von Bejeweled (2001)
+* Clone of Bejeweled (2001)
 * Puzzle
 * Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
-* Maus, Gamepad, Tastatur, Touch
+* Gamebad, Keybaord, Mouse, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/freegemas/)
 
 ### Freegish
 
-* Clone von Gish (2004)
+* Clone of Gish (2004)
 * Platform
 * Singleplayer
 * [Repo](https://github.com/midzer/freegish) / [Wiki](https://en.wikipedia.org/wiki/Gish_(video_game))
-* Tastatur
+* Keyboard
 * 🥷🥷
 * [Play!](/wasm/freegish/)
 
 ### FreeSiege
 
 * Original (2009)
-* Puzzlespiel
-* Single- und Multiplayer
+* Puzzle
+* Single- and Multiplayer
 * [Repo](https://github.com/midzer/freesiege)
-* Gamepad, Tastatur
+* Gamepad, Keyboard
 * 🥷
 * [Play!](/wasm/freesiege/)
 
@@ -242,27 +242,27 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Platform
 * Singleplayer
 * [Repo](https://github.com/midzer/gilbert) / [Wiki](https://libregamewiki.org/Gilbert_and_the_doors)
-* Tastatur, Touch
-* 🥷🥷🥷🥷
+* Keyboard, Touch
+* 🥷🥷🥷
 * [Play!](/wasm/gilbert/)
 
 ### Help Hannah's Horse
 
-* Clone von Pac-Man (1980)
+* Clone of Pac-Man (1980)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/hannah) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
-* Tastatur, Touch
+* [Repo](https://github.com/midzer/hannah) / [Wiki](https://en.wikipedia.org/wiki/Pac-Man)
+* Keyboard, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/hannah/)
 
 ### Hurrican
 
-* Clone von Turrican (1990)
+* Clone of Turrican (1990)
 * Jump 'n' Shoot
-* Single- und Multiplayer
+* Single- and Multiplayer
 * [Repo](https://github.com/midzer/hurrican) / [Wiki](https://de.wikipedia.org/wiki/Turrican)
-* Tastatur
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play!](/wasm/hurrican/)
 
@@ -272,17 +272,17 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Jump 'n' Run
 * Multiplayer
 * [Repo](https://github.com/midzer/jumpnbump) / [Wiki](https://en.wikipedia.org/wiki/Jump_%27n_Bump)
-* Tastatur
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play!](/wasm/jumpnbump/)
 
 ### LBreakoutHD
 
-* Clone von Breakout (1976)
+* Clone of Breakout (1976)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/lbreakouthd) / [Wiki](https://en.wikipedia.org/wiki/Breakout_(video_game))
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/lbreakouthd/)
 
@@ -291,88 +291,88 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (2006)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/Li-Ri)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/Li-Ri) / [Wiki](https://libregamewiki.org/Ri-li)
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/li-ri/)
 
 ### Neverball
 
-* Clone von Super Monkey Ball (2001)
+* Clone of Super Monkey Ball (2001)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/Neverball/neverball) / [Wiki](https://de.wikipedia.org/wiki/Neverball)
-* Maus, Touch
+* [Repo](https://github.com/Neverball/neverball) / [Wiki](https://en.wikipedia.org/wiki/Neverball)
+* Mouse, Touch
 * 🥷🥷🥷🥷🥷
 * [Play external!](https://play.neverball.org/)
 
 ### Numpty Physics
 
-* Clone von Crayon Physics (2007)
-* Physikspiel
+* Clone of Crayon Physics (2007)
+* Physics game
 * Singleplayer
-* [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://de.wikipedia.org/wiki/Crayon_Physics_Deluxe)
-* Maus, Touch
+* [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://en.wikipedia.org/wiki/Crayon_Physics_Deluxe)
+* Mouse, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/numptyphysics/)
 
 ### Magic Sushi
 
-* Clone von Bejeweled (2001)
+* Clone of Bejeweled (2001)
 * Puzzle
 * Singleplayer
 * [Repo](https://github.com/EXL/Magic-Sushi) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
-* Maus, Tastatur, Touch
-* 🥷🥷🥷
+* Keyboard, Mouse, Touch
+* 🥷🥷
 * [Play external!](https://lab.exlmoto.ru/sushi/)
 
 ### Open Fodder
 
-* Clone von Cannon Fodder (1993)
+* Clone of Cannon Fodder (1993)
 * Shoot 'em up
 * Singleplayer
-* [Repo](https://github.com/OpenFodder/openfodder) / [Wiki](https://de.wikipedia.org/wiki/Cannon_Fodder)
-* Tastatur
+* [Repo](https://github.com/OpenFodder/openfodder) / [Wiki](https://en.wikipedia.org/wiki/Cannon_Fodder_(video_game))
+* Keyboard
 * 🐱
 * [Play external!](https://s3.amazonaws.com/openfodder/OpenFodder.html)
 
 ### Open Golf
 
 * Original (2020)
-* Sport
+* Sports game
 * Singleplayer
 * [Repo](https://github.com/mgerdes/Open-Golf)
-* Tastatur
+* Keyboard
 * 🐱
 * [Play external!](https://mgerdes.github.io/minigolf.html)
 
 ### OpenTTD
 
-* Clone von Transport Tycoon Deluxe (1995)
-* Wirtschaftsimulation
+* Clone of Transport Tycoon Deluxe (1995)
+* Business simulation game
 * Singleplayer
-* [Repo](https://github.com/OpenTTD/OpenTTD) / [Wiki](https://de.wikipedia.org/wiki/Transport_Tycoon)
-* Tastatur
+* [Repo](https://github.com/OpenTTD/OpenTTD) / [Wiki](https://en.wikipedia.org/wiki/Transport_Tycoon)
+* Keyboard
 * 🥷🥷🥷
 * [Play!](/wasm/openttd/)
 
 ### OpenTyrian
 
-* Clone von Tyrian (1995)
+* Clone of Tyrian (1995)
 * Top-Down-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/opentyrian) / [Wiki](https://de.wikipedia.org/wiki/Tyrian)
-* Tastatur
+* [Repo](https://github.com/midzer/opentyrian) / [Wiki](https://en.wikipedia.org/wiki/Tyrian_(video_game))
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play!](/wasm/opentyrian/)
 
 ### Pacman
 
-* Clone von Pac-Man (1980)
+* Clone of Pac-Man (1980)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/pacman) / [Wiki](https://de.wikipedia.org/wiki/Pac-Man)
-* Tastatur, Touch
+* [Repo](https://github.com/midzer/pacman) / [Wiki](https://en.wikipedia.org/wiki/Pac-Man)
+* Keyboard, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/pacman/)
 
@@ -382,7 +382,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/Powermanga) / [Wiki](https://libregamewiki.org/Powermanga)
-* Tastatur, Touch
+* Keyboard, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/powermanga/)
 
@@ -391,69 +391,69 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1989)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://de.wikipedia.org/wiki/Prince_of_Persia_(Computerspiel,_1989))
-* Gamepad, Tastatur
+* [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://en.wikipedia.org/wiki/Prince_of_Persia_(1989_video_game))
+* Gamepad, Keyboard
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/prince/)
 
 ### Rocks'n'Diamonds
 
-* Clone von Boulder Dash (1984)
+* Clone of Boulder Dash (1984)
 * Puzzle
 * Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
-* Maus, Gamepad, Tastatur
-* 🐱
+* Gamepad, Keyboard, Mouse
+* 🥷🥷🥷
 * [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
 ### SDL-Ball
 
-* Clone von Breakout (1976)
+* Clone of Breakout (1976)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://de.wikipedia.org/wiki/Breakout_%28Computerspiel%29)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/sdl-ball) / [Wiki](https://en.wikipedia.org/wiki/Breakout_(video_game))
+* Keyboard, Mouse, Touch
 * 🥷🥷
 * [Play!](/wasm/sdl-ball/)
 
 ### SDL Sopwith
 
-* Remake von Sopwith (1984)
+* Remake of Sopwith (1984)
 * Shoot 'em up
 * Singleplayer
 * [Repo](https://github.com/fragglet/sdl-sopwith) / [Wiki](https://en.wikipedia.org/wiki/Sopwith_(video_game))
-* Tastatur
+* Keyboard
 * 🥷🥷🥷
 * [Play external!](https://fragglet.github.io/sdl-sopwith/)
 
 ### Shiromino
 
-* Clone von Tetris (1984)
+* Clone of Tetris (1984)
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/shiromino) / [Wiki](https://tetris.wiki/Shiromino)
-* Tastatur
-* 🥷🥷
+* Keyboard
+* 🥷🥷🥷
 * [Play!](/wasm/shiromino/)
 
 ### Simutrans
 
 * Original (1999)
-* Transportsimulator
+* Transport simulation game
 * Singleplayer
-* [Repo](https://github.com/midzer/simutrans) / [Wiki](https://de.wikipedia.org/wiki/Simutrans)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/simutrans) / [Wiki](https://en.wikipedia.org/wiki/Simutrans)
+* Keyboard, Mouse, Touch
 * 🐱
 * [Play!](/wasm/simutrans/)
 
 ### Space Cadet
 
-* Remake (1995)
+* Original (1995)
 * Pinball
 * Singleplayer
 * [Repo](https://github.com/alula/SpaceCadetPinball) / [Wiki](https://en.wikipedia.org/wiki/Full_Tilt!_Pinball#3D_Pinball_for_Windows_%E2%80%93_Space_Cadet)
-* Tastatur
-* 🐱
+* Keyboard
+* 🥷🥷🥷🥷
 * [Play external!](https://alula.github.io/SpaceCadetPinball/)
 
 ### Project: Starfighter
@@ -462,7 +462,7 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Shoot 'em up
 * Singleplayer
 * [Repo](https://github.com/midzer/starfighter) / [Wiki](https://libregamewiki.org/Starfighter)
-* Maus, Tastatur, Touch
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/starfighter/)
 
@@ -471,8 +471,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (1991)
 * Puzzle
 * Singleplayer
-* [Repo](https://github.com/midzer/open-supaplex) / [Wiki](https://de.wikipedia.org/wiki/Supaplex)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/open-supaplex) / [Wiki](https://en.wikipedia.org/wiki/Supaplex)
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/supaplex/)
 
@@ -482,17 +482,17 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Jump 'n' Run
 * Multiplayer
 * [Repo](https://github.com/mmatyas/supermariowar) / [Wiki](https://en.wikipedia.org/wiki/Super_Mario_War)
-* Tastatur
-* 🐱
+* Keyboard
+* 🥷🥷🥷
 * [Play external!](https://mmatyas.github.io/smw-js/)
 
 ### SuperTux
 
-* Clone von Super Mario (1985)
+* Clone of Super Mario (1985)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/SuperTux/supertux) / [Wiki](https://de.wikipedia.org/wiki/SuperTux)
-* Tastatur
+* [Repo](https://github.com/SuperTux/supertux) / [Wiki](https://en.wikipedia.org/wiki/SuperTux)
+* Keyboard
 * 🐱
 * [Play external!](https://supertux.semphris.com/play/)
 
@@ -502,27 +502,27 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * JRPG
 * Singleplayer
 * [Repo](https://codeberg.org/midzer/tth)
-* Gamepad, Maus, Tastatur, Touch
+* Gamepad, Keyboard, Mouse, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/tth/)
 
 ### Vectoroids
 
-* Clone von Asteroids (1979)
+* Clone of Asteroids (1979)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://de.wikipedia.org/wiki/Asteroids)
-* Tastatur
+* [Repo](https://github.com/midzer/vectoroids) / [Wiki](https://en.wikipedia.org/wiki/Asteroids_(video_game))
+* Keyboard
 * 🥷🥷🥷
 * [Play!](/wasm/vectoroids/)
 
 ### Violetland
 
-* Clone von Crimsonland (2003)
+* Clone of Crimsonland (2003)
 * Top-Down-Shooter
 * Singleplayer
 * [Repo](https://github.com/midzer/violetland) / [Wiki](https://en.wikipedia.org/wiki/Crimsonland)
-* Maus, Tastatur, Touch
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/violetland/)
 
@@ -531,8 +531,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Original (2010)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/midzer/vvvvvv) / [Wiki](https://de.wikipedia.org/wiki/VVVVVV)
-* Tastatur, Touch
+* [Repo](https://github.com/midzer/vvvvvv) / [Wiki](https://en.wikipedia.org/wiki/VVVVVV)
+* Keyboard, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/vvvvvv/)
 
@@ -542,27 +542,27 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Platform
 * Singleplayer
 * [Repo](https://github.com/midzer/waterCloset)
-* Tastatur, Touch
+* Keyboard, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/water-closet/)
 
 ### XGalaga
 
-* Clone von Galaga (1981)
+* Clone of Galaga (1981)
 * Arcade
 * Singleplayer
-* [Repo](https://github.com/midzer/xgalaga-sdl) / [Wiki](https://de.wikipedia.org/wiki/Galaga)
-* Tastatur, Touch
-* 🥷🥷🥷
+* [Repo](https://github.com/midzer/xgalaga-sdl) / [Wiki](https://en.wikipedia.org/wiki/Galaga)
+* Keyboard, Touch
+* 🥷🥷
 * [Play!](/wasm/xgalaga/)
 
 ### xrick
 
-* Clone von Rick Dangerous (1989)
+* Clone of Rick Dangerous (1989)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/zpqrtbnk/xrick) / [Wiki](https://de.wikipedia.org/wiki/Rick_Dangerous)
-* Tastatur, Touch
+* [Repo](https://github.com/zpqrtbnk/xrick) / [Wiki](https://en.wikipedia.org/wiki/Rick_Dangerous)
+* Keyboard, Touch
 * 🐱
 * [Play external!](https://www.xrick.net/)
 
@@ -570,23 +570,23 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 ### Command & Conquer
 
-* Echtzeitstrategie
+* Real-Time-Strategy
 * Singleplayer
 * [Repo](https://github.com/midzer/Vanilla-Conquer)
-* Maus, Tastatur, Touch
+* Keyboard, Mouse, Touch
 
 #### Tiberian Dawn
 
 * Official (1995)
-* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Der_Tiberiumkonflikt)
-* 🥷🥷🥷🥷
+* [Wiki](https://en.wikipedia.org/wiki/Command_%26_Conquer_(1995_video_game))
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/tiberian-dawn/)
 
 #### Red Alert
 
 * Official (1996)
-* [Wiki](https://de.wikipedia.org/wiki/Command_%26_Conquer:_Alarmstufe_Rot)
-* 🥷🥷🥷🥷
+* [Wiki](https://en.wikipedia.org/wiki/Command_%26_Conquer:_Red_Alert)
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/red-alert/)
 
 ## Shareware
@@ -594,40 +594,40 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 ### Descent I
 
 * Official (1995)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://de.wikipedia.org/wiki/Descent_(Computerspiel))
-* Tastatur
-* 🥷🥷
+* [Repo](https://github.com/midzer/dxx-rebirth) / [Wiki](https://en.wikipedia.org/wiki/Descent_(video_game))
+* Keyboard
+* 🥷🥷🥷
 * [Play!](/wasm/descent1/)
 
 ### Diablo
 
 * Official (1997)
-* Action-Rollenspiel
+* Action role-playing game
 * Singleplayer
-* [Repo](https://github.com/d07RiV/diabloweb) / [Wiki](https://de.wikipedia.org/wiki/Diablo_(Computerspiel))
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/d07RiV/diabloweb) / [Wiki](https://en.wikipedia.org/wiki/Diablo_(video_game))
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷🥷
 * [Play external!](https://d07riv.github.io/diabloweb/)
 
 ### Doom
 
 * Official (1993)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://de.wikipedia.org/wiki/Doom)
-* Maus, Tastatur
+* [Repo](https://github.com/midzer/chocolate-doom) / [Wiki](https://en.wikipedia.org/wiki/Doom_(1993_video_game))
+* Keyboard, Mouse
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/doom/)
 
 ### Doom 3
 
 * Official (2004)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/gabrielcuvillier/d3wasm) / [Wiki](https://de.wikipedia.org/wiki/Doom_3)
-* Maus, Tastatur
+* [Repo](https://github.com/gabrielcuvillier/d3wasm) / [Wiki](https://en.wikipedia.org/wiki/Doom_3)
+* Keyboard, Mouse
 * 🥷🥷🥷🥷🥷
 * [Play external!](http://wasm.continuation-labs.com/d3demo/)
 
@@ -636,19 +636,19 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1993)
 * Jump 'n' Shoot
 * Singleplayer
-* [Repo](https://github.com/lethal-guitar/RigelEngine) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem)
-* Tastatur
+* [Repo](https://github.com/lethal-guitar/RigelEngine) / [Wiki](https://en.wikipedia.org/wiki/Duke_Nukem)
+* Keyboard
 * 🥷🥷
 * [Play external!](https://rigelengine.nikolai-wuttke.de/)
 
 ### Duke Nukem 3D
 
 * Official (1996)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/BelgianChocolateDuke3D) / [Wiki](https://de.wikipedia.org/wiki/Duke_Nukem_3D)
+* [Repo](https://github.com/midzer/BelgianChocolateDuke3D) / [Wiki](https://en.wikipedia.org/wiki/Duke_Nukem_3D)
 * 🥷🥷🥷
-* Maus, Tastatur
+* Keyboard, Mouse
 * [Play!](/wasm/duke3d/)
 
 ### Fade To Black
@@ -656,8 +656,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1995)
 * Action-Adventure
 * Singleplayer
-* [Repo](https://github.com/midzer/f2bgl) / [Wiki](https://de.wikipedia.org/wiki/Fade_to_Black_(Computerspiel))
-* Tastatur
+* [Repo](https://github.com/midzer/f2bgl) / [Wiki](https://en.wikipedia.org/wiki/Fade_to_Black_(video_game))
+* Keyboard
 * 🥷
 * [Play!](/wasm/f2b/)
 
@@ -665,38 +665,38 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 
 * Original (1998)
 * Cinematic platformer
-* [Repo](https://github.com/midzer/hode) / [Wiki](https://de.wikipedia.org/wiki/Heart_of_Darkness_(Computerspiel))
-* Tastatur
+* [Repo](https://github.com/midzer/hode) / [Wiki](https://en.wikipedia.org/wiki/Heart_of_Darkness_(video_game))
+* Keyboard
 * 🥷🥷🥷
 * [Play!](/wasm/hod/)
 
 ### Heroes of Might and Magic II
 
 * Official (1996)
-* Rundenbasiertes Strategiespiel
+* Turn-based strategy game
 * Singleplayer
-* [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://de.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
-* Maus, Tastatur, Touch
+* [Repo](https://github.com/midzer/fheroes2) / [Wiki](https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II)
+* Keyboard, Mouse, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/heroes2/)
 
 ### Homeworld
 
 * Official (1999)
-* Echtzeitstrategie
+* Real-Time-Strategy
 * Singleplayer
-* [Repo](https://github.com/GardensOfKadesh/Homeworld) / [Wiki](https://de.wikipedia.org/wiki/Homeworld)
-* Maus, Tastatur
+* [Repo](https://github.com/GardensOfKadesh/Homeworld) / [Wiki](https://en.wikipedia.org/wiki/Homeworld)
+* Keyboard, Mouse
 * 🐱
 * [Play external!](https://gardensofkadesh.github.io/)
 
 ### Jagged Alliance 2
 
 * Original (1999)
-* Taktik- und Strategiespiel
+* Turn-based strategy game
 * Singleplayer
-* [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://de.wikipedia.org/wiki/Jagged_Alliance_2)
-* Maus, Tastatur
+* [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://en.wikipedia.org/wiki/Jagged_Alliance_2)
+* Keyboard, Mouse
 * 🥷🥷🥷
 * [Play!](/wasm/jaggedalliance2/)
 
@@ -705,8 +705,8 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1994)
 * Jump 'n' Run
 * Singleplayer
-* [Repo](https://github.com/AlisterT/openjazz) / [Wiki](https://de.wikipedia.org/wiki/Jazz_Jackrabbit)
-* Tastatur
+* [Repo](https://github.com/AlisterT/openjazz) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit)
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play external!](https://openjazz.github.io/)
 
@@ -716,27 +716,27 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/deathkiller/jazz2-native) / [Wiki](https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2)
-* Tastatur
+* Keyboard
 * 🥷🥷🥷🥷
 * [Play external!](https://deat.tk/jazz2/wasm/)
 
 ### Quake
 
 * Official (1996)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/GMH-Code/Quake-WASM) / [Wiki](https://de.wikipedia.org/wiki/Quake)
-* Maus, Gamepad, Tastatur
+* [Repo](https://github.com/GMH-Code/Quake-WASM) / [Wiki](https://en.wikipedia.org/wiki/Quake_(video_game))
+* Gamepad, Keyboard, Mouse
 * 🥷🥷🥷🥷
 * [Play external!](https://quake.m-h.org.uk/)
 
 ### Quake 3
 
 * Official (1999)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/lrusso/Quake3) / [Wiki](https://de.wikipedia.org/wiki/Quake_III_Arena)
-* Maus, Gamepad, Tastatur
+* [Repo](https://github.com/lrusso/Quake3) / [Wiki](https://en.wikipedia.org/wiki/Quake_III_Arena)
+* Gamepad, Keyboard, Mouse
 * 🥷🥷🥷🥷🥷
 * [Play external!](https://lrusso.github.io/Quake3/Quake3.htm)
 
@@ -745,57 +745,57 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * Official (1994)
 * Top-Down-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/raptor) / [Wiki](https://de.wikipedia.org/wiki/Raptor_(Computerspiel))
-* Maus, Tastatur
+* [Repo](https://github.com/midzer/raptor) / [Wiki](https://en.wikipedia.org/wiki/Raptor:_Call_of_the_Shadows)
+* Keyboard, Mouse
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/raptor/)
 
 ### Rise of the Triad
 
 * Official (1994)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/taradino) / [Wiki](https://de.wikipedia.org/wiki/Rise_of_the_Triad)
-* Maus, Tastatur
-* 🥷🥷🥷
+* [Repo](https://github.com/midzer/taradino) / [Wiki](https://en.wikipedia.org/wiki/Rise_of_the_Triad)
+* Keyboard, Mouse
+* 🥷🥷
 * [Play!](/wasm/rott/)
 
 ### Shadow Warrior
 
 * Official (1997)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/jfsw) / [Wiki](https://de.wikipedia.org/wiki/Shadow_Warrior)
+* [Repo](https://github.com/midzer/jfsw) / [Wiki](https://en.wikipedia.org/wiki/Shadow_Warrior_(1997_video_game))
 * 🥷🥷🥷
-* Maus, Tastatur
+* Keyboard, Mouse
 * [Play!](/wasm/shadow-warrior/)
 
 ### Star Wars Jedi Knight: Dark Forces II
 
 * Official (1997)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/shinyquagsire23/OpenJKDF2) / [Wiki](https://de.wikipedia.org/wiki/Star_Wars_Jedi_Knight:_Dark_Forces_II)
+* [Repo](https://github.com/shinyquagsire23/OpenJKDF2) / [Wiki](https://en.wikipedia.org/wiki/Star_Wars_Jedi_Knight:_Dark_Forces_II)
 * 🥷🥷🥷🥷
-* Maus, Tastatur
+* Keyboard, Mouse
 * [Play external!](https://maxthomas.dev/openjkdf2/) (needs WebGL3)
 
 ### WipEout
 
 * Official (1995)
-* Rennspiel
+* Racing
 * Singleplayer
-* [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://de.wikipedia.org/wiki/Wipeout)
-* Tastatur
+* [Repo](https://github.com/phoboslab/wipeout-rewrite) / [Wiki](https://en.wikipedia.org/wiki/Wipeout_(video_game))
+* Keyboard
 * 🥷🥷🥷🥷🥷
 * [Play external!](https://phoboslab.org/wipegame/)
 
 ### Wolfenstein 3D
 
 * Official (1994)
-* Ego-Shooter
+* First-Person-Shooter
 * Singleplayer
-* [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://de.wikipedia.org/wiki/Wolfenstein_3D)
-* Tastatur
-* 🥷🥷🥷🥷
+* [Repo](https://github.com/midzer/wolf4sdl) / [Wiki](https://en.wikipedia.org/wiki/Wolfenstein_3D)
+* Keyboard
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/wolfenstein/)
