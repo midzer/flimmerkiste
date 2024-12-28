@@ -456,6 +456,16 @@ Dabei vergebe ich eine "Ninja-Bewertung" von 1-5 🥷 je nach Spielspaß, Gesamt
 * 🐱
 * [Play external!](https://alula.github.io/SpaceCadetPinball/)
 
+### Project: Starfighter
+
+* Original (2003)
+* Shoot 'em up
+* Singleplayer
+* [Repo](https://github.com/midzer/starfighter) / [Wiki](https://libregamewiki.org/Starfighter)
+* Maus, Tastatur, Touch
+* 🥷🥷🥷🥷🥷
+* [Play!](/wasm/starfighter/)
+
 ### Supaplex
 
 * Original (1991)
