@@ -1,4 +1,5 @@
 export const MODS = [
+    "2kad04.mod",
     "068.xm",
     "1990chip.mod",
     "AGGRESSiON - Easy DVD Creator 1.1.0 kg.xm",
