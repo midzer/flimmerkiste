@@ -1,9 +1,7 @@
 <nav>
-  <header>
-    <a [routerLink]="['']" routerLinkActive="active">
-      <img src="/assets/images/header.webp" width="536" height="42" alt="Flimmerkiste">
-    </a>
-  </header>
+  <a [routerLink]="['']" routerLinkActive="active">
+    <img src="/assets/images/header.webp" width="536" height="42" alt="Flimmerkiste">
+  </a>
   <ul>
     @for (menuitem of menu; track menuitem) {
       <li>
