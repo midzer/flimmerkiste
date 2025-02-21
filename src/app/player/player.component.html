@@ -6,7 +6,7 @@
     </div>
   </div>
   <label for="tunes">Select a tune:</label>
-  <select [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune" name="tunes">
+  <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
     <optgroup label="SIDS">
       @for (sid of sids; track sid) {
         <option [ngValue]="sid">
