@@ -52,8 +52,10 @@ export const MODS = [
     "toilet.xm",
     "transfu3.mod",
     "tu_itr29.mod",
+    "tuber_theme_14.xm",
     "tz-abmin.mod",
     "watersky.xm",
     "wotw-intro56.mod",
-    "yum,cookie.xm"
+    "yum,cookie.xm",
+    "zabttc.mod"
 ]
