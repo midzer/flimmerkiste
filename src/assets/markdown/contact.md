@@ -2,7 +2,7 @@
 
 * eMail: moin<span hidden>.nospam</span>@midzer.de
 * IRC: midzer on [Libera](https://libera.chat)
-* RSS: [JSON](https://midzer.de/feed.json) / [XML](https://midzer.de/sitemap.xml)
+* RSS: [Atom](https://midzer.de/atom.xml) / [JSON](https://midzer.de/feed.json) / [XML](https://midzer.de/feed.xml)
 * Signal: [dennis.23](https://signal.me/#eu/uEDHSc1w2jQJOnuylgVg0gcL0_VVUeSH74uL4xKjAUpHtlsrhmJGZIxDQYEcQu_O)
 * Threema: [8XVZAC74](https://threema.id/8XVZAC74)
 * XMPP: midzer<span hidden>.nospam</span>@jabber.ccc.de

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Flimmerkiste</title>
+    <link>https://midzer.de/</link>
+    <description></description>
+    <item>
+      <title></title>
+      <link>https://midzer.de/omas-kaesetorte</link>
+      <description></description>
+      <guid>https://midzer.de/omas-kaesetorte</guid>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/als-ich-mich-selbst-zu-lieben-begann</link>
+      <description></description>
+      <guid>https://midzer.de/als-ich-mich-selbst-zu-lieben-begann</guid>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/porting-games-for-the-web-with-emscripten</link>
+      <description></description>
+      <guid>https://midzer.de/porting-games-for-the-web-with-emscripten</guid>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/kaiserschmarrn</link>
+      <description></description>
+      <guid>https://midzer.de/kaiserschmarrn</guid>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/the-future-is-remix</link>
+      <description></description>
+      <guid>https://midzer.de/the-future-is-remix</guid>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/obatzda</link>
+      <description></description>
+      <guid>https://midzer.de/obatzda</guid>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/how-to-disrupt-an-online-conversation-legally</link>
+      <description></description>
+      <guid>https://midzer.de/how-to-disrupt-an-online-conversation-legally</guid>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/eierlikoerkuchen</link>
+      <description></description>
+      <guid>https://midzer.de/eierlikoerkuchen</guid>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/a-short-guideline-for-getting-stuff-done-without-ai</link>
+      <description></description>
+      <guid>https://midzer.de/a-short-guideline-for-getting-stuff-done-without-ai</guid>
+      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/omas-faschingskrapfen</link>
+      <description></description>
+      <guid>https://midzer.de/omas-faschingskrapfen</guid>
+      <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/eine-frage-des-geldes</link>
+      <description></description>
+      <guid>https://midzer.de/eine-frage-des-geldes</guid>
+      <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/avocado-mit-shrimps</link>
+      <description></description>
+      <guid>https://midzer.de/avocado-mit-shrimps</guid>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/schwedische-apfeltorte</link>
+      <description></description>
+      <guid>https://midzer.de/schwedische-apfeltorte</guid>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/yummylicious</link>
+      <description></description>
+      <guid>https://midzer.de/yummylicious</guid>
+      <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/von-gut-und-boese</link>
+      <description></description>
+      <guid>https://midzer.de/von-gut-und-boese</guid>
+      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/die-dualitaet-des-seins</link>
+      <description></description>
+      <guid>https://midzer.de/die-dualitaet-des-seins</guid>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/how-content-visibility-vastly-improved-page-rendering-time-for-shoogle</link>
+      <description></description>
+      <guid>https://midzer.de/how-content-visibility-vastly-improved-page-rendering-time-for-shoogle</guid>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/a-minimal-approach-to-automatic-manual-and-persistent-dark-mode-for-websites</link>
+      <description></description>
+      <guid>https://midzer.de/a-minimal-approach-to-automatic-manual-and-persistent-dark-mode-for-websites</guid>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/mondgarten</link>
+      <description></description>
+      <guid>https://midzer.de/mondgarten</guid>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/guads-neis</link>
+      <description></description>
+      <guid>https://midzer.de/guads-neis</guid>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/2-accessible-ways-to-obfuscate-an-email-address-in-html-without-javascript</link>
+      <description></description>
+      <guid>https://midzer.de/2-accessible-ways-to-obfuscate-an-email-address-in-html-without-javascript</guid>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/how-to-skip-loading-polyfills-in-modern-browsers</link>
+      <description></description>
+      <guid>https://midzer.de/how-to-skip-loading-polyfills-in-modern-browsers</guid>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/90s-boiler-room</link>
+      <description></description>
+      <guid>https://midzer.de/90s-boiler-room</guid>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/ola-party</link>
+      <description></description>
+      <guid>https://midzer.de/ola-party</guid>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/tanzgeplenkel</link>
+      <description></description>
+      <guid>https://midzer.de/tanzgeplenkel</guid>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/infest</link>
+      <description></description>
+      <guid>https://midzer.de/infest</guid>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/traumlandschaften</link>
+      <description></description>
+      <guid>https://midzer.de/traumlandschaften</guid>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/nominierung</link>
+      <description></description>
+      <guid>https://midzer.de/nominierung</guid>
+      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/bsd-freakout</link>
+      <description></description>
+      <guid>https://midzer.de/bsd-freakout</guid>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/salatdressing</link>
+      <description></description>
+      <guid>https://midzer.de/salatdressing</guid>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/quarkspatzen</link>
+      <description></description>
+      <guid>https://midzer.de/quarkspatzen</guid>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/pancakes</link>
+      <description></description>
+      <guid>https://midzer.de/pancakes</guid>
+      <pubDate>Fri, 23 Nov 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/bits-and-bytes</link>
+      <description></description>
+      <guid>https://midzer.de/bits-and-bytes</guid>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/retro-dreams</link>
+      <description></description>
+      <guid>https://midzer.de/retro-dreams</guid>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/how-to-optimize-websites-for-performance</link>
+      <description></description>
+      <guid>https://midzer.de/how-to-optimize-websites-for-performance</guid>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/prielcrafted</link>
+      <description></description>
+      <guid>https://midzer.de/prielcrafted</guid>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/roaming-frequencies</link>
+      <description></description>
+      <guid>https://midzer.de/roaming-frequencies</guid>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/das-wort-zum-sonntag</link>
+      <description></description>
+      <guid>https://midzer.de/das-wort-zum-sonntag</guid>
+      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/transzendentales-potpourri</link>
+      <description></description>
+      <guid>https://midzer.de/transzendentales-potpourri</guid>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/relative-gedankennavigation</link>
+      <description></description>
+      <guid>https://midzer.de/relative-gedankennavigation</guid>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/oachkatzlbeats</link>
+      <description></description>
+      <guid>https://midzer.de/oachkatzlbeats</guid>
+      <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/die-schlosseiche-von-eisolzried</link>
+      <description></description>
+      <guid>https://midzer.de/die-schlosseiche-von-eisolzried</guid>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/lockpickingsimulator-2017</link>
+      <description></description>
+      <guid>https://midzer.de/lockpickingsimulator-2017</guid>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/pausenfiller</link>
+      <description></description>
+      <guid>https://midzer.de/pausenfiller</guid>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/bergfestzelebration-iii</link>
+      <description></description>
+      <guid>https://midzer.de/bergfestzelebration-iii</guid>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/retrogeschunkel</link>
+      <description></description>
+      <guid>https://midzer.de/retrogeschunkel</guid>
+      <pubDate>Mon, 15 Aug 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/marionettenzauber</link>
+      <description></description>
+      <guid>https://midzer.de/marionettenzauber</guid>
+      <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/darknet-von-daniel-suarez</link>
+      <description></description>
+      <guid>https://midzer.de/darknet-von-daniel-suarez</guid>
+      <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/midnight-flow</link>
+      <description></description>
+      <guid>https://midzer.de/midnight-flow</guid>
+      <pubDate>Wed, 20 Jul 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/creme-bavaroise</link>
+      <description></description>
+      <guid>https://midzer.de/creme-bavaroise</guid>
+      <pubDate>Sat, 14 May 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/go-pr0---mind-wanking</link>
+      <description></description>
+      <guid>https://midzer.de/go-pr0---mind-wanking</guid>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/sandgefluester</link>
+      <description></description>
+      <guid>https://midzer.de/sandgefluester</guid>
+      <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/guacamole</link>
+      <description></description>
+      <guid>https://midzer.de/guacamole</guid>
+      <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/ojja-mit-tbikha-de-sfax</link>
+      <description></description>
+      <guid>https://midzer.de/ojja-mit-tbikha-de-sfax</guid>
+      <pubDate>Mon, 08 Feb 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/bergfestzelebration-ii</link>
+      <description></description>
+      <guid>https://midzer.de/bergfestzelebration-ii</guid>
+      <pubDate>Wed, 27 Jan 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/quinoa-pfanne</link>
+      <description></description>
+      <guid>https://midzer.de/quinoa-pfanne</guid>
+      <pubDate>Sat, 16 Jan 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/groovesmoothie</link>
+      <description></description>
+      <guid>https://midzer.de/groovesmoothie</guid>
+      <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/kopfgeister</link>
+      <description></description>
+      <guid>https://midzer.de/kopfgeister</guid>
+      <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/rauchen-als-akt-des-passiven-widerstands</link>
+      <description></description>
+      <guid>https://midzer.de/rauchen-als-akt-des-passiven-widerstands</guid>
+      <pubDate>Wed, 21 Oct 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/inner-vision</link>
+      <description></description>
+      <guid>https://midzer.de/inner-vision</guid>
+      <pubDate>Tue, 13 Oct 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/endoplasmatisches-retikolum</link>
+      <description></description>
+      <guid>https://midzer.de/endoplasmatisches-retikolum</guid>
+      <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/bergfestzelebration</link>
+      <description></description>
+      <guid>https://midzer.de/bergfestzelebration</guid>
+      <pubDate>Fri, 21 Aug 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/wer-rastet-der-rostet</link>
+      <description></description>
+      <guid>https://midzer.de/wer-rastet-der-rostet</guid>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/style-ohne-hipstergewand</link>
+      <description></description>
+      <guid>https://midzer.de/style-ohne-hipstergewand</guid>
+      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/ueber-die-alpen-und-zurueck</link>
+      <description></description>
+      <guid>https://midzer.de/ueber-die-alpen-und-zurueck</guid>
+      <pubDate>Sun, 24 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/trommelfundgrube</link>
+      <description></description>
+      <guid>https://midzer.de/trommelfundgrube</guid>
+      <pubDate>Sat, 23 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/gimme-a-break</link>
+      <description></description>
+      <guid>https://midzer.de/gimme-a-break</guid>
+      <pubDate>Fri, 22 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/mit-pauken-und-tubas</link>
+      <description></description>
+      <guid>https://midzer.de/mit-pauken-und-tubas</guid>
+      <pubDate>Thu, 21 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/trend-zur-langsamkeit</link>
+      <description></description>
+      <guid>https://midzer.de/trend-zur-langsamkeit</guid>
+      <pubDate>Tue, 19 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/intro</link>
+      <description></description>
+      <guid>https://midzer.de/intro</guid>
+      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/</link>
+      <description></description>
+      <guid>https://midzer.de/</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/about</link>
+      <description></description>
+      <guid>https://midzer.de/about</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/games</link>
+      <description></description>
+      <guid>https://midzer.de/games</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/memes</link>
+      <description></description>
+      <guid>https://midzer.de/memes</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/links</link>
+      <description></description>
+      <guid>https://midzer.de/links</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/archive</link>
+      <description></description>
+      <guid>https://midzer.de/archive</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/contact</link>
+      <description></description>
+      <guid>https://midzer.de/contact</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

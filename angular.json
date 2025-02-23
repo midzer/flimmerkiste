@@ -22,7 +22,8 @@
               "src/site.webmanifest",
               "src/robots.txt",
               "src/sitemap.xml",
-              "src/feed.json"
+              "src/feed.json",
+              "src/feed.xml"
             ],
             "scripts": [
             ],
