@@ -1,5 +1,5 @@
 .player {
-    position: fixed;
+    position: absolute;
     top: 42%;
     left: 77.6%;
     width: 20.5%;
@@ -73,13 +73,13 @@ label {
 button,
 select {
     border-style: none;
-    padding: 0.125rem;
     border: 1px solid var(--bgcolor);
     cursor: pointer;
 }
 
 button {
-    flex-grow: 1;   
+    flex-grow: 1;
+    padding: 0.125rem;
 }
 
 canvas {
@@ -127,13 +127,16 @@ select {
 
 @media (min-width: 576px) {
     .player {
-        position: absolute;
         top: 7.5%;
         bottom: 50%;
     }
 
     .d-flex {
         flex-wrap: nowrap;
+    }
+
+    button {
+        padding: revert;
     }
 
     .heart {

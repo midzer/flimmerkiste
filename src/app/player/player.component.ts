@@ -165,7 +165,7 @@ export class PlayerComponent implements OnInit {
         this.subTune.set(this.sidPlayer.getsubtunes() - 1);
       }
       else {
-        this.subTune.set(this.subTune() -1);
+        this.subTune.set(this.subTune() - 1);
       }
       this.sidPlayer.start(this.subTune());
     }
@@ -177,6 +177,17 @@ export class PlayerComponent implements OnInit {
     }
     else {
       this.play();
+    }
+  }
+
+  shuffle(): void {
+    const allTunes = this.sids.concat(this.mods, this.flacs);
+    const randomTune = allTunes[Math.floor(Math.random() * allTunes.length)];
+    if (randomTune !== this.selectedTune) {
+      this.selectChange(randomTune);
+    }
+    else {
+      this.shuffle();
     }
   }
 

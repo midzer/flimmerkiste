@@ -6,35 +6,38 @@
     </div>
   </div>
   <label for="tunes">Select a tune:</label>
-  <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
-    <optgroup label="SIDS">
-      @for (sid of sids; track sid) {
-        <option [ngValue]="sid">
-          {{sid}}
-        </option>
-      }
-    </optgroup>
-    <optgroup label="MODS">
-      @for (mod of mods; track mod) {
-        <option [ngValue]="mod">
-          {{mod}}
-        </option>
-      }
-    </optgroup>
-    <optgroup label="OPUS">
-      @for (flac of flacs; track flac) {
-        <option [ngValue]="flac">
-          {{flac}}
-        </option>
-      }
-    </optgroup>
-  </select>
   <div class="d-flex">
+    <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
+      <optgroup label="SIDS">
+        @for (sid of sids; track sid) {
+          <option [ngValue]="sid">
+            {{sid}}
+          </option>
+        }
+      </optgroup>
+      <optgroup label="MODS">
+        @for (mod of mods; track mod) {
+          <option [ngValue]="mod">
+            {{mod}}
+          </option>
+        }
+      </optgroup>
+      <optgroup label="OPUS">
+        @for (flac of flacs; track flac) {
+          <option [ngValue]="flac">
+            {{flac}}
+          </option>
+        }
+      </optgroup>
+    </select>
+    <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
     <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
+  </div>
+  <div class="d-flex">
     <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
+    <button (click)="shuffle()"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
     <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
     <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
-    <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
   </div>
   <a href="{{ getPath(optgroupLabel, selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
     <canvas></canvas>
