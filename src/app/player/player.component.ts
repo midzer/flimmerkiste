@@ -5,8 +5,8 @@ import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
 
-import { FRIENDS } from './friends';
 import { COMMUNITIES } from './communities';
+import { FRIENDS } from './friends';
 import { SPACES } from './spaces';
 
 @Component({
@@ -99,6 +99,10 @@ export class PlayerComponent implements OnInit {
   }
 
   startPlaying(): void {
+    if (this.selectedTune !== this.loadedTune) {
+      this.loadTune(this.selectedTune);
+      return;
+    }
     switch (this.optgroupLabel) {
       case 'SID':
         this.sidPlayer.playcont();
@@ -112,7 +116,6 @@ export class PlayerComponent implements OnInit {
     }
     this.redrawSpectrum();
     this.intervalID = window.setInterval(this.setPlayTime, 1000);
-    document.querySelector('.heart').classList.add('hide');
     this.playing = true;
   }
 
@@ -130,7 +133,6 @@ export class PlayerComponent implements OnInit {
     }
     window.cancelAnimationFrame(this.requestID);
     window.clearInterval(this.intervalID);
-    document.querySelector('.heart').classList.remove('hide');
     this.playing = false;
   }
 
@@ -141,12 +143,9 @@ export class PlayerComponent implements OnInit {
     }
     else {
       this.playButton = this.pauseIcon;
-      if (this.selectedTune !== this.loadedTune) {
-        this.loadTune(this.selectedTune);
-        return;
-      }
       this.startPlaying();
     }
+    document.querySelector('.heart').classList.toggle('hidden');
   }
 
   next(): void {
@@ -197,12 +196,10 @@ export class PlayerComponent implements OnInit {
 
   shuffleTune(): void {
     const randomTune = this.randomFrom(SIDS.concat(MODS, FLACS));
-    if (randomTune !== this.selectedTune) {
-      this.selectTuneChange(randomTune);
+    if (randomTune === this.selectedTune) {
+      return this.shuffleTune();
     }
-    else {
-      this.shuffleTune();
-    }
+    this.selectTuneChange(randomTune);
   }
 
   copy(event): void {
@@ -510,11 +507,9 @@ export class PlayerComponent implements OnInit {
 
   shuffleLink(): void {
     const randomLink = this.randomFrom(COMMUNITIES.concat(FRIENDS, SPACES)).name;
-    if (randomLink !== this.selectedLink) {
-      this.selectedLink = randomLink;
+    if (randomLink === this.selectedLink) {
+      return this.shuffleLink();
     }
-    else {
-      this.shuffleLink();
-    }
+    this.selectedLink = randomLink;
   }
 }

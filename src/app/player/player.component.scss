@@ -103,8 +103,8 @@ a[data-descr]:focus::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--lightgrey);
-    background-color: var(--bgcolor);
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
 }
 
@@ -134,6 +134,6 @@ select {
     margin-top: auto;
 }
 
-.hide {
+.hidden {
     visibility: hidden;
 }
