@@ -49,12 +49,11 @@
 
 /* Make it move */
 @keyframes marquee {
-    from { transform: translate(0); }
     to   { transform: translate(-100%); }
 }
 
 select {
-    height: 33px; /* wrapped flex items take only the minimum size */
+    height: 31px; /* wrapped flex items take only the minimum size */
 }
 
 label {
@@ -79,16 +78,22 @@ select {
 
 button {
     flex-grow: 1;
-    padding: 0.125rem;
+    padding: 1px;
 }
 
+.heart {
+    position: absolute;
+    top: 0;
+}
+
+.heart,
 canvas {
-    height: 7vh;
+    display: block;
+    height: 7.5vh;
 }
 
 a[data-descr] {
     position: relative;
-    cursor: pointer;
 }
 
 a[data-descr]:hover::after,
@@ -110,25 +115,10 @@ select {
     width: 100%;
 }
 
-.heart-link {
-    margin-top: auto;
-}
-
-.heart {
-    height: auto;
-    animation: 1s ease infinite pulse;
-}
-
-@keyframes pulse {
-    to {
-      transform: scale(0.8);
-    }
-}
-
 @media (min-width: 576px) {
     .player {
         top: 7.5%;
-        bottom: 50%;
+        bottom: 64%;
     }
 
     .d-flex {
@@ -138,8 +128,12 @@ select {
     button {
         padding: revert;
     }
+}
 
-    .heart {
-        width: 10vw;
-    }
+.mt-auto {
+    margin-top: auto;
+}
+
+.hide {
+    visibility: hidden;
 }

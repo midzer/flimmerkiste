@@ -5,6 +5,10 @@ import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
 
+import { FRIENDS } from './friends';
+import { COMMUNITIES } from './communities';
+import { SPACES } from './spaces';
+
 @Component({
     selector: 'app-player',
     templateUrl: './player.component.html',
@@ -43,12 +47,17 @@ export class PlayerComponent implements OnInit {
   backgroundImg: HTMLImageElement;
   requestID: number;
 
-  optgroupLabel: string = 'SID';
-  selectedTune: string = 'Last_Ninja_2';
+  optgroupLabel: string;
+  selectedTune: string = this.randomFrom(SIDS.concat(MODS, FLACS));
   loadedTune: string;
   mods: string[] = MODS;
   sids: string[] = SIDS;
   flacs: string[] = FLACS;
+
+  selectedLink: string = this.randomFrom(COMMUNITIES.concat(FRIENDS, SPACES)).name;
+  communities: {name: string, url: string}[] = COMMUNITIES;
+  friends: {name: string, url: string}[] = FRIENDS;
+  spaces: {name: string, url: string}[] = SPACES;
 
   ngOnInit() {
     const query = window.location.search;
@@ -102,6 +111,8 @@ export class PlayerComponent implements OnInit {
         break;
     }
     this.redrawSpectrum();
+    this.intervalID = window.setInterval(this.setPlayTime, 1000);
+    document.querySelector('.heart').classList.add('hide');
     this.playing = true;
   }
 
@@ -118,18 +129,18 @@ export class PlayerComponent implements OnInit {
         break;
     }
     window.cancelAnimationFrame(this.requestID);
+    window.clearInterval(this.intervalID);
+    document.querySelector('.heart').classList.remove('hide');
     this.playing = false;
   }
 
   play(): void {
     if (this.playing) {
       this.playButton = this.playIcon;
-      window.clearInterval(this.intervalID);
       this.stopPlaying();
     }
     else {
       this.playButton = this.pauseIcon;
-      this.intervalID = window.setInterval(this.setPlayTime, 1000);
       if (this.selectedTune !== this.loadedTune) {
         this.loadTune(this.selectedTune);
         return;
@@ -180,14 +191,17 @@ export class PlayerComponent implements OnInit {
     }
   }
 
-  shuffle(): void {
-    const allTunes = this.sids.concat(this.mods, this.flacs);
-    const randomTune = allTunes[Math.floor(Math.random() * allTunes.length)];
+  randomFrom(array: any) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  shuffleTune(): void {
+    const randomTune = this.randomFrom(SIDS.concat(MODS, FLACS));
     if (randomTune !== this.selectedTune) {
-      this.selectChange(randomTune);
+      this.selectTuneChange(randomTune);
     }
     else {
-      this.shuffle();
+      this.shuffleTune();
     }
   }
 
@@ -231,18 +245,21 @@ export class PlayerComponent implements OnInit {
     this.videoPlaying = !this.videoPlaying;
   }
 
-  getPath(label: string, tune: string): string {
-    const path = '/assets/';
-    switch (label) {
+  getPath(tune: string): string {
+    let path = '/assets/';
+    switch (this.getOptgroupLabel(this.selectedTune)) {
       case 'SID':
-        return path + 'sids/' + tune + '.sid';
+        path += 'sids/' + tune + '.sid';
+        break;
       case 'MOD':
-        return path + 'mods/' + tune;
+        path += 'mods/' + tune;
+        break;
       case 'OPUS':
-        return path + 'flacs/' + tune + '.webm';
-      default:
-        return ''
+        path += 'flacs/' + tune + '.webm';
+        break;
     }
+
+    return path;
   }
 
   removeNullFromString(str: string): string {
@@ -298,7 +315,7 @@ export class PlayerComponent implements OnInit {
               this.removeNullFromString(this.sidPlayer.gettitle()));
           });
         }
-        this.sidPlayer.loadinit(this.getPath(this.optgroupLabel, tune), this.subTune());
+        this.sidPlayer.loadinit(this.getPath(tune), this.subTune());
         break;
       case 'MOD':
         if (!this.modPlayer) {
@@ -316,7 +333,7 @@ export class PlayerComponent implements OnInit {
         }
         this.analyserNode = this.modPlayer.audioContext.createAnalyser();
         this.modPlayer.audioScriptNode.connect(this.analyserNode);
-        this.modPlayer.loadModule(this.getPath(this.optgroupLabel, tune));
+        this.modPlayer.loadModule(this.getPath(tune));
         break;
       case 'OPUS':
         if (!this.flacPlayer) {
@@ -331,7 +348,7 @@ export class PlayerComponent implements OnInit {
         this.subTunes.set(1);
         this.info.set('Fetching OPUS...');
         try {
-          const response = await fetch(this.getPath(this.optgroupLabel, tune));
+          const response = await fetch(this.getPath(tune));
           this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
             this.buffer = buffer;
             this.playBuffer(0);
@@ -346,13 +363,13 @@ export class PlayerComponent implements OnInit {
     this.loadedTune = tune;
   }
 
-  selectChange(event: string): void {
+  selectTuneChange(event: string): void {
+    this.selectedTune = event;
     if (this.playing) {
       this.stopPlaying();
       this.loadTune(event);
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
-    this.selectedTune = event;
   }
 
   redrawSpectrum = () => {
@@ -452,18 +469,18 @@ export class PlayerComponent implements OnInit {
     let tunes: string[];
     switch (label) {
       case 'SID':
-        tunes = this.sids
+        tunes = this.sids;
         break;
       case 'MOD':
-        tunes = this.mods
+        tunes = this.mods;
         break;
       case 'OPUS':
-        tunes = this.flacs
+        tunes = this.flacs;
         break;
     }
 
     const files = await Promise.all(tunes.map(async tune => {
-      const response = await fetch(this.getPath(label, tune));
+      const response = await fetch(this.getPath(tune));
       return {
         name: label === 'MODS' ? tune : tune + "." + label.toLowerCase(),
         data: new Uint8Array(await response.arrayBuffer())
@@ -481,5 +498,23 @@ export class PlayerComponent implements OnInit {
     document.body.appendChild(el);
     el.click();
     document.body.removeChild(el);
+  }
+
+  selectLinkChange(event: string): void {
+    this.selectedLink = event;
+  }
+
+  external(): void {
+    window.location.href = COMMUNITIES.concat(FRIENDS, SPACES).find(link => link["name"] === this.selectedLink).url;
+  }
+
+  shuffleLink(): void {
+    const randomLink = this.randomFrom(COMMUNITIES.concat(FRIENDS, SPACES)).name;
+    if (randomLink !== this.selectedLink) {
+      this.selectedLink = randomLink;
+    }
+    else {
+      this.shuffleLink();
+    }
   }
 }

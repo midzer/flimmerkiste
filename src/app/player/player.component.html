@@ -5,44 +5,58 @@
       <span>{{info()}}</span>
     </div>
   </div>
-  <label for="tunes">Select a tune:</label>
   <div class="d-flex">
-    <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectChange($event)" aria-label="Select tune">
+    <label for="tunes">Select a tune:</label>
+    <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectTuneChange($event)" aria-label="Select tune">
       <optgroup label="SIDS">
         @for (sid of sids; track sid) {
-          <option [ngValue]="sid">
-            {{sid}}
-          </option>
+          <option [ngValue]="sid">{{sid}}</option>
         }
       </optgroup>
       <optgroup label="MODS">
         @for (mod of mods; track mod) {
-          <option [ngValue]="mod">
-            {{mod}}
-          </option>
+          <option [ngValue]="mod">{{mod}}</option>
         }
       </optgroup>
       <optgroup label="OPUS">
         @for (flac of flacs; track flac) {
-          <option [ngValue]="flac">
-            {{flac}}
-          </option>
+          <option [ngValue]="flac">{{flac}}</option>
         }
       </optgroup>
     </select>
+    <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
+    <button (click)="shuffleTune()"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
+  </div>
+  <div class="d-flex">
+    <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
+    <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
     <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
     <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
   </div>
-  <div class="d-flex">
-    <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
-    <button (click)="shuffle()"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
-    <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
-    <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
-  </div>
-  <a href="{{ getPath(optgroupLabel, selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
-    <canvas></canvas>
-  </a>
-  <a class="heart-link" href="https://www.kommunikationsliebe.org/" rel="noopener">
+  <a href="{{ getPath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
     <img class="heart" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
+    <canvas class="d-none"></canvas>
   </a>
+  <div class="d-flex mt-auto">
+    <label for="links">Select a link:</label>
+    <select id="links" [(ngModel)]="selectedLink" (ngModelChange)="selectLinkChange($event)" aria-label="Select link">
+      <optgroup label="COMMUNITIES">
+        @for (community of communities; track community) {
+          <option [ngValue]="community.name">{{community.name}}</option>
+        }
+      </optgroup>
+      <optgroup label="FRIENDS">
+        @for (friend of friends; track friend) {
+          <option [ngValue]="friend.name">{{friend.name}}</option>
+        }
+      </optgroup>
+      <optgroup label="SPACES">
+        @for (space of spaces; track space) {
+          <option [ngValue]="space.name">{{space.name}}</option>
+        }
+      </optgroup>
+    </select>
+    <button (click)="external()"><img src="/assets/icons/external-link.svg" width="24" height="24" alt="Go to {{ selectedLink }}"></button>
+    <button (click)="shuffleLink()"><img src="/assets/icons/arrows-random.svg" width="24" height="24" alt="Shuffle link"></button>
+  </div>
 </div><!-- player -->

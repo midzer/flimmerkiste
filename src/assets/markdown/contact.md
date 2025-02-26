@@ -14,3 +14,13 @@
   # OTR-Fingerprint
   98FC9734 B957C246 554C7BA5 EC86DF0E 4FD485EC
   ```
+
+## /me @
+
+[Codeberg](https://codeberg.org/midzer)
+
+[Flohmarkt](https://muc.deals/~dennis)
+
+[GitHub](https://github.com/midzer)
+
+[Mastodon](https://chaos.social/@midzer)

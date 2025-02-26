@@ -14,10 +14,6 @@ export var MENU: Menuitem[] = [
         icon: 'photo'
     },
     {
-        name: 'links',
-        icon: 'link'
-    },
-    {
         name: 'archive',
         icon: 'archive'
     },
