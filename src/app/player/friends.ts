@@ -8,6 +8,10 @@ export const FRIENDS = [
         "url": "https://audito.re/"
     },
     {
+        "name": "Brayd",
+        "url": "https://braydmedia.de/"
+    },
+    {
         "name": "gamambel",
         "url": "https://headstrong.de/"
     },
