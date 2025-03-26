@@ -5,9 +5,7 @@ import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
 
-import { COMMUNITIES } from './communities';
-import { FRIENDS } from './friends';
-import { SPACES } from './spaces';
+import { TOOLS } from './tools';
 
 @Component({
     selector: 'app-player',
@@ -54,10 +52,7 @@ export class PlayerComponent implements OnInit {
   sids: string[] = SIDS;
   flacs: string[] = FLACS;
 
-  selectedLink: string = this.randomFrom(COMMUNITIES.concat(FRIENDS, SPACES)).name;
-  communities: {name: string, url: string}[] = COMMUNITIES;
-  friends: {name: string, url: string}[] = FRIENDS;
-  spaces: {name: string, url: string}[] = SPACES;
+  selectedTool: string = this.randomFrom(TOOLS);
 
   ngOnInit() {
     const query = window.location.search;
@@ -202,6 +197,14 @@ export class PlayerComponent implements OnInit {
     this.selectTuneChange(randomTune);
   }
 
+  shuffleTool(): void {
+    const randomTool = this.randomFrom(TOOLS);
+    if (randomTool === this.selectedTool) {
+      return this.shuffleTool();
+    }
+    this.selectedTool = randomTool;
+  }
+
   copy(event): void {
     const btn = event.target;
     const copyTune = btn.dataset.descr;
@@ -242,7 +245,7 @@ export class PlayerComponent implements OnInit {
     this.videoPlaying = !this.videoPlaying;
   }
 
-  getPath(tune: string): string {
+  getTunePath(tune: string): string {
     let path = '/assets/';
     switch (this.getOptgroupLabel(this.selectedTune)) {
       case 'SID':
@@ -257,6 +260,10 @@ export class PlayerComponent implements OnInit {
     }
 
     return path;
+  }
+
+  getToolPath(tool: string): string {
+    return '/assets/tools/' + tool + '.png';
   }
 
   removeNullFromString(str: string): string {
@@ -312,7 +319,7 @@ export class PlayerComponent implements OnInit {
               this.removeNullFromString(this.sidPlayer.gettitle()));
           });
         }
-        this.sidPlayer.loadinit(this.getPath(tune), this.subTune());
+        this.sidPlayer.loadinit(this.getTunePath(tune), this.subTune());
         break;
       case 'MOD':
         if (!this.modPlayer) {
@@ -330,7 +337,7 @@ export class PlayerComponent implements OnInit {
         }
         this.analyserNode = this.modPlayer.audioContext.createAnalyser();
         this.modPlayer.audioScriptNode.connect(this.analyserNode);
-        this.modPlayer.loadModule(this.getPath(tune));
+        this.modPlayer.loadModule(this.getTunePath(tune));
         break;
       case 'OPUS':
         if (!this.flacPlayer) {
@@ -345,7 +352,7 @@ export class PlayerComponent implements OnInit {
         this.subTunes.set(1);
         this.info.set('Fetching OPUS...');
         try {
-          const response = await fetch(this.getPath(tune));
+          const response = await fetch(this.getTunePath(tune));
           this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
             this.buffer = buffer;
             this.playBuffer(0);
@@ -477,7 +484,7 @@ export class PlayerComponent implements OnInit {
     }
 
     const files = await Promise.all(tunes.map(async tune => {
-      const response = await fetch(this.getPath(tune));
+      const response = await fetch(this.getTunePath(tune));
       return {
         name: label === 'MODS' ? tune : tune + "." + label.toLowerCase(),
         data: new Uint8Array(await response.arrayBuffer())
@@ -495,21 +502,5 @@ export class PlayerComponent implements OnInit {
     document.body.appendChild(el);
     el.click();
     document.body.removeChild(el);
-  }
-
-  selectLinkChange(event: string): void {
-    this.selectedLink = event;
-  }
-
-  external(): void {
-    window.location.href = COMMUNITIES.concat(FRIENDS, SPACES).find(link => link["name"] === this.selectedLink).url;
-  }
-
-  shuffleLink(): void {
-    const randomLink = this.randomFrom(COMMUNITIES.concat(FRIENDS, SPACES)).name;
-    if (randomLink === this.selectedLink) {
-      return this.shuffleLink();
-    }
-    this.selectedLink = randomLink;
   }
 }

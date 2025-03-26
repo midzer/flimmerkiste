@@ -523,9 +523,9 @@
     </item>
     <item>
       <title></title>
-      <link>https://midzer.de/archive</link>
+      <link>https://midzer.de/links</link>
       <description></description>
-      <guid>https://midzer.de/archive</guid>
+      <guid>https://midzer.de/links</guid>
       <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -533,6 +533,13 @@
       <link>https://midzer.de/contact</link>
       <description></description>
       <guid>https://midzer.de/contact</guid>
+      <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://midzer.de/archive</link>
+      <description></description>
+      <guid>https://midzer.de/archive</guid>
       <pubDate>Sun, 17 May 2015 00:00:00 +0000</pubDate>
     </item>
   </channel>

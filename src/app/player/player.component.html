@@ -33,30 +33,9 @@
     <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
     <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
   </div>
-  <a href="{{ getPath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
+  <a href="{{ getTunePath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
     <img class="heart" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
     <canvas class="d-none"></canvas>
   </a>
-  <div class="d-flex mt-auto">
-    <label for="links">Select a link:</label>
-    <select id="links" [(ngModel)]="selectedLink" (ngModelChange)="selectLinkChange($event)" aria-label="Select link">
-      <optgroup label="COMMUNITIES">
-        @for (community of communities; track community) {
-          <option [ngValue]="community.name">{{community.name}}</option>
-        }
-      </optgroup>
-      <optgroup label="FRIENDS">
-        @for (friend of friends; track friend) {
-          <option [ngValue]="friend.name">{{friend.name}}</option>
-        }
-      </optgroup>
-      <optgroup label="SPACES">
-        @for (space of spaces; track space) {
-          <option [ngValue]="space.name">{{space.name}}</option>
-        }
-      </optgroup>
-    </select>
-    <button (click)="external()"><img src="/assets/icons/external-link.svg" width="24" height="24" alt="Go to {{ selectedLink }}"></button>
-    <button (click)="shuffleLink()"><img src="/assets/icons/arrows-random.svg" width="24" height="24" alt="Shuffle link"></button>
-  </div>
+  <img (click)="shuffleTool()" class="tool mt-auto" src="{{ getToolPath(selectedTool) }}" width="250" height="250" alt="{{ selectedTool }}">
 </div><!-- player -->

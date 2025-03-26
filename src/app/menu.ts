@@ -14,11 +14,15 @@ export var MENU: Menuitem[] = [
         icon: 'photo'
     },
     {
-        name: 'archive',
-        icon: 'archive'
+        name: 'links',
+        icon: 'link'
     },
     {
         name: 'contact',
         icon: 'message'
+    },
+    {
+        name: 'archive',
+        icon: 'archive'
     }
 ];

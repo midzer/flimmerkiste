@@ -73,6 +73,11 @@ button,
 select {
     border-style: none;
     border: 1px solid var(--bgcolor);
+}
+
+button,
+select,
+.tool {
     cursor: pointer;
 }
 
@@ -110,15 +115,22 @@ a[data-descr]:focus::after {
 
 .heart,
 .marquee,
+.tool,
 canvas,
 select {
     width: 100%;
 }
 
+.tool {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-width: 576px) {
     .player {
         top: 7.5%;
-        bottom: 64%;
+        bottom: 52.5%;
     }
 
     .d-flex {
@@ -127,6 +139,10 @@ select {
 
     button {
         padding: revert;
+    }
+
+    .tool {
+        width: 16vh;
     }
 }
 
