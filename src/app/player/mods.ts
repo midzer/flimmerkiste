@@ -12,6 +12,8 @@ export const MODS = [
     "chip_mania.xm",
     "chop_chip.mod",
     "class01.mod",
+    "class02.mod",
+    "class05.mod",
     "class11.mod",
     "contraduct_design.xm",
     "db_3dg.xm",
