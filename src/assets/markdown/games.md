@@ -788,7 +788,7 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * [Repo](https://github.com/shinyquagsire23/OpenJKDF2) / [Wiki](https://en.wikipedia.org/wiki/Star_Wars_Jedi_Knight:_Dark_Forces_II)
 * 🥷🥷🥷🥷
 * Keyboard, Mouse
-* [Play external!](https://maxthomas.dev/openjkdf2/) (needs WebGL3)
+* [Play external!](https://maxthomas.dev/openjkdf2/) (needs WebGL2)
 
 ### WipEout
 
