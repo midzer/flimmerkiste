@@ -43,17 +43,4 @@ a {
   &:hover {
     color: var(--lightblue);
   }
-
-  &::before {
-    content: '\203A';
-    font-weight: bold;
-    position: absolute;
-    opacity: 0;
-    left: 0;
-    transition: left .3s, opacity .3s;
-  }
-
-  &:hover::before {
-    opacity: 1;
-  }
 }
