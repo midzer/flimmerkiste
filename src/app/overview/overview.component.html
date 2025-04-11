@@ -1,9 +1,9 @@
 <ul>
   @for (post of posts; track post) {
     <li>
-      <div>{{post.date}}</div>
       <a [routerLink]="[post.name | lowercase | blank2dash]">{{post.name}}</a>
       <span [class.active]="active" (click)="toggleCategory(post.category)">{{post.category}}</span>
+      <div>{{post.date}}</div>
     </li>
   }
 </ul>
