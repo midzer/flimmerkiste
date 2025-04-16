@@ -145,7 +145,7 @@ export class PlayerComponent implements OnInit {
 
   next(): void {
     if (this.sidPlayer && this.optgroupLabel === 'SID') {
-      if (this.subTune() === this.sidPlayer.getsubtunes() - 1) {
+      if (this.subTune() === this.subTunes() - 1) {
         this.subTune.set(0);
       }
       else {
@@ -167,7 +167,7 @@ export class PlayerComponent implements OnInit {
   prev(): void {
     if (this.sidPlayer && this.optgroupLabel === 'SID') {
       if (this.subTune() === 0) {
-        this.subTune.set(this.sidPlayer.getsubtunes() - 1);
+        this.subTune.set(this.subTunes() - 1);
       }
       else {
         this.subTune.set(this.subTune() - 1);
