@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { OverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [
   { path: ':name',
     loadChildren: () => import('./content/content.module').then(mod => mod.ContentModule)
   },
   { path: '',
-    loadComponent: () => import('./overview/overview.component').then(m => m.OverviewComponent)
+    component: OverviewComponent
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule],
   providers: []
