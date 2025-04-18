@@ -4,6 +4,7 @@ export const TOOLS = [
     "card",
     "code",
     "hook",
+    "katana",
     "key",
     "key2",
     "key3",
@@ -13,6 +14,5 @@ export const TOOLS = [
     "paper",
     "rope",
     "shuriken",
-    "sphere",
-    "sword"
+    "sphere"
 ]
