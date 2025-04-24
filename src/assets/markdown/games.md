@@ -56,6 +56,16 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * 🥷
 * [Play external!](https://asylum.m-h.org.uk/)
 
+### Atomiks
+
+* Remake (1990)
+* Puzzle
+* Singleplayer
+* [Repo](https://github.com/midzer/atomiks) / [Wiki](https://en.wikipedia.org/wiki/Atomix_(video_game))
+* Keyboard, Touch
+* 🥷🥷🥷
+* [Play!](/wasm/atomiks/)
+
 ### Ballerburg SDL
 
 * Remake of Ballerburg (1987)
@@ -176,6 +186,16 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * 🥷🥷🥷
 * [Play!](/wasm/cuyo/)
 
+### Defblade
+
+* Original (2025) 
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/paper-world)
+* Keyboard
+* 🥷🥷🥷
+* [Play!](/wasm/defblade/)
+
 ### Der Clou!
 
 * Official (1994)
@@ -195,6 +215,16 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * Keyboard, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/dungeonrush/)
+
+### Empty Clip
+
+* Original (2022)
+* RPG
+* Singleplayer
+* [Repo](https://github.com/midzer/empty-clip)
+* Keyboard, Mouse, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/emptyclip/) (needs WebGL2)
 
 ### Flare
 
@@ -325,6 +355,16 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * Keyboard, Mouse, Touch
 * 🥷🥷
 * [Play external!](https://lab.exlmoto.ru/sushi/)
+
+### Mega Mario
+
+* Remake of Super Mario (1985)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/megamario) / [Wiki](https://de.wikipedia.org/wiki/Super_Mario_Bros.)
+* Keyboard, Touch
+* 🥷🥷🥷
+* [Play!](/wasm/megamario/)
 
 ### Open Fodder
 
