@@ -66,6 +66,16 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * 🥷🥷🥷
 * [Play!](/wasm/atomiks/)
 
+### Azimuth
+
+* Original (2012)
+* Metroidvania
+* Singleplayer
+* [Repo](https://github.com/midzer/azimuth) / [Wiki](https://libregamewiki.org/Azimuth)
+* Keyboard
+* 🥷🥷🥷🥷🥷
+* [Play!](/wasm/azimuth/)
+
 ### Ballerburg SDL
 
 * Remake of Ballerburg (1987)
@@ -242,7 +252,7 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * Puzzle
 * Singleplayer
 * [Repo](https://github.com/midzer/freegemas) / [Wiki](https://en.wikipedia.org/wiki/Bejeweled)
-* Gamebad, Keybaord, Mouse, Touch
+* Gamebad, Keyboard, Mouse, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/freegemas/)
 
