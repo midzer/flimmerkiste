@@ -453,7 +453,7 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * Singleplayer
 * [Repo](https://www.artsoft.org/rocksndiamonds/) / [Wiki](https://en.wikipedia.org/wiki/Rocks%27n%27Diamonds)
 * Gamepad, Keyboard, Mouse
-* 🥷🥷🥷
+* 🥷🥷🥷🥷🥷
 * [Play external!](https://www.artsoft.org/rocksndiamonds/play/)
 
 ### SDL-Ball
