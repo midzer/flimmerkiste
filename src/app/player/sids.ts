@@ -76,6 +76,7 @@ export const SIDS = [
     "Scumball",
     "Short_Circuit",
     "Snare",
+    "Some_Pleasure",
     "Spellbound",
     "Stormlord",
     "Supremacy",
