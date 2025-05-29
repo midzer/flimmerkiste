@@ -7,6 +7,7 @@ import { MENU } from '../menu';
     selector: 'app-screen',
     templateUrl: './screen.component.html',
     styleUrls: ['./screen.component.scss'],
+    standalone: true,
     imports: [RouterLinkActive, RouterLink, RouterOutlet]
 })
 

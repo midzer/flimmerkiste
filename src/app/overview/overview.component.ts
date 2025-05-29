@@ -11,6 +11,7 @@ import { Post } from '../post';
     selector: 'app-overview',
     templateUrl: './overview.component.html',
     styleUrls: ['./overview.component.scss'],
+    standalone: true,
     imports: [RouterLink, LowerCasePipe, Blank2dashPipe]
 })
 export class OverviewComponent implements OnInit {

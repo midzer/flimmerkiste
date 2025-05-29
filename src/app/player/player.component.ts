@@ -11,6 +11,7 @@ import { TOOLS } from './tools';
     selector: 'app-player',
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
+    standalone: true,
     imports: [FormsModule]
 })
 
