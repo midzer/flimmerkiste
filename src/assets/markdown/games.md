@@ -1,8 +1,8 @@
 # Games
 
-I create and collect [Emscripten](https://emscripten.org/) web ports of games, mostly discovered at [Open Source Game Clones](https://osgameclones.com/).
+I create and collect [Emscripten](https://emscripten.org/) web ports, mostly discovered at [Open Source Game Clones](https://osgameclones.com/).
 
-I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall impression and quality of the port. Untested games get (temporarily) a 🐱.
+They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impression and quality of the port. Untested games get (temporarily) a 🐱.
 
 ## Free Open Source Software
 
@@ -756,8 +756,8 @@ I assign a "ninja rating" of 1-5 🥷 depending on the fun of the game, overall 
 * Turn-based strategy game
 * Singleplayer
 * [Repo](https://github.com/midzer/ja2-stracciatella) / [Wiki](https://en.wikipedia.org/wiki/Jagged_Alliance_2)
-* Keyboard, Mouse
-* 🥷🥷🥷
+* Keyboard, Mouse, Touch
+* 🥷🥷🥷🥷🥷
 * [Play!](/wasm/jaggedalliance2/)
 
 ### Jazz Jackrabbit
