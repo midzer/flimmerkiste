@@ -9,7 +9,7 @@ Als Brotaufstrich, zur Brezn, zu jeder Tages- und Nachtzeit. Gekauft natürlich 
 * 80g Butter
 * Salz, Pfeffer, Kümmel, Paprika
 * 2 mittlere, kleingehackte Zwiebeln
-* 4 Esslöffel Bier
+* 4 Esslöffel Weißbier
 
 ## Zubereitung
 
