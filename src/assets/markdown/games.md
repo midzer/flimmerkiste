@@ -86,6 +86,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play external!](https://baller.tuxfamily.org/online/)
 
+### Biolab
+
+* Original (2024)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/phoboslab/high_biolab)
+* Keyboard, Touch
+* 🥷🥷🥷🥷🥷
+* [Play external!](https://phoboslab.org/high_impact/biolab)
+
 ### Blobby Volley 2
 
 * Original (2000)
@@ -115,6 +125,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * Keyboard
 * 🥷🥷🥷🥷
 * [Play!](/wasm/bombermaaan/)
+
+### BreakHack
+
+* Original (2018)
+* Roguelike
+* Singleplayer
+* [Repo](https://github.com/midzer/breakhack)
+* Keyboard, Touch
+* 🥷🥷🥷🥷🥷
+* [Play!](/wasm/breakhack/)
 
 ### Brogue
 
@@ -286,6 +306,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷
 * [Play!](/wasm/gilbert/)
 
+### Haxima
+
+* Original (2005)
+* RPG
+* Singleplayer
+* [Repo](https://github.com/midzer/nazghul)
+* Keyboard
+* 🥷🥷🥷🥷
+* [Play!](/wasm/haxima/)
+
 ### Help Hannah's Horse
 
 * Clone of Pac-Man (1980)
@@ -336,26 +366,6 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play!](/wasm/li-ri/)
 
-### Neverball
-
-* Clone of Super Monkey Ball (2001)
-* Arcade
-* Singleplayer
-* [Repo](https://github.com/Neverball/neverball) / [Wiki](https://en.wikipedia.org/wiki/Neverball)
-* Mouse, Touch
-* 🥷🥷🥷🥷🥷
-* [Play external!](https://play.neverball.org/)
-
-### Numpty Physics
-
-* Clone of Crayon Physics (2007)
-* Physics game
-* Singleplayer
-* [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://en.wikipedia.org/wiki/Crayon_Physics_Deluxe)
-* Mouse, Touch
-* 🥷🥷🥷🥷
-* [Play!](/wasm/numptyphysics/)
-
 ### Magic Sushi
 
 * Clone of Bejeweled (2001)
@@ -375,6 +385,46 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * Keyboard, Touch
 * 🥷🥷🥷
 * [Play!](/wasm/megamario/)
+
+### Minecraft 4k
+
+* Clone of Minecraft (2011)
+* Sandbox
+* Singleplayer
+* [Repo](https://github.com/midzer/m4kc) / [Wiki](https://en.wikipedia.org/wiki/Minecraft)
+* Keyboard, Mouse
+* 🥷🥷🥷
+* [Play!](/wasm/m4kc/)
+
+### Neverball
+
+* Clone of Super Monkey Ball (2001)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/Neverball/neverball) / [Wiki](https://en.wikipedia.org/wiki/Neverball)
+* Mouse, Touch
+* 🥷🥷🥷🥷🥷
+* [Play external!](https://play.neverball.org/)
+
+### Nikwi
+
+* Original (2011)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/nikwi)
+* Keyboard
+* 🥷🥷🥷
+* [Play!](/wasm/nikwi/)
+
+### Numpty Physics
+
+* Clone of Crayon Physics (2007)
+* Physics game
+* Singleplayer
+* [Repo](https://github.com/midzer/numptyphysics) / [Wiki](https://en.wikipedia.org/wiki/Crayon_Physics_Deluxe)
+* Mouse, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/numptyphysics/)
 
 ### Open Fodder
 
@@ -446,6 +496,26 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/prince/)
 
+### Prototype
+
+* Original (2016)
+* Shoot 'em up
+* Singleplayer
+* [Repo](https://github.com/midzer/prototype)
+* Keyboard, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/prototype/)
+
+### Rockbot
+
+* Clone of Mega Man (1987)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/rockbot) / [Wiki](https://en.wikipedia.org/wiki/Mega_Man)
+* Keyboard, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/rockbot/)
+
 ### Rocks'n'Diamonds
 
 * Clone of Boulder Dash (1984)
@@ -496,6 +566,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🐱
 * [Play!](/wasm/simutrans/)
 
+### Sokoban
+
+* Clone of Sokoban (1982)
+* Puzzle
+* Singleplayer
+* [Repo](https://github.com/midzer/simple-sokoban) / [Wiki](https://en.wikipedia.org/wiki/Sokoban)
+* Keyboard, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/sokoban/)
+
 ### Space Cadet
 
 * Original (1995)
@@ -506,7 +586,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play external!](https://alula.github.io/SpaceCadetPinball/)
 
-### Project: Starfighter
+### Starfighter
 
 * Original (2003)
 * Shoot 'em up
