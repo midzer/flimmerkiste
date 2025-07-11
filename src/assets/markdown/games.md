@@ -36,6 +36,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🐱
 * [Play external!](https://angband.live/)
 
+### Apotris
+
+* Clone of Tetris (1984)
+* Arcade
+* Singleplayer
+* [Repo](https://gitea.com/akouzoukos/apotris)
+* Keyboard
+* 🥷🥷🥷🥷🥷
+* [Play external!](https://akouzoukos.com/apotris/play/)
+
 ### AstroMenace
 
 * Original (2007)
