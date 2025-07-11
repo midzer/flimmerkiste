@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 import { MarkdownComponent } from 'ngx-markdown';
 
@@ -20,35 +21,40 @@ import { Mp3filePipe } from '../mp3file.pipe';
 export class ContentComponent implements OnInit {
   path: string;
   name: string;
-  postName: string;
   posts = POSTS;
   hasAudio: boolean = false;
   hasVideo: boolean = false;
+  baseTitle = "midzer's Flimmerkiste";
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private titleService: Title
   ) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.name = params['name'];
       this.path = '/assets/markdown/' + this.name + '.md';
+      let pageTitle = this.name;
       const name = this.name.split('-').join(' ');
       for (let i = this.posts.length - 1; i >= 0 ; i--) {
         const post = this.posts[i];
         if (post.name.toLowerCase() === name) {
-          const category = post.category;
-          if (category === 'DJ Sets' || category === 'Audio') {
-            this.hasAudio = true;
+          pageTitle = post.name;
+          switch (post.category) {
+            case 'DJ Sets':
+            case 'Audio':
+              this.hasAudio = true;
+              break;
+            case 'Video':
+              this.hasVideo = true;
+              break;
           }
-          else if (category === 'Video') {
-            this.hasVideo = true;
-          }
-          this.postName = post.name;
           break;
         }
       }
+      this.titleService.setTitle(pageTitle + ' | ' + this.baseTitle);
     });
   }
 
@@ -100,8 +106,7 @@ export class ContentComponent implements OnInit {
   share(event): void {
     if (navigator.share) {
       navigator.share({
-        title: 'Flimmerkiste',
-        text: this.postName,
+        title: this.titleService.getTitle(),
         url: window.location.href
       })
       .then(() => console.log('Successful share'))
