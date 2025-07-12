@@ -44,6 +44,7 @@ export class PlayerComponent implements OnInit {
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
   backgroundImg: HTMLImageElement;
+  amplitudeArray: Uint8Array;
   requestID: number;
 
   optgroupLabel: string;
@@ -110,6 +111,7 @@ export class PlayerComponent implements OnInit {
         this.flacPlayer.resume();
         break;
     }
+    this.initSpectrum();
     this.redrawSpectrum();
     this.intervalID = window.setInterval(this.setPlayTime, 1000);
     this.playing = true;
@@ -377,70 +379,58 @@ export class PlayerComponent implements OnInit {
     }
   }
 
-  redrawSpectrum = () => {
-    if (!this.canvas) {
-      this.canvas = document.querySelector('canvas');
-      this.ctx = this.canvas.getContext('2d');
+  initSpectrum = () => {
+    this.canvas = document.querySelector('canvas');
+    this.ctx = this.canvas.getContext('2d');
+    
+    if (this.optgroupLabel !== 'SID') {
+      const imgObj = new Image();
+      imgObj.onload = () => { this.backgroundImg = imgObj; }
+      imgObj.src = '/assets/images/darcula-spectrum.png';
+      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
     }
+  }
+
+  redrawSpectrum = () => {
     if (this.optgroupLabel === 'SID') {
-      // Fill logic from https://github.com/Chordian/deepsid/blob/master/js/viz.js
-      // Color the top line background
+      this.ctx.drawImage(
+        this.canvas,
+        0, 0, this.canvas.width, this.canvas.height - 1, // source: everything except bottom row
+        0, 1, this.canvas.width, this.canvas.height - 1  // destination: move down by 1
+      );
+
       this.ctx.fillStyle = 'black';
       this.ctx.fillRect(0, 0, this.canvas.width, 1);
-      
-      // Color the voices
+
       this.ctx.lineWidth = 2;
       for (let voice = 0; voice < 3; voice++) {
         const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
-        let x = (freq / 0xFFFF) * this.canvas.width;
-        x = x | 0;
-        switch(voice) {
-          case 0:
-            this.ctx.strokeStyle = '#955529';
-            break;
-          case 1:
-            this.ctx.strokeStyle = '#ca7570';
-            break;
-          case 2:
-            this.ctx.strokeStyle = '#2c339e';
+        let x = (freq / 0xFFFF) * this.canvas.width | 0;
+        switch (voice) {
+          case 0: this.ctx.strokeStyle = '#955529'; break;
+          case 1: this.ctx.strokeStyle = '#ca7570'; break;
+          case 2: this.ctx.strokeStyle = '#2c339e'; break;
         }
         this.ctx.beginPath();
         this.ctx.moveTo(x, 0);
         this.ctx.lineTo(x, 1);
         this.ctx.stroke();
       }
-      this.ctx.drawImage(this.canvas,
-        1, 0, this.canvas.width, this.canvas.height - 1,
-        1, 1, this.canvas.width, this.canvas.height - 1);
-    }
-    else {
-      if (!this.backgroundImg) {
-        const imgObj = new Image();
-        imgObj.onload = () => {
-            this.backgroundImg = imgObj;
-        }
-        imgObj.src = '/assets/images/darcula-spectrum.png';
-      }
-      // Read the frequency values
-      const amplitudeArray = new Uint8Array(
-        this.analyserNode.frequencyBinCount
-      );
-
-      // Get the byte frequency data for this sample
-      this.analyserNode.getByteFrequencyData(amplitudeArray);
-      
-      // Clear the canvas
+    } else {
+      this.analyserNode.getByteFrequencyData(this.amplitudeArray);
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-      const SPACER_WIDTH = 8;
-      const BAR_WIDTH = 5;
-      const OFFSET = 100;
+      const SPACER_WIDTH = 8, BAR_WIDTH = 5, OFFSET = 100;
       const numBars = Math.round(this.canvas.width / SPACER_WIDTH);
-      for (var i = 0; i < numBars; ++i) {
-        const magnitude = amplitudeArray[i + OFFSET] * this.canvas.height / 255;
+      for (let i = 0; i < numBars; ++i) {
+        const magnitude = this.amplitudeArray[i + OFFSET] * this.canvas.height / 255;
         if (this.backgroundImg) {
           const o = Math.round(this.canvas.height - magnitude);
-          this.ctx.drawImage(this.backgroundImg, 0, 0, BAR_WIDTH, 255, i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude));
+          this.ctx.drawImage(
+            this.backgroundImg,
+            0, 0, BAR_WIDTH, 255,
+            i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude)
+          );
         }
       }
     }
