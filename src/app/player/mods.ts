@@ -54,6 +54,7 @@ export const MODS = [
     "sv_sac05.xm",
     "techno_chip.xm",
     "tempest1.mod",
+    "tempest2.mod",
     "titan_02.xm",
     "toilet.xm",
     "transfu3.mod",
