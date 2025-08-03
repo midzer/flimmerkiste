@@ -14,19 +14,12 @@
 }
 
 .info {
+    cursor: copy;
     white-space: nowrap;
 }
-
-.marquee {
-    overflow: hidden;
-}
-
-.marquee[data-descr] {
-    cursor: copy;
-}
   
-.marquee[data-descr]:hover::after,
-.marquee[data-descr]:focus::after {
+.info:hover::after,
+.info:focus::after {
     content: attr(data-descr);
     position: absolute;
     left: 0;
@@ -34,15 +27,19 @@
     background-color: var(--bgcolor);
 }
 
+.info:hover span,
+.info:focus span {
+    animation-play-state: paused;
+}
+
+.marquee {
+    overflow: hidden;
+}
+
 .marquee > span {
     display: inline-block;
     padding-left: 100%;  /* show the marquee just outside the paragraph */
     animation: marquee 10s linear infinite;
-}
-
-.marquee > span.copied {
-    padding-left: 0;
-    animation: none;
 }
 
 /* Make it move */

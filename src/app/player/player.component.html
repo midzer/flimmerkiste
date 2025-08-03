@@ -1,7 +1,7 @@
 <div class="player">
-  <div class="d-flex info">
+  <div (click)="copy($event)" class="d-flex info" data-descr="Copy tune URL">
     <div>{{subTune() + 1}}/{{subTunes()}} {{playTime()}}</div>
-    <div (click)="copy($event)" class="marquee" tabindex="0" data-descr="Copy tune URL">
+    <div class="marquee" tabindex="0">
       <span>{{info()}}</span>
     </div>
   </div>
