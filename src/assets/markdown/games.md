@@ -96,7 +96,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play external!](https://baller.tuxfamily.org/online/)
 
-### Biolab
+### Biolab Disaster
 
 * Original (2024)
 * Jump 'n' Run
@@ -104,7 +104,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * [Repo](https://github.com/phoboslab/high_biolab)
 * Keyboard, Touch
 * 🥷🥷🥷🥷🥷
-* [Play external!](https://phoboslab.org/high_impact/biolab)
+* [Play!](/wasm/biolab/)
 
 ### Blobby Volley 2
 
