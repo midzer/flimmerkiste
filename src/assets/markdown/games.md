@@ -502,7 +502,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * Jump 'n' Run
 * Singleplayer
 * [Repo](https://github.com/midzer/SDLPoP) / [Wiki](https://en.wikipedia.org/wiki/Prince_of_Persia_(1989_video_game))
-* Gamepad, Keyboard
+* Gamepad, Keyboard, Touch
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/prince/)
 
