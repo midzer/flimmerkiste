@@ -17,6 +17,11 @@
     :host {
         height: 72.6%;
     }
+
+    button {
+        position: sticky;
+        float: right;
+    }
 }
 
 ul {
@@ -73,7 +78,7 @@ img {
 }
 
 button {
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    float: right;
+    right: 0;
 }
