@@ -51,20 +51,12 @@ app-content {
     border-radius: 5px;
   }
 
-  button {
-    margin-right: 1rem;
-  }
-
-  button > * {
-    pointer-events: none;
-  }
-
   h1 {
     word-break: break-word;
   }
 
   [id] {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 42px;
 
     &:hover > .anchor-link {
       opacity: 1;
@@ -74,5 +66,23 @@ app-content {
   .anchor-link {
     margin-left: 0.25rem;
     opacity: 0;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toc-title {
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 768px) {
+    .toc-list {
+      columns: 2;
+    }
   }
 }

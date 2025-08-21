@@ -1,5 +1,15 @@
-<button (click)="goBack()"><img src="/assets/icons/arrow-back.svg" width="24" height="24" alt="Go back"></button>
-<button (click)="share($event)"><img src="/assets/icons/share.svg" width="24" height="24" alt="Share"></button>
+<nav>
+  <button (click)="goBack()"><img src="/assets/icons/arrow-back.svg" width="24" height="24" alt="Go back"></button>
+  <button (click)="share($event)"><img src="/assets/icons/share.svg" width="24" height="24" alt="Share"></button>
+  <button (click)="toggle()">
+    <img [src]="showToc ? '/assets/icons/table-off.svg' : '/assets/icons/table.svg'"
+        width="24" height="24" alt="Toggle TOC">
+  </button>
+</nav>
+<div [hidden]="!showToc">
+  <div class="toc-title">Table of Contents</div>
+  <ul class="toc-list"></ul>
+</div>
 @if (hasAudio == true) {
   <audio controls playsinline preload="metadata">
     <source src="{{name | mp3file}}" type="audio/mpeg">

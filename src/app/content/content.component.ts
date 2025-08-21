@@ -24,7 +24,9 @@ export class ContentComponent implements OnInit {
   posts = POSTS;
   hasAudio: boolean = false;
   hasVideo: boolean = false;
-  baseTitle = "midzer's Flimmerkiste";
+  baseTitle: string = "midzer's Flimmerkiste";
+  tocList: HTMLElement;
+  showToc: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -90,13 +92,16 @@ export class ContentComponent implements OnInit {
     }
     const elements = document.querySelectorAll('[id]:not(h1)');
     elements.forEach(element => {
-      const id = element.id;
       const anchor = document.createElement('a');
       anchor.className = 'anchor-link';
-      anchor.href = window.location.origin + window.location.pathname + '#' + id;
+      anchor.href = window.location.origin + window.location.pathname + '#' + element.id;
       anchor.textContent = '#';
       element.append(anchor);
     });
+    if (this.tocList) {
+      this.tocList.innerHTML = '';
+      this.generateTocList();
+    }
   }
 
   goBack(): void {
@@ -115,13 +120,49 @@ export class ContentComponent implements OnInit {
     else {
       navigator.clipboard.writeText(window.location.href);
     }
-    const btn = event.target;
-    const img = btn.firstElementChild;
+    const img = event.target.firstElementChild;
     const iconPath = '/assets/icons/';
     img.src = iconPath + 'clipboard-check.svg';
     setTimeout(() => {
       img.src = iconPath + 'share.svg';
     }, 1337);
+  }
+
+  toggle(): void {
+    this.showToc = !this.showToc;
+    if (!this.tocList) {
+      this.generateTocList();
+    }
+  }
+
+  generateTocList(): void {
+    this.tocList = document.querySelector('.toc-list');
+    let currentH2Li = null;
+    const elements = document.querySelectorAll('h2[id],h3[id],h4[id]');
+    elements.forEach(element => {
+      if (element.tagName === 'H2') {
+        currentH2Li = this.createTocElement(element);
+        this.tocList.appendChild(currentH2Li);
+      }
+      else if (element.tagName === 'H3') {
+        let sublist = currentH2Li.querySelector('ul');
+        if (!sublist) {
+          sublist = document.createElement('ul');
+          currentH2Li.appendChild(sublist);
+        }
+        sublist.appendChild(this.createTocElement(element));
+      }
+    });
+  }
+
+  createTocElement(element): HTMLLIElement {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `#${element.id}`;
+    a.textContent = element.textContent.replace('#' ,'');
+    li.appendChild(a);
+
+    return li;
   }
 
   convertDurationtoSeconds(duration: string): number {
