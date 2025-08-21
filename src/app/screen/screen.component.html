@@ -18,3 +18,6 @@
 <main>
   <router-outlet></router-outlet>
 </main>
+@if (hostScrolled == true) {
+  <button (click)="scrollToTop()"><img src="/assets/icons/arrow-up-dashed.svg" width="24" height="24" alt="Scroll to top"></button>
+}

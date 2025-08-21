@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
 
 import { MENU } from '../menu';
@@ -13,4 +13,16 @@ import { MENU } from '../menu';
 
 export class ScreenComponent {
   menu = MENU;
+  host: HTMLElement;
+  hostScrolled: boolean = false;
+
+  @HostListener('scroll', ['$event'])
+  onScroll(event: Event): void {
+    this.host = event.target as HTMLElement;
+    this.hostScrolled = this.host.scrollTop > 100;
+  }
+
+  scrollToTop(): void {
+    this.host.scrollTo({ top: 0 });
+  }
 }

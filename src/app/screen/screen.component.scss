@@ -51,12 +51,6 @@ ul {
     }
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: var(--bgcolor);
-}
-
 main {
     margin: 0 0.375rem;
 }
@@ -76,4 +70,10 @@ img {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+button {
+    position: sticky;
+    bottom: 0;
+    float: right;
 }
