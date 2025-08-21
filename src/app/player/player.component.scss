@@ -70,13 +70,30 @@ select {
     border: 1px solid var(--bgcolor);
 }
 
-.tool {
-    cursor: pointer;
-}
-
 button {
     flex-grow: 1;
     padding: 1px;
+}
+
+select,
+button {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+select:hover,
+button:hover {
+    opacity: 1;
+}
+
+button > * {
+    pointer-events: none;
+}
+
+.tool,
+button,
+select {
+    cursor: pointer;
 }
 
 .heart {

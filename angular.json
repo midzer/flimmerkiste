@@ -27,9 +27,6 @@
             ],
             "scripts": [
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
             "optimization": {
               "scripts": true,
               "styles": {

@@ -13,17 +13,6 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    :host {
-        height: 72.6%;
-    }
-
-    button {
-        position: sticky;
-        float: right;
-    }
-}
-
 ul {
     display: inline-block;
     list-style-type: none;
@@ -81,4 +70,32 @@ button {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+@media screen and (min-width: 768px) {
+    :host {
+        height: 72.6%;
+    }
+
+    button {
+        position: sticky;
+        float: right;
+    }
+}
+
+button {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+button > * {
+    pointer-events: none;
+}
+
+button {
+    cursor: pointer;
 }
