@@ -4,6 +4,7 @@
     left: 0;
     width: 75.7%;
     height: 100vh;
+    height: 100dvh;
     background-color: var(--bgcolor);
     overflow-y: scroll;
     opacity: 1;
@@ -67,19 +68,14 @@ img {
 }
 
 button {
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    right: 0;
+    float: right;
 }
 
 @media screen and (min-width: 768px) {
     :host {
         height: 72.6%;
-    }
-
-    button {
-        position: sticky;
-        float: right;
     }
 }
 
