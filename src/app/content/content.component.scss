@@ -85,20 +85,4 @@ app-content {
       columns: 2;
     }
   }
-  button {
-      opacity: 0.7;
-      transition: opacity 0.3s;
-  }
-
-  button:hover {
-      opacity: 1;
-  }
-
-  button > * {
-      pointer-events: none;
-  }
-
-  button {
-      cursor: pointer;
-  }
 }
