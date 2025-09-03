@@ -28,4 +28,4 @@ Denzel Washington said in an interview:
 * Next stage you earn
 * Finally you return
 
-That short formula impressed me very much. It's a life essence. I keep going as long my pumpkin on my shoulders is intact.
+That short formula impressed me very much. It's a life essence. I keep going as long the pumpkin on my shoulders is intact.
