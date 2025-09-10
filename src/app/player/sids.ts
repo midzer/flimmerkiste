@@ -50,6 +50,7 @@ export const SIDS = [
     "Last_Ninja_2",
     "Last_Ninja_3",
     "Lightforce",
+    "Maniac_Mansion",
     "Master_of_Magic",
     "Mega_Apocalypse",
     "Miami_Vice",
@@ -98,6 +99,7 @@ export const SIDS = [
     "Wizardry",
     "Wizball",
     "Yie_Ar_Kung_Fu",
+    "Zak_McKracken_Remix",
     "Zamzara",
     "Zig_Zag",
     "Zoids"
