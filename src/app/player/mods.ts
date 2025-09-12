@@ -37,6 +37,7 @@ export const MODS = [
     "intro_number_136.mod",
     "it_is_a_good_day.mod",
     "isback2002.mod",
+    "j72-chiplvl1.mod",
     "knas.xm",
     "lamour_toujours_remix.xm",
     "lhs_myth1.xm",
