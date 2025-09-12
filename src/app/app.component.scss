@@ -6,7 +6,8 @@
 
 video {
     display: block;
-    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
     height: auto;
 }
 
@@ -16,7 +17,6 @@ video {
     }
     
     video {
-        height: 100vh;
         width: auto;
     }
 }
