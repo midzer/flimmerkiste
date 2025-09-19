@@ -49,6 +49,7 @@ export const SIDS = [
     "Last_Ninja",
     "Last_Ninja_2",
     "Last_Ninja_3",
+    "Lazy_Jones",
     "Lightforce",
     "Maniac_Mansion",
     "Master_of_Magic",
