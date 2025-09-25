@@ -156,6 +156,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play!](/wasm/brogue/)
 
+### Candy Crisis
+
+* Clone of Dr. Mario (1990)
+* Arcade
+* Single- and Multiplayer
+* [Repo](https://github.com/midzer/CandyCrisis) / [Wiki](https://en.wikipedia.org/wiki/Dr._Mario)
+* Keyboard, Touch
+* 🥷🥷🥷🥷🥷
+* [Play!](/wasm/candy-crisis/)
+
 ### Cave Story
 
 * Original (2004)
@@ -218,7 +228,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 
 ### Cuyo
 
-* Clone of Dr. Mario (1990) 
+* Clone of Dr. Mario (1990)
 * Arcade
 * Singleplayer
 * [Repo](https://github.com/midzer/cuyo) / [Wiki](https://en.wikipedia.org/wiki/Dr._Mario)
