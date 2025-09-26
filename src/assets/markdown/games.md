@@ -164,7 +164,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * [Repo](https://github.com/midzer/CandyCrisis) / [Wiki](https://en.wikipedia.org/wiki/Dr._Mario)
 * Keyboard, Touch
 * 🥷🥷🥷🥷🥷
-* [Play!](/wasm/candy-crisis/)
+* [Play!](/wasm/candycrisis/)
 
 ### Cave Story
 
