@@ -155,7 +155,7 @@ export class ContentComponent implements OnInit {
     });
   }
 
-  createTocElement(element): HTMLLIElement {
+  createTocElement(element: Element): HTMLLIElement {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.href = `#${element.id}`;
