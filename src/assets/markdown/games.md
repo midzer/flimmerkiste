@@ -416,6 +416,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷
 * [Play!](/wasm/m4kc/)
 
+### MiniSlug
+
+* Clone of Metal Slug (1996)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/minislug) / [Wiki](https://en.wikipedia.org/wiki/Metal_Slug_(1996_video_game))
+* Keyboard, Touch
+* 🥷🥷🥷🥷🥷
+* [Play!](/wasm/minislug/)
+
 ### Neverball
 
 * Clone of Super Monkey Ball (2001)
