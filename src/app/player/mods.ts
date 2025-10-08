@@ -51,6 +51,7 @@ export const MODS = [
     "plofs.xm",
     "rainfore.mod",
     "rg-dbd.xm",
+    "ryukenden.xm",
     "soda7-digitags.xm",
     "stargazer-pazasol.mod",
     "sv_sac05.xm",
