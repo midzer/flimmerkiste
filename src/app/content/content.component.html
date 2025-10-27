@@ -6,10 +6,7 @@
         width="24" height="24" alt="Toggle TOC">
   </button>
 </nav>
-<div [hidden]="!showToc">
-  <div class="toc-title">Table of Contents</div>
-  <ul class="toc-list"></ul>
-</div>
+<ul [hidden]="!showToc" class="toc"></ul>
 @if (hasAudio == true) {
   <audio controls playsinline preload="metadata">
     <source src="{{name | mp3file}}" type="audio/mpeg">

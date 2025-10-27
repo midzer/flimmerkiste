@@ -76,13 +76,15 @@ app-content {
     justify-content: space-between;
   }
 
-  .toc-title {
-    font-weight: bold;
+  @media (min-width: 576px) {
+    .toc {
+      columns: 2;
+    }
   }
 
-  @media screen and (min-width: 768px) {
-    .toc-list {
-      columns: 2;
+  @media (min-width: 768px) {
+    .toc {
+      columns: 3;
     }
   }
 }

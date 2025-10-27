@@ -136,7 +136,7 @@ export class ContentComponent implements OnInit {
   }
 
   generateTocList(): void {
-    this.tocList = document.querySelector('.toc-list');
+    this.tocList = document.querySelector('.toc');
     let currentH2Li = null;
     const elements = document.querySelectorAll('h2[id],h3[id],h4[id]');
     elements.forEach(element => {
