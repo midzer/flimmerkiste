@@ -12,6 +12,8 @@
 
 ![Gallien](assets/memes/gallien.webp)
 
+![Knowing](assets/memes/knowing.webp)
+
 ![One does not simply use a CDN](assets/memes/one-does-not-simply-use-a-cdn.webp)
 
 ![One does not simply want Umlauts in domains](assets/memes/one-does-not-simply-want-umlauts-in-domains.webp)
