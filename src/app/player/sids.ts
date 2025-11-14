@@ -1,5 +1,6 @@
 export const SIDS = [
     "ACE_II",
+    "Amazing_Horse",
     "Antics_Dulcedo_Cogitationis",
     "Arkanoid",
     "Ark_Pandora",
