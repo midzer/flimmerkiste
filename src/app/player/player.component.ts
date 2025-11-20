@@ -44,7 +44,7 @@ export class PlayerComponent implements OnInit {
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
   backgroundImg: HTMLImageElement;
-  amplitudeArray: Uint8Array;
+  amplitudeArray: Uint8Array<ArrayBuffer>;
   requestID: number;
 
   optgroupLabel: string;
