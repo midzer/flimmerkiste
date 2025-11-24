@@ -4,7 +4,7 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 
-import { MARKED_EXTENSIONS, provideMarkdown } from 'ngx-markdown';
+import { MARKED_EXTENSIONS, provideMarkdown, SANITIZE } from 'ngx-markdown';
 import { gfmHeadingId } from 'marked-gfm-heading-id';
 
 export const appConfig: ApplicationConfig = {
@@ -19,7 +19,10 @@ export const appConfig: ApplicationConfig = {
         useFactory: gfmHeadingId,
         multi: true
       }],
-      sanitize: SecurityContext.NONE,
-    }),
+      sanitize: {
+        provide: SANITIZE,
+        useValue: SecurityContext.NONE
+      },
+    })
   ]
 };
