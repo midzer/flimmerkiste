@@ -53,6 +53,7 @@ export const MODS = [
     "rg-dbd.xm",
     "ryukenden.xm",
     "soda7-digitags.xm",
+    "some1-turtle_race.mod",
     "stargazer-pazasol.mod",
     "sv_sac05.xm",
     "techno_chip.xm",
