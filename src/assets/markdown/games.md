@@ -656,6 +656,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🐱
 * [Play external!](https://supertux.semphris.com/play/)
 
+### Tanks
+
+* Clone of Battle City (1985)
+* Arcade
+* Single- and Multiplayer
+* [Repo](https://github.com/midzer/Tanks) / [Wiki](https://en.wikipedia.org/wiki/Battle_City)
+* Keyboard, Touch
+* 🥷🥷🥷
+* [Play!](/wasm/tanks/)
+
 ### Torus Trooper
 
 * Original (2004)
