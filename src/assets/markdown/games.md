@@ -366,6 +366,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play!](/wasm/jumpnbump/)
 
+### Kobo Deluxe
+
+* Clone of XKobo (?)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/kobodeluxe) / [Wiki](https://de.wikipedia.org/wiki/Kobo_Deluxe)
+* Keyboard
+* 🥷🥷🥷🥷
+* [Play!](/wasm/kobodeluxe/)
+
 ### LBreakoutHD
 
 * Clone of Breakout (1976)
