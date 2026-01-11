@@ -1,4 +1,4 @@
-# Kontakt
+# Contact
 
 * eMail: moin<span hidden>.nospam</span>@midzer.de
 * IRC: midzer on [Libera](https://libera.chat)
