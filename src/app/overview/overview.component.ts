@@ -14,6 +14,7 @@ import { Post } from '../post';
     standalone: true,
     imports: [RouterLink, LowerCasePipe, Blank2dashPipe]
 })
+
 export class OverviewComponent implements OnInit {
   posts = POSTS;
   active = false;

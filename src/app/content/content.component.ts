@@ -18,6 +18,7 @@ import { Mp3filePipe } from '../mp3file.pipe';
     standalone: true,
     imports: [MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe]
 })
+
 export class ContentComponent implements OnInit {
   path: string;
   name: string;

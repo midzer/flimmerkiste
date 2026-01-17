@@ -10,6 +10,7 @@ import { SanitizedUrlPipe } from '../sanitized-url.pipe';
     standalone: true,
     imports: [SanitizedUrlPipe]
 })
+
 export class EyeComponent implements OnInit {
   eye = signal('data:,');
 
