@@ -12,6 +12,7 @@ export const SIDS = [
     "Bionic_Commando",
     "BMX_Kidz",
     "Bulldog",
+    "C_and_C-Act_on_Instinct",
     "Chordian",
     "Cobra",
     "Combat_Crazy",
