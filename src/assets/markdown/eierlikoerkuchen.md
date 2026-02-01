@@ -1,5 +1,7 @@
 # Eierlikörkuchen
 
+![Zwei Stücke vom Eierlikörkuchen auf einem Teller und daneben der ganze Kuchen](/assets/pictures/eierlikoerkuchen.webp)
+
 Einer meiner Lieblingskuchen, kurzum: super einfach, super lecker, super schnell.
 
 ## Zutaten
