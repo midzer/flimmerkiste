@@ -1,6 +1,7 @@
 .player {
     position: absolute;
-    top: 42%;
+    top: 47vh;
+    top: 47dvh;
     left: 77.6%;
     width: 20.5%;
     text-align: center;
@@ -88,6 +89,7 @@ button {
 canvas {
     display: block;
     height: 7.5vh;
+    height: 7.5dvh;
 }
 
 a[data-descr] {
@@ -138,6 +140,7 @@ select {
 
     .tool {
         width: 16vh;
+        width: 16dvh;
     }
 }
 
