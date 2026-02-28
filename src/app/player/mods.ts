@@ -3,6 +3,7 @@ export const MODS = [
     "068.xm",
     "1990chip.mod",
     "AGGRESSiON - Easy DVD Creator 1.1.0 kg.xm",
+    "algardalgar.xm",
     "antipasti40_3.mod",
     "aryx.s3m",
     "azazel-ler_myggor.mod",
