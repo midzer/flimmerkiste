@@ -69,6 +69,7 @@ export const SIDS = [
     "One_Man_and_his_Droid",
     "Parallax",
     "Platoon",
+    "pinball_fantasies_partyland",
     "Rambo_First_Blood_Part_II",
     "Ramparts",
     "R_I_S_K",
