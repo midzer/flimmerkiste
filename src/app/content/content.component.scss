@@ -92,4 +92,10 @@ app-content {
       columns: 3;
     }
   }
+
+  @media (min-width: 1200px) {
+    .toc {
+      columns: 4;
+    }
+  }
 }
