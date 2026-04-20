@@ -1,4 +1,4 @@
-.player {
+:host {
     position: absolute;
     top: 47vh;
     top: 47dvh;
@@ -124,14 +124,18 @@ select {
     margin-right: auto;
 }
 
+.mt-auto {
+    margin-top: auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 @media (min-width: 576px) {
-    .player {
+    :host {
         top: 7.5%;
         bottom: 52.5%;
-    }
-
-    .d-flex {
-        flex-wrap: nowrap;
     }
 
     button {
@@ -144,10 +148,8 @@ select {
     }
 }
 
-.mt-auto {
-    margin-top: auto;
-}
-
-.hidden {
-    visibility: hidden;
+@media (min-width: 996px) {
+    .d-flex {
+        flex-wrap: nowrap;
+    }    
 }

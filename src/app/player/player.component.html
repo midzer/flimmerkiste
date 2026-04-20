@@ -1,41 +1,39 @@
-<div class="player">
-  <div (click)="copy($event)" class="d-flex info" data-descr="Copy tune URL">
-    <div>{{subTune() + 1}}/{{subTunes()}} {{playTime()}}</div>
-    <div class="marquee" tabindex="0">
-      <span>{{info()}}</span>
-    </div>
+<div (click)="copy($event)" class="d-flex info" data-descr="Copy tune URL">
+  <div>{{subTune() + 1}}/{{subTunes()}} {{playTime()}}</div>
+  <div class="marquee" tabindex="0">
+    <span>{{info()}}</span>
   </div>
-  <div class="d-flex">
-    <label for="tunes">Select a tune:</label>
-    <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectTuneChange($event)" aria-label="Select tune">
-      <optgroup label="SIDS">
-        @for (sid of sids; track sid) {
-          <option [ngValue]="sid">{{sid}}</option>
-        }
-      </optgroup>
-      <optgroup label="MODS">
-        @for (mod of mods; track mod) {
-          <option [ngValue]="mod">{{mod}}</option>
-        }
-      </optgroup>
-      <optgroup label="OPUS">
-        @for (flac of flacs; track flac) {
-          <option [ngValue]="flac">{{flac}}</option>
-        }
-      </optgroup>
-    </select>
-    <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
-    <button (click)="shuffleTune()"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
-  </div>
-  <div class="d-flex">
-    <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
-    <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
-    <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
-    <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
-  </div>
-  <a href="{{ getTunePath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
-    <img class="heart" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
-    <canvas></canvas>
-  </a>
-  <img (click)="shuffleTool()" class="tool mt-auto" src="{{ getToolPath(selectedTool) }}" width="250" height="250" alt="{{ selectedTool }}">
-</div><!-- player -->
+</div>
+<div class="d-flex">
+  <label for="tunes">Select a tune:</label>
+  <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectTuneChange($event)" aria-label="Select tune">
+    <optgroup label="SIDS">
+      @for (sid of sids; track sid) {
+        <option [ngValue]="sid">{{sid}}</option>
+      }
+    </optgroup>
+    <optgroup label="MODS">
+      @for (mod of mods; track mod) {
+        <option [ngValue]="mod">{{mod}}</option>
+      }
+    </optgroup>
+    <optgroup label="OPUS">
+      @for (flac of flacs; track flac) {
+        <option [ngValue]="flac">{{flac}}</option>
+      }
+    </optgroup>
+  </select>
+  <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
+  <button (click)="shuffleTune()"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
+</div>
+<div class="d-flex">
+  <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
+  <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
+  <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
+  <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
+</div>
+<a href="{{ getTunePath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
+  <img class="heart" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
+  <canvas></canvas>
+</a>
+<img (click)="shuffleTool()" class="tool mt-auto" src="{{ getToolPath(selectedTool) }}" width="250" height="250" alt="{{ selectedTool }}">
