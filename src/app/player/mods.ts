@@ -1,5 +1,6 @@
 export const MODS = [
     "2kad04.mod",
+    "2nd_pm.s3m",
     "3zs7i73_msc2_r.xm",
     "068.xm",
     "1990chip.mod",
@@ -30,6 +31,7 @@ export const MODS = [
     "external.xm",
     "fap.xm",
     "funky_fish_-_r2-d2.xm",
+    "funky_stars.mod",
     "her3.mod",
     "her4.mod",
     "her10.mod",
