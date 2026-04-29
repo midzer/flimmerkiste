@@ -16,6 +16,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷
 * [Play!](/wasm/abuse/)
 
+### Alienblaster
+
+* Original (2004)
+* Top-Down-Shooter
+* Single- and Multiplayer
+* [Repo](https://codeberg.org/midzer/alienblaster) / [Wiki](https://libregamewiki.org/Alien_Blaster)
+* Keyboard
+* 🥷🥷🥷
+* [Play!](/wasm/alienblaster/)
+
 ### Anarch
 
 * Original (2020)
@@ -436,6 +446,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * 🥷🥷🥷🥷🥷
 * [Play!](/wasm/minislug/)
 
+### Maze of Galious
+
+* Original (1987)
+* Action-adventure
+* Singleplayer
+* [Repo](https://github.com/midzer/mazeofgalious) / [Wiki](https://en.wikipedia.org/wiki/The_Maze_of_Galious)
+* Keyboard
+* 🥷🥷🥷
+* [Play!](/wasm/mog/)
+
 ### Neverball
 
 * Clone of Super Monkey Ball (2001)
@@ -454,6 +474,16 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * [Repo](https://github.com/midzer/nikwi)
 * Keyboard
 * 🥷🥷🥷
+* [Play!](/wasm/nikwi/)
+
+### No Gravity
+
+* Original (2005)
+* Space flight simulation
+* Singleplayer
+* [Repo](https://github.com/midzer/nogravity) [Wiki](https://en.wikipedia.org/wiki/No_Gravity_(video_game))
+* Keyboard
+* 🥷🥷🥷🥷
 * [Play!](/wasm/nikwi/)
 
 ### Numpty Physics
@@ -515,6 +545,26 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * Keyboard, Touch
 * 🥷🥷🥷🥷
 * [Play!](/wasm/pacman/)
+
+### Pang
+
+* Clone of Buster Bros. (1989)
+* Arcade
+* Singleplayer
+* [Repo](https://github.com/midzer/pang) / [Wiki](https://en.wikipedia.org/wiki/Buster_Bros.)
+* Keyboard
+* 🥷🥷🥷🥷
+* [Play!](/wasm/pang/)
+
+### Pekka Kana 2
+
+* Original (2003)
+* Jump 'n' Run
+* Singleplayer
+* [Repo](https://github.com/midzer/pk2_greta) / [Wiki](https://libregamewiki.org/Pekka_Kana_2)
+* Keyboard, Mouse, Touch
+* 🥷🥷🥷🥷
+* [Play!](/wasm/pk2/)
 
 ### Powermanga
 
@@ -855,6 +905,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 
 * Original (1998)
 * Cinematic platformer
+* Singleplayer
 * [Repo](https://github.com/midzer/hode) / [Wiki](https://en.wikipedia.org/wiki/Heart_of_Darkness_(video_game))
 * Keyboard
 * 🥷🥷🥷
