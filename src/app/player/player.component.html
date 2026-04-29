@@ -23,14 +23,14 @@
       }
     </optgroup>
   </select>
-  <button (click)="play()"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
-  <button (click)="shuffleTune()"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
+  <button (click)="play()" title="Play tune"><img [src]="playButton" width="24" height="24" alt="Play tune"></button>
+  <button (click)="shuffleTune()" title="Shuffle tune"><img src="/assets/icons/arrows-shuffle.svg" width="24" height="24" alt="Shuffle tune"></button>
 </div>
 <div class="d-flex">
-  <button (click)="next()"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
-  <button (click)="prev()"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
-  <button (click)="download()"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
-  <button (click)="toggle()"><img [src]="videoButtonIcon" width="24" height="24" alt="Play video"></button>
+  <button (click)="next()" title="Next track"><img src="/assets/icons/player-track-next.svg" width="24" height="24" alt="Next track"></button>
+  <button (click)="prev()" title="Previous track"><img src="/assets/icons/player-track-prev.svg" width="24" height="24" alt="Previous track"></button>
+  <button (click)="download()" title="Download {{ optgroupLabel }} tunes"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download {{ optgroupLabel }} tunes"></button>
+  <button (click)="toggle()" title="Toggle video"><img [src]="videoButtonIcon" width="24" height="24" alt="Toggle video"></button>
 </div>
 <a href="{{ getTunePath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
   <img class="heart" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
