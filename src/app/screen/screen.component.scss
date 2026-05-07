@@ -7,11 +7,7 @@
     height: 100dvh;
     background-color: var(--bgcolor);
     overflow-y: scroll;
-    opacity: 1;
-    transition: opacity 1s;
-    &.hide {
-        opacity: 0;
-    }
+    scrollbar-width: thin;
 }
 
 ul {

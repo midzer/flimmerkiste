@@ -1,4 +1,5 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, OnInit, signal, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { FLACS } from './flacs';
@@ -12,10 +13,13 @@ import { TOOLS } from './tools';
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
     standalone: true,
-    imports: [FormsModule]
+    imports: [FormsModule, NgClass]
 })
 
 export class PlayerComponent implements OnInit {
+
+  @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
+
   modPlayer: any;
   sidPlayer: any;
   flacPlayer: AudioContext;
@@ -33,26 +37,18 @@ export class PlayerComponent implements OnInit {
   playIcon: string = '/assets/icons/player-play.svg';
   pauseIcon: string = '/assets/icons/player-pause.svg';
   playButton: string = this.playIcon;
-  
-  screen: HTMLElement;
-  video: HTMLVideoElement;
-  videoPlaying: boolean = false;
-  playVideoIcon: string = '/assets/icons/movie.svg';
-  pauseVideoIcon: string = '/assets/icons/movie-off.svg';
-  videoButtonIcon: string = this.playVideoIcon;
 
-  canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
   backgroundImg: HTMLImageElement;
   amplitudeArray: Uint8Array<ArrayBuffer>;
   requestID: number;
 
-  optgroupLabel: string;
   selectedTune: string = this.randomFrom(SIDS.concat(MODS, FLACS));
-  loadedTune: string;
   mods: string[] = MODS;
   sids: string[] = SIDS;
   flacs: string[] = FLACS;
+  optgroupLabel: string = this.getOptgroupLabel(this.selectedTune);
+  loadedTune: string;
 
   selectedTool: string = this.randomFrom(TOOLS);
 
@@ -111,10 +107,19 @@ export class PlayerComponent implements OnInit {
         this.flacPlayer.resume();
         break;
     }
-    this.initSpectrum();
+    if (!this.ctx) {
+      this.ctx = this.canvas.nativeElement.getContext('2d');
+    }
+    if (!this.backgroundImg && this.optgroupLabel !== 'SID') {
+      const imgObj = new Image();
+      imgObj.onload = () => { this.backgroundImg = imgObj; }
+      imgObj.src = '/assets/images/darcula-spectrum.png';
+    }
+    if (this.analyserNode) {
+      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
+    }
     this.redrawSpectrum();
     this.intervalID = window.setInterval(this.setPlayTime, 1000);
-    this.playing = true;
   }
 
   stopPlaying(): void {
@@ -131,19 +136,19 @@ export class PlayerComponent implements OnInit {
     }
     window.cancelAnimationFrame(this.requestID);
     window.clearInterval(this.intervalID);
-    this.playing = false;
   }
 
   play(): void {
     if (this.playing) {
       this.playButton = this.playIcon;
       this.stopPlaying();
+      this.playing = false;
     }
     else {
       this.playButton = this.pauseIcon;
       this.startPlaying();
+      this.playing = true;
     }
-    document.querySelector('.heart').classList.toggle('hidden');
   }
 
   next(): void {
@@ -220,25 +225,6 @@ export class PlayerComponent implements OnInit {
       window.location.pathname +
       '?tune=' + this.selectedTune +
       window.location.hash);
-  }
-
-  toggle(): void {
-    if (!this.video) {
-      this.video = document.querySelector('video') as HTMLVideoElement;
-    }
-    if (!this.screen) {
-      this.screen = document.querySelector('app-screen');
-    }
-    if (this.videoPlaying) {
-      this.videoButtonIcon = this.playVideoIcon;
-      this.video.pause();
-    }
-    else {
-      this.videoButtonIcon = this.pauseVideoIcon;
-      this.video.play();
-    }
-    this.screen.classList.toggle('hide');
-    this.videoPlaying = !this.videoPlaying;
   }
 
   getTunePath(tune: string): string {
@@ -368,37 +354,25 @@ export class PlayerComponent implements OnInit {
     if (this.playing) {
       this.stopPlaying();
       this.loadTune(event);
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-  }
-
-  initSpectrum = () => {
-    this.canvas = document.querySelector('canvas');
-    this.ctx = this.canvas.getContext('2d');
-    
-    if (this.optgroupLabel !== 'SID') {
-      const imgObj = new Image();
-      imgObj.onload = () => { this.backgroundImg = imgObj; }
-      imgObj.src = '/assets/images/darcula-spectrum.png';
-      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
+      this.ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
     }
   }
 
   redrawSpectrum = () => {
     if (this.optgroupLabel === 'SID') {
       this.ctx.drawImage(
-        this.canvas,
-        0, 0, this.canvas.width, this.canvas.height - 1, // source: everything except bottom row
-        0, 1, this.canvas.width, this.canvas.height - 1  // destination: move down by 1
+        this.canvas.nativeElement,
+        0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height - 1, // source: everything except bottom row
+        0, 1, this.canvas.nativeElement.width, this.canvas.nativeElement.height - 1  // destination: move down by 1
       );
 
       this.ctx.fillStyle = 'black';
-      this.ctx.fillRect(0, 0, this.canvas.width, 1);
+      this.ctx.fillRect(0, 0, this.canvas.nativeElement.width, 1);
 
       this.ctx.lineWidth = 2;
       for (let voice = 0; voice < 3; voice++) {
         const freq = this.readRegister(0xD400 + voice * 7, 1) + this.readRegister(0xD401 + voice * 7, 1) * 256;
-        let x = (freq / 0xFFFF) * this.canvas.width | 0;
+        let x = (freq / 0xFFFF) * this.canvas.nativeElement.width | 0;
         switch (voice) {
           case 0: this.ctx.strokeStyle = '#955529'; break;
           case 1: this.ctx.strokeStyle = '#ca7570'; break;
@@ -409,22 +383,22 @@ export class PlayerComponent implements OnInit {
         this.ctx.lineTo(x, 1);
         this.ctx.stroke();
       }
-    } else {
-      this.analyserNode.getByteFrequencyData(this.amplitudeArray);
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+    else if (this.backgroundImg) {
+      this.ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
 
       const SPACER_WIDTH = 8, BAR_WIDTH = 5, OFFSET = 100;
-      const numBars = Math.round(this.canvas.width / SPACER_WIDTH);
+      const numBars = Math.round(this.canvas.nativeElement.width / SPACER_WIDTH);
+
+      this.analyserNode.getByteFrequencyData(this.amplitudeArray);
       for (let i = 0; i < numBars; ++i) {
-        const magnitude = this.amplitudeArray[i + OFFSET] * this.canvas.height / 255;
-        if (this.backgroundImg) {
-          const o = Math.round(this.canvas.height - magnitude);
-          this.ctx.drawImage(
-            this.backgroundImg,
-            0, 0, BAR_WIDTH, 255,
-            i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude)
-          );
-        }
+        const magnitude = this.amplitudeArray[i + OFFSET] * this.canvas.nativeElement.height / 255;
+        const o = Math.round(this.canvas.nativeElement.height - magnitude);
+        this.ctx.drawImage(
+          this.backgroundImg,
+          0, 0, BAR_WIDTH, 255,
+          i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude)
+        );
       }
     }
     this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
