@@ -419,13 +419,13 @@ export var Effects = {
 	},
 
 	// Retrigger the note every param ticks.
-	RETRIGGER:{
+	RETRIGGER: {
 		representation: "E",
 		handler: function(registers, param, tick, channel, player) {
 			if (tick % (param & 0x0F) === 0 && registers.sample.sample) {
 				registers.sample.remain   = registers.sample.sample.sampleLength - registers.sample.restart;
 				registers.sample.position = registers.sample.restart;
-				player.dispatchEvent(ScripTracker.Events.instrument, player, channel, registers.instrument, registers.note, Effects.RETRIGGER, param);
+				player.dispatchEvent(player.Events.instrument, player, channel, registers.instrument, registers.note, Effects.RETRIGGER, param);
 			}
 		}
 	},
