@@ -50,6 +50,7 @@ export const MODS = [
     "mo_lgnd.mod",
     "monty-blitz.mod",
     "mrgshor6.xm",
+    "no_touch_knock-out.xm",
     "one_night_shot.mod",
     "paso-pleasure_to_paso.mod",
     "plofs.xm",
