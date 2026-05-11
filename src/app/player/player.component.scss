@@ -122,10 +122,11 @@ select {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
 }
 
-.mt-auto {
-    margin-top: auto;
+.tool:hover {
+    filter: brightness(1.2);
 }
 
 .hidden {

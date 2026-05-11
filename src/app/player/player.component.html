@@ -37,4 +37,4 @@
   <img [ngClass]="{ 'heart': true, 'hidden': playing }" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
   <canvas #canvas></canvas>
 </a>
-<img (click)="shuffleTool()" class="tool mt-auto" src="{{ getToolPath(selectedTool) }}" width="250" height="250" alt="{{ selectedTool }}">
+<img (click)="shuffleTool()" class="tool" src="{{ getToolPath(selectedTool) }}" width="250" height="250" title="Shuffle tool" alt="{{ selectedTool }}">
