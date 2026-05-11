@@ -10,17 +10,7 @@ video {
     max-height: 100vh;
     max-height: 100dvh;
     height: auto;
-
-    &.pointer {
-        cursor: pointer;
-    }
-}
-
-button {
-    position: absolute;
-    top: 4vh;
-    top: 4dvh;
-    right: 7vw;
+    cursor: pointer;
 }
 
 @media (min-width: 576px) {
@@ -30,10 +20,5 @@ button {
     
     video {
         width: auto;
-    }
-
-    button {
-        top: 0;
-        right: 25.3%;
     }
 }

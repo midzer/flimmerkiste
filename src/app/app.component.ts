@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 import { EyeComponent } from './eye/eye.component';
@@ -9,7 +8,7 @@ import { ScreenComponent } from './screen/screen.component';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    imports: [ScreenComponent, PlayerComponent, EyeComponent, NgClass]
+    imports: [ScreenComponent, PlayerComponent, EyeComponent]
 })
 
 export class AppComponent {
@@ -20,14 +19,14 @@ export class AppComponent {
 
   constructor() {}
 
-  startVideo(): void {
-    this.video.nativeElement.play();
-    this.videoPlaying = true;
-  }
-
-  stopVideo(): void {
-    this.video.nativeElement.pause();
-    this.videoPlaying = false;
+  toggleVideo(): void {
+    if (this.videoPlaying) {
+      this.video.nativeElement.pause();
+    }
+    else {
+      this.video.nativeElement.play();
+    }
+    this.videoPlaying = !this.videoPlaying;
   }
 
 }
