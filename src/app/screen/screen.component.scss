@@ -8,6 +8,7 @@
     background-color: var(--bgcolor);
     overflow-y: scroll;
     scrollbar-width: thin;
+    padding: 0 0.375rem;
 }
 
 ul {
@@ -42,10 +43,6 @@ ul {
     }
 }
 
-main {
-    margin: 0 0.375rem;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -71,6 +68,7 @@ button {
 
 @media (min-width: 768px) {
     :host {
-        height: 72.6%;
+        height: 72.5%;
+        padding: 0;
     }
 }
