@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
 
 import { MENU } from '../menu';
@@ -8,15 +8,24 @@ import { MENU } from '../menu';
     templateUrl: './screen.component.html',
     styleUrls: ['./screen.component.scss'],
     standalone: true,
-    imports: [RouterLinkActive, RouterLink, RouterOutlet]
+    imports: [RouterLinkActive, RouterLink, RouterOutlet],
+    host: {
+      'tabindex': '-1',
+      '(scroll)': 'onScroll($event)'
+    }
 })
 
-export class ScreenComponent {
+export class ScreenComponent implements OnInit {
   menu = MENU;
   host: HTMLElement;
   hostScrolled: boolean = false;
 
-  @HostListener('scroll', ['$event'])
+  constructor(private element: ElementRef) {}
+
+  ngOnInit() {
+    this.element.nativeElement.focus();
+  }
+
   onScroll(event: Event): void {
     this.host = event.target as HTMLElement;
     this.hostScrolled = this.host.scrollTop > 100;

@@ -11,6 +11,10 @@
     padding: 0 0.375rem;
 }
 
+:host:focus {
+    outline: none;
+}
+
 ul {
     display: inline-block;
     list-style-type: none;
