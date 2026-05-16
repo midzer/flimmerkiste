@@ -10,27 +10,27 @@ class MODProcessor extends AudioWorkletProcessor {
     super(options);
 
     this.module      = null;			// Module file that is playing.
-	this.pattern     = null;			// The current pattern being played.
-	this.orderIndex  = 0;				// Index in the order table of the module.
-	this.currentRow  = 0;				// Current row in pattern.
-	this.currentTick = 0;				// Current tick in row.
+	  this.pattern     = null;			// The current pattern being played.
+	  this.orderIndex  = 0;				// Index in the order table of the module.
+	  this.currentRow  = 0;				// Current row in pattern.
+	  this.currentTick = 0;				// Current tick in row.
 
-	this.sampleRate     = 0;			// Playback sample rate defined by the audioContext.
-	this.bpm            = 0;			// Current BPM.
-	this.ticksPerRow    = 0;			// Current number of ticks in one row (tempo).
-	this.samplesPerTick = 0;			// Number of samples to process for the current tick.
-	this.sampleCount    = 0;			// Number of samples processed for the current tick.
-	this.sampleStepping = 0;			// Base sample step based on 125 / 6. 
-	this.isPlaying      = false;		// Is the player currently playing?
+	  this.sampleRate     = 0;			// Playback sample rate defined by the audioContext.
+	  this.bpm            = 0;			// Current BPM.
+	  this.ticksPerRow    = 0;			// Current number of ticks in one row (tempo).
+	  this.samplesPerTick = 0;			// Number of samples to process for the current tick.
+	  this.sampleCount    = 0;			// Number of samples processed for the current tick.
+	  this.sampleStepping = 0;			// Base sample step based on 125 / 6. 
+	  this.isPlaying      = false;		// Is the player currently playing?
 
-	this.masterVolume     = 1;			// The master volume multiplier.
-	this.masterVolSlide   = 0;			// Master volume delta per tick.
-	this.breakPattern     = -1;			// Pattern break row to restart next order.
-	this.orderJump        = -1;			// Order jump index of next order.
-	this.rowJump          = -1;			// Row to jump to when looping
-	this.patternDelay     = 0;			// Pattern delay will keep the player at the current row until 0.
-	this.patternLoop      = false;		// Do not jump to next order, but repeat current.
-	this.channelRegisters = [];			// Channel registers containing the player data for each channel.
+	  this.masterVolume     = 1;			// The master volume multiplier.
+	  this.masterVolSlide   = 0;			// Master volume delta per tick.
+	  this.breakPattern     = -1;			// Pattern break row to restart next order.
+	  this.orderJump        = -1;			// Order jump index of next order.
+	  this.rowJump          = -1;			// Row to jump to when looping
+	  this.patternDelay     = 0;			// Pattern delay will keep the player at the current row until 0.
+	  this.patternLoop      = false;		// Do not jump to next order, but repeat current.
+	  this.channelRegisters = [];			// Channel registers containing the player data for each channel.
 
     this.Events = {
         playerReady: "SONG_LOADED",
@@ -44,19 +44,19 @@ class MODProcessor extends AudioWorkletProcessor {
         error:       "ERROR"
     };
 
-	this.eventHandlers = {
-		SONG_LOADED: [],
-		PLAY:        [],
-		STOP:        [],
-		SONG_END:    [],
-		NEW_ROW:     [],
-		NEW_ORDER:   [],
-		INSTRUMENT:  [],
-		EFFECT:      []
-	};
+	  this.eventHandlers = {
+		  SONG_LOADED: [],
+		  PLAY:        [],
+		  STOP:        [],
+		  SONG_END:    [],
+		  NEW_ROW:     [],
+		  NEW_ORDER:   [],
+		  INSTRUMENT:  [],
+		  EFFECT:      []
+	  };
 
     this.sampleRate     = sampleRate;
-	this.sampleStepping = Math.round(this.sampleRate * 0.02) * 3;
+	  this.sampleStepping = Math.round(this.sampleRate * 0.02) * 3;
 
     this.port.onmessage = (event) => {
       const msg = event.data || {};
