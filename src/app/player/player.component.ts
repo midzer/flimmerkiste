@@ -346,6 +346,7 @@ export class PlayerComponent implements OnInit {
         break;
     }
     this.loadedTune = tune;
+    this.initMediaSession(tune, this.optgroupLabel);
   }
 
   selectTuneChange(event: string): void {
@@ -446,6 +447,22 @@ export class PlayerComponent implements OnInit {
 
     source.connect(this.analyserNode);
     this.analyserNode.connect(this.audioContext.destination);
+  }
+
+  initMediaSession(tune: string, label: string) {
+    const ms = navigator.mediaSession;
+
+    ms.metadata = new window.MediaMetadata({
+      title: tune,
+      artist: label,
+      album: 'Flimmerkiste',
+      artwork: [{ src: '/assets/images/health.png', sizes: '192x192', type: 'image/png' }]
+    });
+
+    ms.setActionHandler('play', () => this.play());
+    ms.setActionHandler('pause', () => this.play());
+    ms.setActionHandler('previoustrack', () => this.prev());
+    ms.setActionHandler('nexttrack', () => this.next());
   }
 
   async download() {
