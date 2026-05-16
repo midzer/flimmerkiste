@@ -15,12 +15,12 @@
 <div class="d-flex">
   <label for="tunes">Select a tune:</label>
   <select id="tunes" [(ngModel)]="selectedTune" (ngModelChange)="selectTuneChange($event)" aria-label="Select tune">
-    <optgroup label="SIDS">
+    <optgroup label="SID">
       @for (sid of sids; track sid) {
         <option [ngValue]="sid">{{sid}}</option>
       }
     </optgroup>
-    <optgroup label="MODS">
+    <optgroup label="MOD">
       @for (mod of mods; track mod) {
         <option [ngValue]="mod">{{mod}}</option>
       }

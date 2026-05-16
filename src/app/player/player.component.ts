@@ -2,6 +2,9 @@ import { NgClass } from '@angular/common';
 import { Component, OnInit, signal, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { jsSID } from './modules/jsSID';
+import { ScripTracker } from './modules/scriptracker';
+
 import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
@@ -22,10 +25,11 @@ export class PlayerComponent implements OnInit {
 
   modPlayer: any;
   sidPlayer: any;
-  flacPlayer: AudioContext;
-  analyserNode : AnalyserNode;
-  javascriptNode: ScriptProcessorNode;
+
+  audioContext: AudioContext;
+  analyserNode: AnalyserNode;
   sourceNode: AudioBufferSourceNode;
+
   buffer: AudioBuffer;
   startedAt: number = 0;
   subTune = signal(0);
@@ -86,7 +90,7 @@ export class PlayerComponent implements OnInit {
         this.playTime.set(this.createPlayTime(this.sidPlayer.getplaytime()));
         break;
       case 'OPUS':
-        this.playTime.set(this.createPlayTime(this.flacPlayer.currentTime - this.startedAt));
+        this.playTime.set(this.createPlayTime(this.audioContext.currentTime - this.startedAt));
         break;
     }
   }
@@ -98,15 +102,13 @@ export class PlayerComponent implements OnInit {
     }
     switch (this.optgroupLabel) {
       case 'SID':
-        this.sidPlayer.playcont();
+        this.sidPlayer.resume();
         break;
       case 'MOD':
         this.modPlayer.play();
         break;
-      case 'OPUS':
-        this.flacPlayer.resume();
-        break;
     }
+    this.audioContext.resume();
     if (!this.ctx) {
       this.ctx = this.canvas.nativeElement.getContext('2d');
     }
@@ -115,23 +117,18 @@ export class PlayerComponent implements OnInit {
       imgObj.onload = () => { this.backgroundImg = imgObj; }
       imgObj.src = '/assets/images/darcula-spectrum.png';
     }
-    if (this.analyserNode) {
-      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
-    }
     this.redrawSpectrum();
     this.intervalID = window.setInterval(this.setPlayTime, 1000);
   }
 
   stopPlaying(): void {
+    this.audioContext.suspend();
     switch (this.optgroupLabel) {
       case 'SID':
         this.sidPlayer.pause();
         break;
       case 'MOD':
         this.modPlayer.stop();
-        break;
-      case 'OPUS':
-        this.flacPlayer.suspend();
         break;
     }
     window.cancelAnimationFrame(this.requestID);
@@ -164,8 +161,8 @@ export class PlayerComponent implements OnInit {
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.nextOrder();
     }
-    else if (this.flacPlayer && this.optgroupLabel === 'OPUS') {
-      this.playBuffer(this.flacPlayer.currentTime - this.startedAt + 10);
+    else if (this.audioContext && this.optgroupLabel === 'OPUS') {
+      this.playBuffer(this.audioContext.currentTime - this.startedAt + 10);
     }
     else {
       this.play();
@@ -185,8 +182,8 @@ export class PlayerComponent implements OnInit {
     else if (this.modPlayer && this.optgroupLabel === 'MOD') {
       this.modPlayer.prevOrder();
     }
-    else if (this.flacPlayer && this.optgroupLabel === 'OPUS') {
-      this.playBuffer(this.flacPlayer.currentTime - this.startedAt - 10);
+    else if (this.audioContext && this.optgroupLabel === 'OPUS') {
+      this.playBuffer(this.audioContext.currentTime - this.startedAt - 10);
     }
     else {
       this.play();
@@ -229,7 +226,7 @@ export class PlayerComponent implements OnInit {
 
   getTunePath(tune: string): string {
     let path = '/assets/';
-    switch (this.getOptgroupLabel(this.selectedTune)) {
+    switch (this.getOptgroupLabel(tune)) {
       case 'SID':
         path += 'sids/' + tune + '.sid';
         break;
@@ -264,78 +261,77 @@ export class PlayerComponent implements OnInit {
   }
 
   playBuffer(offset: number): void {
-    if (this.sourceNode) {
-      this.sourceNode.stop();
-      this.sourceNode.disconnect();
-      this.sourceNode = null;
-    }
-    this.sourceNode = this.flacPlayer.createBufferSource();
+    if (!this.buffer) return;
+  
+    this.clearSourceNode();
+
+    this.sourceNode = this.audioContext.createBufferSource();
     this.sourceNode.buffer = this.buffer;
     this.sourceNode.loop = true;
 
-    this.sourceNode.connect(this.flacPlayer.destination);
-    this.sourceNode.connect(this.analyserNode);
-    this.analyserNode.connect(this.javascriptNode);
-    this.javascriptNode.connect(this.flacPlayer.destination);
+    this.connectAnalyserSource(this.sourceNode);
 
-    if (offset < 0) {
-      offset = 0;
-    }
+    if (offset < 0) offset = 0;
+
     this.sourceNode.start(0, offset);
-    this.startedAt = this.flacPlayer.currentTime - offset;
+    this.startedAt = this.audioContext.currentTime - offset;
     this.startPlaying();
   }
 
   async loadTune(tune: string): Promise<void> {
+    this.clearSourceNode();
     this.subTune.set(0);
     this.optgroupLabel = this.getOptgroupLabel(tune);
+    if (!this.audioContext) {
+      this.audioContext = new AudioContext();
+    }
     switch (this.optgroupLabel) {
       case 'SID':
         if (!this.sidPlayer) {
-          const { jsSID } = await import('./modules/jsSID.js');
-          this.sidPlayer = new jsSID(16384, 0.0005);
+          this.sidPlayer = new jsSID(this.audioContext, 16384, 0.0005);
+          await this.sidPlayer.init();
+
           this.sidPlayer.setloadcallback(() => {
             this.startPlaying();
             this.subTunes.set(this.sidPlayer.getsubtunes());
-            this.info.set(this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
-              this.removeNullFromString(this.sidPlayer.gettitle()));
+            this.info.set(
+              this.removeNullFromString(this.sidPlayer.getauthor()) + ' - ' +
+              this.removeNullFromString(this.sidPlayer.gettitle())
+            );
           });
         }
-        this.sidPlayer.loadinit(this.getTunePath(tune), this.subTune());
+        this.sidPlayer.outputNode.connect(this.audioContext.destination);
+        await this.sidPlayer.loadinit(this.getTunePath(tune), this.subTune());
         break;
       case 'MOD':
+        this.ensureAnalyser();
+
         if (!this.modPlayer) {
-          const { ScripTracker } = await import('./modules/scriptracker.js');
-          this.modPlayer = new ScripTracker();
-          this.modPlayer.on(ScripTracker.Events.playerReady, (player, songName, songLength) => {
+          this.modPlayer = new ScripTracker(this.audioContext);
+          await this.modPlayer.init();
+
+          this.modPlayer.on('ready', (player, songName, songLength) => {
             this.startPlaying();
             this.subTunes.set(songLength);
             this.info.set(songName);
           });
-          this.modPlayer.on(ScripTracker.Events.order, (player, currentOrder, songLength, patternIndex) => {
+          this.modPlayer.on('order', (player, currentOrder, songLength, patternIndex) => {
             this.subTune.set(currentOrder - 1);
             this.playTime.set('Pt ' + patternIndex);
           });
         }
-        this.analyserNode = this.modPlayer.audioContext.createAnalyser();
-        this.modPlayer.audioScriptNode.connect(this.analyserNode);
-        this.modPlayer.loadModule(this.getTunePath(tune));
+
+        this.connectAnalyserSource(this.modPlayer.outputNode);
+        await this.modPlayer.loadModule(this.getTunePath(tune));
         break;
       case 'OPUS':
-        if (!this.flacPlayer) {
-          this.flacPlayer = new AudioContext();
-        }
-        this.analyserNode = new AnalyserNode(this.flacPlayer);
-        this.javascriptNode = this.flacPlayer.createScriptProcessor(
-          1024,
-          1,
-          1
-        );
+        this.ensureAnalyser();
         this.subTunes.set(1);
         this.info.set('Fetching OPUS...');
+
         try {
           const response = await fetch(this.getTunePath(tune));
-          this.flacPlayer.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
+          this.audioContext.decodeAudioData(await response.arrayBuffer(), (buffer: AudioBuffer) => {
             this.buffer = buffer;
             this.playBuffer(0);
           });
@@ -423,6 +419,32 @@ export class PlayerComponent implements OnInit {
     return label;
   }
 
+  ensureAnalyser(): void {
+    if (!this.analyserNode) {
+      this.analyserNode = this.audioContext.createAnalyser();
+      this.analyserNode.fftSize = 2048;
+      this.analyserNode.smoothingTimeConstant = 0.8;
+      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
+    }
+  }
+
+  clearSourceNode(): void {
+    if (this.sourceNode) {
+      this.sourceNode.stop();
+      this.sourceNode.disconnect();
+      this.sourceNode = null;
+    }
+  }
+
+  connectAnalyserSource(source: AudioNode): void {
+    this.ensureAnalyser();
+    source.disconnect();
+    this.analyserNode.disconnect();
+
+    source.connect(this.analyserNode);
+    this.analyserNode.connect(this.audioContext.destination);
+  }
+
   async download() {
     const label = this.getOptgroupLabel(this.selectedTune);
     if (!window.confirm('Do you want to download all ' + label + ' tunes?')) {
@@ -444,7 +466,7 @@ export class PlayerComponent implements OnInit {
     const files = await Promise.all(tunes.map(async tune => {
       const response = await fetch(this.getTunePath(tune));
       return {
-        name: label === 'MODS' ? tune : tune + "." + label.toLowerCase(),
+        name: label === 'MOD' ? tune : tune + "." + label.toLowerCase(),
         data: new Uint8Array(await response.arrayBuffer())
       };
     }));
