@@ -25,7 +25,7 @@ export class ContentComponent implements OnInit {
   posts = POSTS;
   hasAudio: boolean = false;
   hasVideo: boolean = false;
-  baseTitle: string = "midzer's Flimmerkiste";
+  baseTitle: string = "Flimmerkiste";
   tocList: HTMLElement;
   showToc: boolean = false;
 
