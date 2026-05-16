@@ -284,6 +284,9 @@ export class PlayerComponent implements OnInit {
     this.optgroupLabel = this.getOptgroupLabel(tune);
     if (!this.audioContext) {
       this.audioContext = new AudioContext();
+      if ('audioSession' in navigator) {
+        (navigator.audioSession as any).type = 'playback';
+      }
     }
     switch (this.optgroupLabel) {
       case 'SID':
