@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, OnInit, signal, ViewChild, ElementRef } from '@angular/core';
+import { Component, signal, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { jsSID } from './modules/jsSID';
@@ -19,7 +19,7 @@ import { TOOLS } from './tools';
     imports: [FormsModule, NgClass]
 })
 
-export class PlayerComponent implements OnInit {
+export class PlayerComponent {
 
   @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
 

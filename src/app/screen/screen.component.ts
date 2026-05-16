@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
 
 import { MENU } from '../menu';
@@ -15,7 +15,7 @@ import { MENU } from '../menu';
     }
 })
 
-export class ScreenComponent implements OnInit {
+export class ScreenComponent {
   menu = MENU;
   host: HTMLElement;
   hostScrolled: boolean = false;

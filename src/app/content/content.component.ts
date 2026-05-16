@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from '@angular/platform-browser';
@@ -19,7 +19,7 @@ import { Mp3filePipe } from '../mp3file.pipe';
     imports: [MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe]
 })
 
-export class ContentComponent implements OnInit {
+export class ContentComponent {
   path: string;
   name: string;
   posts = POSTS;
