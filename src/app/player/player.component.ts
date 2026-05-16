@@ -117,7 +117,7 @@ export class PlayerComponent implements OnInit {
       imgObj.onload = () => { this.backgroundImg = imgObj; }
       imgObj.src = '/assets/images/darcula-spectrum.png';
     }
-    this.redrawSpectrum();
+    this.requestID = window.requestAnimationFrame(this.redrawSpectrum);
     this.intervalID = window.setInterval(this.setPlayTime, 1000);
   }
 
@@ -307,8 +307,6 @@ export class PlayerComponent implements OnInit {
         await this.sidPlayer.loadinit(this.getTunePath(tune), this.subTune());
         break;
       case 'MOD':
-        this.ensureAnalyser();
-
         if (!this.modPlayer) {
           this.modPlayer = new ScripTracker(this.audioContext);
           await this.modPlayer.init();
@@ -328,7 +326,6 @@ export class PlayerComponent implements OnInit {
         await this.modPlayer.loadModule(this.getTunePath(tune));
         break;
       case 'OPUS':
-        this.ensureAnalyser();
         this.subTunes.set(1);
         this.info.set('Fetching OPUS...');
 
@@ -385,19 +382,28 @@ export class PlayerComponent implements OnInit {
       }
     }
     else if (this.backgroundImg) {
-      this.ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
+      const w = this.canvas.nativeElement.width;
+      const h = this.canvas.nativeElement.height;
+
+      this.ctx.clearRect(0, 0, w, h);
 
       const SPACER_WIDTH = 8, BAR_WIDTH = 5, OFFSET = 100;
       const numBars = Math.round(this.canvas.nativeElement.width / SPACER_WIDTH);
 
       this.analyserNode.getByteFrequencyData(this.amplitudeArray);
-      for (let i = 0; i < numBars; ++i) {
-        const magnitude = this.amplitudeArray[i + OFFSET] * this.canvas.nativeElement.height / 255;
-        const o = Math.round(this.canvas.nativeElement.height - magnitude);
+
+      for (let i = 0; i < numBars; i++) {
+        const value = this.amplitudeArray[i + OFFSET] ?? 0;
+        const barH = Math.round((value * h) / 255);
+        if (barH <= 0) continue;
+
+        const x = Math.round(i * SPACER_WIDTH);
+        const y = Math.round(h - barH);
+
         this.ctx.drawImage(
           this.backgroundImg,
           0, 0, BAR_WIDTH, 255,
-          i * SPACER_WIDTH, o, BAR_WIDTH, Math.round(magnitude)
+          x, y, BAR_WIDTH, barH
         );
       }
     }
@@ -423,15 +429,6 @@ export class PlayerComponent implements OnInit {
     return label;
   }
 
-  ensureAnalyser(): void {
-    if (!this.analyserNode) {
-      this.analyserNode = this.audioContext.createAnalyser();
-      this.analyserNode.fftSize = 2048;
-      this.analyserNode.smoothingTimeConstant = 0.8;
-      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
-    }
-  }
-
   clearSourceNode(): void {
     if (this.sourceNode) {
       this.sourceNode.stop();
@@ -441,7 +438,13 @@ export class PlayerComponent implements OnInit {
   }
 
   connectAnalyserSource(source: AudioNode): void {
-    this.ensureAnalyser();
+    if (!this.analyserNode) {
+      this.analyserNode = this.audioContext.createAnalyser();
+      this.analyserNode.fftSize = 2048;
+      this.analyserNode.smoothingTimeConstant = 0.8;
+      this.amplitudeArray = new Uint8Array(this.analyserNode.frequencyBinCount);
+    }
+
     source.disconnect();
     this.analyserNode.disconnect();
 
@@ -458,11 +461,6 @@ export class PlayerComponent implements OnInit {
       album: 'Flimmerkiste',
       artwork: [{ src: '/assets/images/health.png', sizes: '192x192', type: 'image/png' }]
     });
-
-    ms.setActionHandler('play', () => this.play());
-    ms.setActionHandler('pause', () => this.play());
-    ms.setActionHandler('previoustrack', () => this.prev());
-    ms.setActionHandler('nexttrack', () => this.next());
   }
 
   async download() {
