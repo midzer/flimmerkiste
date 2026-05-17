@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from '@angular/platform-browser';
@@ -29,11 +29,9 @@ export class ContentComponent {
   tocList: HTMLElement;
   showToc: boolean = false;
 
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-    private titleService: Title
-  ) {}
+  private readonly route = inject(ActivatedRoute);
+  private readonly location = inject(Location);
+  private readonly titleService = inject(Title);
 
   ngOnInit() {
     this.route.params.subscribe(params => {

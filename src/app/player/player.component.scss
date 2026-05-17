@@ -80,12 +80,6 @@ button {
     cursor: pointer;
 }
 
-.heart {
-    position: absolute;
-    top: 0;
-}
-
-.heart,
 canvas {
     display: block;
     height: 7.5vh;
@@ -110,7 +104,6 @@ a[data-descr]:focus::after {
     justify-content: center;
 }
 
-.heart,
 .marquee,
 .tool,
 canvas,
@@ -127,10 +120,6 @@ select {
 
 .tool:hover {
     filter: brightness(1.2);
-}
-
-.hidden {
-    visibility: hidden;
 }
 
 @media (min-width: 576px) {

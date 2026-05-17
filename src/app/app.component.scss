@@ -13,6 +13,16 @@ video {
     cursor: pointer;
 }
 
+img {
+    position: absolute;
+    top: 4vh;
+    top: 4dvh;
+    right: 6.5%;
+    width: 12%;
+    height: auto;
+    cursor: pointer;
+}
+
 @media (min-width: 576px) {
     .container {
         position: relative;
@@ -20,5 +30,10 @@ video {
     
     video {
         width: auto;
+    }
+
+    img {
+        top: 9vh;
+        top: 9dvh;
     }
 }

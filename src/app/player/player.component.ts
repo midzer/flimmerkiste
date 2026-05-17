@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, signal, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -8,7 +7,6 @@ import { ScripTracker } from './modules/scriptracker';
 import { FLACS } from './flacs';
 import { MODS } from './mods';
 import { SIDS } from './sids';
-
 import { TOOLS } from './tools';
 
 @Component({
@@ -16,7 +14,7 @@ import { TOOLS } from './tools';
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
     standalone: true,
-    imports: [FormsModule, NgClass]
+    imports: [FormsModule]
 })
 
 export class PlayerComponent {

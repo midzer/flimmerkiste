@@ -25,8 +25,7 @@
               "src/feed.json",
               "src/feed.xml"
             ],
-            "scripts": [
-            ],
+            "scripts": [],
             "optimization": {
               "scripts": true,
               "styles": {
@@ -34,6 +33,10 @@
                 "inlineCritical": true
               },
               "fonts": false
+            },
+            "server": "src/main.server.ts",
+            "prerender": {
+              "routesFile": "routes.txt"
             }
           },
           "configurations": {

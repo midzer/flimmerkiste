@@ -5,7 +5,11 @@
     </video>
     @if (!videoPlaying) {
         <app-screen></app-screen>
-        <app-player></app-player>
+        @defer (on interaction) {
+            <app-player></app-player>
+        } @placeholder {
+            <img src="/assets/images/sol.svg" title="Show player" width="208" height="189" alt="Summer of Love heart">
+        }
         <app-eye></app-eye>
     }
 </div>

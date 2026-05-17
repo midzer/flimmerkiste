@@ -1,57 +1,48 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { LowerCasePipe } from '@angular/common';
 
 import { Blank2dashPipe } from '../blank2dash.pipe';
-
 import { POSTS } from '../posts';
 import { Post } from '../post';
 
 @Component({
-    selector: 'app-overview',
-    templateUrl: './overview.component.html',
-    styleUrls: ['./overview.component.scss'],
-    standalone: true,
-    imports: [RouterLink, LowerCasePipe, Blank2dashPipe]
+  selector: 'app-overview',
+  templateUrl: './overview.component.html',
+  styleUrls: ['./overview.component.scss'],
+  standalone: true,
+  imports: [RouterLink, LowerCasePipe, Blank2dashPipe],
 })
-
-export class OverviewComponent implements OnInit {
+export class OverviewComponent {
   posts = POSTS;
   active = false;
 
-  constructor() {}
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
 
   ngOnInit() {
-    const query = window.location.search;
-    if (!query) {
-      return;
-    }
-    const params = new URLSearchParams(query);
-    const category = params.get('cat');
-    if (!category) {
-      return;
-    }
-    this.posts = POSTS.filter((post: Post) => {
-      return post.category.includes(category);
-    });
+    const category = this.route.snapshot.queryParamMap.get('cat');
+    if (!category) return;
+
+    this.posts = POSTS.filter((post: Post) => post.category.includes(category));
     this.active = true;
   }
 
   toggleCategory(category: string): void {
     this.active = !this.active;
-    const searchParams = new URLSearchParams(window.location.search);
+
     if (this.active) {
-      this.posts = POSTS.filter((post: Post) => {
-        return post.category.includes(category);
-      });
-      searchParams.set('cat', category);
-    }
-    else {
+      this.posts = POSTS.filter((post: Post) => post.category.includes(category));
+    } else {
       this.posts = POSTS;
-      searchParams.delete('cat');
     }
-    const params = searchParams.toString();
-    const newRelativePathQuery = window.location.pathname + (params ? '?' + params : '');
-    window.history.replaceState({}, '', newRelativePathQuery);
+
+    const nextParams = this.active ? { cat: category } : {};
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: nextParams,
+      queryParamsHandling: '',
+      replaceUrl: true,
+    });
   }
 }

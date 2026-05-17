@@ -34,7 +34,6 @@
   <button (click)="download()" title="Download {{ optgroupLabel }} tunes"><img src="/assets/icons/download.svg" width="24" height="24" alt="Download"></button>
 </div>
 <a href="{{ getTunePath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
-  <img [ngClass]="{ 'heart': true, 'hidden': playing }" src="/assets/images/sol.svg" width="208" height="189" alt="Summer of Love heart">
   <canvas #canvas></canvas>
 </a>
 <img (click)="shuffleTool()" class="tool" src="{{ getToolPath(selectedTool) }}" width="250" height="250" title="Shuffle tool" alt="{{ selectedTool }}">
