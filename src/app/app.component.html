@@ -3,13 +3,9 @@
         <source src="/video/intro.webm" type="video/webm; codecs=av01.0.12M.08">
         <source src="/video/intro.mp4" type="video/mp4; codecs=avc1.42c01e">
     </video>
-    @if (!videoPlaying) {
-        <app-screen></app-screen>
-        @defer (on interaction) {
-            <app-player></app-player>
-        } @placeholder {
-            <img src="/assets/images/sol.svg" title="Show player" width="208" height="189" alt="Summer of Love heart">
-        }
-        <app-eye></app-eye>
+    <app-screen [hidden]="videoPlaying"></app-screen>
+    @if (playerReady) {
+        <app-player [hidden]="videoPlaying"></app-player>
     }
+    <app-eye [hidden]="videoPlaying"></app-eye>
 </div>
