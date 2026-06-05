@@ -1,7 +1,8 @@
 # Contact
 
 * eMail: moin<span hidden>.nospam</span>@midzer.de
-* IRC: midzer on [Libera](https://libera.chat)
+* IRC: midzer on [Libera](https://libera.chat) and [OFTC](https://www.oftc.net/)
+* Matrix: [@midzer:nope.chat](@midzer:nope.chat)
 * RSS: [Atom](https://midzer.de/atom.xml) / [JSON](https://midzer.de/feed.json) / [XML](https://midzer.de/feed.xml)
 * Signal: [dennis.23](https://signal.me/#eu/uEDHSc1w2jQJOnuylgVg0gcL0_VVUeSH74uL4xKjAUpHtlsrhmJGZIxDQYEcQu_O)
 * Threema: [8XVZAC74](https://threema.id/8XVZAC74)
@@ -18,8 +19,6 @@
 ## /me at
 
 [Codeberg](https://codeberg.org/midzer)
-
-[Flohmarkt](https://muc.deals/~dennis)
 
 [GitHub](https://github.com/midzer)
 
