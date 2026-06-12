@@ -29,6 +29,7 @@ export const MODS = [
     "ELYSIUM.MOD",
     "estrayk_-_classic.mod",
     "external.xm",
+    "e3ch.xm",
     "fap.xm",
     "funky_fish_-_r2-d2.xm",
     "funky_stars.mod",
