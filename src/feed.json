@@ -4,6 +4,11 @@
   "home_page_url": "https://midzer.de/",
   "items": [
     {
+      "id": "https://midzer.de/stories-from-lalaland",
+      "url": "https://midzer.de/stories-from-lalaland",
+      "date_modified": "2026-07-27T00:00:00Z"
+    },
+    {
       "id": "https://midzer.de/trigger-words",
       "url": "https://midzer.de/trigger-words",
       "date_modified": "2026-07-01T00:00:00Z"
