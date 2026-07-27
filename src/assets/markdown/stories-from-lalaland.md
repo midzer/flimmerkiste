@@ -1,4 +1,4 @@
-# Stories from LaLaLand
+# Stories From LaLaLand
 
 * Datum: 2026.07.27
 * DJ: tinkelow
