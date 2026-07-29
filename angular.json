@@ -34,10 +34,7 @@
               },
               "fonts": false
             },
-            "server": "src/main.server.ts",
-            "prerender": {
-              "routesFile": "routes.txt"
-            }
+            "server": "src/main.server.ts"
           },
           "configurations": {
             "production": {

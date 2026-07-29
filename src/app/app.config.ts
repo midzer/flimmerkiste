@@ -1,6 +1,6 @@
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig, SecurityContext } from '@angular/core';
-import { provideZonelessChangeDetection } from '@angular/core';
+import { provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 
@@ -9,7 +9,7 @@ import { gfmHeadingId } from 'marked-gfm-heading-id';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZonelessChangeDetection(),
+    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
     provideMarkdown({
