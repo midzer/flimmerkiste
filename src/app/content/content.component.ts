@@ -1,11 +1,12 @@
-import { Component, ViewEncapsulation, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, ViewEncapsulation, inject, ChangeDetectorRef } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 
 import { MarkdownComponent } from 'ngx-markdown';
 
 import { POSTS } from '../posts';
+import { Post } from '../post';
 import { WebmfilePipe } from '../webmfile.pipe';
 import { Mp4filePipe } from '../mp4file.pipe';
 import { Mp3filePipe } from '../mp3file.pipe';
@@ -16,32 +17,37 @@ import { Mp3filePipe } from '../mp3file.pipe';
     styleUrls: ['./content.component.scss'],
     encapsulation: ViewEncapsulation.None,
     standalone: true,
-    imports: [MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe]
+    imports: [MarkdownComponent, Mp3filePipe, Mp4filePipe, WebmfilePipe, RouterLink]
 })
 
 export class ContentComponent {
-  path: string;
   name: string;
-  posts = POSTS;
   hasAudio: boolean = false;
   hasVideo: boolean = false;
   baseTitle: string = "Flimmerkiste";
   tocList: HTMLElement;
   showToc: boolean = false;
+  loaded: boolean = true;
+  currentIndex = -1;
+  prevPost?: Post;
+  nextPost?: Post;
+  randomPost?: Post;
 
   private readonly route = inject(ActivatedRoute);
-  private readonly location = inject(Location);
+  readonly location = inject(Location);
   private readonly titleService = inject(Title);
 
-  ngOnInit() {
+  constructor(private cdRef: ChangeDetectorRef ) {}
+
+  ngAfterContentInit() {
     this.route.params.subscribe(params => {
       this.name = params['name'];
-      this.path = '/assets/markdown/' + this.name + '.md';
       let pageTitle = this.name;
       const name = this.name.split('-').join(' ');
-      for (let i = this.posts.length - 1; i >= 0 ; i--) {
-        const post = this.posts[i];
+      for (let i = POSTS.length - 1; i >= 0 ; i--) {
+        const post = POSTS[i];
         if (post.name.toLowerCase() === name) {
+          this.currentIndex = i;
           pageTitle = post.name;
           switch (post.category) {
             case 'DJ Sets':
@@ -55,6 +61,19 @@ export class ContentComponent {
           break;
         }
       }
+      if (this.currentIndex > 0) {
+        this.prevPost = POSTS[this.currentIndex - 1];
+      }
+      if (this.currentIndex < POSTS.length - 1) {
+        this.nextPost = POSTS[this.currentIndex + 1];
+      }
+
+      const others = POSTS.filter((_, i) => i !== this.currentIndex);
+      if (others.length) {
+        const randIndex = Math.floor(Math.random() * others.length);
+        this.randomPost = others[randIndex];
+      }
+
       this.titleService.setTitle(pageTitle + ' | ' + this.baseTitle);
     });
   }
@@ -101,6 +120,7 @@ export class ContentComponent {
       this.tocList.innerHTML = '';
       this.generateTocList();
     }
+    this.loaded = true;
   }
 
   goBack(): void {

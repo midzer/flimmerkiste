@@ -7,17 +7,43 @@
   </button>
 </nav>
 <ul [hidden]="!showToc" class="toc"></ul>
+<markdown [src]="'/assets/markdown/' + location.path().substring(1) + '.md'" (load)="onLoad()" [disableSanitizer]="true"></markdown>
+@if (loaded) {
 @if (hasAudio) {
   <audio controls playsinline preload="metadata">
     <source src="{{name | mp3file}}" type="audio/mpeg">
     Your browser does not support audio element
   </audio>
 }
-<markdown [src]="path" (load)="onLoad()" [disableSanitizer]="true"></markdown>
 @if (hasVideo) {
-  <video controls playsinline preload="metadata">
-    <source src="{{name | webmfile}}" type='video/webm; codecs="av01.0.12M.08, opus"'>
-    <source src="{{name | mp4file}}" type='video/mp4; codecs="avc1.42c01e, mp4a.40.2"'>
-    Your browser does not support video element
-  </video>
+<video controls playsinline preload="metadata">
+  <source src="{{name | webmfile}}" type='video/webm; codecs="av01.0.12M.08, opus"'>
+  <source src="{{name | mp4file}}" type='video/mp4; codecs="avc1.42c01e, mp4a.40.2"'>
+  Your browser does not support video element
+</video>
+}
+<div class="post-navigation">
+@if (prevPost) {
+  <a [routerLink]="['/', prevPost.name.toLowerCase().split(' ').join('-')]">
+    ← {{ prevPost.name }}
+  </a>
+}
+
+@if (randomPost) {
+  <a [routerLink]="['/', randomPost.name.toLowerCase().split(' ').join('-')]">
+    Random post
+  </a>
+}
+
+@if (nextPost) {
+  <a [routerLink]="['/', nextPost.name.toLowerCase().split(' ').join('-')]">
+    {{ nextPost.name }} →
+  </a>
+}
+</div>
+
+<a href="https://human-made.site/">human-made webring</a>:
+<div class="webring">
+  <a href="https://human-made.site?prev&referer=https://midzer.de">previous</a> | <a href="https://human-made.site?random&referer=https://midzer.de">random</a> | <a href="https://human-made.site?next&referer=https://midzer.de">next</a>
+</div>
 }
