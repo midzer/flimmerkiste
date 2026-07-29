@@ -1,5 +1,5 @@
-import { Component, ElementRef } from '@angular/core';
-import { RouterLinkActive, RouterLink, RouterOutlet } from '@angular/router';
+import { Component, ElementRef, inject } from '@angular/core';
+import { RouterLinkActive, RouterLink, RouterOutlet, Router, NavigationEnd } from '@angular/router';
 
 import { MENU } from '../menu';
 
@@ -20,10 +20,19 @@ export class ScreenComponent {
   host: HTMLElement;
   hostScrolled: boolean = false;
 
+  private readonly router = inject(Router);
+
   constructor(private element: ElementRef) {}
 
   ngOnInit() {
     this.element.nativeElement.focus();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Reset scroll position
+        // after internal navigation
+        this.scrollToTop();
+      }
+    });
   }
 
   onScroll(event: Event): void {
@@ -32,6 +41,8 @@ export class ScreenComponent {
   }
 
   scrollToTop(): void {
-    this.host.scrollTo({ top: 0 });
+    if (this.host) {
+      this.host.scrollTo({ top: 0 });
+    }
   }
 }
