@@ -7,8 +7,7 @@
   </button>
 </nav>
 <ul [hidden]="!showToc" class="toc"></ul>
-<markdown [src]="'/assets/markdown/' + location.path().substring(1) + '.md'" (load)="onLoad()" [disableSanitizer]="true"></markdown>
-@if (loaded) {
+<markdown [src]="'/assets/markdown/' + name + '.md'" (load)="onLoad()" [disableSanitizer]="true"></markdown>
 @if (hasAudio) {
   <audio controls playsinline preload="metadata">
     <source src="{{name | mp3file}}" type="audio/mpeg">
@@ -46,4 +45,3 @@
 <div class="webring">
   <a href="https://human-made.site?prev&referer=https://midzer.de">previous</a> | <a href="https://human-made.site?random&referer=https://midzer.de">random</a> | <a href="https://human-made.site?next&referer=https://midzer.de">next</a>
 </div>
-}

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, inject, ChangeDetectorRef } from '@angular/core';
+import { Component, ViewEncapsulation, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from '@angular/platform-browser';
@@ -27,19 +27,16 @@ export class ContentComponent {
   baseTitle: string = "Flimmerkiste";
   tocList: HTMLElement;
   showToc: boolean = false;
-  loaded: boolean = true;
   currentIndex = -1;
   prevPost?: Post;
   nextPost?: Post;
   randomPost?: Post;
 
   private readonly route = inject(ActivatedRoute);
-  readonly location = inject(Location);
+  private readonly location = inject(Location);
   private readonly titleService = inject(Title);
 
-  constructor(private cdRef: ChangeDetectorRef ) {}
-
-  ngAfterContentInit() {
+  ngOnInit() {
     this.route.params.subscribe(params => {
       this.name = params['name'];
       let pageTitle = this.name;
@@ -120,7 +117,6 @@ export class ContentComponent {
       this.tocList.innerHTML = '';
       this.generateTocList();
     }
-    this.loaded = true;
   }
 
   goBack(): void {
