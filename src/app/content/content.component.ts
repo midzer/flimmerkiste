@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, inject } from '@angular/core';
+import { Component, ViewEncapsulation, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
 import { Title } from '@angular/platform-browser';
@@ -21,7 +21,7 @@ import { Mp3filePipe } from '../mp3file.pipe';
 })
 
 export class ContentComponent {
-  name: string;
+  name = signal('');
   hasAudio: boolean = false;
   hasVideo: boolean = false;
   baseTitle: string = "Flimmerkiste";
@@ -38,9 +38,9 @@ export class ContentComponent {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.name = params['name'];
-      let pageTitle = this.name;
-      const name = this.name.split('-').join(' ');
+      let pageTitle = params['name'];
+      this.name.set(params['name']);
+      const name = this.name().split('-').join(' ');
       for (let i = POSTS.length - 1; i >= 0 ; i--) {
         const post = POSTS[i];
         if (post.name.toLowerCase() === name) {
