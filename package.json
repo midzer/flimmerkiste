@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --no-hmr --host 0.0.0.0",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,7 +25,7 @@
     "ngx-markdown": "^22.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^22.0.0",
+    "@angular/build": "^22.0.0",
     "@angular/cli": "^22.0.0",
     "@angular/compiler-cli": "^22.0.0",
     "@types/express": "^5.0.1",
