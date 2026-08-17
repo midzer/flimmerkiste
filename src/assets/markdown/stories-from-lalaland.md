@@ -2,7 +2,7 @@
 
 * Datum: 2026.07.27
 * DJ: tinkelow
-* Genre: Tech-House, Melodic Techno, Techno
+* Genre: Electro-House, Tech-House, Melodic Techno
 * Laufzeit: 1:58:28
 
 01. 0:00:00 Stephan Bodzin - Atlas
