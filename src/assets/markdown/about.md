@@ -29,3 +29,5 @@ Das Leben ist wie ein Wundertüte, du weißt nie was dich als nächstes erwartet
 Das Leben ist voller Bewegung und Emotionen und Glück ist kein stehender Tümpel, noch ein reißender Strom, vielmehr ein farbenfrohes Bächlein, welches mal zum Kneipen und erfrischen einlädt.
 
 Es gibt keinen Masterplan. Nur die Fülle des Seins genießen und weitermachen. Alleine und/oder im Team. Der Fokus bist du selbst.
+
+<img src="/assets/images/sol.svg" loading="lazy" width="1000" height="913" alt="Summer of Love Herz">
