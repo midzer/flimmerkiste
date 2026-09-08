@@ -21,3 +21,11 @@ Man wurde älter und der Zockdrang ließ nach. Civilization 4, ein rundenbasiert
 Working by doing und nebenher bisserl an Webseiten schrauben.
 
 <img src="/assets/pictures/midzer.webp" loading="lazy" width="1000" height="750" alt="midzer vor einer geschlossenen Imbissbude auf einem Rastplatz">
+
+# Die Zukunft
+
+Das Leben ist wie ein Wundertüte, du weißt nie was dich als nächstes erwartet. Ob ich nun Überraschungen mag oder nicht, kommt auf die Situation an.
+
+Das Leben ist voller Bewegung und Emotionen und Glück ist kein stehender Tümpel, noch ein reißender Strom, vielmehr ein farbenfrohes Bächlein, welches mal zum Kneipen und erfrischen einlädt.
+
+Es gibt keinen Masterplan. Nur die Fülle des Seins genießen und weitermachen. Alleine und/oder im Team. Der Fokus bist du selbst.
