@@ -484,7 +484,7 @@ They are given a "ninja rating" of 1-5 🥷 depending on the fun, overall impres
 * [Repo](https://github.com/midzer/nogravity) [Wiki](https://en.wikipedia.org/wiki/No_Gravity_(video_game))
 * Keyboard
 * 🥷🥷🥷🥷
-* [Play!](/wasm/nikwi/)
+* [Play!](/wasm/nogravity/)
 
 ### Numpty Physics
 
