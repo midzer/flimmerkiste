@@ -28,8 +28,8 @@
     background-color: var(--bgcolor);
 }
 
-.info:hover span,
-.info:focus span {
+.info:hover samp,
+.info:focus samp {
     animation-play-state: paused;
 }
 
@@ -37,7 +37,7 @@
     overflow: hidden;
 }
 
-.marquee > span {
+.marquee > samp {
     display: inline-block;
     padding-left: 100%;  /* show the marquee just outside the paragraph */
     animation: marquee 10s linear infinite;
@@ -82,8 +82,8 @@ button {
 
 canvas {
     display: block;
-    height: 7.5vh;
-    height: 7.5dvh;
+    height: 7.25vh;
+    height: 7.25dvh;
 }
 
 a[data-descr] {
@@ -105,17 +105,20 @@ a[data-descr]:focus::after {
 }
 
 .marquee,
-.tool,
+.tool > img,
 canvas,
 select {
     width: 100%;
+}
+
+.tool > img {
+    height: auto;
 }
 
 .tool {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
 }
 
 .tool:hover {
@@ -125,7 +128,6 @@ select {
 @media (min-width: 576px) {
     :host {
         top: 7.5%;
-        bottom: 52.5%;
     }
 
     button {
@@ -133,13 +135,17 @@ select {
     }
 
     .tool {
-        width: 16vh;
-        width: 16dvh;
+        margin-top: 1.5rem;
+    }
+
+    .tool > img {
+        width: 15vh;
+        width: 15dvh;
     }
 }
 
 @media (min-width: 996px) {
     .d-flex {
         flex-wrap: nowrap;
-    }    
+    }
 }

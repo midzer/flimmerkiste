@@ -1,9 +1,9 @@
 <div (click)="copy($event)" class="d-flex info" data-descr="Copy tune URL">
   <div class="marquee" tabindex="0">
-    <span>{{info()}}</span>
+    <samp>{{info()}}</samp>
   </div>
   @if (loadedTune) {
-    <div>{{subTune() + 1}}/{{subTunes()}} {{playTime()}}</div>
+    <samp>{{subTune() + 1}}/{{subTunes()}} {{playTime()}}</samp>
   }
 </div>
 <div class="d-flex">
@@ -36,4 +36,7 @@
 <a href="{{ getTunePath(selectedTune) }}" download attr.data-descr="Download {{ selectedTune }}" attr.aria-label="Download {{ selectedTune }}">
   <canvas #canvas></canvas>
 </a>
-<img (click)="shuffleTool()" class="tool" src="{{ getToolPath(selectedTool) }}" width="250" height="250" title="Shuffle tool" alt="{{ selectedTool }}">
+<div (click)="shuffleTool()" class="tool" title="Shuffle tool">
+  <div><samp>{{ selectedTool }}</samp></div>
+  <img src="{{ getToolPath(selectedTool) }}" width="250" height="250" alt="{{ selectedTool }}">
+</div>
