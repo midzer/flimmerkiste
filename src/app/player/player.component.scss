@@ -19,7 +19,7 @@
     cursor: copy;
     white-space: nowrap;
 }
-  
+
 .info:hover::after,
 .info:focus::after {
     content: attr(data-descr);
@@ -29,24 +29,34 @@
     background-color: var(--bgcolor);
 }
 
-.info:hover samp,
-.info:focus samp {
-    animation-play-state: paused;
-}
-
-.marquee {
+.marquee-box {
     overflow: hidden;
 }
 
-.marquee > samp {
-    display: inline-block;
-    padding-left: 100%;  /* show the marquee just outside the paragraph */
-    animation: marquee 10s linear infinite;
+.marquee:hover,
+.marquee:focus {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee {
+        animation-play-state: paused;
+    }
+}
+
+.marquee {
+    will-change: transform;
+    animation: marquee 10s linear alternate infinite;
 }
 
 /* Make it move */
 @keyframes marquee {
-    to   { transform: translate(-100%); }
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+samp {
+    display: block;
 }
 
 select {
@@ -83,8 +93,8 @@ button {
 
 canvas {
     display: block;
-    height: 7.25vh;
-    height: 7.25dvh;
+    height: 7.5vh;
+    height: 7.5dvh;
 }
 
 a[data-descr] {
@@ -105,7 +115,7 @@ a[data-descr]:focus::after {
     justify-content: center;
 }
 
-.marquee,
+.marquee-box,
 .tool > img,
 canvas,
 select {
@@ -117,7 +127,6 @@ select {
 }
 
 .tool {
-    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
