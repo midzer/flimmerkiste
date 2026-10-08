@@ -1,5 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild, inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, ElementRef, HostListener, ViewChild, inject, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { EyeComponent } from './eye/eye.component';
@@ -14,26 +13,14 @@ import { ScreenComponent } from './screen/screen.component';
   imports: [ScreenComponent, PlayerComponent, EyeComponent]
 })
 export class AppComponent {
-  @ViewChild('video') video?: ElementRef<HTMLVideoElement>;
+  @ViewChild('video') video: ElementRef<HTMLVideoElement>;
 
-  private platformId = inject(PLATFORM_ID);
-
-  isBrowser = isPlatformBrowser(this.platformId);
   videoPlaying = false;
-  playerReady = false;
 
   private readonly router = inject(Router);
 
   private sequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
   private state = 0;
-
-  constructor() {
-    if (this.isBrowser) {
-      queueMicrotask(() => {
-        this.playerReady = true;
-      });
-    }
-  }
 
   toggleVideo(): void {
     if (this.videoPlaying) {

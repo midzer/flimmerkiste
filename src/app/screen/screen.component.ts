@@ -11,21 +11,19 @@ import { MENU } from '../menu';
     imports: [RouterLinkActive, RouterLink, RouterOutlet],
     host: {
       'tabindex': '-1',
-      '(scroll)': 'onScroll($event)'
+      '(scroll)': 'onScroll()'
     }
 })
 
 export class ScreenComponent {
   menu = MENU;
-  host: HTMLElement;
-  hostScrolled: boolean = false;
 
   private readonly router = inject(Router);
+  private readonly host = inject(ElementRef).nativeElement;
 
-  constructor(private element: ElementRef) {}
 
   ngOnInit() {
-    this.element.nativeElement.focus();
+    this.host.focus();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         // Reset scroll position
@@ -35,14 +33,9 @@ export class ScreenComponent {
     });
   }
 
-  onScroll(event: Event): void {
-    this.host = event.target as HTMLElement;
-    this.hostScrolled = this.host.scrollTop > 100;
-  }
+  onScroll(): void {}
 
   scrollToTop(): void {
-    if (this.host) {
-      this.host.scrollTo({ top: 0 });
-    }
+    this.host.scrollTo({ top: 0 });
   }
 }
