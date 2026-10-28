@@ -27,6 +27,7 @@ export const MODS = [
     "dt_core.xm",
     "dt_orion.xm",
     "dubmood_-_rez_1911_cracktro_6.xm",
+    "dubmood&ziphoid&zabutom_-_no_more_songs_to_sin.xm",
     "easter_egg.xm",
     "ELYSIUM.MOD",
     "estrayk_-_classic.mod",
