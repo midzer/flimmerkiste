@@ -76,5 +76,6 @@ export const MODS = [
     "watersky.xm",
     "wotw-intro56.mod",
     "yum,cookie.xm",
-    "zabttc.mod"
+    "zabttc.mod",
+    "zedfox_-_goldenbrown.xm"
 ]
