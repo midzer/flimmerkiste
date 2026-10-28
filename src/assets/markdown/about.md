@@ -22,7 +22,7 @@ Working by doing und nebenher bisserl an Webseiten schrauben.
 
 <img src="/assets/pictures/midzer.webp" loading="lazy" width="1000" height="750" alt="midzer vor einer geschlossenen Imbissbude auf einem Rastplatz">
 
-# Die Zukunft
+## Die Zukunft
 
 Das Leben ist wie ein Wundertüte, du weißt nie was dich als nächstes erwartet. Ob ich nun Überraschungen mag oder nicht, kommt auf die Situation an.
 
