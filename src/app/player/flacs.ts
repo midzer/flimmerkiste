@@ -1,5 +1,4 @@
 export const FLACS = [
     "Hybris_Ingame",
-    "Sauron - OOOPS!",
-    "underpant"
+    "Sauron - OOOPS!"
 ]

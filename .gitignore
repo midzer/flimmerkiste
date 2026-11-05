@@ -54,5 +54,8 @@ src/assets/flacs/
 # Pictures
 src/assets/pictures/
 
+# Tones
+src/assets/tones/
+
 # Other
 ninja.md
