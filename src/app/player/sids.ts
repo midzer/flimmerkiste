@@ -86,6 +86,7 @@ export const SIDS = [
     "Snare",
     "Some_Pleasure",
     "Spellbound",
+    "Spy_vs_Spy",
     "Stormlord",
     "Supremacy",
     "Sweet",
