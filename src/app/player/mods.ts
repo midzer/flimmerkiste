@@ -58,6 +58,7 @@ export const MODS = [
     "one_night_shot.mod",
     "paso-pleasure_to_paso.mod",
     "plofs.xm",
+    "r0lfs_pepparkakshus.xm",
     "rainfore.mod",
     "rg-dbd.xm",
     "ryukenden.xm",
